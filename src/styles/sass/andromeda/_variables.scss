@@ -1,0 +1,40 @@
+// Font
+$font-stack: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// Basic Colors
+$default-color: #C2C2C2;  // Default color
+$primary-color: #1C84C6;  // Primary color
+$info-color: #23C6C8;     // Info color
+$success-color: #1AB394;  // Success color
+$warning-color: #F8AC59;  // Warrning color
+$danger-color: #ED5565;   // Danger color
+
+// Various colors
+$text-color: #676A6C;
+$gray-color: #F3F3F4;
+$light-gray: lighten($gray-color, 20%);
+$label-badget-color: #5E5E5E;
+
+// Spiner color and margin
+$spin-color: $primary-color;
+$spin-margin: 0 auto;
+
+// IBOX colors ( default panel colors)
+$border-color: #E7EAEC;   // IBox border
+$ibox-title-bg: white;    // IBox Background header
+$ibox-content-bg: white;  // IBox Background content
+
+//Sidebar width
+$sidebar-width: 220px;
+
+// Boxed layout width
+$boxed-width: 1200px;
+$boxed-backgound: none;
+
+//Border radius for buttons
+$btn-border-radius: 3px;
+
+//Navigation
+$nav-bg: #2F4050;
+$nav-profil-pattern: no-repeat;
+$nav-text-color: #A7B1C2;
