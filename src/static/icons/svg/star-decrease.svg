@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;}
+	.st2{fill:none;stroke:#000000;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g id="Filled_Icons" class="st0">
+	<path class="st1" d="M17.1,14.7l5.4-4.7h-8.1c-0.8,0-1.5-0.7-1.5-1.5v-3c0-0.6,0.4-1.2,0.9-1.4l-1.4-3.8C12.4,0.1,12.1,0,11.9,0
+		c-0.2,0-0.3,0.2-0.4,0.4L8.7,8H0.5C0.3,8,0.1,8.1,0,8.3C0,8.5,0,8.7,0.2,8.9l6.7,5.8L4,23.3c-0.1,0.2,0,0.4,0.2,0.6
+		C4.3,24,4.4,24,4.5,24s0.2,0,0.3-0.1l7.2-5.3l7.2,5.3c0.2,0.1,0.4,0.1,0.6,0c0.2-0.1,0.2-0.4,0.2-0.6L17.1,14.7z"/>
+	<path class="st1" d="M23.5,5h-9C14.2,5,14,5.2,14,5.5v3C14,8.8,14.2,9,14.5,9h9C23.8,9,24,8.8,24,8.5v-3C24,5.2,23.8,5,23.5,5z"/>
+</g>
+<g id="Outline_Icons">
+	<g>
+		<g>
+			<polyline class="st2" points="20.9,10.7 16.5,14.5 19.5,23.5 12,18 4.5,23.5 7.5,14.5 0.5,8.5 9,8.5 12,0.5 13.3,4 			"/>
+		</g>
+		<rect x="14.4" y="5.5" class="st2" width="9" height="3"/>
+	</g>
+</g>
+</svg>

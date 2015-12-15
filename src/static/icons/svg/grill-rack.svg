@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+<g id="Filled_Icons" display="none">
+	<g display="inline">
+		<path d="M18.5,0.006h-13c-0.827,0-1.5,0.673-1.5,1.5v13c0,0.827,0.673,1.5,1.5,1.5H10v2h4v-2h4.5c0.827,0,1.5-0.673,1.5-1.5v-13
+			C20,0.679,19.327,0.006,18.5,0.006z M19,1.506v1.5h-2v-2h1.5C18.775,1.006,19,1.23,19,1.506z M11,9.006v-2h2v2H11z M13,10.006v2
+			h-2v-2H13z M10,9.006H8v-2h2V9.006z M11,6.006v-2h2v2H11z M14,7.006h2v2h-2V7.006z M14,6.006v-2h2v2H14z M14,3.006v-2h2v2H14z
+			 M13,3.006h-2v-2h2V3.006z M10,3.006H8v-2h2V3.006z M10,4.006v2H8v-2H10z M7,6.006H5v-2h2V6.006z M7,7.006v2H5v-2H7z M7,10.006v2
+			H5v-2H7z M8,10.006h2v2H8V10.006z M10,13.006v2H8v-2H10z M11,13.006h2v2h-2V13.006z M14,13.006h2v2h-2V13.006z M14,12.006v-2h2v2
+			H14z M17,10.006h2v2h-2V10.006z M17,9.006v-2h2v2H17z M17,6.006v-2h2v2H17z M5.5,1.006H7v2H5v-1.5C5,1.23,5.225,1.006,5.5,1.006z
+			 M5,14.506v-1.5h2v2H5.5C5.225,15.006,5,14.781,5,14.506z M18.5,15.006H17v-2h2v1.5C19,14.781,18.775,15.006,18.5,15.006z"/>
+		<path d="M10,19.006v2.758c0,1.104,0.897,2,2,2c1.103,0,2-0.896,2-2v-2.758H10z"/>
+	</g>
+</g>
+<g id="Outline_Icons">
+	<g>
+		<path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="M10.5,18.5h3v3.258
+			c0,0.828-0.672,1.5-1.5,1.5c-0.828,0-1.5-0.672-1.5-1.5V18.5z"/>
+		<rect x="10.5" y="15.5" fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" width="3" height="3"/>
+		<path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="M19.5,1.5c0-0.553-0.447-1-1-1h-13
+			c-0.553,0-1,0.447-1,1v13c0,0.553,0.447,1,1,1h13c0.553,0,1-0.447,1-1V1.5z"/>
+		<line fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" x1="4.5" y1="3.5" x2="19.5" y2="3.5"/>
+		<line fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" x1="4.5" y1="6.5" x2="19.5" y2="6.5"/>
+		<line fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" x1="4.5" y1="9.5" x2="19.5" y2="9.5"/>
+		<line fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" x1="4.5" y1="12.5" x2="19.5" y2="12.5"/>
+		<line fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" x1="16.5" y1="0.5" x2="16.5" y2="15.5"/>
+		<line fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" x1="13.5" y1="0.5" x2="13.5" y2="15.5"/>
+		<line fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" x1="10.5" y1="0.5" x2="10.5" y2="15.5"/>
+		<line fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" x1="7.5" y1="0.5" x2="7.5" y2="15.5"/>
+	</g>
+</g>
+</svg>

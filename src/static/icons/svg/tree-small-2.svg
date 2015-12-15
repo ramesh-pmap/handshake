@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;}
+	.st2{fill:none;stroke:#000000;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g id="Filled_Icons" class="st0">
+	<path class="st1" d="M21,5h-1.2c-0.4-0.6-1.3-1.8-3-2c-0.5-0.8-2-3-4.8-3S7.7,2.2,7.2,3c-1.6,0.1-2.6,1.4-3,2H3C1.8,5,0,6.2,0,8
+		s1.2,3,3,3h4.8l3.7,3.7V17h-4c-0.2,0-0.3,0.1-0.4,0.2C7,17.3,7,17.5,7,17.7l2,6C9.1,23.9,9.3,24,9.5,24h5c0.2,0,0.4-0.1,0.5-0.3
+		l2-6c0.1-0.2,0-0.3-0.1-0.5c-0.1-0.1-0.2-0.2-0.4-0.2h-4v-2.3l3.7-3.7H21c1.8,0,3-1.2,3-3S22.2,5,21,5z M11.5,13.3L9.2,11h2.3V13.3
+		z M12.5,13.3V11h2.3L12.5,13.3z"/>
+</g>
+<g id="Outline_Icons">
+	<g>
+		<polygon class="st2" points="14,23.5 9,23.5 7,17.5 16,17.5 		"/>
+		<path class="st2" d="M21,10.5c1.5,0,2.5-1,2.5-2.5S22,5.5,21,5.5h-1.5c0,0-1-2-3-2c0,0-1.5-3-4.5-3s-4.5,3-4.5,3c-2,0-3,2-3,2H3
+			c-1,0-2.5,1-2.5,2.5s1,2.5,2.5,2.5H21z"/>
+		<line class="st2" x1="11.5" y1="10.5" x2="11.5" y2="17.5"/>
+		<line class="st2" x1="15.5" y1="10.5" x2="11.5" y2="14.5"/>
+		<line class="st2" x1="7.5" y1="10.5" x2="11.5" y2="14.5"/>
+	</g>
+</g>
+</svg>

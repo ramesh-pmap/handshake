@@ -8,6 +8,7 @@ import { Router, Route } from 'react-router';
 import LoginPage from './modules/global/pages/login';
 import ToolkitHome from './modules/toolkit/pages/home';
 import DataPage from './modules/global/pages/data';
+import IconsPage from './modules/global/pages/icon-grid';
 
 // import ToolkitCSS from './modules/toolkit/pages/css';
 
@@ -22,6 +23,7 @@ const template = (
 		<Route path="/" component={LoginPage} title="Login Page" />
 		<Route path="toolkit" component={ToolkitHome} title="Toolkit Page" />
 		<Route path="data" component={DataPage} title="Data Sample Page" />
+		<Route path="icons" component={IconsPage} title="Icons Page" />
 
 	</Router>
 );

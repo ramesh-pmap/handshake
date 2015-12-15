@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;}
+	.st2{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#000000;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g id="Filled_Icons" class="st0">
+	<g class="st1">
+		<path d="M3.5,22C2.7,22,2,21.3,2,20.5V4H0.5C0.2,4,0,4.2,0,4.5v19C0,23.8,0.2,24,0.5,24h19c0.3,0,0.5-0.2,0.5-0.5V22H3.5z"/>
+		<path d="M23.5,0h-20C3.2,0,3,0.2,3,0.5v20C3,20.8,3.2,21,3.5,21h20c0.3,0,0.5-0.2,0.5-0.5v-20C24,0.2,23.8,0,23.5,0z M13,17H7
+			c-0.3,0-0.5-0.2-0.5-0.5C6.5,16.2,6.7,16,7,16h6c0.3,0,0.5,0.2,0.5,0.5C13.5,16.8,13.3,17,13,17z M20,15H7c-0.3,0-0.5-0.2-0.5-0.5
+			C6.5,14.2,6.7,14,7,14h13c0.3,0,0.5,0.2,0.5,0.5C20.5,14.8,20.3,15,20,15z M20,13H7c-0.3,0-0.5-0.2-0.5-0.5C6.5,12.2,6.7,12,7,12
+			h13c0.3,0,0.5,0.2,0.5,0.5C20.5,12.8,20.3,13,20,13z M20,11H7c-0.3,0-0.5-0.2-0.5-0.5C6.5,10.2,6.7,10,7,10h13
+			c0.3,0,0.5,0.2,0.5,0.5C20.5,10.8,20.3,11,20,11z M20,9H7C6.7,9,6.5,8.8,6.5,8.5C6.5,8.2,6.7,8,7,8h13c0.3,0,0.5,0.2,0.5,0.5
+			C20.5,8.8,20.3,9,20,9z M20,7H7C6.7,7,6.5,6.8,6.5,6.5C6.5,6.2,6.7,6,7,6h13c0.3,0,0.5,0.2,0.5,0.5C20.5,6.8,20.3,7,20,7z M20,5H7
+			C6.7,5,6.5,4.8,6.5,4.5C6.5,4.2,6.7,4,7,4h13c0.3,0,0.5,0.2,0.5,0.5C20.5,4.8,20.3,5,20,5z"/>
+	</g>
+</g>
+<g id="Outline_Icons">
+	<g>
+		<rect x="3.5" y="0.5" class="st2" width="20" height="20"/>
+		<line class="st3" x1="7" y1="4.5" x2="20" y2="4.5"/>
+		<line class="st3" x1="7" y1="6.5" x2="20" y2="6.5"/>
+		<line class="st3" x1="7" y1="8.5" x2="20" y2="8.5"/>
+		<line class="st3" x1="7" y1="10.5" x2="20" y2="10.5"/>
+		<line class="st3" x1="7" y1="12.5" x2="20" y2="12.5"/>
+		<line class="st3" x1="7" y1="14.5" x2="20" y2="14.5"/>
+		<line class="st3" x1="7" y1="16.5" x2="13" y2="16.5"/>
+		<polyline class="st2" points="3.5,4.5 0.5,4.5 0.5,23.5 19.5,23.5 19.5,20.5 		"/>
+	</g>
+</g>
+</svg>

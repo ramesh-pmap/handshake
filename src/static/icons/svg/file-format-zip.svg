@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Outline_Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+<g>
+	<g>
+		
+			<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="12.5" y1="18.499" x2="12.5" y2="13.311"/>
+		<path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M15.519,18.499
+			v-5.188h1.241c1.056,0,1.239,0.581,1.239,1.297c0,0.717-0.184,1.297-1.239,1.297h-1.241"/>
+		<polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+			7.245,13.311 9.5,13.311 7.245,18.498 9.5,18.498 		"/>
+	</g>
+	<g>
+		<g>
+			<polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				21.5,23.499 2.5,23.499 2.5,0.499 15.5,0.499 21.5,6.499 			"/>
+			<polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				15.5,0.499 15.5,6.499 21.5,6.499 			"/>
+		</g>
+	</g>
+</g>
+</svg>

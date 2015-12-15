@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+<g id="Filled_Icons" display="none">
+	<path display="inline" d="M17.853,6.146l-5.999-6C11.76,0.053,11.633,0,11.5,0h-11C0.225,0,0,0.224,0,0.5v23
+		C0,23.775,0.225,24,0.5,24h17c0.275,0,0.5-0.225,0.5-0.5v-17C18,6.367,17.947,6.24,17.853,6.146z M6.854,18.147
+		c0.195,0.195,0.195,0.513,0,0.707C6.756,18.951,6.629,19,6.5,19c-0.127,0-0.256-0.049-0.354-0.146l-4-4
+		c-0.195-0.193-0.195-0.51,0-0.707l4-4c0.195-0.195,0.512-0.195,0.707,0c0.195,0.196,0.195,0.513,0,0.707L3.207,14.5L6.854,18.147z
+		 M15.853,14.854l-3.999,4C11.756,18.951,11.629,19,11.5,19c-0.127,0-0.256-0.049-0.354-0.146c-0.195-0.193-0.195-0.51,0-0.707
+		l3.646-3.646l-3.646-3.646c-0.195-0.194-0.195-0.511,0-0.707c0.195-0.195,0.512-0.195,0.707,0l4,4.001
+		C16.049,14.344,16.049,14.659,15.853,14.854z M11.5,6.5v-6l6,6H11.5z"/>
+</g>
+<g id="Outline_Icons">
+	<g>
+		<polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="17.5,23.5 
+			0.5,23.5 0.5,0.5 11.5,0.5 17.5,6.5 		"/>
+		<polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="11.5,0.5 
+			11.5,6.5 17.5,6.5 		"/>
+		<polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+			11.5,10.5 15.5,14.5 11.5,18.5 		"/>
+		<polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="6.5,10.5 
+			2.5,14.5 6.5,18.5 		"/>
+	</g>
+</g>
+</svg>

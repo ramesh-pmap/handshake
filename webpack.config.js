@@ -21,7 +21,8 @@ module.exports = {
   },
 
   copydocs: [
-    fse.copy('./doc', './build/doc', {clobber: true})
+    fse.copy('./doc', './build/doc', {clobber: true}),
+    fse.copy('./src/static', './build/static', {clobber: true})
   ],
 
   module: {
@@ -63,7 +64,7 @@ module.exports = {
       },
       // Fonts.
       {
-        test: /\.(ttf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
+        test: /\.(csv|ttf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
         loader: 'file-loader'
       }
     ]

@@ -42,6 +42,7 @@ class Header extends React.Component {
               <NavItem active={false} href="/">Home</NavItem>
               <NavItem active={false} href="/toolkit">Toolkit</NavItem>
               <NavItem active={false} href="/data">Data Sample</NavItem>
+              <NavItem active={false} href="/icons">Icons</NavItem>
             </Nav>
           </CollapsibleNav>
 

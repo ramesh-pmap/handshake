@@ -1,6 +1,6 @@
-# cosmos
+# mars
 
-Client side code for the cosmos application as well as a NodeJS server for local development.
+Client side code for the mars application as well as a NodeJS server for local development.
 
 ## Setup
 
@@ -15,10 +15,10 @@ Client side code for the cosmos application as well as a NodeJS server for local
 
 ```
 # clone the source code
-$ git clone https://github.com/ProcessMAP/cosmos.git
+$ git clone https://github.com/ProcessMAP/mars.git
 
 # cd path to cloned source 
-$ cd cosmos 
+$ cd mars 
 
 # install npm dependencies
 $ npm install
@@ -222,5 +222,5 @@ Here is a list of some dependency packages we are using in the app:
 
 ### Bugs
 
-- Bugs & Features: [https://github.com/ProcessMAP/cosmos-Issues/issues](https://github.com/ProcessMAP/cosmos-Issues/issues?state=open)
+- Bugs & Features: [https://github.com/ProcessMAP/mars-Issues/issues](https://github.com/ProcessMAP/mars-Issues/issues?state=open)
 

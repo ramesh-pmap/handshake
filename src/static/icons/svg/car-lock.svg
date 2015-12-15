@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+<g id="Filled_Icons" display="none">
+	<g display="inline">
+		<path d="M12,15.506c0-0.828,0.671-1.5,1.5-1.5h0.551c0.254-2.242,2.141-3.997,4.449-3.997c0.079,0,0.152,0.018,0.232,0.022
+			l-0.807-0.807L15.964,4.32c-0.077-0.19-0.26-0.314-0.464-0.314h-11c-0.205,0-0.389,0.124-0.465,0.314L2.073,9.225l-1.927,1.928
+			C0.053,11.246,0,11.373,0,11.506v1.5h5c0.276,0,0.5,0.225,0.5,0.5c0,0.275-0.224,0.5-0.5,0.5H0v1.5c0,0.275,0.224,0.5,0.5,0.5H1
+			v1.5c0,0.275,0.224,0.5,0.5,0.5h3c0.276,0,0.5-0.225,0.5-0.5v-1.5h7V15.506z M3.238,9.006l1.6-4h10.323l1.601,4H3.238z"/>
+		<path d="M23.5,15.006H22v-0.497c0-1.93-1.57-3.5-3.5-3.5c-1.93,0-3.5,1.57-3.5,3.5v0.497h-1.5c-0.275,0-0.5,0.225-0.5,0.5v8
+			c0,0.275,0.225,0.5,0.5,0.5h10c0.275,0,0.5-0.225,0.5-0.5v-8C24,15.229,23.775,15.006,23.5,15.006z M19,19.354v1.653
+			c0,0.276-0.225,0.5-0.5,0.5c-0.275,0-0.5-0.224-0.5-0.5v-1.653c-0.294-0.174-0.5-0.481-0.5-0.847c0-0.552,0.447-1,1-1
+			c0.551,0,1,0.448,1,1C19.5,18.873,19.293,19.18,19,19.354z M21,15.006h-5v-0.497c0-1.379,1.122-2.5,2.5-2.5
+			c1.378,0,2.5,1.121,2.5,2.5V15.006z"/>
+	</g>
+</g>
+<g id="Outline_Icons">
+	<g>
+		<g>
+			
+				<rect x="1.5" y="15.501" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="3" height="2"/>
+			<polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				17.5,9.501 2.5,9.501 0.5,11.501 0.5,15.501 11.001,15.501 			"/>
+			<polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				15.5,4.501 4.5,4.501 2.5,9.501 17.5,9.501 			"/>
+			
+				<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="0.5" y1="13.501" x2="5" y2="13.501"/>
+		</g>
+		<g>
+			
+				<rect x="13.5" y="15.5" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="10" height="8"/>
+			
+				<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="18.5" y1="21.002" x2="18.5" y2="19.002"/>
+			<path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M15.5,15.502
+				v-0.999c0-1.657,1.343-3,3-3c1.656,0,3,1.343,3,3v0.999"/>
+			<path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="M19,18.502c0,0.275-0.225,0.5-0.5,0.5l0,0
+				c-0.275,0-0.5-0.225-0.5-0.5l0,0c0-0.275,0.225-0.5,0.5-0.5l0,0C18.775,18.002,19,18.227,19,18.502L19,18.502z"/>
+		</g>
+	</g>
+</g>
+</svg>

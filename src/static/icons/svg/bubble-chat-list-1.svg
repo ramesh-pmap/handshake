@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;}
+	.st2{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g id="Filled_Icons" class="st0">
+	<path class="st1" d="M23.5,1h-23C0.2,1,0,1.2,0,1.5v16C0,17.8,0.2,18,0.5,18H7v3.5c0,0.2,0.1,0.4,0.3,0.5c0.1,0,0.1,0,0.2,0
+		c0.1,0,0.3-0.1,0.4-0.1l3.9-3.9h11.8c0.3,0,0.5-0.2,0.5-0.5v-16C24,1.2,23.8,1,23.5,1z M6.5,13h-1C5.2,13,5,12.8,5,12.5
+		C5,12.2,5.2,12,5.5,12h1C6.8,12,7,12.2,7,12.5C7,12.8,6.8,13,6.5,13z M6.5,10h-1C5.2,10,5,9.8,5,9.5C5,9.2,5.2,9,5.5,9h1
+		C6.8,9,7,9.2,7,9.5C7,9.8,6.8,10,6.5,10z M6.5,7h-1C5.2,7,5,6.8,5,6.5C5,6.2,5.2,6,5.5,6h1C6.8,6,7,6.2,7,6.5C7,6.8,6.8,7,6.5,7z
+		 M18.5,13h-9C9.2,13,9,12.8,9,12.5C9,12.2,9.2,12,9.5,12h9c0.3,0,0.5,0.2,0.5,0.5C19,12.8,18.8,13,18.5,13z M18.5,10h-9
+		C9.2,10,9,9.8,9,9.5C9,9.2,9.2,9,9.5,9h9C18.8,9,19,9.2,19,9.5C19,9.8,18.8,10,18.5,10z M18.5,7h-9C9.2,7,9,6.8,9,6.5
+		C9,6.2,9.2,6,9.5,6h9C18.8,6,19,6.2,19,6.5C19,6.8,18.8,7,18.5,7z"/>
+</g>
+<g id="Outline_Icons">
+	<g>
+		<polygon class="st2" points="23.5,17.5 11.5,17.5 7.5,21.5 7.5,17.5 0.5,17.5 0.5,1.5 23.5,1.5 		"/>
+		<line class="st2" x1="9.5" y1="6.5" x2="18.5" y2="6.5"/>
+		<line class="st2" x1="9.5" y1="9.5" x2="18.5" y2="9.5"/>
+		<line class="st2" x1="9.5" y1="12.5" x2="18.5" y2="12.5"/>
+		<line class="st2" x1="5.5" y1="6.5" x2="6.5" y2="6.5"/>
+		<line class="st2" x1="5.5" y1="9.5" x2="6.5" y2="9.5"/>
+		<line class="st2" x1="5.5" y1="12.5" x2="6.5" y2="12.5"/>
+	</g>
+</g>
+</svg>

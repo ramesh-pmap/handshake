@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+<g id="Filled_Icons" display="none">
+	<path display="inline" d="M21.037,2.718V1.014c0-0.275-0.225-0.5-0.5-0.5s-0.5,0.225-0.5,0.5v1.705
+		c-0.176,0.098-0.353,0.197-0.521,0.287c-1.552,0.841-2.777,1.504-3.459,3.869C13.291,16.452,8.112,17.366,4.33,18.034
+		c-1.855,0.327-3.462,0.627-4.112,1.976c5.758,0.979,11.749,0.146,15.253-4.504c4.598-6.105,4.08-9.41,4.074-9.442
+		c-0.048-0.271,0.131-0.53,0.4-0.581c0.271-0.05,0.529,0.125,0.582,0.394c0.027,0.149,0.652,3.711-4.26,10.23
+		C12.926,20.545,7.719,21.4,4.202,21.4c-2.022,0-3.183-0.24-4.183-0.41c0.037,0.266,0.14,0.529,0.321,0.781
+		c0.964,1.336,3.869,2.234,7.229,2.234c7.719,0,15.967-4.465,15.967-16.993C23.537,4.468,21.752,3.146,21.037,2.718z"/>
+</g>
+<g id="Outline_Icons">
+	<g>
+		<g>
+			<path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M16.537,7.008
+				c0.729-2.521,2.08-2.902,4-4c0,0,2.5,1.167,2.5,4c0,21.045-23.803,17.412-22.484,13.456C1.87,16.508,12.225,21.945,16.537,7.008z
+				"/>
+		</g>
+		<path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M0.568,20.57
+			c0,0,10.021,2.238,15.302-4.771c4.834-6.417,4.167-9.834,4.167-9.834"/>
+		
+			<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="20.537" y1="1.008" x2="20.537" y2="3.008"/>
+	</g>
+</g>
+</svg>

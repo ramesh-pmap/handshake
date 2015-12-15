@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Outline_Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+<g>
+	
+		<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="3.496" y1="6.5" x2="7.996" y2="6.5"/>
+	
+		<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="3.496" y1="9.5" x2="11.496" y2="9.5"/>
+	
+		<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="3.496" y1="12.5" x2="9.496" y2="12.5"/>
+	
+		<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="3.496" y1="15.5" x2="8.496" y2="15.5"/>
+	<g>
+		<polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="22.5,15 
+			22.5,17.5 20,17.5 		"/>
+		<path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M13.756,17.499
+			C14.375,15.752,16.041,14.5,18,14.5s3.84,1.231,4.459,2.979"/>
+		<g>
+			<polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				13.5,22.966 13.5,20.466 16.5,20.466 			"/>
+			<path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M22.744,20.467
+				c-0.619,1.748-2.285,2.999-4.244,2.999s-3.84-1.231-4.459-2.979"/>
+		</g>
+	</g>
+	<g>
+		<polyline fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" points="11,21.5 0.5,21.5 0.5,0.5 
+			11.5,0.5 16.5,5.5 16.5,11 		"/>
+		<polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="11.5,0.5 
+			11.5,5.5 16.5,5.5 		"/>
+	</g>
+</g>
+</svg>

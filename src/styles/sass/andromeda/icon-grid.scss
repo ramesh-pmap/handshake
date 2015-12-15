@@ -1,0 +1,26 @@
+.icon-grid{
+  
+  .icon-grid-title{
+    font-weight: 500;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $gray-color;
+  }
+
+  .icon-grid-item{
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 4px;
+    transition: all 0.25s linear;
+    
+    &:hover{
+      background: lighten($info-color, 50%);
+      border-radius: 10px;
+    }
+    
+    img{
+      margin: 14px auto;
+      max-width: 32px;
+    }
+  }
+
+}

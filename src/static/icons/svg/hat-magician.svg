@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+<g id="Filled_Icons" display="none">
+	<g display="inline">
+		<path d="M4.5,15.275v5.229c0,1.72,3.888,2.5,7.5,2.5c3.611,0,7.5-0.78,7.5-2.5v-5.229c-1.736,0.945-5.33,1.229-7.5,1.229
+			C9.83,16.505,6.235,16.221,4.5,15.275z"/>
+		<path d="M4.5,11.099v0.907c0,0.436,2.628,1.5,7.5,1.5c4.871,0,7.5-1.064,7.5-1.5v-0.907c-2.242,0.612-4.911,0.907-7.5,0.907
+			C9.41,12.006,6.742,11.711,4.5,11.099z"/>
+		<path d="M4.5,13.275v0.729c0,0.436,2.628,1.5,7.5,1.5c4.871,0,7.5-1.064,7.5-1.5v-0.729c-1.736,0.945-5.33,1.229-7.5,1.229
+			C9.83,14.505,6.235,14.221,4.5,13.275z"/>
+		<path d="M12,2.006c-7.795,0-12,2.318-12,4.5c0,2.182,4.205,4.5,12,4.5c7.794,0,12-2.318,12-4.5C24,4.324,19.794,2.006,12,2.006z
+			 M12,8.006c-4.289,0-6.5-1.051-6.5-1.5c0-0.447,2.211-1.5,6.5-1.5c4.288,0,6.5,1.053,6.5,1.5C18.5,6.955,16.288,8.006,12,8.006z"
+			/>
+	</g>
+</g>
+<g id="Outline_Icons">
+	<g>
+		
+			<ellipse fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="12" cy="6.5" rx="11.5" ry="4"/>
+		
+			<ellipse fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="12" cy="6.5" rx="7" ry="2"/>
+		<path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M18.5,13.5
+			c0,1.104-2.634,2-6.5,2c-3.866,0-6.501-0.896-6.501-2"/>
+		<path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M18.5,11.5
+			c0,1.104-2.634,2-6.5,2c-3.866,0-6.501-0.896-6.501-2"/>
+		<path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M5.499,9.8v10.7
+			c0,1.104,2.635,2,6.501,2c3.866,0,6.499-0.896,6.499-2V9.8"/>
+	</g>
+</g>
+</svg>

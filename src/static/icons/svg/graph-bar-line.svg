@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;}
+	.st2{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g id="Filled_Icon" class="st0">
+	<g class="st1">
+		<path d="M23.5,23H23V8.5C23,8.2,22.8,8,22.5,8h-3C19.2,8,19,8.2,19,8.5V23h-2v-7.5c0-0.3-0.2-0.5-0.5-0.5h-3
+			c-0.3,0-0.5,0.2-0.5,0.5V23h-2v-9.5c0-0.3-0.2-0.5-0.5-0.5h-3C7.2,13,7,13.2,7,13.5V23H5v-4.5C5,18.2,4.8,18,4.5,18h-3
+			C1.2,18,1,18.2,1,18.5V23H0.5C0.2,23,0,23.2,0,23.5C0,23.8,0.2,24,0.5,24h23c0.3,0,0.5-0.2,0.5-0.5C24,23.2,23.8,23,23.5,23z"/>
+		<path d="M3,13c0.8,0,1.5-0.7,1.5-1.5c0-0.2,0-0.4-0.1-0.5l3.8-3.2C8.5,7.9,8.7,8,9,8c0.5,0,0.9-0.2,1.2-0.6l3.3,1.1
+			c0,0.8,0.7,1.5,1.5,1.5c0.8,0,1.5-0.7,1.5-1.5c0-0.3-0.1-0.5-0.2-0.7l4.2-4.9C20.6,3,20.8,3,21,3c0.8,0,1.5-0.7,1.5-1.5
+			C22.5,0.7,21.8,0,21,0c-0.8,0-1.5,0.7-1.5,1.5c0,0.3,0.1,0.5,0.2,0.7l-4.2,4.9C15.4,7,15.2,7,15,7c-0.5,0-0.9,0.2-1.2,0.6
+			l-3.3-1.1C10.5,5.7,9.8,5,9,5C8.2,5,7.5,5.7,7.5,6.5c0,0.2,0,0.4,0.1,0.5l-3.8,3.2C3.5,10.1,3.3,10,3,10c-0.8,0-1.5,0.7-1.5,1.5
+			C1.5,12.3,2.2,13,3,13z"/>
+	</g>
+</g>
+<g id="Outline_Icons">
+	<g>
+		<line class="st2" x1="0.5" y1="23.5" x2="23.5" y2="23.5"/>
+		<rect x="1.5" y="18.5" class="st2" width="3" height="5"/>
+		<rect x="7.5" y="13.5" class="st2" width="3" height="10"/>
+		<rect x="13.5" y="15.5" class="st2" width="3" height="8"/>
+		<rect x="19.5" y="8.5" class="st2" width="3" height="15"/>
+		<circle class="st2" cx="3" cy="11.5" r="1"/>
+		<circle class="st2" cx="9" cy="6.5" r="1"/>
+		<circle class="st2" cx="15" cy="8.5" r="1"/>
+		<circle class="st2" cx="21" cy="1.5" r="1"/>
+		<line class="st2" x1="3.8" y1="10.9" x2="8.2" y2="7.1"/>
+		<line class="st2" x1="9.9" y1="6.8" x2="14.1" y2="8.2"/>
+		<line class="st2" x1="20.3" y1="2.3" x2="15.7" y2="7.7"/>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;}
+	.st2{fill:none;stroke:#000000;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g id="Filled_Icons" class="st0">
+	<path class="st1" d="M23.9,1.6l-1.5-1.5c-0.2-0.2-0.5-0.2-0.7,0l-3,3c-0.2,0.2-0.2,0.5,0,0.7L19,4.2L8.6,14.7l-0.2-0.2L6.8,13
+		c-0.2-0.2-0.5-0.2-0.7,0c-0.2,0.2-0.2,0.5,0,0.7l0.7,0.7l-6.2,6.2C0.2,21,0,21.5,0,22c0,0.5,0.2,1,0.6,1.4C1,23.8,1.5,24,2,24
+		c0.5,0,1-0.2,1.4-0.6l6.2-6.2l0.7,0.7c0.2,0.2,0.5,0.2,0.7,0c0.2-0.2,0.2-0.5,0-0.7L10,16.1l0,0l-0.7-0.7L19.8,5l0.4,0.4
+		c0.1,0.1,0.2,0.1,0.4,0.1s0.3,0,0.4-0.1l3-3C24,2.2,24,1.8,23.9,1.6z"/>
+</g>
+<g id="Outline_Icons">
+	<g>
+		<path class="st2" d="M3.1,23.1c-0.6,0.6-1.5,0.6-2.1,0c-0.6-0.6-0.6-1.5,0-2.1l6.6-6.6l2.1,2.1L3.1,23.1z"/>
+		<line class="st3" x1="6.5" y1="13.3" x2="10.7" y2="17.5"/>
+		<line class="st2" x1="19.8" y1="4.2" x2="8.6" y2="15.4"/>
+		<rect x="19.1" y="1.7" transform="matrix(0.7072 -0.707 0.707 0.7072 4.2771 15.828)" class="st2" width="4.2" height="2.1"/>
+	</g>
+</g>
+</svg>

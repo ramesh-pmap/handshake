@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;}
+	.st2{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g id="Filled_Icons" class="st0">
+	<path class="st1" d="M20,7h-4V0.5C16,0.2,15.8,0,15.5,0C15.2,0,15,0.2,15,0.5V7H8V0.5C8,0.2,7.8,0,7.5,0C7.2,0,7,0.2,7,0.5V7H3
+		C2.7,7,2.5,7.2,2.5,7.5C2.5,7.8,2.7,8,3,8h2v6.5c0,2.3,1.8,4.2,4,4.5v2.5C9,21.8,9.2,22,9.5,22H11v1.5c0,0.3,0.2,0.5,0.5,0.5
+		c0.3,0,0.5-0.2,0.5-0.5V22h1.5c0.3,0,0.5-0.2,0.5-0.5V19c2.2-0.2,4-2.2,4-4.5V8h2c0.3,0,0.5-0.2,0.5-0.5C20.5,7.2,20.3,7,20,7z"/>
+</g>
+<g id="Outline_Icons">
+	<g>
+		<line class="st2" x1="3" y1="7.5" x2="20" y2="7.5"/>
+		<path class="st2" d="M17.5,7.5v7c0,2.2-1.8,4-4,4h-4c-2.2,0-4-1.8-4-4v-7"/>
+		<rect x="9.5" y="18.5" class="st2" width="4" height="3"/>
+		<line class="st2" x1="11.5" y1="21.5" x2="11.5" y2="23.5"/>
+		<line class="st2" x1="7.5" y1="7.5" x2="7.5" y2="0.5"/>
+		<line class="st2" x1="15.5" y1="7.5" x2="15.5" y2="0.5"/>
+	</g>
+</g>
+</svg>

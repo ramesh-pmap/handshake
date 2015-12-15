@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Outline_Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#000000;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g>
+	<g>
+		<rect x="1.5" y="4.5" class="st0" width="17" height="12"/>
+		<polyline class="st0" points="22.5,23.5 22.5,0.5 1.4,0.5 		"/>
+		<line class="st1" x1="15.5" y1="4.5" x2="15.5" y2="0.5"/>
+		<line class="st1" x1="4.5" y1="4.5" x2="4.5" y2="0.5"/>
+	</g>
+	<g>
+		<polyline class="st0" points="9.2,12.4 7.5,12.4 7.5,8.5 9.2,8.5 		"/>
+		<line class="st0" x1="7.5" y1="10.5" x2="8.7" y2="10.5"/>
+	</g>
+	<polyline class="st0" points="11.5,12.4 11.5,8.5 13.5,12.4 13.5,8.5 	"/>
+	<g>
+		<path class="st0" d="M3.5,12.4V8.5h0.9c0.8,0,0.9,0.4,0.9,1c0,0.5-0.1,1-0.9,1H3.5"/>
+		<line class="st0" x1="4.4" y1="10.5" x2="5.4" y2="12.4"/>
+	</g>
+	<g>
+		<line class="st0" x1="15.5" y1="12.4" x2="15.5" y2="8.5"/>
+		<line class="st0" x1="14.5" y1="8.5" x2="16.4" y2="8.5"/>
+	</g>
+</g>
+</svg>

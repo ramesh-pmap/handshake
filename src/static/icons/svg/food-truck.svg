@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+<g id="Filled_Icons" display="none">
+	<g display="inline">
+		<g>
+			<g>
+				<circle cx="5" cy="21.512" r="2.5"/>
+			</g>
+			<g>
+				<circle cx="19" cy="21.512" r="2.5"/>
+			</g>
+		</g>
+		<g>
+			<path d="M2.559,19.012c0.631-0.615,1.491-1,2.441-1c0.95,0,1.811,0.385,2.441,1H7.5V9.018H4.999
+				C4.818,9.019,4.651,9.11,4.563,9.27l-2.466,4.438l-1.95,1.95C0.053,15.752,0,15.879,0,16.012v3H2.559z M3.553,13.781l1.5-2.999
+				c0.085-0.169,0.258-0.276,0.447-0.276H6c0.276,0,0.5,0.224,0.5,0.5c0,0.276-0.224,0.5-0.5,0.5H5.809l-1.361,2.725
+				C4.359,14.404,4.183,14.506,4,14.506c-0.075,0-0.151-0.018-0.224-0.052C3.529,14.33,3.43,14.029,3.553,13.781z"/>
+			<path d="M8.148,20.012c0.219,0.457,0.352,0.961,0.352,1.5c0,0.172-0.026,0.336-0.051,0.5h7.102
+				c-0.023-0.164-0.051-0.328-0.051-0.5c0-0.539,0.133-1.043,0.352-1.5H8.148z"/>
+			<path d="M22.148,20.012c0.219,0.457,0.352,0.961,0.352,1.5c0,0.172-0.025,0.336-0.051,0.5H23.5c0.275,0,0.5-0.223,0.5-0.5v-1.5
+				H22.148z"/>
+			<path d="M1.5,21.512c0-0.539,0.133-1.043,0.352-1.5H0v1.5c0,0.277,0.224,0.5,0.5,0.5h1.051C1.526,21.848,1.5,21.684,1.5,21.512z"
+				/>
+			<path d="M8.5,19.012h8.059c0.631-0.615,1.491-1,2.441-1c0.95,0,1.81,0.385,2.441,1H24v-14.5c0-0.275-0.225-0.5-0.5-0.5L9,4.006
+				c-0.133,0-0.26,0.053-0.354,0.147C8.553,4.247,8.5,4.373,8.5,4.506V19.012z M21,16.506c0,0.275-0.225,0.5-0.5,0.5h-9
+				c-0.276,0-0.5-0.225-0.5-0.5v-0.494h10V16.506z M12.084,7.229c0.093-0.139,0.249-0.223,0.416-0.223h7
+				c0.167,0,0.322,0.084,0.416,0.223l1.852,2.777H10.232L12.084,7.229z M21,11.006v2.006H11v-2.006H21z M10.5,14.012h11
+				c0.275,0,0.5,0.225,0.5,0.5c0,0.277-0.225,0.5-0.5,0.5h-11c-0.276,0-0.5-0.223-0.5-0.5C10,14.234,10.224,14.012,10.5,14.012z"/>
+		</g>
+	</g>
+</g>
+<g id="Outline_Icons">
+	<g>
+		<g>
+			
+				<circle fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="5" cy="21.506" r="2"/>
+			
+				<circle fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="19" cy="21.506" r="2"/>
+			<polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				3,21.506 0.5,21.506 0.5,16.006 2.5,14.006 5,9.506 8.5,9.506 8.5,4.506 23.5,4.506 23.5,21.506 21,21.506 			"/>
+			
+				<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="7" y1="21.506" x2="17" y2="21.506"/>
+			<polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				6.5,11.506 6,11.506 4.5,14.506 			"/>
+			
+				<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="8.5" y1="9.506" x2="8.5" y2="19.506"/>
+			
+				<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="0.5" y1="19.506" x2="23.5" y2="19.506"/>
+		</g>
+		<polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+			10.5,10.506 21.5,10.506 19.5,7.506 12.5,7.506 		"/>
+		
+			<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="10.5" y1="14.506" x2="21.5" y2="14.506"/>
+		
+			<rect x="11.5" y="10.506" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="9" height="6"/>
+	</g>
+</g>
+</svg>

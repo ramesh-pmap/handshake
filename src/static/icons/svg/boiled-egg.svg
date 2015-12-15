@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+<g id="Filled_Icons" display="none">
+	<g display="inline">
+		<path d="M22.228,13.588c0.024-0.147-0.018-0.293-0.112-0.404c-0.095-0.113-0.234-0.178-0.382-0.178H3
+			c-0.146,0-0.286,0.064-0.381,0.178c-0.096,0.111-0.137,0.26-0.112,0.404c0.447,2.715,1.986,5.537,3.979,7.418H18.25
+			C20.241,19.125,21.779,16.303,22.228,13.588z"/>
+		<path d="M20.863,12.006c0.003-0.228,0.004-0.421,0.004-0.5c0-6.126-3.973-11.5-8.5-11.5c-4.528,0-8.5,5.374-8.5,11.5
+			c0,0.088,0.002,0.279,0.004,0.5H20.863z M12.367,2.632c0.275,0,0.5,0.224,0.5,0.5c0,0.276-0.225,0.5-0.5,0.5
+			c-2.274,0-4.424,3.138-4.424,6.456c0,0.276-0.224,0.5-0.5,0.5c-0.276,0-0.5-0.224-0.5-0.5C6.943,6.568,9.263,2.632,12.367,2.632z"
+			/>
+		<path d="M16.867,22.006H3.88c-0.317,0.419-0.513,0.936-0.513,1.5c0,0.275,0.224,0.5,0.5,0.5h17c0.275,0,0.5-0.225,0.5-0.5
+			c0-0.564-0.195-1.081-0.514-1.5H16.867z"/>
+	</g>
+</g>
+<g id="Outline_Icons">
+	<g>
+		<path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="M20.326,13.5
+			c0.027-0.329,0.041-1.662,0.041-2c0-5.522-3.582-11-8-11s-8,5.478-8,11c0,0.338,0.014,1.671,0.039,2H20.326z"/>
+		<path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M12.367,3.126
+			c-2.719,0-4.924,3.558-4.924,6.956"/>
+		<path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M3.867,23.5h17
+			c0-1.105-0.896-2-2-2h-2.008c2.547-1.81,4.396-5.098,4.875-8H3c0.479,2.902,2.328,6.19,4.875,8H5.867
+			C4.763,21.5,3.867,22.395,3.867,23.5z"/>
+		
+			<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="7.875" y1="21.5" x2="16.867" y2="21.5"/>
+	</g>
+</g>
+</svg>
