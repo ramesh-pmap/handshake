@@ -9,6 +9,7 @@ import LoginPage from './modules/global/pages/login';
 import ToolkitHome from './modules/toolkit/pages/home';
 import DataPage from './modules/global/pages/data';
 import IconsPage from './modules/global/pages/icon-grid';
+import DocMgtPage from './modules/document-management/home';
 
 // import ToolkitCSS from './modules/toolkit/pages/css';
 
@@ -24,6 +25,7 @@ const template = (
 		<Route path="toolkit" component={ToolkitHome} title="Toolkit Page" />
 		<Route path="data" component={DataPage} title="Data Sample Page" />
 		<Route path="icons" component={IconsPage} title="Icons Page" />
+		<Route path="document-management" component={DocMgtPage} title="Document Management" />
 
 	</Router>
 );
