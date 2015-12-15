@@ -1,0 +1,8388 @@
+[
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"atomic-bomb",
+    "Tags":"bomb, atomic, danger, hiroshima, weapon"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"bin-1",
+    "Tags":"garbage, trash, trashcan, waste"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"bin-2",
+    "Tags":"garbage, trash, trashcan, waste"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"binoculars",
+    "Tags":"explore, search, settings"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"delete-1",
+    "Tags":"cancel, cancelled, cross out, null"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"delete-2",
+    "Tags":"cancel, cancelled, cross out, null"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"flash-1",
+    "Tags":"lightning bolt"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"flash-2",
+    "Tags":"lightning bolt"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"hide",
+    "Tags":"cross out, disable, eye"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"link-1",
+    "Tags":"anchor, anchor tag, hyperlink, internet, web"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"link-2",
+    "Tags":"anchor, anchor tag, hyperlink, internet, web"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"link-3",
+    "Tags":"anchor, anchor tag, hyperlink, internet, web"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"link-broken-1",
+    "Tags":"broken, anchor, anchor tag, error, hyperlink, internet, web"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"link-broken-2",
+    "Tags":"broken, anchor, anchor tag, error, hyperlink, internet, web"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"paperclip-1",
+    "Tags":"bind, document, office, office supply, paper"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"paperclip-2",
+    "Tags":"bind, document, office, office supply, paper"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"pen-1",
+    "Tags":"pen, paper, ink, office supply, write"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"pen-2",
+    "Tags":"pen, paper, ink, office supply, write"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"pen-3",
+    "Tags":"pen, paper, ink, office supply, write"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"pen-4",
+    "Tags":"pen, paper, ink, office supply, write"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"pencil-1",
+    "Tags":"erase, write, office, school, supply"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"pencil-2",
+    "Tags":"erase, write, office, school, supply"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"pencil-3",
+    "Tags":"erase, write, office, school, supply"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"pencil-circle",
+    "Tags":"erase, write, office, school, supply"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"pencil-fill",
+    "Tags":"document, enter, entry, fill, form, write"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"pencil-write-1",
+    "Tags":"document, enter, entry, fill, form, write"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"pencil-write-2",
+    "Tags":"document, enter, entry, fill, form, write"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"pin-1",
+    "Tags":"announcement, bulletin, board, important, note, notice"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"pin-2",
+    "Tags":"announcement, bulletin, board, important, note, notice"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"print-picture",
+    "Tags":"computer, printer, photo"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"print-text",
+    "Tags":"computer, printer, document, file"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"quill-circle",
+    "Tags":"letter, script, write"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"quill-ink",
+    "Tags":"letter, script, write"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"quill-write",
+    "Tags":"letter, script, write"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"scissors-1",
+    "Tags":"cut, school supply, office"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"scissors-2",
+    "Tags":"cut, school supply, office"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"search",
+    "Tags":"magnifying glass"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"skull-1",
+    "Tags":"danger, hazard, toxic"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"skull-2",
+    "Tags":"danger, hazard, toxic"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"typewriter-1",
+    "Tags":"keyboard, letters, retro"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"typewriter-2",
+    "Tags":"keyboard, letters, retro"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"view-1",
+    "Tags":"eye, eyeball"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"view-2",
+    "Tags":"eye, eyeball"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"zoom-area-in",
+    "Tags":"plus, magnify, magnifying glass"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"zoom-area-out",
+    "Tags":"minus, magnify, magnifying glass"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"zoom-in-1",
+    "Tags":"plus, magnify, magnifying glass"
+  },
+  {
+    "Folder":1,
+    "Directory":"content-edition",
+    "Category":"content edition",
+    "Name":"zoom-out-1",
+    "Tags":"minus, magnify, magnifying glass"
+  },
+  {
+    "Folder":2,
+    "Directory":"status",
+    "Category":"status",
+    "Name":"check-1",
+    "Tags":"checkmark, confirm"
+  },
+  {
+    "Folder":2,
+    "Directory":"status",
+    "Category":"status",
+    "Name":"check-2",
+    "Tags":"checkmark, confirm"
+  },
+  {
+    "Folder":2,
+    "Directory":"status",
+    "Category":"status",
+    "Name":"check-badge",
+    "Tags":"checkmark, confirm"
+  },
+  {
+    "Folder":2,
+    "Directory":"status",
+    "Category":"status",
+    "Name":"check-box-1",
+    "Tags":"checkmark, confirm"
+  },
+  {
+    "Folder":2,
+    "Directory":"status",
+    "Category":"status",
+    "Name":"check-box-2",
+    "Tags":"checkmark, confirm"
+  },
+  {
+    "Folder":2,
+    "Directory":"status",
+    "Category":"status",
+    "Name":"check-circle-1",
+    "Tags":"checkmark, confirm"
+  },
+  {
+    "Folder":2,
+    "Directory":"status",
+    "Category":"status",
+    "Name":"check-circle-2",
+    "Tags":"checkmark, confirm"
+  },
+  {
+    "Folder":2,
+    "Directory":"status",
+    "Category":"status",
+    "Name":"check-double-1",
+    "Tags":"checkmark, confirm"
+  },
+  {
+    "Folder":2,
+    "Directory":"status",
+    "Category":"status",
+    "Name":"check-double-2",
+    "Tags":"checkmark, confirm"
+  },
+  {
+    "Folder":2,
+    "Directory":"status",
+    "Category":"status",
+    "Name":"check-shield",
+    "Tags":"checkmark, confirm"
+  },
+  {
+    "Folder":2,
+    "Directory":"status",
+    "Category":"status",
+    "Name":"checklist",
+    "Tags":"checkmark, confirm"
+  },
+  {
+    "Folder":2,
+    "Directory":"status",
+    "Category":"status",
+    "Name":"close-badge",
+    "Tags":"x"
+  },
+  {
+    "Folder":2,
+    "Directory":"status",
+    "Category":"status",
+    "Name":"close-shield",
+    "Tags":"x"
+  },
+  {
+    "Folder":2,
+    "Directory":"status",
+    "Category":"status",
+    "Name":"close",
+    "Tags":"x"
+  },
+  {
+    "Folder":2,
+    "Directory":"status",
+    "Category":"status",
+    "Name":"cursor-choose",
+    "Tags":"check, close, finger, pointer, touch gesture"
+  },
+  {
+    "Folder":3,
+    "Directory":"settings",
+    "Category":"settings",
+    "Name":"brightness-decrease",
+    "Tags":"display, sun, darken, dim"
+  },
+  {
+    "Folder":3,
+    "Directory":"settings",
+    "Category":"settings",
+    "Name":"brightness-increase",
+    "Tags":"display, sun, brighten"
+  },
+  {
+    "Folder":3,
+    "Directory":"settings",
+    "Category":"settings",
+    "Name":"cog-check",
+    "Tags":"checkmark, options"
+  },
+  {
+    "Folder":3,
+    "Directory":"settings",
+    "Category":"settings",
+    "Name":"cog-double-1",
+    "Tags":"options"
+  },
+  {
+    "Folder":3,
+    "Directory":"settings",
+    "Category":"settings",
+    "Name":"cog-double-2",
+    "Tags":"options"
+  },
+  {
+    "Folder":3,
+    "Directory":"settings",
+    "Category":"settings",
+    "Name":"cog-lightbulb",
+    "Tags":"idea, options"
+  },
+  {
+    "Folder":3,
+    "Directory":"settings",
+    "Category":"settings",
+    "Name":"cog-magnify",
+    "Tags":"magnifying glass, options"
+  },
+  {
+    "Folder":3,
+    "Directory":"settings",
+    "Category":"settings",
+    "Name":"cog-play",
+    "Tags":"options, play, media"
+  },
+  {
+    "Folder":3,
+    "Directory":"settings",
+    "Category":"settings",
+    "Name":"cog-square",
+    "Tags":"options"
+  },
+  {
+    "Folder":3,
+    "Directory":"settings",
+    "Category":"settings",
+    "Name":"cog",
+    "Tags":"options"
+  },
+  {
+    "Folder":3,
+    "Directory":"settings",
+    "Category":"settings",
+    "Name":"gauge",
+    "Tags":"dashboard, meter, monitor, speed"
+  },
+  {
+    "Folder":3,
+    "Directory":"settings",
+    "Category":"settings",
+    "Name":"hammer-1",
+    "Tags":"construction, fix, tool"
+  },
+  {
+    "Folder":3,
+    "Directory":"settings",
+    "Category":"settings",
+    "Name":"hammer-2",
+    "Tags":"construction, fix, tool"
+  },
+  {
+    "Folder":3,
+    "Directory":"settings",
+    "Category":"settings",
+    "Name":"screwdriver",
+    "Tags":"construction, fix, tool"
+  },
+  {
+    "Folder":3,
+    "Directory":"settings",
+    "Category":"settings",
+    "Name":"settings-1",
+    "Tags":"dial, options"
+  },
+  {
+    "Folder":3,
+    "Directory":"settings",
+    "Category":"settings",
+    "Name":"settings-2",
+    "Tags":"dial, options"
+  },
+  {
+    "Folder":3,
+    "Directory":"settings",
+    "Category":"settings",
+    "Name":"settings-3",
+    "Tags":"dial, options"
+  },
+  {
+    "Folder":3,
+    "Directory":"settings",
+    "Category":"settings",
+    "Name":"slider-1",
+    "Tags":"options"
+  },
+  {
+    "Folder":3,
+    "Directory":"settings",
+    "Category":"settings",
+    "Name":"slider-2",
+    "Tags":"options"
+  },
+  {
+    "Folder":3,
+    "Directory":"settings",
+    "Category":"settings",
+    "Name":"switch-down",
+    "Tags":"light, light switch, turn off"
+  },
+  {
+    "Folder":3,
+    "Directory":"settings",
+    "Category":"settings",
+    "Name":"switch-up",
+    "Tags":"light, light switch, turn on"
+  },
+  {
+    "Folder":3,
+    "Directory":"settings",
+    "Category":"settings",
+    "Name":"toolbox",
+    "Tags":"fix, maintenance, tools"
+  },
+  {
+    "Folder":3,
+    "Directory":"settings",
+    "Category":"settings",
+    "Name":"wave",
+    "Tags":"monitor, pulse"
+  },
+  {
+    "Folder":3,
+    "Directory":"settings",
+    "Category":"settings",
+    "Name":"wrench-double",
+    "Tags":"fix, maintenace, options, tools"
+  },
+  {
+    "Folder":3,
+    "Directory":"settings",
+    "Category":"settings",
+    "Name":"wrench",
+    "Tags":"fix, maintenace, options, tools"
+  },
+  {
+    "Folder":4,
+    "Directory":"login",
+    "Category":"login",
+    "Name":"cursor-dial",
+    "Tags":"adjust, finger, hand, move, point, touch gesture"
+  },
+  {
+    "Folder":4,
+    "Directory":"login",
+    "Category":"login",
+    "Name":"dial-pad",
+    "Tags":"call, circle, circular, phone, numbers, telephone"
+  },
+  {
+    "Folder":4,
+    "Directory":"login",
+    "Category":"login",
+    "Name":"exit-sign",
+    "Tags":"leave, rectangle, rectangular, goodbye"
+  },
+  {
+    "Folder":4,
+    "Directory":"login",
+    "Category":"login",
+    "Name":"key-1",
+    "Tags":"entrance, home, permissions"
+  },
+  {
+    "Folder":4,
+    "Directory":"login",
+    "Category":"login",
+    "Name":"key-2",
+    "Tags":"entrance, home, permissions"
+  },
+  {
+    "Folder":4,
+    "Directory":"login",
+    "Category":"login",
+    "Name":"key-hole-1",
+    "Tags":"entrance, home, permissions"
+  },
+  {
+    "Folder":4,
+    "Directory":"login",
+    "Category":"login",
+    "Name":"key-hole-2",
+    "Tags":"entrance, home, permissions"
+  },
+  {
+    "Folder":4,
+    "Directory":"login",
+    "Category":"login",
+    "Name":"login-1",
+    "Tags":"enter, sign in"
+  },
+  {
+    "Folder":4,
+    "Directory":"login",
+    "Category":"login",
+    "Name":"login-2",
+    "Tags":"enter, sign in"
+  },
+  {
+    "Folder":4,
+    "Directory":"login",
+    "Category":"login",
+    "Name":"login-3",
+    "Tags":"enter, sign in"
+  },
+  {
+    "Folder":4,
+    "Directory":"login",
+    "Category":"login",
+    "Name":"logout-1",
+    "Tags":"exit, leave, sign out"
+  },
+  {
+    "Folder":4,
+    "Directory":"login",
+    "Category":"login",
+    "Name":"logout-2",
+    "Tags":"exit, leave, sign out"
+  },
+  {
+    "Folder":4,
+    "Directory":"login",
+    "Category":"login",
+    "Name":"logout-3",
+    "Tags":"exit, leave, sign out"
+  },
+  {
+    "Folder":5,
+    "Directory":"time",
+    "Category":"time",
+    "Name":"alarm-clock",
+    "Tags":"alert, notification, reminder"
+  },
+  {
+    "Folder":5,
+    "Directory":"time",
+    "Category":"time",
+    "Name":"alarm-silent",
+    "Tags":"alert, mute, notification, reminder, silence"
+  },
+  {
+    "Folder":5,
+    "Directory":"time",
+    "Category":"time",
+    "Name":"alarm-snooze",
+    "Tags":"alert, delay, notification, reminder"
+  },
+  {
+    "Folder":5,
+    "Directory":"time",
+    "Category":"time",
+    "Name":"alarm-sound",
+    "Tags":"alert, increase, loud, notification, reminder, volume"
+  },
+  {
+    "Folder":5,
+    "Directory":"time",
+    "Category":"time",
+    "Name":"alarm",
+    "Tags":"bell, alert, notification, reminder"
+  },
+  {
+    "Folder":5,
+    "Directory":"time",
+    "Category":"time",
+    "Name":"calendar-1",
+    "Tags":"date, event, notification, notice, reminder"
+  },
+  {
+    "Folder":5,
+    "Directory":"time",
+    "Category":"time",
+    "Name":"calendar-2",
+    "Tags":"date, event, notification, notice, reminder"
+  },
+  {
+    "Folder":5,
+    "Directory":"time",
+    "Category":"time",
+    "Name":"clock-1",
+    "Tags":"hour, minute, second, alert, analog, event, notice, reminder"
+  },
+  {
+    "Folder":5,
+    "Directory":"time",
+    "Category":"time",
+    "Name":"clock-2",
+    "Tags":"hour, minute, second, alert, analog, event, notice, reminder"
+  },
+  {
+    "Folder":5,
+    "Directory":"time",
+    "Category":"time",
+    "Name":"clock-3",
+    "Tags":"hour, minute, second, alert, analog, event, notice, reminder"
+  },
+  {
+    "Folder":5,
+    "Directory":"time",
+    "Category":"time",
+    "Name":"clock-fire",
+    "Tags":"alert, attention, critical, emergency, event, notice, reminder"
+  },
+  {
+    "Folder":5,
+    "Directory":"time",
+    "Category":"time",
+    "Name":"hourglass-1",
+    "Tags":"alert, attention, notice, reminder"
+  },
+  {
+    "Folder":5,
+    "Directory":"time",
+    "Category":"time",
+    "Name":"hourglass-2",
+    "Tags":"alert, attention, notice, reminder"
+  },
+  {
+    "Folder":5,
+    "Directory":"time",
+    "Category":"time",
+    "Name":"stopwatch",
+    "Tags":"alert, attention, measure, minute, second, timer"
+  },
+  {
+    "Folder":5,
+    "Directory":"time",
+    "Category":"time",
+    "Name":"timer-full-1",
+    "Tags":"measure, minute, second, stopwatch"
+  },
+  {
+    "Folder":5,
+    "Directory":"time",
+    "Category":"time",
+    "Name":"timer-full-2",
+    "Tags":"measure, minute, second, stopwatch"
+  },
+  {
+    "Folder":5,
+    "Directory":"time",
+    "Category":"time",
+    "Name":"timer-half-1",
+    "Tags":"measure, minute, second, stopwatch"
+  },
+  {
+    "Folder":5,
+    "Directory":"time",
+    "Category":"time",
+    "Name":"timer-half-2",
+    "Tags":"measure, minute, second, stopwatch"
+  },
+  {
+    "Folder":5,
+    "Directory":"time",
+    "Category":"time",
+    "Name":"timer-half-3",
+    "Tags":"measure, minute, second, stopwatch"
+  },
+  {
+    "Folder":5,
+    "Directory":"time",
+    "Category":"time",
+    "Name":"timer-half-4",
+    "Tags":"measure, minute, second, stopwatch"
+  },
+  {
+    "Folder":5,
+    "Directory":"time",
+    "Category":"time",
+    "Name":"timer-quarter-1",
+    "Tags":"measure, minute, second, stopwatch"
+  },
+  {
+    "Folder":5,
+    "Directory":"time",
+    "Category":"time",
+    "Name":"timer-quarter-2",
+    "Tags":"measure, minute, second, stopwatch"
+  },
+  {
+    "Folder":5,
+    "Directory":"time",
+    "Category":"time",
+    "Name":"timer-three-quarter-1",
+    "Tags":"measure, minute, second, stopwatch"
+  },
+  {
+    "Folder":5,
+    "Directory":"time",
+    "Category":"time",
+    "Name":"timer-three-quarter-2",
+    "Tags":"measure, minute, second, stopwatch"
+  },
+  {
+    "Folder":5,
+    "Directory":"time",
+    "Category":"time",
+    "Name":"watch-1",
+    "Tags":"analog, wrist, wristwatch, hour, minute, second, notice, reminder"
+  },
+  {
+    "Folder":5,
+    "Directory":"time",
+    "Category":"time",
+    "Name":"watch-2",
+    "Tags":"analog, wrist, wristwatch, hour, minute, second, notice, reminder"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"at-sign-circle",
+    "Tags":"email, send, internet"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"at-sign-stamp",
+    "Tags":"email, send, internet"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"at-sign",
+    "Tags":"email, send, internet"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-2",
+    "Tags":"envelope, send, internet"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-add",
+    "Tags":"contact, envelope, send, internet"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-at-sign",
+    "Tags":"envelope, notice, notification, internet"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-audio-video",
+    "Tags":"envelope, media, notice, notification, internet"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-block",
+    "Tags":"cancel, disable, envelope, internet, null"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-check-1",
+    "Tags":"envelope, increase, magnifying glass, magnifying lens, zoom in"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-check-2",
+    "Tags":"envelope, increase, magnifying glass, magnifying lens, zoom in"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-circle",
+    "Tags":"envelope, circular, notice, notification"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-compose",
+    "Tags":"envelope, write, internet"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-death-threat",
+    "Tags":"envelope, internet, danger, hazard, toxic, warning"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-delete",
+    "Tags":"cancel, disable, envelope, internet, null"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-download",
+    "Tags":"envelope, internet"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-favorite-1",
+    "Tags":"envelope, star, internet"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-favorite-2",
+    "Tags":"envelope, heart, internet"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-forward",
+    "Tags":"envelope, send, internet"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-inbox-1",
+    "Tags":"download, envelope, internet"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-lock",
+    "Tags":"envelope, internet, permission, safe, secure, security"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-love-letter",
+    "Tags":"envelope, heart, internet"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-outbox-1",
+    "Tags":"envelope, upload, send, forward, reply, reply all, internet"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-picture",
+    "Tags":"envelope, file, photo, receive, send, internet"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-read-1",
+    "Tags":"checkmark, confirm, envelope, circular, circle, internet"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-read-2",
+    "Tags":"envelope, open, internet"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-read-later",
+    "Tags":"envelope, internet, reminder, time"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-receipt",
+    "Tags":"envelope, bill, currency, money, internet"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-refresh-1",
+    "Tags":"envelope, internet, reload, sync"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-refresh-2",
+    "Tags":"envelope, internet, reload, sync"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-remove",
+    "Tags":"delete, envelope, internet, minus"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-reply-all",
+    "Tags":"arrow, envelope, send, internet"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-reply",
+    "Tags":"arrow, envelope, send, internet"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-send-1",
+    "Tags":"paper, airplane, send"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-send-2",
+    "Tags":"paper, airplane, send"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-send-3",
+    "Tags":"envelope, forward, send, internet, priority, rush, hurry"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-setup",
+    "Tags":"cogs, options, envelope, internet, settings"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-share",
+    "Tags":"envelope, branch, settings"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-target",
+    "Tags":"circular, circle, envelope, focus, internet"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-text",
+    "Tags":"document, envelope, letter, internet, words"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-upload",
+    "Tags":"arrow, envelope, internet, send"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email-warning",
+    "Tags":"attention, envelope, internet"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"email",
+    "Tags":"envelope, internet"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"envelope-1",
+    "Tags":"file, Folder, manila Folder, documents, letter"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"envelope-2",
+    "Tags":"letter, postage, send, stamp, write"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"envelope-3",
+    "Tags":"letter, postage, send, stamp, write"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"forward-box",
+    "Tags":"email, deliver, send, internet"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"forward",
+    "Tags":"arrow, direct, send, right"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"inbox-1",
+    "Tags":"download, arrow, box"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"inbox-picture",
+    "Tags":"box, download, file, Folder, photo"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"inbox-text",
+    "Tags":"box, document, download, file, Folder"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"inbox",
+    "Tags":"arrow, box, document, download"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"mailbox-1",
+    "Tags":"envelope, letter, send, ship, package, postage, stamp"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"mailbox-2",
+    "Tags":"envelope, letter, send, ship, package, postage, stamp"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"mailbox-3",
+    "Tags":"envelope, letter, send, ship, package, postage, stamp"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"mailbox-4",
+    "Tags":"inbox, file, document"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"outbox",
+    "Tags":"arrow, cloud, upload, send"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"reply-all",
+    "Tags":"arrow, email, forward, left, response, send"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"reply",
+    "Tags":"arrow, email, forward, left, response, send"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"stamp-1",
+    "Tags":"envelope, letter, postage, ship"
+  },
+  {
+    "Folder":6,
+    "Directory":"email",
+    "Category":"email",
+    "Name":"ups-document",
+    "Tags":"delivery, package, parcel, send, ship"
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"account-circle-1",
+    "Tags":"default, figure, person"
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"account-circle-2",
+    "Tags":"arrow, default, figure, person, sync"
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"account-code",
+    "Tags":"default, digital, person, scan"
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"account-expand",
+    "Tags":"arrow, default, figure, person, increase"
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"account-favorite",
+    "Tags":"default, figure, person, heart"
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"account-files",
+    "Tags":"Folder, inbox, document, person"
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"account-find-1",
+    "Tags":"magnifying glass, person, search, zoom"
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"account-find-2",
+    "Tags":"magnifying glass, person, search, zoom"
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"account-flag",
+    "Tags":"default, figure, person"
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"account-flash",
+    "Tags":"lightning bolt, person"
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"account-group-1",
+    "Tags":"business, figure, person, people"
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"account-group-2",
+    "Tags":"business, figure, person, people"
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"account-group-3",
+    "Tags":"business, figure, person, people"
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"account-group-4",
+    "Tags":"business, figure, leader, person, people"
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"account-group-5",
+    "Tags":"business, figure, person, people"
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"account-group-circle",
+    "Tags":"business, circle, circular, figure, leader, person, people"
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"account-home",
+    "Tags":"couple, figure, home, person, people"
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"account-lock",
+    "Tags":"encryption, figure, key, password, person, security"
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"account-protection",
+    "Tags":"person, security, shield"
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"account-target",
+    "Tags":"circle, focus, person"
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"account-text",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"account-up-down",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"account",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"business-check",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"business-decrease",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"business-hierarchy",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"business-idea",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"business-increase",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"business-man-1",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"business-man-2",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"business-man-speech",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"business-money",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"business-question",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"business-setting",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"business-shield",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"business-statistics-1",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"business-statistics-2",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"business-statistics-3",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"business-strategy",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"business-target",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"business-time",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"female",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"gender-female",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"gender-male-female",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"gender-male",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"group-chat",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"group-global",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"group-wifi",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"hierarchy-business",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"id-card-1",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"id-card-2",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"id-card-3",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"id-card-4",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"id-card-double",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"id-picture-1",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"id-picture-2",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"male",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"phone-book-1",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"phone-book-2",
+    "Tags":""
+  },
+  {
+    "Folder":7,
+    "Directory":"users",
+    "Category":"users",
+    "Name":"profile-picture-1",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"group-add-1",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"group-add-2",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"group-block",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"group-cash",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"group-check",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"group-download",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"group-edit",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"group-favorite-heart",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"group-favorite-star",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"group-information",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"group-lock",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"group-protect",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"group-refresh",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"group-remove",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"group-setting",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"group-subtract-1",
+    "Tags":"minus, remove, -"
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"group-subtract-2",
+    "Tags":"minus, remove, -"
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"group-timeout",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"group-unknown",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"group-upload",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"group-view",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"group-warning",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-1",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-2",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-add-1",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-add-2",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-block-1",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-block-2",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-cash-1",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-cash-2",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-check-1",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-check-2",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-download-1",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-download-2",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-edit-1",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-edit-2",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-favorite-heart-1",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-favorite-heart-2",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-favorite-star-1",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-favorite-star-2",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-information-1",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-information-2",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-lock-1",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-lock-2",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-protect-1",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-protect-2",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-refresh-1",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-refresh-2",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-remove-1",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-remove-2",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-setting-1",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-setting-2",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-subtract-1",
+    "Tags":"minus, remove, -"
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-subtract-2",
+    "Tags":"minus, remove, -"
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-timeout-1",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-timeout-2",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-unknown-1",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-unknown-2",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-upload-1",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-upload-2",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-view-1",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-view-2",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-warning-1",
+    "Tags":""
+  },
+  {
+    "Folder":8,
+    "Directory":"users-actions",
+    "Category":"users actions",
+    "Name":"person-warning-2",
+    "Tags":""
+  },
+  {
+    "Folder":9,
+    "Directory":"people",
+    "Category":"people",
+    "Name":"bellboy",
+    "Tags":""
+  },
+  {
+    "Folder":9,
+    "Directory":"people",
+    "Category":"people",
+    "Name":"business-man-3",
+    "Tags":""
+  },
+  {
+    "Folder":9,
+    "Directory":"people",
+    "Category":"people",
+    "Name":"business-man-4",
+    "Tags":""
+  },
+  {
+    "Folder":9,
+    "Directory":"people",
+    "Category":"people",
+    "Name":"business-man-5",
+    "Tags":""
+  },
+  {
+    "Folder":9,
+    "Directory":"people",
+    "Category":"people",
+    "Name":"chef",
+    "Tags":""
+  },
+  {
+    "Folder":9,
+    "Directory":"people",
+    "Category":"people",
+    "Name":"doctor-1",
+    "Tags":""
+  },
+  {
+    "Folder":9,
+    "Directory":"people",
+    "Category":"people",
+    "Name":"doctor-2",
+    "Tags":""
+  },
+  {
+    "Folder":9,
+    "Directory":"people",
+    "Category":"people",
+    "Name":"gentleman",
+    "Tags":""
+  },
+  {
+    "Folder":9,
+    "Directory":"people",
+    "Category":"people",
+    "Name":"graduate",
+    "Tags":""
+  },
+  {
+    "Folder":9,
+    "Directory":"people",
+    "Category":"people",
+    "Name":"king",
+    "Tags":""
+  },
+  {
+    "Folder":9,
+    "Directory":"people",
+    "Category":"people",
+    "Name":"lady-1",
+    "Tags":""
+  },
+  {
+    "Folder":9,
+    "Directory":"people",
+    "Category":"people",
+    "Name":"lady-2",
+    "Tags":""
+  },
+  {
+    "Folder":9,
+    "Directory":"people",
+    "Category":"people",
+    "Name":"man",
+    "Tags":""
+  },
+  {
+    "Folder":9,
+    "Directory":"people",
+    "Category":"people",
+    "Name":"nurse",
+    "Tags":""
+  },
+  {
+    "Folder":9,
+    "Directory":"people",
+    "Category":"people",
+    "Name":"police-officer",
+    "Tags":""
+  },
+  {
+    "Folder":9,
+    "Directory":"people",
+    "Category":"people",
+    "Name":"prisoner",
+    "Tags":""
+  },
+  {
+    "Folder":9,
+    "Directory":"people",
+    "Category":"people",
+    "Name":"sport-player",
+    "Tags":""
+  },
+  {
+    "Folder":9,
+    "Directory":"people",
+    "Category":"people",
+    "Name":"spy",
+    "Tags":""
+  },
+  {
+    "Folder":9,
+    "Directory":"people",
+    "Category":"people",
+    "Name":"surgeon",
+    "Tags":""
+  },
+  {
+    "Folder":9,
+    "Directory":"people",
+    "Category":"people",
+    "Name":"telemarketer",
+    "Tags":""
+  },
+  {
+    "Folder":9,
+    "Directory":"people",
+    "Category":"people",
+    "Name":"thief",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-1",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-2",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-3",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-add-1",
+    "Tags":"chatter, conversation, balloon, new, plus"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-add-2",
+    "Tags":"chatter, conversation, balloon, new, plus"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-add-3",
+    "Tags":"chatter, conversation, balloon, new, plus"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-block-1",
+    "Tags":"chatter, conversation, balloon, cancel"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-block-2",
+    "Tags":"chatter, conversation, balloon, cancel"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-block-3",
+    "Tags":"chatter, conversation, balloon, cancel"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-check-1",
+    "Tags":"chatter, conversation, balloon, confirm"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-check-2",
+    "Tags":"chatter, conversation, balloon, confirm"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-check-3",
+    "Tags":"chatter, conversation, balloon, confirm"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-download-1",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-download-2",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-download-3",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-edit-1",
+    "Tags":"chatter, conversation, balloon, revise"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-edit-2",
+    "Tags":"chatter, conversation, balloon, revise"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-edit-3",
+    "Tags":"chatter, conversation, balloon, revise"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-exclamation-1",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-exclamation-2",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-favorite-heart-1",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-favorite-heart-2",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-favorite-heart-3",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-favorite-star-1",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-favorite-star-2",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-favorite-star-3",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-forward-all-1",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-forward-1",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-forward-2",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-forward-all-2",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-graph-1",
+    "Tags":"chatter, conversation, balloon, chart, statistics"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-graph-2",
+    "Tags":"chatter, conversation, balloon, chart, statistics"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-heart-1",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-heart-2",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-information-1",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-information-2",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-list-1",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-lock-1",
+    "Tags":"chatter, conversation, balloon, permission"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-lock-2",
+    "Tags":"chatter, conversation, balloon, permission"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-lock-3",
+    "Tags":"chatter, conversation, balloon, permission"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-picture-1",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-picture-2",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-question-1",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-question-2",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-quote-1",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-quote-2",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-refresh-1",
+    "Tags":"chatter, conversation, balloon, reload"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-refresh-2",
+    "Tags":"chatter, conversation, balloon, reload"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-refresh-3",
+    "Tags":"chatter, conversation, balloon, reload"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-remove-1",
+    "Tags":"chatter, conversation, balloon, close, x, delete"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-remove-2",
+    "Tags":"chatter, conversation, balloon, close, x, delete"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-remove-3",
+    "Tags":"chatter, conversation, balloon, close, x, delete"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-setting-1",
+    "Tags":"chatter, conversation, balloon, admin, permission, cog"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-setting-2",
+    "Tags":"chatter, conversation, balloon, admin, permission, cog"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-setting-3",
+    "Tags":"chatter, conversation, balloon, admin, permission, cog"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-share-1",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-share-2",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-share-3",
+    "Tags":"chatter, conversation, balloon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-smiley-1",
+    "Tags":"chatter, conversation, balloon, emoji, emoticon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-smiley-2",
+    "Tags":"chatter, conversation, balloon, emoji, emoticon"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-subtract-1",
+    "Tags":"chatter, conversation, balloon, minus, remove, -"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-subtract-2",
+    "Tags":"chatter, conversation, balloon, minus, remove, -"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-subtract-3",
+    "Tags":"chatter, conversation, balloon, minus, remove, -"
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-text-1",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-text-2",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-typing-1",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-typing-2",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-typing-3",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-upload-1",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-upload-3",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-upload-2",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-view-1",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-view-2",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-view-3",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-warning-1",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-warning-2",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-warning-3",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-warning-4",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-wink-1",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-chat-wink-2",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"bubble-thought",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"chat-double-bubble-1",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"chat-double-bubble-2",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"chat-double-bubble-3",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"chat-double-bubble-4",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"user-chat-1",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"user-chat-2",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"user-chat-3",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"user-chat-4",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"user-chat-5",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"user-chat-6",
+    "Tags":""
+  },
+  {
+    "Folder":10,
+    "Directory":"messages-chat",
+    "Category":"messages chat",
+    "Name":"user-chat-7",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"battery-charge-1",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"computer-chip-32-bit",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"computer-chip-64-bit",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"computer-chip",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"computer-disk-drive-1",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"computer-disk-drive-2",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"computer-harddisk",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"computer-imac-1",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"computer-imac-2",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"computer-notebook-1",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"computer-notebook-2",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"computer-pc-1",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"computer-pc-2",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"computer-power-supply",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"computer-ram",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"computer-screen-1",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"computer-screen-2",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"computer-screen-3",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"disk-1",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"disk-2",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"disk-3",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"disk-broken",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"disk-burn",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"electricity-outlet-1",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"electricity-outlet-2",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"floppy-disk",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"keyboard-1",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"keyboard-2",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"modem",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"mouse-wireless",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"mouse",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"plug-1",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"plug-2",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"plug-3",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"port-keyboard",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"scanner",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"sd-card-add",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"sd-card-block",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"sd-card-check",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"sd-card-download",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"sd-card-question",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"sd-card-refresh",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"sd-card-remove",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"sd-card-setting",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"sd-card-subtract",
+    "Tags":"minus, remove, -"
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"sd-card-sync",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"sd-card-upload",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"sd-card-warning",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"sd-card",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"sim-card",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"usb-1",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"usb-2",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"usb-lock",
+    "Tags":""
+  },
+  {
+    "Folder":11,
+    "Directory":"computers",
+    "Category":"computers",
+    "Name":"webcam",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"fax-machine",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-1",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-2",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-3",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-4",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-5",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-book",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-booth",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-call-1",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-call-2",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-call-24-hours",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-call-add",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-call-bluetooth",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-call-food",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-call-forward",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-call-incoming",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-call-lock",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-call-merge",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-call-outgoing",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-call-pause",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-call-pending",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-call-refresh",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-call-reject",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-call-silent",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-call-split",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-call-subtract",
+    "Tags":"minus, remove, -"
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-call-timeout",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-circle",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-miss-call",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-ringing",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-signal-full",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-signal-high",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-signal-low",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-signal-medium",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-signal-none",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-signal-very-low",
+    "Tags":""
+  },
+  {
+    "Folder":12,
+    "Directory":"phone",
+    "Category":"phone",
+    "Name":"phone-silent-circle",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"battery-charge-2",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"battery-full",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"battery-high",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"battery-low",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"battery-medium",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-1",
+    "Tags":"smartphone, cellular, iphone, android"
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-2",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-3",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-4",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-audio",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-broken",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-cash",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-code",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-download",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-heart",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-landscape",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-location",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-lock-landscape",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-lock-portrait",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-picture",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-portrait",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-protect",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-qr-code",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-rotate-1",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-rotate-2",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-rotate-lock",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-shopping",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-silent",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-sync-remove",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-sync",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-text-message-1",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-text-message-2",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-up-down",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-vibrate",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-video-call",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-video",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"mobile-phone-warning",
+    "Tags":""
+  },
+  {
+    "Folder":13,
+    "Directory":"mobile-phones",
+    "Category":"mobile phones",
+    "Name":"qr-code-scan",
+    "Tags":""
+  },
+  {
+    "Folder":14,
+    "Directory":"smart-devices",
+    "Category":"smart devices",
+    "Name":"controller",
+    "Tags":""
+  },
+  {
+    "Folder":14,
+    "Directory":"smart-devices",
+    "Category":"smart devices",
+    "Name":"google-nest",
+    "Tags":""
+  },
+  {
+    "Folder":14,
+    "Directory":"smart-devices",
+    "Category":"smart devices",
+    "Name":"hand-kindle",
+    "Tags":""
+  },
+  {
+    "Folder":14,
+    "Directory":"smart-devices",
+    "Category":"smart devices",
+    "Name":"hand-remote",
+    "Tags":""
+  },
+  {
+    "Folder":14,
+    "Directory":"smart-devices",
+    "Category":"smart devices",
+    "Name":"hand-tablet",
+    "Tags":""
+  },
+  {
+    "Folder":14,
+    "Directory":"smart-devices",
+    "Category":"smart devices",
+    "Name":"ipod",
+    "Tags":""
+  },
+  {
+    "Folder":14,
+    "Directory":"smart-devices",
+    "Category":"smart devices",
+    "Name":"kindle",
+    "Tags":""
+  },
+  {
+    "Folder":14,
+    "Directory":"smart-devices",
+    "Category":"smart devices",
+    "Name":"mp3-player",
+    "Tags":""
+  },
+  {
+    "Folder":14,
+    "Directory":"smart-devices",
+    "Category":"smart devices",
+    "Name":"remote-television",
+    "Tags":""
+  },
+  {
+    "Folder":14,
+    "Directory":"smart-devices",
+    "Category":"smart devices",
+    "Name":"smartphone-iphone",
+    "Tags":""
+  },
+  {
+    "Folder":14,
+    "Directory":"smart-devices",
+    "Category":"smart devices",
+    "Name":"smartphone-pen",
+    "Tags":""
+  },
+  {
+    "Folder":14,
+    "Directory":"smart-devices",
+    "Category":"smart devices",
+    "Name":"smartwatch-1",
+    "Tags":""
+  },
+  {
+    "Folder":14,
+    "Directory":"smart-devices",
+    "Category":"smart devices",
+    "Name":"smartwatch-2",
+    "Tags":""
+  },
+  {
+    "Folder":14,
+    "Directory":"smart-devices",
+    "Category":"smart devices",
+    "Name":"tablet-ipad-1",
+    "Tags":""
+  },
+  {
+    "Folder":14,
+    "Directory":"smart-devices",
+    "Category":"smart devices",
+    "Name":"tablet-ipad-2",
+    "Tags":""
+  },
+  {
+    "Folder":14,
+    "Directory":"smart-devices",
+    "Category":"smart devices",
+    "Name":"touchpad-wireless",
+    "Tags":""
+  },
+  {
+    "Folder":15,
+    "Directory":"video-meeting",
+    "Category":"video meeting",
+    "Name":"headphone",
+    "Tags":""
+  },
+  {
+    "Folder":15,
+    "Directory":"video-meeting",
+    "Category":"video meeting",
+    "Name":"video-camera",
+    "Tags":""
+  },
+  {
+    "Folder":15,
+    "Directory":"video-meeting",
+    "Category":"video meeting",
+    "Name":"video-meeting-circle",
+    "Tags":""
+  },
+  {
+    "Folder":15,
+    "Directory":"video-meeting",
+    "Category":"video meeting",
+    "Name":"video-meeting-square",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"area-circle",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"crosshair-1",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"crosshair-2",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"crosshair-3",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-1",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-2",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-add",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-double-click-1",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-double-click-2",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-double",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-down",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-finger",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-hand-1",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-hand-2",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-hold-1",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-hold-2",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-information",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-move-1",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-move-2",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-move-3",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-move-left-right-1",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-move-left-right-2",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-move-left",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-move-right",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-move-up-down-1",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-move-up-down-2",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-move-up",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-move",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-question",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-select-area",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-tap",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-touch-1",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"cursor-touch-2",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"direction-button-1",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"direction-button-2",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"direction-button-3",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"frame-1",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"frame-2",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"frame-3",
+    "Tags":""
+  },
+  {
+    "Folder":16,
+    "Directory":"selection-cursors",
+    "Category":"selection cursors",
+    "Name":"target",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"clear-all",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"filter-1",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"filter-10",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"filter-2",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"filter-3",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"filter-4",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"filter-5",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"filter-6",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"filter-7",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"filter-8",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"filter-9",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"filter-android",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"filter-audio",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"filter-film",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"filter-heart",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"filter-mail",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"filter-picture",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"filter-plus-one",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"filter-plus",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"filter-text-1",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"filter-video",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"navigation-before-1",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"navigation-before-2",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"navigation-before-3",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"navigation-before-4",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"navigation-down-1",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"navigation-down-2",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"navigation-drawer-1",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"navigation-drawer-2",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"navigation-left-1",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"navigation-left-2",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"navigation-next-1",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"navigation-next-2",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"navigation-next-3",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"navigation-next-4",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"navigation-right-1",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"navigation-right-2",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"navigation-show-more-1",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"navigation-show-more-2",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"navigation-up-1",
+    "Tags":""
+  },
+  {
+    "Folder":17,
+    "Directory":"navigation",
+    "Category":"navigation",
+    "Name":"navigation-up-2",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"book-1",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"book-2",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"book-address",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"book-audio",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"book-bookmarked",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"book-contact-1",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"book-contact-2",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"book-disk",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"book-download-1",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"book-download-2",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"book-favorite-1",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"book-favorite-2",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"book-location",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"book-open-1",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"book-open-2",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"book-open-3",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"book-open-4",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"book-open-bookmarked-1",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"book-open-bookmarked-2",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"book-phone-1",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"book-phone-2",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"book-playlist",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"book-video",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"book-view",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"books-encyclopedia-1",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"books-encyclopedia-2",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"books-library",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"box-1",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"box-2",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"box-3",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"box-full",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"boxes-1",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"boxes-2",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"briefcase",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"drawer-1",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"drawer-2",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"drawer-3",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"filter-11",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"filter-12",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"filter-13",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"filter-text-2",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"Folder-binders",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"layers-hide",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"layers-show",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"new-document",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"news-article",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"newspaper",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"notebook-bookmarked",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"notebook",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"sketch-pad",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"view-agenda",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"view-array",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"view-carousel",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"view-column",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"view-content",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"view-headline",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"view-list",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"view-module-1",
+    "Tags":""
+  },
+  {
+    "Folder":18,
+    "Directory":"content",
+    "Category":"content",
+    "Name":"view-module-2",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"badge-1",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"badge-2",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"badge-3",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"badge-check-1",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"badge-check-2",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"badge-check",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"badge-exclamation",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"badge-heart",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"badge-like-1",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"badge-like-2",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"badge-number-one-1",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"badge-number-one-2",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"badge-one-hundred-1",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"badge-one-hundred-2",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"badge-plus",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"badge-question",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"badge-star-1",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"badge-star-2",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"badge-star",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"certificate-1",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"certificate-2",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"crown-1",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"crown-2",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"crown-3",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"flag-1",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"flag-2",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"flag-3",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"flag-death-skull",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"flag-square-1",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"flag-square-2",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"flag-square-3",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"flag-star",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"flag-triangle-1",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"flag-triangle-2",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"google-plus-plus-one",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"google-plus",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"heart-add",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"heart-angel",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"heart-block",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"heart-broken",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"heart-check",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"heart-circle",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"heart-delete",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"heart-download",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"heart-edit",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"heart-favorite",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"heart-lock-1",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"heart-refresh",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"heart-setting",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"heart-share",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"heart-subtract",
+    "Tags":"minus, remove, -"
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"heart-upload",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"heart-view",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"heart-warning",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"heart",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"hot-topic-box",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"hot-topic-circle",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"hot-topic",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"medal-1",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"medal-2",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"medal-3",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"medal-4",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"pedestal",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"present-box",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"rank-army-1",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"rank-army-2",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"rank-army-3",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"rank-army-4",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"rank-army-5",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"rank-army-badge-1",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"rank-army-badge-2",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"rank-army-star-1",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"rank-army-star-2",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"rank-army-star-badge-1",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"rank-army-star-badge-2",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"rank-army-star-badge-3",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"rank-army-star-badge-4",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"rank-army-star-badge-5",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"star-center",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"star-decrease",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"star-half",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"star-increase",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"thumbs-down-1",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"thumbs-down-2",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"thumbs-up-1",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"thumbs-up-2",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"trophy-1",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"trophy-2",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"trophy-3",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"trophy-oscar",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"trophy-star-1",
+    "Tags":""
+  },
+  {
+    "Folder":19,
+    "Directory":"vote-rewards",
+    "Category":"vote rewards",
+    "Name":"trophy-star-2",
+    "Tags":""
+  },
+  {
+    "Folder":20,
+    "Directory":"lock",
+    "Category":"lock",
+    "Name":"lock-close-1",
+    "Tags":""
+  },
+  {
+    "Folder":20,
+    "Directory":"lock",
+    "Category":"lock",
+    "Name":"lock-close-2",
+    "Tags":""
+  },
+  {
+    "Folder":20,
+    "Directory":"lock",
+    "Category":"lock",
+    "Name":"lock-close-3",
+    "Tags":""
+  },
+  {
+    "Folder":20,
+    "Directory":"lock",
+    "Category":"lock",
+    "Name":"lock-close-4",
+    "Tags":""
+  },
+  {
+    "Folder":20,
+    "Directory":"lock",
+    "Category":"lock",
+    "Name":"lock-close-5",
+    "Tags":""
+  },
+  {
+    "Folder":20,
+    "Directory":"lock",
+    "Category":"lock",
+    "Name":"lock-close-6",
+    "Tags":""
+  },
+  {
+    "Folder":20,
+    "Directory":"lock",
+    "Category":"lock",
+    "Name":"lock-door",
+    "Tags":""
+  },
+  {
+    "Folder":20,
+    "Directory":"lock",
+    "Category":"lock",
+    "Name":"lock-open-1",
+    "Tags":""
+  },
+  {
+    "Folder":20,
+    "Directory":"lock",
+    "Category":"lock",
+    "Name":"lock-open-2",
+    "Tags":""
+  },
+  {
+    "Folder":20,
+    "Directory":"lock",
+    "Category":"lock",
+    "Name":"lock-open-3",
+    "Tags":""
+  },
+  {
+    "Folder":21,
+    "Directory":"share",
+    "Category":"share",
+    "Name":"megaphone-1",
+    "Tags":""
+  },
+  {
+    "Folder":21,
+    "Directory":"share",
+    "Category":"share",
+    "Name":"megaphone-2",
+    "Tags":""
+  },
+  {
+    "Folder":21,
+    "Directory":"share",
+    "Category":"share",
+    "Name":"rss-feed-box",
+    "Tags":""
+  },
+  {
+    "Folder":21,
+    "Directory":"share",
+    "Category":"share",
+    "Name":"rss-feed",
+    "Tags":""
+  },
+  {
+    "Folder":21,
+    "Directory":"share",
+    "Category":"share",
+    "Name":"satellite-dish",
+    "Tags":""
+  },
+  {
+    "Folder":21,
+    "Directory":"share",
+    "Category":"share",
+    "Name":"satellite-1",
+    "Tags":""
+  },
+  {
+    "Folder":21,
+    "Directory":"share",
+    "Category":"share",
+    "Name":"share-favorite",
+    "Tags":""
+  },
+  {
+    "Folder":21,
+    "Directory":"share",
+    "Category":"share",
+    "Name":"share-location",
+    "Tags":""
+  },
+  {
+    "Folder":21,
+    "Directory":"share",
+    "Category":"share",
+    "Name":"share-setting",
+    "Tags":""
+  },
+  {
+    "Folder":21,
+    "Directory":"share",
+    "Category":"share",
+    "Name":"share-time",
+    "Tags":""
+  },
+  {
+    "Folder":21,
+    "Directory":"share",
+    "Category":"share",
+    "Name":"share",
+    "Tags":""
+  },
+  {
+    "Folder":21,
+    "Directory":"share",
+    "Category":"share",
+    "Name":"signal-antenna-1",
+    "Tags":""
+  },
+  {
+    "Folder":21,
+    "Directory":"share",
+    "Category":"share",
+    "Name":"signal-antenna-2",
+    "Tags":""
+  },
+  {
+    "Folder":21,
+    "Directory":"share",
+    "Category":"share",
+    "Name":"signal-around",
+    "Tags":""
+  },
+  {
+    "Folder":21,
+    "Directory":"share",
+    "Category":"share",
+    "Name":"signal-person",
+    "Tags":""
+  },
+  {
+    "Folder":21,
+    "Directory":"share",
+    "Category":"share",
+    "Name":"signal-tower",
+    "Tags":""
+  },
+  {
+    "Folder":22,
+    "Directory":"interface-feedback",
+    "Category":"interface feedback",
+    "Name":"help-circle",
+    "Tags":""
+  },
+  {
+    "Folder":22,
+    "Directory":"interface-feedback",
+    "Category":"interface feedback",
+    "Name":"information-circle",
+    "Tags":""
+  },
+  {
+    "Folder":22,
+    "Directory":"interface-feedback",
+    "Category":"interface feedback",
+    "Name":"loading-1",
+    "Tags":""
+  },
+  {
+    "Folder":22,
+    "Directory":"interface-feedback",
+    "Category":"interface feedback",
+    "Name":"loading-2",
+    "Tags":""
+  },
+  {
+    "Folder":22,
+    "Directory":"interface-feedback",
+    "Category":"interface feedback",
+    "Name":"radioactive-1",
+    "Tags":""
+  },
+  {
+    "Folder":22,
+    "Directory":"interface-feedback",
+    "Category":"interface feedback",
+    "Name":"radioactive-2",
+    "Tags":""
+  },
+  {
+    "Folder":22,
+    "Directory":"interface-feedback",
+    "Category":"interface feedback",
+    "Name":"report-problem-circle",
+    "Tags":""
+  },
+  {
+    "Folder":22,
+    "Directory":"interface-feedback",
+    "Category":"interface feedback",
+    "Name":"report-problem-diamond",
+    "Tags":""
+  },
+  {
+    "Folder":22,
+    "Directory":"interface-feedback",
+    "Category":"interface feedback",
+    "Name":"report-problem-triangle",
+    "Tags":""
+  },
+  {
+    "Folder":22,
+    "Directory":"interface-feedback",
+    "Category":"interface feedback",
+    "Name":"sign-stop",
+    "Tags":""
+  },
+  {
+    "Folder":22,
+    "Directory":"interface-feedback",
+    "Category":"interface feedback",
+    "Name":"trending-down",
+    "Tags":""
+  },
+  {
+    "Folder":22,
+    "Directory":"interface-feedback",
+    "Category":"interface feedback",
+    "Name":"trending-up",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"bluetooth",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"checker-flag-1",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"checker-flag-2",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"download-1",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"download-2",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"download-3",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"download-4",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"download-5",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"download-6",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"download-7",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"download-box-1",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"download-box-2",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"download-box-3",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"download-box-4",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"download-box-5",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"download-circle",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"download-computer",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"download-harddrive-1",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"download-harddrive-2",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"download-notebook",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"ethernet-cable",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"firewire-1",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"firewire-2",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"network-business",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"network-cable-1",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"network-cable-2",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"network-computers-1",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"network-computers-2",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"network-connecting",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"network-signal",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"network-1",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"notebook-lock-network",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"screen-wireless",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"sign-upload-download",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"syncing-1",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"transfer-1",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"transfer-2",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"transfer-3",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"transfer-4",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"transfer-box-1",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"transfer-box-2",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"transfer-box-3",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"transfer-camera-notebook",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"transfer-circle",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"transfer-computer-satellite",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"transfer-computers-1",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"transfer-computers-2",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"transfer-file",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"transfer-Folder",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"transfer-ftp",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"transfer-phone-computer",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"transfer-phone-satellite",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"transfer-users",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"upload-1",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"upload-2",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"upload-3",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"upload-4",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"upload-box-1",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"upload-box-2",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"upload-box-3",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"upload-box-4",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"upload-box-5",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"upload-circle",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"upload-computer",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"upload-harddrive-1",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"upload-harddrive-2",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"upload-notebook",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"usb",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"wifi-modem-1",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"wifi-modem-2",
+    "Tags":""
+  },
+  {
+    "Folder":23,
+    "Directory":"data-transfer",
+    "Category":"data transfer",
+    "Name":"world-refresh",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-add",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-audio",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-block",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-cash",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-check",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-disable",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-download",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-favorite",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-file",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-Folder",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-lock",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-mobile-download",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-mobile-upload",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-picture",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-protect",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-question",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-refresh",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-remove",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-search",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-server-1",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-server-2",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-setting",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-signal",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-subtract",
+    "Tags":"minus, remove, -"
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-sync",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-time",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-transfer-finish",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-transfer-half",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-transfer-start",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-transfer",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-upload-home",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-upload",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-warning",
+    "Tags":""
+  },
+  {
+    "Folder":24,
+    "Directory":"cloud",
+    "Category":"cloud",
+    "Name":"cloud-1",
+    "Tags":""
+  },
+  {
+    "Folder":25,
+    "Directory":"synchronize",
+    "Category":"synchronize",
+    "Name":"synchronize-1",
+    "Tags":""
+  },
+  {
+    "Folder":25,
+    "Directory":"synchronize",
+    "Category":"synchronize",
+    "Name":"synchronize-2",
+    "Tags":""
+  },
+  {
+    "Folder":25,
+    "Directory":"synchronize",
+    "Category":"synchronize",
+    "Name":"synchronize-3",
+    "Tags":""
+  },
+  {
+    "Folder":25,
+    "Directory":"synchronize",
+    "Category":"synchronize",
+    "Name":"synchronize-4",
+    "Tags":""
+  },
+  {
+    "Folder":25,
+    "Directory":"synchronize",
+    "Category":"synchronize",
+    "Name":"synchronize-5",
+    "Tags":""
+  },
+  {
+    "Folder":25,
+    "Directory":"synchronize",
+    "Category":"synchronize",
+    "Name":"synchronize-6",
+    "Tags":""
+  },
+  {
+    "Folder":25,
+    "Directory":"synchronize",
+    "Category":"synchronize",
+    "Name":"synchronize-7",
+    "Tags":""
+  },
+  {
+    "Folder":25,
+    "Directory":"synchronize",
+    "Category":"synchronize",
+    "Name":"synchronize-lock",
+    "Tags":""
+  },
+  {
+    "Folder":25,
+    "Directory":"synchronize",
+    "Category":"synchronize",
+    "Name":"synchronize-time",
+    "Tags":""
+  },
+  {
+    "Folder":25,
+    "Directory":"synchronize",
+    "Category":"synchronize",
+    "Name":"synchronize-triangle",
+    "Tags":""
+  },
+  {
+    "Folder":25,
+    "Directory":"synchronize",
+    "Category":"synchronize",
+    "Name":"synchronize-view",
+    "Tags":""
+  },
+  {
+    "Folder":25,
+    "Directory":"synchronize",
+    "Category":"synchronize",
+    "Name":"synchronize-warning",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-1",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-2",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-3",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-add-1",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-add-2",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-block-1",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-block-2",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-bug",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-cash-1",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-cash-2",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-check-1",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-check-2",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-download-1",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-download-2",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-edit-1",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-edit-2",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-favorite-heart-1",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-favorite-heart-2",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-favorite-star-1",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-favorite-star-2",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-lock-1",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-lock-2",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-network-1",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-network-2",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-network-3",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-network-4",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-question-2",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-question",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-refresh-1",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-refresh-2",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-remove-1",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-remove-2",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-setting-1",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-setting-2",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-share-1",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-share-2",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-subtract-1",
+    "Tags":"minus, remove, -"
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-subtract-2",
+    "Tags":"minus, remove, -"
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-sync-1",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-sync-2",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-timeout-1",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-timeout-2",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-upload-1",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-upload-2",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-view-1",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-view-2",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-warning-1",
+    "Tags":""
+  },
+  {
+    "Folder":26,
+    "Directory":"server",
+    "Category":"server",
+    "Name":"server-warning-2",
+    "Tags":""
+  },
+  {
+    "Folder":27,
+    "Directory":"remove-add",
+    "Category":"remove add",
+    "Name":"add-1",
+    "Tags":""
+  },
+  {
+    "Folder":27,
+    "Directory":"remove-add",
+    "Category":"remove add",
+    "Name":"add-2",
+    "Tags":""
+  },
+  {
+    "Folder":27,
+    "Directory":"remove-add",
+    "Category":"remove add",
+    "Name":"add-box",
+    "Tags":""
+  },
+  {
+    "Folder":27,
+    "Directory":"remove-add",
+    "Category":"remove add",
+    "Name":"add-circle-1",
+    "Tags":""
+  },
+  {
+    "Folder":27,
+    "Directory":"remove-add",
+    "Category":"remove add",
+    "Name":"add-circle-2",
+    "Tags":""
+  },
+  {
+    "Folder":27,
+    "Directory":"remove-add",
+    "Category":"remove add",
+    "Name":"add-circle-double",
+    "Tags":""
+  },
+  {
+    "Folder":27,
+    "Directory":"remove-add",
+    "Category":"remove add",
+    "Name":"add-tab",
+    "Tags":""
+  },
+  {
+    "Folder":27,
+    "Directory":"remove-add",
+    "Category":"remove add",
+    "Name":"remove-1",
+    "Tags":""
+  },
+  {
+    "Folder":27,
+    "Directory":"remove-add",
+    "Category":"remove add",
+    "Name":"remove-2",
+    "Tags":""
+  },
+  {
+    "Folder":27,
+    "Directory":"remove-add",
+    "Category":"remove add",
+    "Name":"remove-box",
+    "Tags":""
+  },
+  {
+    "Folder":27,
+    "Directory":"remove-add",
+    "Category":"remove add",
+    "Name":"remove-circle-1",
+    "Tags":""
+  },
+  {
+    "Folder":27,
+    "Directory":"remove-add",
+    "Category":"remove add",
+    "Name":"remove-circle-2",
+    "Tags":""
+  },
+  {
+    "Folder":27,
+    "Directory":"remove-add",
+    "Category":"remove add",
+    "Name":"remove-tab",
+    "Tags":""
+  },
+  {
+    "Folder":27,
+    "Directory":"remove-add",
+    "Category":"remove add",
+    "Name":"subtract-1",
+    "Tags":"minus, remove, -"
+  },
+  {
+    "Folder":27,
+    "Directory":"remove-add",
+    "Category":"remove add",
+    "Name":"subtract-2",
+    "Tags":"minus, remove, -"
+  },
+  {
+    "Folder":27,
+    "Directory":"remove-add",
+    "Category":"remove add",
+    "Name":"subtract-box",
+    "Tags":"minus, remove, -"
+  },
+  {
+    "Folder":27,
+    "Directory":"remove-add",
+    "Category":"remove add",
+    "Name":"subtract-circle-1",
+    "Tags":"minus, remove, -"
+  },
+  {
+    "Folder":27,
+    "Directory":"remove-add",
+    "Category":"remove add",
+    "Name":"subtract-circle-2",
+    "Tags":"minus, remove, -"
+  },
+  {
+    "Folder":27,
+    "Directory":"remove-add",
+    "Category":"remove add",
+    "Name":"subtract-tab",
+    "Tags":"minus, remove, -"
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"center-point",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"cross-over-1",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"expand-1",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"expand-2",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"expand-3",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"expand-4",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"expand-all-1",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"expand-corner",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"expand-diagonal-1",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"expand-diagonal-2",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"expand-diagonal-3",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"expand-diagonal-4",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"expand-diagonal-5",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"expand-diagonal-6",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"expand-horizontal-1",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"expand-horizontal-2",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"expand-horizontal-3",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"expand-horizontal-4",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"expand-horizontal-5",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"expand-horizontal-6",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"expand-horizontal-7",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"expand-vertical-1",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"expand-vertical-2",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"expand-vertical-3",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"expand-vertical-4",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"expand-vertical-5",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"expand-vertical-6",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"flip-down-1",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"flip-down-2",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"flip-up-1",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"flip-up-2",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"focus-1",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"focus-2",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"launch",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"move-back",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"move-bottom",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"move-down-1",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"move-down-2",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"move-left-1",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"move-left-2",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"move-left-right",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"move-right-1",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"move-right-2",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"move-top",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"move-up-1",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"move-up-2",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"shrink-1",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"shrink-all-1",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"shrink-diagonal-1",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"shrink-diagonal-2",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"shrink-horizontal-1",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"shrink-horizontal-2",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"shrink-horizontal-3",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"shrink-vertical-1",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"touch-up-1",
+    "Tags":""
+  },
+  {
+    "Folder":28,
+    "Directory":"resize-move",
+    "Category":"resize move",
+    "Name":"touch-up-2",
+    "Tags":""
+  },
+  {
+    "Folder":29,
+    "Directory":"controls",
+    "Category":"controls",
+    "Name":"arrow-curve",
+    "Tags":""
+  },
+  {
+    "Folder":29,
+    "Directory":"controls",
+    "Category":"controls",
+    "Name":"button-power-1",
+    "Tags":""
+  },
+  {
+    "Folder":29,
+    "Directory":"controls",
+    "Category":"controls",
+    "Name":"button-power-2",
+    "Tags":""
+  },
+  {
+    "Folder":29,
+    "Directory":"controls",
+    "Category":"controls",
+    "Name":"button-power-3",
+    "Tags":""
+  },
+  {
+    "Folder":29,
+    "Directory":"controls",
+    "Category":"controls",
+    "Name":"crop-area-1",
+    "Tags":""
+  },
+  {
+    "Folder":29,
+    "Directory":"controls",
+    "Category":"controls",
+    "Name":"cross-over-2",
+    "Tags":""
+  },
+  {
+    "Folder":29,
+    "Directory":"controls",
+    "Category":"controls",
+    "Name":"loop-back",
+    "Tags":""
+  },
+  {
+    "Folder":29,
+    "Directory":"controls",
+    "Category":"controls",
+    "Name":"loop-infinite-1",
+    "Tags":""
+  },
+  {
+    "Folder":29,
+    "Directory":"controls",
+    "Category":"controls",
+    "Name":"loop-infinite-2",
+    "Tags":""
+  },
+  {
+    "Folder":29,
+    "Directory":"controls",
+    "Category":"controls",
+    "Name":"loop-infinite-3",
+    "Tags":""
+  },
+  {
+    "Folder":29,
+    "Directory":"controls",
+    "Category":"controls",
+    "Name":"refresh-one",
+    "Tags":""
+  },
+  {
+    "Folder":29,
+    "Directory":"controls",
+    "Category":"controls",
+    "Name":"split",
+    "Tags":""
+  },
+  {
+    "Folder":29,
+    "Directory":"controls",
+    "Category":"controls",
+    "Name":"syncing-2",
+    "Tags":""
+  },
+  {
+    "Folder":29,
+    "Directory":"controls",
+    "Category":"controls",
+    "Name":"zigzag-1",
+    "Tags":""
+  },
+  {
+    "Folder":29,
+    "Directory":"controls",
+    "Category":"controls",
+    "Name":"zigzag-3",
+    "Tags":""
+  },
+  {
+    "Folder":29,
+    "Directory":"controls",
+    "Category":"controls",
+    "Name":"zigziag-2",
+    "Tags":""
+  },
+  {
+    "Folder":30,
+    "Directory":"bookmarks-Tags",
+    "Category":"bookmarks Tags",
+    "Name":"bookmark-1",
+    "Tags":""
+  },
+  {
+    "Folder":30,
+    "Directory":"bookmarks-Tags",
+    "Category":"bookmarks Tags",
+    "Name":"bookmark-2",
+    "Tags":""
+  },
+  {
+    "Folder":30,
+    "Directory":"bookmarks-Tags",
+    "Category":"bookmarks Tags",
+    "Name":"bookmark-3",
+    "Tags":""
+  },
+  {
+    "Folder":30,
+    "Directory":"bookmarks-Tags",
+    "Category":"bookmarks Tags",
+    "Name":"bookmark-4",
+    "Tags":""
+  },
+  {
+    "Folder":30,
+    "Directory":"bookmarks-Tags",
+    "Category":"bookmarks Tags",
+    "Name":"bookmark-5",
+    "Tags":""
+  },
+  {
+    "Folder":30,
+    "Directory":"bookmarks-Tags",
+    "Category":"bookmarks Tags",
+    "Name":"bookmark-add",
+    "Tags":""
+  },
+  {
+    "Folder":30,
+    "Directory":"bookmarks-Tags",
+    "Category":"bookmarks Tags",
+    "Name":"bookmark-all-1",
+    "Tags":""
+  },
+  {
+    "Folder":30,
+    "Directory":"bookmarks-Tags",
+    "Category":"bookmarks Tags",
+    "Name":"bookmark-all-2",
+    "Tags":""
+  },
+  {
+    "Folder":30,
+    "Directory":"bookmarks-Tags",
+    "Category":"bookmarks Tags",
+    "Name":"bookmark-article",
+    "Tags":""
+  },
+  {
+    "Folder":30,
+    "Directory":"bookmarks-Tags",
+    "Category":"bookmarks Tags",
+    "Name":"bookmark-block",
+    "Tags":""
+  },
+  {
+    "Folder":30,
+    "Directory":"bookmarks-Tags",
+    "Category":"bookmarks Tags",
+    "Name":"bookmark-cash",
+    "Tags":""
+  },
+  {
+    "Folder":30,
+    "Directory":"bookmarks-Tags",
+    "Category":"bookmarks Tags",
+    "Name":"bookmark-check",
+    "Tags":""
+  },
+  {
+    "Folder":30,
+    "Directory":"bookmarks-Tags",
+    "Category":"bookmarks Tags",
+    "Name":"bookmark-download",
+    "Tags":""
+  },
+  {
+    "Folder":30,
+    "Directory":"bookmarks-Tags",
+    "Category":"bookmarks Tags",
+    "Name":"bookmark-edit",
+    "Tags":""
+  },
+  {
+    "Folder":30,
+    "Directory":"bookmarks-Tags",
+    "Category":"bookmarks Tags",
+    "Name":"bookmark-favorite-heart",
+    "Tags":""
+  },
+  {
+    "Folder":30,
+    "Directory":"bookmarks-Tags",
+    "Category":"bookmarks Tags",
+    "Name":"bookmark-favorite-star",
+    "Tags":""
+  },
+  {
+    "Folder":30,
+    "Directory":"bookmarks-Tags",
+    "Category":"bookmarks Tags",
+    "Name":"bookmark-lock",
+    "Tags":""
+  },
+  {
+    "Folder":30,
+    "Directory":"bookmarks-Tags",
+    "Category":"bookmarks Tags",
+    "Name":"bookmark-refresh",
+    "Tags":""
+  },
+  {
+    "Folder":30,
+    "Directory":"bookmarks-Tags",
+    "Category":"bookmarks Tags",
+    "Name":"bookmark-remove",
+    "Tags":""
+  },
+  {
+    "Folder":30,
+    "Directory":"bookmarks-Tags",
+    "Category":"bookmarks Tags",
+    "Name":"bookmark-setting",
+    "Tags":""
+  },
+  {
+    "Folder":30,
+    "Directory":"bookmarks-Tags",
+    "Category":"bookmarks Tags",
+    "Name":"bookmark-share",
+    "Tags":""
+  },
+  {
+    "Folder":30,
+    "Directory":"bookmarks-Tags",
+    "Category":"bookmarks Tags",
+    "Name":"bookmark-subtract",
+    "Tags":"minus, remove, -"
+  },
+  {
+    "Folder":30,
+    "Directory":"bookmarks-Tags",
+    "Category":"bookmarks Tags",
+    "Name":"bookmark-upload",
+    "Tags":""
+  },
+  {
+    "Folder":30,
+    "Directory":"bookmarks-Tags",
+    "Category":"bookmarks Tags",
+    "Name":"bookmark-view",
+    "Tags":""
+  },
+  {
+    "Folder":30,
+    "Directory":"bookmarks-Tags",
+    "Category":"bookmarks Tags",
+    "Name":"bookmark-warning",
+    "Tags":""
+  },
+  {
+    "Folder":31,
+    "Directory":"organization",
+    "Category":"organization",
+    "Name":"file-arborescence",
+    "Tags":""
+  },
+  {
+    "Folder":31,
+    "Directory":"organization",
+    "Category":"organization",
+    "Name":"flow-chart-1",
+    "Tags":""
+  },
+  {
+    "Folder":31,
+    "Directory":"organization",
+    "Category":"organization",
+    "Name":"flow-chart-2",
+    "Tags":""
+  },
+  {
+    "Folder":31,
+    "Directory":"organization",
+    "Category":"organization",
+    "Name":"flow-chart-3",
+    "Tags":""
+  },
+  {
+    "Folder":31,
+    "Directory":"organization",
+    "Category":"organization",
+    "Name":"graph",
+    "Tags":""
+  },
+  {
+    "Folder":31,
+    "Directory":"organization",
+    "Category":"organization",
+    "Name":"hierarchy-1",
+    "Tags":""
+  },
+  {
+    "Folder":31,
+    "Directory":"organization",
+    "Category":"organization",
+    "Name":"hierarchy-2",
+    "Tags":""
+  },
+  {
+    "Folder":31,
+    "Directory":"organization",
+    "Category":"organization",
+    "Name":"hierarchy-3",
+    "Tags":""
+  },
+  {
+    "Folder":31,
+    "Directory":"organization",
+    "Category":"organization",
+    "Name":"hierarchy-4",
+    "Tags":""
+  },
+  {
+    "Folder":31,
+    "Directory":"organization",
+    "Category":"organization",
+    "Name":"network-2",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"angle-tool",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"art-board",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"art-knife",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"blur-linear",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"bring-to-front",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"circle",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"color-bucket",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"color-contrast-off",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"color-contrast-on",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"color-palette",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"compasses",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"computer-graphic",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"cone",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"crayons",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"crop-area-2",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"crop-picture",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"cube",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"design-mug",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"eraser-1",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"eye-dropper-1",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"eye-dropper-2",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"eye-dropper-3",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"gradient",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"grid",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"highlight",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"hot-blue",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"layers",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"magic-wand-1",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"magic-wand-2",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"magnet-tool",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"measuring-tool",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"origami-paper-bird",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"paint-brush-1",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"paint-brush-2",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"paint-color-tube",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"paint-palette",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"paint-roll",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"painting-canvas",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"pen-tablet",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"pen-tool-1",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"pen-tool-2",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"pencil-ruler",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"polygon",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"prism",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"pyramid",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"quill",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"rgb-color",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"ruler-1",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"ruler-2",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"ruler-3",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"select-area",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"send-to-back",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"spray-paint",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"stamp-2",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"tube",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"vector-circle",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"vector-line-curve",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"vector-line",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"vector-square-1",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"vector-square-2",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"vector-triangle",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"view-add",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"view-lock",
+    "Tags":""
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"view-subtract",
+    "Tags":"minus, remove, -"
+  },
+  {
+    "Folder":32,
+    "Directory":"design",
+    "Category":"design",
+    "Name":"window-design",
+    "Tags":""
+  }
+]
