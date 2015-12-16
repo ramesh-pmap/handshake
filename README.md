@@ -1,4 +1,4 @@
-# mars
+# cosmos
 
 Client side code for the mars application as well as a NodeJS server for local development.
 
