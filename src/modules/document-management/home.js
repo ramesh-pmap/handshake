@@ -1,9 +1,10 @@
 // Dependencies.
 import React from 'react';
-import {Link} from 'react-router';
+// import {Link} from 'react-router';
+import {LinkContainer} from 'react-router-bootstrap';
 
 // Core components.
-import {Row, Col, ButtonToolbar, ButtonGroup, DropdownButton, MenuItem, Button, Table, Input, ListGroup, ListGroupItem} from 'react-bootstrap';
+import {Row, Col, ButtonToolbar, ButtonGroup, DropdownButton, MenuItem, Button, Table, Input, ListGroup, ListGroupItem, Modal} from 'react-bootstrap';
 import Icon from 'react-fa';
 
 // Layouts.
@@ -29,10 +30,12 @@ class Page extends React.Component {
 
     this.state = {
       data: [],
-      showResults: ''
+      showResults: '',
+      showUModal: false
     };
   }
 
+  // Search & Results
   onFocus() {
     this.setState({
       showResults: 'results_wrapper--open'
@@ -42,6 +45,14 @@ class Page extends React.Component {
     this.setState({
       showResults: ''
     });
+  }
+
+  // Upload Modal
+  closeModal() {
+    this.setState({ showModal: false });
+  }
+  openModal() {
+    this.setState({ showModal: true });
   }
 
   componentDidMount() {
@@ -61,7 +72,7 @@ class Page extends React.Component {
             <Row>
               <Col md={6}>
                 <ButtonGroup className="title-dropdown">
-                  <DropdownButton id="doc_mgt-docs_dropdown" href="#" title="All Documents" bsStyle="link" bsSize="lg">
+                  <DropdownButton id="doc_mgt-docs_dropdown" title="All Documents" bsStyle="link" bsSize="lg">
                     <MenuItem eventKey="1">All Documents</MenuItem>
                     <MenuItem eventKey="2">My Documents</MenuItem>
                     <MenuItem eventKey="3">Recent Dcouments</MenuItem>
@@ -74,11 +85,29 @@ class Page extends React.Component {
               <Col md={6}>
                 <div className="action-bar-spacing text-right">
                   <ButtonToolbar>
-                    <Link to="/document-management-upload" className="btn btn-sm btn-success">
-                      <Icon name="upload" />
-                      &nbsp;
-                      Upload
-                    </Link>
+
+                    <DropdownButton title="Add" href="#" bsStyle="success" bsSize="sm">
+                      <MenuItem onClick={this.openModal.bind(this)}>
+                        <Icon name="upload" />
+                        &nbsp;
+                        Upload New Document
+                      </MenuItem>
+                      <LinkContainer to="/document-management-upload">
+                        <MenuItem>
+                          <Icon name="link" />
+                          &nbsp;
+                          Web Link
+                        </MenuItem>
+                      </LinkContainer>
+                      <LinkContainer to="/document-management-upload">
+                        <MenuItem>
+                          <Icon name="book" />
+                          &nbsp;
+                          Hardcopy
+                        </MenuItem>
+                      </LinkContainer>
+                    </DropdownButton>
+
                     <Button href="#" bsStyle="link" bsSize="sm">
                       <Icon name="folder-open" />
                       &nbsp;
@@ -266,6 +295,19 @@ class Page extends React.Component {
 
           </Col>
         </Row>
+
+        <Modal show={this.state.showModal} onHide={this.closeModal.bind(this)}>
+          <Modal.Header closeButton>
+            <Modal.Title>Upload New Document</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <h4>Upload</h4>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button onClick={this.closeModal.bind(this)}>Cancel</Button>
+          </Modal.Footer>
+        </Modal>
+
       </Main>
     );
   }

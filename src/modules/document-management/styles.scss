@@ -18,10 +18,10 @@
     float: none;
   }
   
-  // .form-group{
-  //   display: inline-block;
-  //   width: 200px;
-  // }
+  .btn-group {
+    float: none !important;
+    margin-bottom: 2px;
+  }
 }
 
 $search-width: 150px;
