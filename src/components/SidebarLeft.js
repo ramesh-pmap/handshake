@@ -32,7 +32,7 @@ class Sidebar extends React.Component {
           moon
         </NavItem>
 
-        <NavItem href="" className="active">
+        <NavItem href="">
           <Icon name="code" className="fa-fw" />
           React-Bootstrap
         </NavItem>

@@ -3,9 +3,10 @@ import React from 'react';
 // Layout components.
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Sidebar from '../components/SidebarLeft';
 
 // Define class.
-class Main extends React.Component {
+class Layout extends React.Component {
   constructor(props) {
     // Pass `props` into scope.
     super(props);
@@ -14,19 +15,24 @@ class Main extends React.Component {
   // Render method.
   render() {
     return (
-        <div>
-          <Header />
+      <div id="shellWrapper" className="shell-wrapper doc-wrapper">
+        <Sidebar title="mars" />
+        <Header />
+        <div className="page-content-wrapper">
+
           {this.props.children}
+
           <Footer />
         </div>
+      </div>
     );
   }
 }
 
 // Validation.
-Main.propTypes = {
+Layout.propTypes = {
   children: React.PropTypes.node
 };
 
 // Export.
-export default Main;
+export default Layout;

@@ -4,8 +4,53 @@
   .dropdown{
     margin-bottom: 0 !important;
   }
+  
+  .btn{
+    padding-left: 0 !important;
+  }
+  
 }
 
 .action-bar-spacing{
   margin-top: 10px;
+  
+  .btn-toolbar .btn{
+    float: none;
+  }
+  
+  .form-group{
+    display: inline-block;
+    width: 200px;
+  }
+  
+  #doc_mgt-search_input{
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 8px;
+    width: 200px;
+    height: 34px;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    z-index: 999;
+    
+    &:focus{
+      width: 100%;
+    }
+  }
+}
+
+@media(min-width:768px){
+  .doc-mgt-right-column{
+    margin-top: 62px;
+  }
+}
+
+#doc_mgt-list_thead{
+  height: 34px;
+  
+  table{
+    margin-bottom: 0;
+  }
 }
