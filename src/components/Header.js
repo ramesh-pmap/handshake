@@ -1,11 +1,9 @@
 // Dependencies.
 import React from 'react';
-
-// Utility methods.
-import utils from '../utils';
+import {Link} from 'react-router';
 
 // UI Components.
-import {Navbar, NavBrand, Nav, NavItem, CollapsibleNav, Button} from 'react-bootstrap';
+import {Navbar, NavBrand, CollapsibleNav, Button} from 'react-bootstrap';
 import Icon from 'react-fa';
 
 // Images.
@@ -21,7 +19,7 @@ class Header extends React.Component {
 
   // Toggle SidebarLeft.
   handleClick() {
-    utils.toggleClass(document.getElementById('shellWrapper'), 'toggled');
+    this.props.onUserToggle();
   }
 
   // Render method.
@@ -38,13 +36,13 @@ class Header extends React.Component {
           </NavBrand>
 
           <CollapsibleNav eventKey={0}>
-            <Nav navbar right>
-              <NavItem active={false} href="/">Home</NavItem>
-              <NavItem active={false} href="/toolkit">Toolkit</NavItem>
-              <NavItem active={false} href="/data">Data Sample</NavItem>
-              <NavItem active={false} href="/icons">Icons</NavItem>
-              <NavItem active={false} href="/document-management">Document Mgt</NavItem>
-            </Nav>
+            <ul className="nav navbar-nav navbar-right">
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/toolkit">Toolkit</Link></li>
+              <li><Link to="/data">Data Sample</Link></li>
+              <li><Link to="/icons">Icons</Link></li>
+              <li><Link to="/document-management">Document Mgt</Link></li>
+            </ul>
           </CollapsibleNav>
 
         </Navbar>
@@ -53,6 +51,11 @@ class Header extends React.Component {
   }
 
 }
+
+// Validation.
+Header.propTypes = {
+  onUserToggle: React.PropTypes.func
+};
 
 // Export.
 export default Header;

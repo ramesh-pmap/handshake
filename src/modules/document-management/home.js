@@ -1,5 +1,6 @@
 // Dependencies.
 import React from 'react';
+import {Link} from 'react-router';
 
 // Core components.
 import {Row, Col, ButtonToolbar, ButtonGroup, DropdownButton, MenuItem, Button, Table, Input, ListGroup, ListGroupItem} from 'react-bootstrap';
@@ -73,11 +74,11 @@ class Page extends React.Component {
               <Col md={6}>
                 <div className="action-bar-spacing text-right">
                   <ButtonToolbar>
-                    <Button href="/document-management-upload" bsStyle="success" bsSize="sm">
+                    <Link to="/document-management-upload" className="btn btn-sm btn-success">
                       <Icon name="upload" />
                       &nbsp;
                       Upload
-                    </Button>
+                    </Link>
                     <Button href="#" bsStyle="link" bsSize="sm">
                       <Icon name="folder-open" />
                       &nbsp;

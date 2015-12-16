@@ -10,14 +10,26 @@ class Layout extends React.Component {
   constructor(props) {
     // Pass `props` into scope.
     super(props);
+
+    this.state = {
+      sidebarOpened: true
+    };
+  }
+
+  handleUserToggle() {
+    this.setState({sidebarOpened: !this.state.sidebarOpened});
   }
 
   // Render method.
   render() {
+    // console.log('State: ', this.state.sidebarOpened);
+    const sidebarOpened = this.state.sidebarOpened;
+    let toggle = (sidebarOpened === true) ? 'shell-wrapper doc-wrapper toggled' : 'shell-wrapper doc-wrapper';
+
     return (
-      <div id="shellWrapper" className="shell-wrapper doc-wrapper">
+      <div id="shellWrapper" className={`${toggle}`}>
         <Sidebar title="mars" />
-        <Header />
+        <Header onUserToggle={this.handleUserToggle.bind(this)} />
         <div className="page-content-wrapper">
 
           {this.props.children}
