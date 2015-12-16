@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Core components.
-import {Row, Col, ButtonToolbar, ButtonGroup, DropdownButton, MenuItem, Button, Table, Input} from 'react-bootstrap';
+import {Row, Col, ButtonToolbar, ButtonGroup, DropdownButton, MenuItem, Button, Table, Input, ListGroup, ListGroupItem} from 'react-bootstrap';
 import Icon from 'react-fa';
 
 // Layouts.
@@ -15,7 +15,7 @@ import '../../modules/document-management/styles.scss';
 import utils from '../../utils';
 
 // Json file with icons data.
-const DataIcons = 'data/document-list.json';
+const DataIcons = '../../static/data/document-list.json';
 
 // Define class.
 class Page extends React.Component {
@@ -27,8 +27,20 @@ class Page extends React.Component {
     utils.title(props);
 
     this.state = {
-      data: []
+      data: [],
+      showResults: ''
     };
+  }
+
+  onFocus() {
+    this.setState({
+      showResults: 'results_wrapper--open'
+    });
+  }
+  onBlur() {
+    this.setState({
+      showResults: ''
+    });
   }
 
   componentDidMount() {
@@ -46,7 +58,7 @@ class Page extends React.Component {
           <Col sm={9}>
 
             <Row>
-              <Col sm={6}>
+              <Col md={6}>
                 <ButtonGroup className="title-dropdown">
                   <DropdownButton id="doc_mgt-docs_dropdown" href="#" title="All Documents" bsStyle="link" bsSize="lg">
                     <MenuItem eventKey="1">All Documents</MenuItem>
@@ -58,7 +70,7 @@ class Page extends React.Component {
 
                 </ButtonGroup>
               </Col>
-              <Col sm={6}>
+              <Col md={6}>
                 <div className="action-bar-spacing text-right">
                   <ButtonToolbar>
                     <Button href="/document-management-upload" bsStyle="success" bsSize="sm">
@@ -72,7 +84,29 @@ class Page extends React.Component {
                       New Folder
                     </Button>
                     &nbsp;
-                    <Input id="doc_mgt-search_input" type="search" placeholder="Search" bsSize="small" />
+                    <div id="doc_mgt-search_wrapper">
+                      <Input type="search" placeholder="Search" bsSize="small"
+                        onFocus={this.onFocus.bind(this)}
+                        onBlur={this.onBlur.bind(this)}
+                      />
+                      <ListGroup id="doc_mgt-results_wrapper" className={this.state.showResults}>
+                        <ListGroupItem href="#">
+                          <Icon name="file-word-o" className="fa-fw fa-lg text-muted" />
+                          &nbsp;
+                          <b>Sample Word Document</b>
+                        </ListGroupItem>
+                        <ListGroupItem href="#">
+                          <Icon name="folder-open" className="fa-fw fa-lg text-info" />
+                          &nbsp;
+                          <b>Policies</b>
+                        </ListGroupItem>
+                        <ListGroupItem href="#">
+                          <Icon name="file-excel-o" className="fa-fw fa-lg text-success" />
+                          &nbsp;
+                          <b>Sample Excel Document</b>
+                        </ListGroupItem>
+                      </ListGroup>
+                    </div>
                   </ButtonToolbar>
                 </div>
               </Col>
