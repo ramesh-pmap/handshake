@@ -14,8 +14,8 @@ import '../../modules/document-management/styles.scss';
 // Utility methods.
 import utils from '../../utils';
 
-// Json file with icons data.
-const DataIcons = '../../static/data/document-list.json';
+// Json file with document list data.
+const DocumentList = '../../../static/data/document-list.json';
 
 // Define class.
 class Page extends React.Component {
@@ -45,7 +45,7 @@ class Page extends React.Component {
 
   componentDidMount() {
     // Fetch Json data.
-    fetch(DataIcons).then(r => r.json())
+    fetch(DocumentList).then(r => r.json())
       .then(data => {this.setState({data}); })
       .catch(error => {this.setState({error}); });
   }
