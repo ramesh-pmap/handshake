@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 // Layout components.
 import Header from '../components/Header';
@@ -22,6 +23,8 @@ class Layout extends React.Component {
 
   // Render method.
   render() {
+    // const { state } = this.props;
+    // console.log('Layout:state:', state);
     const sidebarOpened = this.state.sidebarOpened;
     let toggle = (sidebarOpened === false) ? 'shell-wrapper doc-wrapper toggled' : 'shell-wrapper doc-wrapper';
 
@@ -30,9 +33,7 @@ class Layout extends React.Component {
         <Sidebar title="mars" />
         <Header onUserToggle={this.handleUserToggle.bind(this)} />
         <div className="page-content-wrapper">
-
           {this.props.children}
-
         </div>
       </div>
     );
@@ -41,8 +42,13 @@ class Layout extends React.Component {
 
 // Validation.
 Layout.propTypes = {
-  children: React.PropTypes.node
+  children: React.PropTypes.node,
+  state: React.PropTypes.object
 };
 
+const mapStateToProps = (state) => ({
+  state
+});
+
 // Export.
-export default Layout;
+export default connect(mapStateToProps)(Layout);

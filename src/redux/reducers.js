@@ -3,7 +3,7 @@ import { TOGGLE_SIDEBAR, UPLOAD_FILE, COMPLETE_UPLOAD } from './constants';
 import { fromJS } from 'immutable';
 
 const INITIAL_STATE = fromJS({
-  sidebarOpened: false,
+  sidebarOpened: false
 });
 
 function toggleSidebarReducer(state = INITIAL_STATE, action = {}) {

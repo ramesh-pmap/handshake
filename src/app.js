@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 // Define class.
 class App extends React.Component {
@@ -9,6 +10,8 @@ class App extends React.Component {
 
   // Render method.
   render() {
+    // const { state } = this.props;
+    // console.log('App:state:', state);
     return (
 			<div>
 				{this.props.children}
@@ -19,8 +22,13 @@ class App extends React.Component {
 
 // Validation.
 App.propTypes = {
-  children: React.PropTypes.node
+  children: React.PropTypes.node,
+  state: React.PropTypes.object
 };
 
+const mapStateToProps = (state) => ({
+  state
+});
+
 // Export.
-export default App;
+export default connect(mapStateToProps)(App);

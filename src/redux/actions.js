@@ -7,14 +7,14 @@ import { TOGGLE_SIDEBAR, UPLOAD_FILE, COMPLETE_UPLOAD } from './constants';
 // };
 
  // Action creators
-export function ToggleSidebar(value) {
+export function toggleSidebar(value) {
   return { type: TOGGLE_SIDEBAR, value };
 }
 
-export function UploadFile(value) {
+export function uploadFile(value) {
   return { type: UPLOAD_FILE, value };
 }
 
-export function CompleteUpload(value) {
+export function completeUpload(value) {
   return { type: COMPLETE_UPLOAD, value };
 }
