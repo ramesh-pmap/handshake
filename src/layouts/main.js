@@ -12,7 +12,7 @@ class Layout extends React.Component {
     super(props);
 
     this.state = {
-      sidebarOpened: true
+      sidebarOpened: false
     };
   }
 
@@ -22,9 +22,8 @@ class Layout extends React.Component {
 
   // Render method.
   render() {
-    // console.log('State: ', this.state.sidebarOpened);
     const sidebarOpened = this.state.sidebarOpened;
-    let toggle = (sidebarOpened === true) ? 'shell-wrapper doc-wrapper toggled' : 'shell-wrapper doc-wrapper';
+    let toggle = (sidebarOpened === false) ? 'shell-wrapper doc-wrapper toggled' : 'shell-wrapper doc-wrapper';
 
     return (
       <div id="shellWrapper" className={`${toggle}`}>
