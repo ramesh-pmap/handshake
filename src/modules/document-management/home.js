@@ -5,7 +5,7 @@ import {LinkContainer} from 'react-router-bootstrap';
 import Dropzone from 'react-dropzone';
 
 // Core components.
-import {Row, Col, ButtonToolbar, ButtonGroup, DropdownButton, MenuItem, Button, Table, Input, ListGroup, ListGroupItem, Modal} from 'react-bootstrap';
+import {Row, Col, ButtonGroup, DropdownButton, MenuItem, Button, Table, Input, ListGroup, ListGroupItem, Modal, Badge} from 'react-bootstrap';
 import Icon from 'react-fa';
 
 // Layouts.
@@ -33,11 +33,13 @@ class Page extends React.Component {
       data: [],
       showResults: '',
       showModal: false,
-      files: []
+      files: [],
+      width: 0,
+      height: 0
     };
   }
 
-  // Search & Results
+  // Search & Results.
   onFocus() {
     this.setState({
       showResults: 'results_wrapper--open'
@@ -49,7 +51,7 @@ class Page extends React.Component {
     });
   }
 
-  // Upload Modal
+  // Upload Modal.
   closeModal() {
     this.setState({ showModal: false });
   }
@@ -57,14 +59,7 @@ class Page extends React.Component {
     this.setState({ showModal: true });
   }
 
-  componentDidMount() {
-    // Fetch Json data.
-    fetch(DocumentList).then(r => r.json())
-      .then(data => {this.setState({data}); })
-      .catch(error => {this.setState({error}); });
-  }
-
-  // Dropzone
+  // Dropzone.
   onDrop(uploadedFiles) {
     this.setState({ files: uploadedFiles });
   }
@@ -72,12 +67,40 @@ class Page extends React.Component {
     this.refs.dropzone.open();
   }
 
+  // Window Resizing.
+  updateDimensions() {
+    let w = window;
+    let d = document;
+    let e = d.documentElement;
+    let g = d.getElementsByTagName('body')[0];
+    let x = w.innerWidth || e.clientWidth || g.clientWidth;
+    let y = w.innerHeight || e.clientHeight || g.clientHeight;
+    this.setState({width: x, height: y});
+  }
+  componentWillMount() {
+    this.updateDimensions();
+  }
+  componentDidMount() {
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateDimensions.bind(this));
+  }
+  componentDidMount() {
+    // Window Resizing.
+    window.addEventListener('resize', this.updateDimensions.bind(this));
+
+    // Fetch Json data.
+    fetch(DocumentList).then(r => r.json())
+      .then(data => {this.setState({data}); })
+      .catch(error => {this.setState({error}); });
+  }
+
   // Render method.
   render() {
     return (
       <Main>
         <Row>
-          <Col sm={9}>
+          <Col sm={9} id="doc_mgt-left_column">
 
             <Row>
               <Col md={6}>
@@ -94,9 +117,8 @@ class Page extends React.Component {
               </Col>
               <Col md={6}>
                 <div className="action-bar-spacing text-right">
-                  <ButtonToolbar>
 
-                    <DropdownButton title="Add" href="#" bsStyle="success" bsSize="sm">
+                    <DropdownButton id="AddDocumentDropdown" title="Add" href="#" bsStyle="success" bsSize="sm" pullRight>
                       <MenuItem onClick={this.openModal.bind(this)}>
                         <Icon name="upload" />
                         &nbsp;
@@ -118,12 +140,6 @@ class Page extends React.Component {
                       </LinkContainer>
                     </DropdownButton>
 
-                    <Button href="#" bsStyle="link" bsSize="sm">
-                      <Icon name="folder-open" />
-                      &nbsp;
-                      New Folder
-                    </Button>
-                    &nbsp;
                     <div id="doc_mgt-search_wrapper">
                       <Input type="search" placeholder="Search" bsSize="small"
                         onFocus={this.onFocus.bind(this)}
@@ -134,8 +150,8 @@ class Page extends React.Component {
                           <Icon name="file-word-o" className="fa-fw fa-lg text-muted" />
                           &nbsp;
                           <b>Sample Word Document</b>
-                          <small>/OSHA/</small>
-                          <small>/OSHA/Procedures/</small>
+                          <p className="small">/OSHA/</p>
+                          <p className="small">/OSHA/Procedures/</p>
                         </ListGroupItem>
                         <ListGroupItem href="#">
                           <Icon name="folder-open" className="fa-fw fa-lg text-info" />
@@ -149,7 +165,7 @@ class Page extends React.Component {
                         </ListGroupItem>
                       </ListGroup>
                     </div>
-                  </ButtonToolbar>
+
                 </div>
               </Col>
             </Row>
@@ -270,41 +286,39 @@ class Page extends React.Component {
 
           </Col>
 
-          <Col sm={3} className="doc-mgt-right-column">
-            <ButtonGroup className="title-dropdown">
-              <DropdownButton id="doc_mgt-actions_dropdown" title="Activity" bsStyle="link" bsSize="lg">
-                <MenuItem eventKey="1">Pending <small>(2)</small></MenuItem>
-                <MenuItem eventKey="2">Ready for Release <small>(1)</small></MenuItem>
-                <MenuItem eventKey="3">Change Requests <small>(7)</small></MenuItem>
-                <MenuItem eventKey="4">All</MenuItem>
-              </DropdownButton>
-            </ButtonGroup>
+          <Col sm={3} id="doc_mgt-right_column" className="sidebar-wrapper">
+            <div className="sidebar" style={{height: this.state.height + 'px'}}>
 
-            <a href="" className="block">
-              <p>
-                Sample Action
-                <Icon name="envelope" className="fa-lg pull-right" />
-              </p>
-            </a>
-            <a href="" className="block">
-              <p>
-                Sample Action
-                <Icon name="envelope" className="fa-lg pull-right" />
-              </p>
-            </a>
-            <a href="" className="block">
-              <p>
-                Sample Action
-                <Icon name="envelope" className="fa-lg pull-right" />
-              </p>
-            </a>
-            <a href="" className="block">
-              <p>
-                Sample Action
-                <Icon name="envelope" className="fa-lg pull-right" />
-              </p>
-            </a>
+              <div className="fixed-title">
+                <ButtonGroup className="title-dropdown">
+                  <DropdownButton id="doc_mgt-actions_dropdown" title="All Tasks" bsStyle="link" bsSize="lg">
+                    <MenuItem eventKey="1">Pending <small>(2)</small></MenuItem>
+                    <MenuItem eventKey="2">Ready for Release <small>(1)</small></MenuItem>
+                    <MenuItem eventKey="3">Change Requests <small>(7)</small></MenuItem>
+                    <MenuItem eventKey="4">All Tasks</MenuItem>
+                  </DropdownButton>
+                </ButtonGroup>
+              </div>
 
+              <ListGroup bsStyle="info">
+                <ListGroupItem href="#link1">
+                  <Icon name="file-word-o" className="fa-fw fa-lg text-muted" />
+                  &nbsp;
+                  <b>Sample Word Document</b>
+                  <Badge className="pull-right">2</Badge>
+                  <p className="small">/OSHA/</p>
+                  <p className="small">/OSHA/Procedures/</p>
+                </ListGroupItem>
+                <ListGroupItem href="#link1" bsStyle="danger">
+                  <Icon name="file-word-o" className="fa-fw fa-lg text-muted" />
+                  &nbsp;
+                  <b>Sample Word Document</b>
+                  <p className="small">/OSHA/</p>
+                  <p className="small">/OSHA/Procedures/</p>
+                </ListGroupItem>
+              </ListGroup>
+
+            </div>
           </Col>
         </Row>
 

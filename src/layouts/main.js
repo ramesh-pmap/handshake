@@ -2,7 +2,7 @@ import React from 'react';
 
 // Layout components.
 import Header from '../components/Header';
-import Footer from '../components/Footer';
+// import Footer from '../components/Footer';
 import Sidebar from '../components/SidebarLeft';
 
 // Define class.
@@ -33,7 +33,6 @@ class Layout extends React.Component {
 
           {this.props.children}
 
-          <Footer />
         </div>
       </div>
     );

@@ -11,6 +11,10 @@ html,body {
   height: 100%;
 }
 
+*:focus {
+  outline: 0 !important;
+}
+
 body.full-height-layout #wrapper,
 body.full-height-layout #page-wrapper {
   height: 100%;
