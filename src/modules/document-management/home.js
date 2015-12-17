@@ -2,6 +2,7 @@
 import React from 'react';
 // import {Link} from 'react-router';
 import {LinkContainer} from 'react-router-bootstrap';
+import Dropzone from 'react-dropzone';
 
 // Core components.
 import {Row, Col, ButtonToolbar, ButtonGroup, DropdownButton, MenuItem, Button, Table, Input, ListGroup, ListGroupItem, Modal} from 'react-bootstrap';
@@ -31,7 +32,8 @@ class Page extends React.Component {
     this.state = {
       data: [],
       showResults: '',
-      showUModal: false
+      showModal: false,
+      files: []
     };
   }
 
@@ -60,6 +62,14 @@ class Page extends React.Component {
     fetch(DocumentList).then(r => r.json())
       .then(data => {this.setState({data}); })
       .catch(error => {this.setState({error}); });
+  }
+
+  // Dropzone
+  onDrop(uploadedFiles) {
+    this.setState({ files: uploadedFiles });
+  }
+  onOpenClick() {
+    this.refs.dropzone.open();
   }
 
   // Render method.
@@ -124,6 +134,8 @@ class Page extends React.Component {
                           <Icon name="file-word-o" className="fa-fw fa-lg text-muted" />
                           &nbsp;
                           <b>Sample Word Document</b>
+                          <small>/OSHA/</small>
+                          <small>/OSHA/Procedures/</small>
                         </ListGroupItem>
                         <ListGroupItem href="#">
                           <Icon name="folder-open" className="fa-fw fa-lg text-info" />
@@ -160,9 +172,9 @@ class Page extends React.Component {
                 <tr>
                   <td width="50%">
                     <Button href="#" bsStyle="link" bsSize="xs">
-                      <Icon name="folder-open" className="fa-fw fa-lg text-info" />
+                      <Icon name="folder-open" className="fa-fw fa-lg text-muted" />
                       &nbsp;
-                      <b>Procedures</b>
+                      Procedures
                     </Button>
                   </td>
                   <td width="10%" className="text-center">
@@ -176,9 +188,9 @@ class Page extends React.Component {
                 <tr>
                   <td>
                     <Button href="#" bsStyle="link" bsSize="xs">
-                      <Icon name="folder-open" className="fa-fw fa-lg text-info" />
+                      <Icon name="folder-open" className="fa-fw fa-lg text-muted" />
                       &nbsp;
-                      <b>Policies</b>
+                      Policies
                     </Button>
                   </td>
                   <td className="text-center">
@@ -194,7 +206,7 @@ class Page extends React.Component {
                     <Button href="#" bsStyle="link" bsSize="xs">
                       <Icon name="file-word-o" className="fa-fw fa-lg text-muted" />
                       &nbsp;
-                      <b>Sample Word Document</b>
+                      Sample Word Document
                     </Button>
                   </td>
                   <td className="text-center">
@@ -208,9 +220,9 @@ class Page extends React.Component {
                 <tr>
                   <td>
                     <Button href="#" bsStyle="link" bsSize="xs">
-                      <Icon name="file-excel-o" className="fa-fw fa-lg text-success" />
+                      <Icon name="file-excel-o" className="fa-fw fa-lg text-muted" />
                       &nbsp;
-                      <b>Sample Excel Document</b>
+                      Sample Excel Document
                     </Button>
                   </td>
                   <td className="text-center">
@@ -224,9 +236,9 @@ class Page extends React.Component {
                 <tr>
                   <td>
                     <Button href="#" bsStyle="link" bsSize="xs">
-                      <Icon name="file-pdf-o" className="fa-fw fa-lg text-danger" />
+                      <Icon name="file-pdf-o" className="fa-fw fa-lg text-muted" />
                       &nbsp;
-                      <b>Sample PDF Document</b>
+                      Sample PDF Document
                     </Button>
                   </td>
                   <td className="text-center">
@@ -240,9 +252,9 @@ class Page extends React.Component {
                 <tr>
                   <td>
                     <Button href="#" bsStyle="link" bsSize="xs">
-                      <Icon name="file-image-o" className="fa-fw fa-lg text-warning" />
+                      <Icon name="file-image-o" className="fa-fw fa-lg text-muted" />
                       &nbsp;
-                      <b>Sample Image File</b>
+                      Sample Image File
                     </Button>
                   </td>
                   <td className="text-center">
@@ -301,7 +313,26 @@ class Page extends React.Component {
             <Modal.Title>Upload New Document</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <h4>Upload</h4>
+
+            <Dropzone id="Upload_Dropzone" ref="dropzone" onDrop={this.onDrop.bind(this)} className="dropzone">
+              Try dropping some files here, or click to select files to upload.
+            </Dropzone>
+            <br />
+            <div className="dropzone-btn text-center">
+              <Button bsStyle="primary" onClick={this.onOpenClick.bind(this)}>
+                Open Dropzone
+              </Button>
+            </div>
+
+            {
+              this.state.files.length ? <div>
+                <h2>Uploading {this.state.files.length} files...</h2>
+                <div>
+                  {this.state.files.map( file => <Image src={file.preview} />)}
+                </div>
+              </div> : null
+            }
+
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.closeModal.bind(this)}>Cancel</Button>
