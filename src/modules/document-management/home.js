@@ -9,7 +9,7 @@ import {Row, Col, ButtonGroup, DropdownButton, MenuItem, Button, Table, Input, L
 import Icon from 'react-fa';
 
 // Layouts.
-import Main from '../../layouts/main';
+import Main from '../../layouts/shell-demo/main';
 
 // Stylesheets.
 import '../../modules/document-management/styles.scss';
@@ -305,7 +305,7 @@ class Page extends React.Component {
                   <Icon name="file-word-o" className="fa-fw fa-lg text-muted" />
                   &nbsp;
                   <b>Sample Word Document</b>
-                  <Badge className="pull-right">2</Badge>
+                  <Badge pullRight>2</Badge>
                   <p className="small">/OSHA/</p>
                   <p className="small">/OSHA/Procedures/</p>
                 </ListGroupItem>

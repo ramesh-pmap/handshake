@@ -4,15 +4,20 @@
 ---------------------------------------------------
 ------------------------------------------------ */
 .navbar-brand{
+  
+  img{
+    display: inline-block;
+  }
 
-  & > img.brand-logo{
+  & > .brand-logo{
     display: inline-block;
     width: auto;
     max-height: 26px;
     margin-top: -2px;
+    cursor: pointer;
   }
 
-  .btn + img.brand-logo{
+  .btn + .brand-logo{
     margin-left: 16px;
   }
 
