@@ -1,4 +1,4 @@
-import { OPEN_SIDEBAR, CLOSE_SIDEBAR } from '../constants';
+import { TOGGLE_SIDEBAR, UPLOAD_FILE, COMPLETE_UPLOAD } from './constants';
 // Other constants
 // export const VisibilityFilters = {
 //   SHOW_ALL: 'SHOW_ALL',
@@ -7,10 +7,14 @@ import { OPEN_SIDEBAR, CLOSE_SIDEBAR } from '../constants';
 // };
 
  // Action creators
-export function OpenSidebar(value) {
-  return { type: OPEN_SIDEBAR, value };
+export function ToggleSidebar(value) {
+  return { type: TOGGLE_SIDEBAR, value };
 }
 
-export function CloseSidebar(value) {
-  return { type: CLOSE_SIDEBAR, value };
+export function UploadFile(value) {
+  return { type: UPLOAD_FILE, value };
+}
+
+export function CompleteUpload(value) {
+  return { type: COMPLETE_UPLOAD, value };
 }

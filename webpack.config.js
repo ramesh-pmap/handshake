@@ -4,12 +4,12 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    javascript: './src/app.js',
+    javascript: './src/index.js',
     html: './src/index.html',
   },
 
   output: {
-    filename: 'app.js',
+    filename: 'index.js',
     path: __dirname + '/build',
   },
 
