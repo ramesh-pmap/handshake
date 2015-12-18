@@ -6,4 +6,4 @@ deployment:
   push_to_cosmos:
     branch: document-mgt
     commands:
-      - rsync -avz -e ­"npm install && npm run build" * circleci@64.80.61.75:/Library/Server/Web/Data/Sites/cosmos
+      - rsync -avz -e ­'npm install && npm run build' * circleci@64.80.61.75:/Library/Server/Web/Data/Sites/cosmos
