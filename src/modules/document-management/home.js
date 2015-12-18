@@ -403,14 +403,10 @@ class Page extends React.Component {
           <Modal.Body>
 
             <Dropzone id="Upload_Dropzone" ref="dropzone" onDrop={this.onDrop.bind(this)} className="dropzone">
-              Try dropping some files here, or click to select files to upload.
+              Drag and drop files here
+              <br className="hidden-xs"/>&nbsp;
+              or click to select files to upload.
             </Dropzone>
-            <br />
-            <div className="dropzone-btn text-center">
-              <Button bsStyle="primary" onClick={this.onOpenClick.bind(this)}>
-                Open Dropzone
-              </Button>
-            </div>
 
             {
               this.state.files.length ? <div>
