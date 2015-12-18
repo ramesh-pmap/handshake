@@ -26,7 +26,7 @@ class Page extends React.Component {
   render() {
     return (
       <Main>
-        <Mars title="Mars title changed" message="Mars message" />
+        <Mars title="Mars title" message="Mars message" />
         <Login/>
       </Main>
     );
