@@ -6,4 +6,4 @@ deployment:
   push_to_cosmos:
     branch: document-mgt
     commands:
-      - rsync -avz --omit-dir-times --no-perms build circleci@64.80.61.75:/Library/Server/Web/Data/Sites/cosmos
+      - rsync -avz build circleci@64.80.61.75:/Library/Server/Web/Data/Sites/cosmos
