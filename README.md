@@ -1,4 +1,4 @@
-# mars
+# cosmos
 
 Client side code for the mars application as well as a NodeJS server for local development.
 
@@ -17,17 +17,17 @@ Client side code for the mars application as well as a NodeJS server for local d
 # clone the source code
 $ git clone https://github.com/ProcessMAP/mars.git
 
-# cd path to cloned source 
-$ cd mars 
+# cd path to cloned source
+$ cd mars
 
 # install npm dependencies
 $ npm install
 
-# run the start script (build and start the sever) 
+# run the start script (build and start the sever)
 $ npm start
 
 ```
-- application runs at [http://localhost:8080/](http://localhost:8080/) 
+- application runs at [http://localhost:8080/](http://localhost:8080/)
 - go to the components API at [http://localhost:8080/doc/components.html](http://localhost:8080/doc/components.html)
 
 ## Git Workflow
@@ -38,17 +38,17 @@ This is the workflow all team members should be following in order to reduce fil
   $ git checkout master
   $ git pull
   $ git checkout -b branch_name
-  
+
   # Open Atom editor (or any other editor) and do your work
   $ atom .
-  
+
   # Once completed, add files to git
   $ git add .
   $ git commit -m "#12: Commit message goes here..."
   $ git checkout master
   $ git pull
   $ git merge branch_name
-  
+
   # Push changes back to master
   $ git push
 ```
@@ -66,7 +66,7 @@ This is the workflow all team members should be following in order to reduce fil
 * Local Server
   * [Webpack-dev-server](https://webpack.github.io/docs/webpack-dev-server.html)
 
-* Package Manager 
+* Package Manager
   * [Npm](https://npmjs.org/)
 
 * Task Runner / Build Tool
@@ -74,7 +74,7 @@ This is the workflow all team members should be following in order to reduce fil
   * [Git hooks](http://git-scm.com/book/en/Customizing-Git-Git-Hooks) `> runs-on precommit` RUNS ON COMMIT!
 
 * Module Dependency Manager & Optimizer
-  * [Webpack](https://webpack.github.io) 
+  * [Webpack](https://webpack.github.io)
 
 * Application Structure
   * [React](https://facebook.github.io/react/)
@@ -92,7 +92,7 @@ This is the workflow all team members should be following in order to reduce fil
   * [Karma](http://karma-runner.github.io/0.13/index.html)
 
 * Code Complexity Analysis
-  * TBD 
+  * TBD
 
 * Code Coverage
   * ??? [Istambul](http://gotwarlost.github.io/istanbul/)
@@ -162,7 +162,7 @@ Folder structure example:
 
 ```
 
-### Application Architecture 
+### Application Architecture
 
 * TBD
 
@@ -184,7 +184,7 @@ is-state
 
 ### NPM:
 
-We use npm to manage all packages added to the application. 
+We use npm to manage all packages added to the application.
 
 ####NPM dependency packages
 
@@ -223,4 +223,3 @@ Here is a list of some dependency packages we are using in the app:
 ### Bugs
 
 - Bugs & Features: [https://github.com/ProcessMAP/mars-Issues/issues](https://github.com/ProcessMAP/mars-Issues/issues?state=open)
-
