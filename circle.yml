@@ -7,4 +7,4 @@ deployment:
     branch: document-mgt
     commands:
       - rsync -avz * circleci@64.80.61.75:/Library/Server/Web/Data/Sites/cosmos
-      - rsync -avz -e build-script.sh
+      - rsync -avz -e circleci@64.80.61.75:/Library/Server/Web/Data/Sites/cosmos/build-script.sh
