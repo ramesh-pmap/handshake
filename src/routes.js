@@ -20,6 +20,6 @@ export default (
 		<Route path="data" component={DataPage} title="Data Sample Page" />
 		<Route path="icons" component={IconsPage} title="Icons Page" />
 		<Route path="document-management" component={DocMgtPage} title="Document Management" />
-		<Route path="document-management-upload" component={DocMgtUploadPage} title="Document Management Upload" />
+		<Route path="document-management/upload" component={DocMgtUploadPage} title="Document Management Upload" />
 	</Router>
 );

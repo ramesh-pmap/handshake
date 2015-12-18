@@ -5,7 +5,7 @@ import React from 'react';
 import {Row, Col} from 'react-bootstrap';
 
 // Layouts.
-import Main from '../../layouts/main';
+import Main from '../../layouts/shell-demo/main';
 
 // Stylesheets.
 import '../../modules/document-management/styles.scss';

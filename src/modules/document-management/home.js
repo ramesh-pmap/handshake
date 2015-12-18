@@ -1,11 +1,11 @@
 // Dependencies.
 import React from 'react';
-import {Link} from 'react-router';
+// import {Link} from 'react-router';
 import {LinkContainer} from 'react-router-bootstrap';
 import Dropzone from 'react-dropzone';
 
 // Core components.
-import {Row, Col, ButtonGroup, DropdownButton, MenuItem, Button, Table, Input, ListGroup, ListGroupItem, Modal} from 'react-bootstrap';
+import {Row, Col, ButtonGroup, DropdownButton, MenuItem, Button, Input, ListGroup, ListGroupItem, Modal, Breadcrumb, BreadcrumbItem} from 'react-bootstrap';
 import Icon from 'react-fa';
 
 // Layouts.
@@ -35,7 +35,8 @@ class Page extends React.Component {
       showModal: false,
       files: [],
       width: 0,
-      height: 0
+      height: 0,
+      showListHeader: 'titles'
     };
   }
 
@@ -83,8 +84,6 @@ class Page extends React.Component {
   componentWillMount() {
     this.updateDimensions();
   }
-  componentDidMount() {
-  }
   componentWillUnmount() {
     window.removeEventListener('resize', this.updateDimensions.bind(this));
   }
@@ -114,184 +113,238 @@ class Page extends React.Component {
                     <MenuItem eventKey="3">Recent Dcouments</MenuItem>
                   </DropdownButton>
 
-                  <p>
-                    /&nbsp;
-                    <Link to="">Smiths Group</Link>
-                    &nbsp;/&nbsp;
-                    OSHA
-                  </p>
+                  <Breadcrumb>
+                    <LinkContainer to="/document-management/upload">
+                      <BreadcrumbItem>
+                        Smiths
+                      </BreadcrumbItem>
+                    </LinkContainer>
+                    <LinkContainer to="/document-management/upload">
+                      <BreadcrumbItem>
+                        Library
+                      </BreadcrumbItem>
+                    </LinkContainer>
+                    <BreadcrumbItem active>
+                      Data
+                    </BreadcrumbItem>
+                  </Breadcrumb>
 
                 </ButtonGroup>
               </Col>
               <Col md={6}>
                 <div className="action-bar-spacing text-right">
 
-                    <DropdownButton id="AddDocumentDropdown" title="Add" href="#" bsStyle="success" bsSize="sm" pullRight>
-                      <MenuItem onClick={this.openModal.bind(this)}>
-                        <Icon name="upload" />
+                  <DropdownButton id="AddDocumentDropdown" title="Add" href="#" bsStyle="success" bsSize="sm" pullRight>
+                    <MenuItem onClick={this.openModal.bind(this)}>
+                      <Icon name="upload" />
+                      &nbsp;
+                      Upload New Document
+                    </MenuItem>
+                    <LinkContainer to="/document-management/upload">
+                      <MenuItem>
+                        <Icon name="link" />
                         &nbsp;
-                        Upload New Document
+                        Web Link
                       </MenuItem>
-                      <LinkContainer to="/document-management-upload">
-                        <MenuItem>
-                          <Icon name="link" />
-                          &nbsp;
-                          Web Link
-                        </MenuItem>
-                      </LinkContainer>
-                      <LinkContainer to="/document-management-upload">
-                        <MenuItem>
-                          <Icon name="book" />
-                          &nbsp;
-                          Hardcopy
-                        </MenuItem>
-                      </LinkContainer>
-                    </DropdownButton>
+                    </LinkContainer>
+                    <LinkContainer to="/document-management/upload">
+                      <MenuItem>
+                        <Icon name="book" />
+                        &nbsp;
+                        Hardcopy
+                      </MenuItem>
+                    </LinkContainer>
+                  </DropdownButton>
 
-                    <div id="doc_mgt-search_wrapper">
-                      <Input type="search" placeholder="Search" bsSize="small"
-                        onFocus={this.onFocus.bind(this)}
-                        onBlur={this.onBlur.bind(this)}
-                      />
-                      <ListGroup id="doc_mgt-results_wrapper" className={this.state.showResults}>
-                        <ListGroupItem href="#">
-                          <Icon name="file-word-o" className="fa-fw fa-lg text-muted" />
-                          &nbsp;
-                          <b>Sample Word Document</b>
-                          <p className="small">/OSHA/</p>
-                          <p className="small">/OSHA/Procedures/</p>
-                        </ListGroupItem>
-                        <ListGroupItem href="#">
-                          <Icon name="folder-open" className="fa-fw fa-lg text-info" />
-                          &nbsp;
-                          <b>Policies</b>
-                        </ListGroupItem>
-                        <ListGroupItem href="#">
-                          <Icon name="file-excel-o" className="fa-fw fa-lg text-success" />
-                          &nbsp;
-                          <b>Sample Excel Document</b>
-                        </ListGroupItem>
-                      </ListGroup>
-                    </div>
+                  <div id="doc_mgt-search_wrapper">
+                    <Input type="search" placeholder="Search" bsSize="small"
+                      onFocus={this.onFocus.bind(this)}
+                      onBlur={this.onBlur.bind(this)}
+                    />
+                    <ListGroup id="doc_mgt-results_wrapper" className={this.state.showResults}>
+                      <ListGroupItem href="#">
+                        <Icon name="file-word-o" className="fa-fw fa-lg text-muted" />
+                        &nbsp;
+                        <b>Sample Word Document</b>
+                        <p className="small">/OSHA/</p>
+                        <p className="small">/OSHA/Procedures/</p>
+                      </ListGroupItem>
+                      <ListGroupItem href="#">
+                        <Icon name="folder-open" className="fa-fw fa-lg text-info" />
+                        &nbsp;
+                        <b>Policies</b>
+                      </ListGroupItem>
+                      <ListGroupItem href="#">
+                        <Icon name="file-excel-o" className="fa-fw fa-lg text-success" />
+                        &nbsp;
+                        <b>Sample Excel Document</b>
+                      </ListGroupItem>
+                    </ListGroup>
+                  </div>
 
                 </div>
               </Col>
             </Row>
 
-            <div id="doc_mgt-list_thead">
-              <Table>
-                <thead>
-                  <tr>
-                    <th width="50%">Name</th>
-                    <th width="10%" className="text-center">Version</th>
-                    <th width="20%" className="text-center">Modified</th>
-                    <th width="20%" className="text-center">Actions</th>
-                  </tr>
-                </thead>
-              </Table>
+            <div className="card">
+              <div className="doc_mgt-list_header">
+
+                <Row className="doc_mgt-list_actions">
+                  <Col sm={12}>
+                    <Button href="#/" bsStyle="link" bsSize="xs">
+                      <Icon name="folder-open" className="text-info" /> Share
+                    </Button>
+                  </Col>
+                </Row>
+
+                <Row className="doc_mgt-list_titles hidden-xs">
+                  <Col sm={6}>
+                    <b>Type &nbsp;Name</b>
+                  </Col>
+                  <Col sm={1} className="text-center">
+                    <b>Version</b>
+                  </Col>
+                  <Col sm={2} className="text-center">
+                    <b>Modified</b>
+                  </Col>
+                  <Col sm={3} className="text-center">
+                    <b>Status</b>
+                  </Col>
+                </Row>
+
+              </div>
+
+              <ListGroup className="doc_mgt-list">
+
+                  <ListGroupItem>
+                    <Row>
+                      <Col sm={6}>
+                        <Button href="#/" bsStyle="link" bsSize="xs">
+                          <Icon name="folder-open" className="fa-fw fa-lg text-muted" />
+                          &nbsp;
+                          Procedures
+                        </Button>
+                      </Col>
+                      <Col sm={1} className="text-center hidden-xs" />
+                      <Col sm={2} className="text-center text-left-xs">
+                        <span className="visible-xs-inline">Date Modified: </span>
+                        11/8/2015
+                      </Col>
+                    </Row>
+                  </ListGroupItem>
+
+                  <ListGroupItem>
+                    <Row>
+                      <Col sm={6}>
+                        <Button href="#/" bsStyle="link" bsSize="xs">
+                          <Icon name="folder-open" className="fa-fw fa-lg text-muted" />
+                          &nbsp;
+                          Policies
+                        </Button>
+                      </Col>
+                      <Col sm={1} className="text-center hidden-xs" />
+                      <Col sm={2} className="text-center text-left-xs">
+                        <span className="visible-xs-inline">Date Modified: </span>
+                        11/8/2015
+                      </Col>
+                    </Row>
+                  </ListGroupItem>
+
+                  <ListGroupItem>
+                    <Row>
+                      <Col sm={6}>
+                        <Button href="#/" bsStyle="link" bsSize="xs">
+                          <Icon name="file-word-o" className="fa-fw fa-lg text-muted" />
+                          &nbsp;
+                          Sample Word Document
+                        </Button>
+                      </Col>
+                      <Col sm={1} className="text-center text-left-xs">
+                        <span className="visible-xs-inline">Version: </span>
+                        <Button href="#" bsStyle="link" bsSize="xs">2</Button>
+                      </Col>
+                      <Col sm={2} className="text-center text-left-xs">
+                        <span className="visible-xs-inline">Date Modified: </span>
+                        11/8/2015
+                      </Col>
+                      <Col sm={3} className="text-center text-left-xs">
+                        (Status)
+                      </Col>
+                    </Row>
+                  </ListGroupItem>
+
+                  <ListGroupItem>
+                    <Row>
+                      <Col sm={6}>
+                        <Button href="#/" bsStyle="link" bsSize="xs">
+                          <Icon name="file-excel-o" className="fa-fw fa-lg text-muted" />
+                          &nbsp;
+                          Sample Excel Document
+                        </Button>
+                      </Col>
+                      <Col sm={1} className="text-center text-left-xs">
+                        <span className="visible-xs-inline">Version: </span>
+                        <Button href="#" bsStyle="link" bsSize="xs">1</Button>
+                      </Col>
+                      <Col sm={2} className="text-center text-left-xs">
+                        <span className="visible-xs-inline">Date Modified: </span>
+                        11/8/2015
+                      </Col>
+                      <Col sm={3} className="text-center text-left-xs">
+                        (Status)
+                      </Col>
+                    </Row>
+                  </ListGroupItem>
+
+                  <ListGroupItem>
+                    <Row>
+                      <Col sm={6}>
+                        <Button href="#/" bsStyle="link" bsSize="xs">
+                          <Icon name="file-pdf-o" className="fa-fw fa-lg text-muted" />
+                          &nbsp;
+                          Sample PDF Document
+                        </Button>
+                      </Col>
+                      <Col sm={1} className="text-center text-left-xs">
+                        <span className="visible-xs-inline">Version: </span>
+                        <Button href="#" bsStyle="link" bsSize="xs">1</Button>
+                      </Col>
+                      <Col sm={2} className="text-center text-left-xs">
+                        <span className="visible-xs-inline">Date Modified: </span>
+                        11/8/2015
+                      </Col>
+                      <Col sm={3} className="text-center text-left-xs">
+                        (Status)
+                      </Col>
+                    </Row>
+                  </ListGroupItem>
+
+                  <ListGroupItem>
+                    <Row>
+                      <Col sm={6}>
+                        <Button href="#/" bsStyle="link" bsSize="xs">
+                          <Icon name="file-image-o" className="fa-fw fa-lg text-muted" />
+                          &nbsp;
+                          Sample Image Document
+                        </Button>
+                      </Col>
+                      <Col sm={1} className="text-center text-left-xs">
+                        <span className="visible-xs-inline">Version: </span>
+                        <Button href="#" bsStyle="link" bsSize="xs">1</Button>
+                      </Col>
+                      <Col sm={2} className="text-center text-left-xs">
+                        <span className="visible-xs-inline">Date Modified: </span>
+                        11/8/2015
+                      </Col>
+                      <Col sm={3} className="text-center text-left-xs">
+                        (Status)
+                      </Col>
+                    </Row>
+                  </ListGroupItem>
+
+                </ListGroup>
+
             </div>
-
-            <Table hover>
-              <tbody>
-                <tr>
-                  <td width="50%">
-                    <Button href="#" bsStyle="link" bsSize="xs">
-                      <Icon name="folder-open" className="fa-fw fa-lg text-muted" />
-                      &nbsp;
-                      Procedures
-                    </Button>
-                  </td>
-                  <td width="10%" className="text-center">
-                    <Button href="#" bsStyle="link" bsSize="xs">1</Button>
-                  </td>
-                  <td width="20%" className="text-center">
-                    11/8/2015
-                  </td>
-                  <td width="20%" className="text-center">Actions</td>
-                </tr>
-                <tr>
-                  <td>
-                    <Button href="#" bsStyle="link" bsSize="xs">
-                      <Icon name="folder-open" className="fa-fw fa-lg text-muted" />
-                      &nbsp;
-                      Policies
-                    </Button>
-                  </td>
-                  <td className="text-center">
-                    <Button href="#" bsStyle="link" bsSize="xs">1</Button>
-                  </td>
-                  <td className="text-center">
-                    11/8/2015
-                  </td>
-                  <td className="text-center">Actions</td>
-                </tr>
-                <tr>
-                  <td>
-                    <Button href="#" bsStyle="link" bsSize="xs">
-                      <Icon name="file-word-o" className="fa-fw fa-lg text-muted" />
-                      &nbsp;
-                      Sample Word Document
-                    </Button>
-                  </td>
-                  <td className="text-center">
-                    <Button href="#" bsStyle="link" bsSize="xs">1</Button>
-                  </td>
-                  <td className="text-center">
-                    11/8/2015
-                  </td>
-                  <td className="text-center">Actions</td>
-                </tr>
-                <tr>
-                  <td>
-                    <Button href="#" bsStyle="link" bsSize="xs">
-                      <Icon name="file-excel-o" className="fa-fw fa-lg text-muted" />
-                      &nbsp;
-                      Sample Excel Document
-                    </Button>
-                  </td>
-                  <td className="text-center">
-                    <Button href="#" bsStyle="link" bsSize="xs">1</Button>
-                  </td>
-                  <td className="text-center">
-                    11/8/2015
-                  </td>
-                  <td className="text-center">Actions</td>
-                </tr>
-                <tr>
-                  <td>
-                    <Button href="#" bsStyle="link" bsSize="xs">
-                      <Icon name="file-pdf-o" className="fa-fw fa-lg text-muted" />
-                      &nbsp;
-                      Sample PDF Document
-                    </Button>
-                  </td>
-                  <td className="text-center">
-                    <Button href="#" bsStyle="link" bsSize="xs">1</Button>
-                  </td>
-                  <td className="text-center">
-                    11/8/2015
-                  </td>
-                  <td className="text-center">Actions</td>
-                </tr>
-                <tr>
-                  <td>
-                    <Button href="#" bsStyle="link" bsSize="xs">
-                      <Icon name="file-image-o" className="fa-fw fa-lg text-muted" />
-                      &nbsp;
-                      Sample Image File
-                    </Button>
-                  </td>
-                  <td className="text-center">
-                    <Button href="#" bsStyle="link" bsSize="xs">1</Button>
-                  </td>
-                  <td className="text-center">
-                    11/8/2015
-                  </td>
-                  <td className="text-center">Actions</td>
-                </tr>
-              </tbody>
-            </Table>
-
           </Col>
 
           <Col sm={3} id="doc_mgt-right_column" className="sidebar-wrapper">
@@ -316,7 +369,7 @@ class Page extends React.Component {
                   <p className="small">/OSHA/</p>
                   <p className="small">/OSHA/Procedures/</p>
                 </ListGroupItem>
-                <ListGroupItem href="#link1" bsStyle="danger">
+                <ListGroupItem href="#link1">
                   <Icon name="file-word-o" className="fa-fw fa-lg text-muted" />
                   &nbsp;
                   <b>Sample Word Document</b>
