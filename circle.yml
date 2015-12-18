@@ -7,6 +7,3 @@ deployment:
     branch: document-mgt
     commands:
       - rsync -avz --exclude=node_modules * circleci@64.80.61.75:/Library/Server/Web/Data/Sites/cosmos
-      - ssh -v circleci@64.80.61.75 'cd /Library/Server/Web/Data/Sites/cosmos/'
-      - ssh -v circleci@64.80.61.75 'npm install'
-      - ssh -v circleci@64.80.61.75 'npm run build'
