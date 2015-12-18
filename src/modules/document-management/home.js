@@ -1,11 +1,11 @@
 // Dependencies.
 import React from 'react';
-// import {Link} from 'react-router';
+import {Link} from 'react-router';
 import {LinkContainer} from 'react-router-bootstrap';
 import Dropzone from 'react-dropzone';
 
 // Core components.
-import {Row, Col, ButtonGroup, DropdownButton, MenuItem, Button, Table, Input, ListGroup, ListGroupItem, Modal, Badge} from 'react-bootstrap';
+import {Row, Col, ButtonGroup, DropdownButton, MenuItem, Button, Table, Input, ListGroup, ListGroupItem, Modal} from 'react-bootstrap';
 import Icon from 'react-fa';
 
 // Layouts.
@@ -75,6 +75,9 @@ class Page extends React.Component {
     let g = d.getElementsByTagName('body')[0];
     let x = w.innerWidth || e.clientWidth || g.clientWidth;
     let y = w.innerHeight || e.clientHeight || g.clientHeight;
+    // let nav = document.getElementById('sidebar-wrapper');
+    // let navWidth = nav.innerWidth || nav.clientWidth;
+    // x = ( Math.floor((navWidth / 25) * 100) - navWidth );
     this.setState({width: x, height: y});
   }
   componentWillMount() {
@@ -111,7 +114,12 @@ class Page extends React.Component {
                     <MenuItem eventKey="3">Recent Dcouments</MenuItem>
                   </DropdownButton>
 
-                  <p>/ OSHA</p>
+                  <p>
+                    /&nbsp;
+                    <Link to="">Smiths Group</Link>
+                    &nbsp;/&nbsp;
+                    OSHA
+                  </p>
 
                 </ButtonGroup>
               </Col>
@@ -305,11 +313,24 @@ class Page extends React.Component {
                   <Icon name="file-word-o" className="fa-fw fa-lg text-muted" />
                   &nbsp;
                   <b>Sample Word Document</b>
-                  <Badge pullRight>2</Badge>
                   <p className="small">/OSHA/</p>
                   <p className="small">/OSHA/Procedures/</p>
                 </ListGroupItem>
                 <ListGroupItem href="#link1" bsStyle="danger">
+                  <Icon name="file-word-o" className="fa-fw fa-lg text-muted" />
+                  &nbsp;
+                  <b>Sample Word Document</b>
+                  <p className="small">/OSHA/</p>
+                  <p className="small">/OSHA/Procedures/</p>
+                </ListGroupItem>
+                <ListGroupItem href="#link1">
+                  <Icon name="file-word-o" className="fa-fw fa-lg text-muted" />
+                  &nbsp;
+                  <b>Sample Word Document</b>
+                  <p className="small">/OSHA/</p>
+                  <p className="small">/OSHA/Procedures/</p>
+                </ListGroupItem>
+                <ListGroupItem href="#link1">
                   <Icon name="file-word-o" className="fa-fw fa-lg text-muted" />
                   &nbsp;
                   <b>Sample Word Document</b>
