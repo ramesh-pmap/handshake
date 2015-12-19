@@ -26,12 +26,21 @@ class Layout extends React.Component {
     // const { state } = this.props;
     // console.log('Layout:state:', state);
     const sidebarOpened = this.state.sidebarOpened;
+    const noHeader = this.props.noHeader;
     let toggle = (sidebarOpened === false) ? 'shell-wrapper doc-wrapper toggled' : 'shell-wrapper doc-wrapper';
 
     return (
       <div id="shellWrapper" className={`${toggle}`}>
-        <Sidebar title="mars" />
-        <Header onUserToggle={this.handleUserToggle.bind(this)} />
+          {(() => {
+            if (!noHeader) {
+              return (
+                <div>
+                  <Sidebar title="mars" />
+                  <Header onUserToggle={this.handleUserToggle.bind(this)} />
+                </div>
+                );
+            }
+          })()}
         <div className="page-content-wrapper">
           {this.props.children}
         </div>
@@ -43,6 +52,7 @@ class Layout extends React.Component {
 // Validation.
 Layout.propTypes = {
   children: React.PropTypes.node,
+  noHeader: React.PropTypes.bool,
   state: React.PropTypes.object
 };
 

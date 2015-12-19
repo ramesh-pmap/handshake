@@ -8,7 +8,7 @@ import utils from '../../../utils';
 import Main from '../../../layouts/main';
 
 // Misc components.
-import Login from '../../../components/Login';
+import Mars from '../../../components/Mars';
 
 
 // Define class.
@@ -21,29 +21,16 @@ class Page extends React.Component {
     utils.title(props);
   }
 
-  handleLogin(loginName) {
-    if (loginName === 'pmap') {
-      this.props.history.pushState(null, '/document-management');
-    }
-    if (loginName === 'pmap2') {
-      this.props.history.pushState(null, '/home');
-    }
-  }
-
   // Render method.
   render() {
     return (
-      <Main noHeader>
-        <Login onLogin={this.handleLogin.bind(this)}/>
+      <Main>
+        <Mars title="Home" />
       </Main>
     );
   }
 }
 
-// Validation.
-Page.propTypes = {
-  history: React.PropTypes.object
-};
 
 // Export.
 export default Page;
