@@ -1,7 +1,7 @@
 // Set the page `<title>`.
 export default function(props) {
   // Fallback site title.
-  const suffix = 'mars';
+  const suffix = 'cosmos';
 
   // Used in conditional.
   let title = props.route.title;
