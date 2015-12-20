@@ -5,7 +5,7 @@ import {LinkContainer} from 'react-router-bootstrap';
 import Dropzone from 'react-dropzone';
 
 // Core components.
-import {Row, Col, ButtonGroup, DropdownButton, MenuItem, Button, Input, ListGroup, ListGroupItem, Modal, Breadcrumb, BreadcrumbItem} from 'react-bootstrap';
+import {Row, Col, ButtonGroup, DropdownButton, MenuItem, Button, Input, ListGroup, ListGroupItem, Modal, Breadcrumb, BreadcrumbItem, ProgressBar} from 'react-bootstrap';
 import Icon from 'react-fa';
 
 // Layouts.
@@ -63,9 +63,14 @@ class Page extends React.Component {
   // Dropzone.
   onDrop(uploadedFiles) {
     this.setState({ files: uploadedFiles });
+    console.log(uploadedFiles);
   }
   onOpenClick() {
     this.refs.dropzone.open();
+  }
+  uploadFilesToServer() {
+    this.setState({ files: [] });
+    this.closeModal();
   }
 
   // Window Resizing.
@@ -396,30 +401,70 @@ class Page extends React.Component {
           </Col>
         </Row>
 
-        <Modal show={this.state.showModal} onHide={this.closeModal.bind(this)}>
+        <Modal bsSize="large" show={this.state.showModal} onHide={this.closeModal.bind(this)}>
           <Modal.Header closeButton>
             <Modal.Title>Upload New Document</Modal.Title>
           </Modal.Header>
           <Modal.Body>
 
-            <Dropzone id="Upload_Dropzone" ref="dropzone" onDrop={this.onDrop.bind(this)} className="dropzone">
-              Drag and drop files here
-              <br className="hidden-xs"/>&nbsp;
-              or click to select files to upload.
-            </Dropzone>
-
             {
-              this.state.files.length ? <div>
-                <h2>Uploading {this.state.files.length} files...</h2>
-                <div>
-                  {this.state.files.map( file => <Image src={file.preview} />)}
+              this.state.files.length < 1 ?
+                <Dropzone id="Upload_Dropzone" ref="dropzone" onDrop={this.onDrop.bind(this)} className="dropzone">
+                  <p>
+                    <Icon name="upload" className="fa-2x text-success" />
+                  </p>
+                  Drag and drop files here
+                  <br className="hidden-xs"/>&nbsp;
+                  or click to select files to upload.
+                </Dropzone>
+              :
+                <div className="uploading-files">
+                  <h4>Uploading {this.state.files.length} files...</h4>
+                  <hr />
+
+                  <Row>
+                    <Col xs={11}>
+                      <Button bsStyle="link" disabled>
+                        <Icon name="file-image-o" className="fa-fw fa-lg" />
+                        &nbsp;
+                        original-sample-image-file-name.jpg
+                      </Button>
+                      <ProgressBar bsStyle="primary" active now={45} label="%(percent)s%" />
+                    </Col>
+                    <Col xs={1} className="text-right">
+                      <Button href="#/" bsStyle="danger" bsSize="xs">
+                        <Icon name="times" />
+                      </Button>
+                    </Col>
+                  </Row>
+
+                  <Row>
+                    <Col xs={11}>
+                      <Button href="#/" bsStyle="link">
+                        <Icon name="file-word-o" className="fa-fw fa-lg" />
+                        &nbsp;
+                        sample-microsoft-word-documnet-file-name.docx
+                      </Button>
+                      <ProgressBar bsStyle="success" now={100} label="%(percent)s%" />
+                    </Col>
+                    <Col xs={1} className="text-right">
+                      <Button href="#/" bsStyle="danger" bsSize="xs">
+                        <Icon name="times" />
+                      </Button>
+                    </Col>
+                  </Row>
+
                 </div>
-              </div> : null
             }
 
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.closeModal.bind(this)}>Cancel</Button>
+            {this.state.files.length >= 1 ?
+              <Button bsStyle="success" onClick={this.uploadFilesToServer.bind(this)}>
+                Upload
+              </Button>
+            : null }
           </Modal.Footer>
         </Modal>
 

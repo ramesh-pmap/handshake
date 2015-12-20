@@ -223,13 +223,12 @@ $search-expanded-width: 400px;
 ---------------------------------------- */
 .dropzone{
   width: 100% !important;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.6;
   text-align: center;
   padding: 40px;
   margin-bottom: 10px;
   border: 2px dashed #999999;
-
   -webkit-border-radius: 14px;
   -moz-border-radius: 14px;
   border-radius: 14px;
@@ -238,5 +237,16 @@ $search-expanded-width: 400px;
 @media(max-width:768px){
   .dropzone{
     font-size: 16px;
+  }
+}
+
+.uploading-files{
+  
+  .btn-link[disabled]{
+    color: darken($gray-color, 40%);
+  }
+  
+  .upload-preview{
+    max-height: 60px;
   }
 }
