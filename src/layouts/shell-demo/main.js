@@ -38,7 +38,7 @@ class Layout extends React.Component {
   }
 }
 
-// Validation.
+// propTypes.
 Layout.propTypes = {
   children: React.PropTypes.node
 };

@@ -9,8 +9,8 @@ import HomePage from './modules/global/pages/home';
 import ToolkitHome from './modules/toolkit/pages/home';
 import DataPage from './modules/global/pages/data';
 import IconsPage from './modules/global/pages/icon-grid';
-import DocMgtPage from './modules/document-management/home';
-import DocMgtUploadPage from './modules/document-management/upload';
+import DocMgtPage from './modules/document-management/pages/home';
+import DocMgtUploadPage from './modules/document-management/pages/upload';
 
 
 // Routes template.
@@ -22,6 +22,6 @@ export default (
 		<Route path="data" component={DataPage} title="Data Sample Page" />
 		<Route path="icons" component={IconsPage} title="Icons Page" />
 		<Route path="document-management" component={DocMgtPage} title="Document Management" />
-		<Route path="document-management/upload" component={DocMgtUploadPage} title="Document Management Upload" />
+		<Route path="document-management/upload" component={DocMgtUploadPage} title="Upload New Document" />
 	</Router>
 );

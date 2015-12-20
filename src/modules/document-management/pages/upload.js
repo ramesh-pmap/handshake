@@ -5,13 +5,13 @@ import React from 'react';
 import {Row, Col} from 'react-bootstrap';
 
 // Layouts.
-import Main from '../../layouts/shell-demo/main';
+import Main from '../../../layouts/shell-demo/main';
 
 // Stylesheets.
-import '../../modules/document-management/styles.scss';
+import '../../../modules/document-management/styles.scss';
 
 // Utility methods.
-import utils from '../../utils';
+import utils from '../../../utils';
 
 // Define class.
 class Page extends React.Component {
