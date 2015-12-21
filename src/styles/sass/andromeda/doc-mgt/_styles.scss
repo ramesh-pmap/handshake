@@ -1,23 +1,23 @@
 .title-dropdown{
   margin-bottom: 0 !important;
-  
+
   .dropdown{
     margin-bottom: 0 !important;
   }
-  
+
   .btn{
     padding-left: 0 !important;
   }
-  
+
 }
 
 .action-bar-spacing{
   margin-top: 10px;
-  
+
   .btn-toolbar .btn{
     float: none;
   }
-  
+
   .btn-group {
     float: none !important;
     margin-bottom: 2px;
@@ -28,7 +28,7 @@
   display: block;
   margin: 6px 0 0;
   opacity: 0.5;
-  
+
   & + .small{
     margin-top: 0;
   }
@@ -48,7 +48,7 @@ $search-expanded-width: 400px;
   position: static;
   display: inline-block;
   width: $search-width;
-  
+
   #doc_mgt-results_wrapper{
     display: none;
     opacity: 0;
@@ -61,17 +61,17 @@ $search-expanded-width: 400px;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
     transition: all .3s ease;
-    
+
     &.results_wrapper--open{
       display: block;
       opacity: 1;
     }
-    
+
     .list-group-item:first-child {
         border-width: 0 1px 1px;
     }
   }
-  
+
   input {
     display: block;
     position: absolute;
@@ -83,7 +83,7 @@ $search-expanded-width: 400px;
     -moz-transition: all 0.15s ease;
     transition: all 0.15s ease;
     z-index: 999;
-    
+
     &:focus{
       width: $search-expanded-width;
     }
@@ -98,14 +98,14 @@ $search-expanded-width: 400px;
 -------------------------------------------
 ---------------------------------------- */
 .doc_mgt-list_header{
-  
+
   .doc_mgt-list_titles{
     padding: 20px 0 6px;
     margin-left: 0;
     margin-right: 0;
     border-bottom: 2px solid darken($border-color, 6%);
   }
-  
+
   .doc_mgt-list_actions{
     display: none;
     padding: 10px 0;
@@ -120,7 +120,7 @@ $search-expanded-width: 400px;
 -------------------------------------------
 ---------------------------------------- */
 .doc_mgt-list{
-  
+
   .list-group-item{
     border-color: $border-color;
     border-width: 1px 0 0;
@@ -128,21 +128,21 @@ $search-expanded-width: 400px;
     -moz-border-radius: 0;
     border-radius: 0;
     cursor: default;
-    
+
     &:hover{
       background-color: $row-hover;
     }
-    
+
     p{
       margin: 0;
     }
-    
+
     &.selected,
     &.selected:hover,
     &.selected:focus{
       color: #FFFFFF !important;
       background-color: $primary-color !important;
-      
+
       a, a:hover, a:focus,
       .fa, .fa:hover,
       span{
@@ -151,7 +151,7 @@ $search-expanded-width: 400px;
       a:hover, a:focus{
         font-weight: bold;
       }
-      
+
     }
   }
   .list-group-item:first-child{
@@ -167,8 +167,9 @@ $search-expanded-width: 400px;
 -------------------------------------------
 ---------------------------------------- */
 .sidebar{
-  font-size: 10px;
-  
+  // font-size: 10px;
+  background: rgba(255,255,255, .5);
+
   .list-group-item{
     margin: 10px 20px;
     padding: 10px;
@@ -176,27 +177,27 @@ $search-expanded-width: 400px;
     border-width: 0 0 1px;
     background: #FFFFFF;
   }
-  
+
   .form-horizontal{
     margin-top: 20px;
-    
+
     &.static{
       .form-group{
         margin-bottom: 0;
       }
     }
-  
+
     .form-group{
       clear: both;
-      
+
       .form-control{
         height: 32px;
       }
-      
+
       label{
         text-align: left;
         padding: 8px 0 0 10px;
-        
+
         &.required:after{
           display: inline-block;
           content: ' *';
@@ -205,7 +206,7 @@ $search-expanded-width: 400px;
           margin-right: -8px;
         }
       }
-      
+
       input,
       textarea{
         font-size: 11px;
@@ -224,7 +225,7 @@ textarea{
     top: 50px;
     right: 0;
     padding: 0;
-    
+
     .sidebar{
       // height: 100%;
       overflow-y: auto;
@@ -232,7 +233,7 @@ textarea{
       margin-left: 20px;
       // background: #FFFFFF;
       border-left: 1px solid $border-color;
-        
+
       .fixed-title:first-child{
         position: absolute;
         top: 0;
@@ -247,13 +248,13 @@ textarea{
 
       .list-group{
         margin: 0 -22px;
-        
+
         .list-group-item{
           // border: none;
           -webkit-border-radius: 0;
           -moz-border-radius: 0;
           border-radius: 0;
-          
+
           &:hover{
             border-color: transparent;
             background-color: #FFFFFF;
@@ -295,11 +296,11 @@ textarea{
 }
 
 .uploading-files{
-  
+
   .btn-link[disabled]{
     color: darken($gray-color, 40%);
   }
-  
+
   .upload-preview{
     max-height: 60px;
   }
