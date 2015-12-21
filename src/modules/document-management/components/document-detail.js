@@ -5,7 +5,7 @@ import React from 'react';
 
 // Core components.
 import {Button, ButtonGroup, DropdownButton, MenuItem, FormControls} from 'react-bootstrap';
-// import Icon from 'react-fa';
+import Icon from 'react-fa';
 
 
 // Define class.
@@ -37,6 +37,16 @@ class Layout extends React.Component {
               <MenuItem eventKey="4">All Tasks</MenuItem>
             </DropdownButton>
           </ButtonGroup>
+        </div>
+
+        <div className="workflow-avatars">
+          <img src="/static/images/a1.jpg" alt="image"/>
+          <div className="divider-vertical"></div>
+          <img src="/static/images/a2.jpg" alt="image"/>
+          <img src="/static/images/a3.jpg" alt="image"/>
+          <img src="/static/images/a4.jpg" alt="image"/>
+          <div className="divider-vertical"></div>
+          <Icon name="check-circle-o" className="fa-fw fa-3x text-muted" />
         </div>
 
         <div className="form-horizontal static">
