@@ -1,7 +1,7 @@
 // Dependencies.
 import React from 'react';
 // import {Link} from 'react-router';
-import {LinkContainer} from 'react-router-bootstrap';
+// import {LinkContainer} from 'react-router-bootstrap';
 
 // Core components.
 import {Row, Col, ListGroup, ListGroupItem, ButtonGroup, DropdownButton, MenuItem, Breadcrumb, BreadcrumbItem, Input} from 'react-bootstrap';
@@ -74,27 +74,25 @@ class Layout extends React.Component {
           <div className="action-bar-spacing text-right">
 
             <DropdownButton id="AddDocumentDropdown" title="Add" href="#" bsStyle="success" bsSize="sm" pullRight>
-              <LinkContainer to="/document-management/upload">
-                <MenuItem>
-                  <Icon name="upload" />
-                  &nbsp;
-                  Upload New Document
-                </MenuItem>
-              </LinkContainer>
-              <LinkContainer to="/document-management/upload">
-                <MenuItem>
-                  <Icon name="link" />
-                  &nbsp;
-                  Web Link
-                </MenuItem>
-              </LinkContainer>
-              <LinkContainer to="/document-management/upload">
-                <MenuItem>
-                  <Icon name="book" />
-                  &nbsp;
-                  Hardcopy
-                </MenuItem>
-              </LinkContainer>
+              {
+                this.state.sectionTitle !== UPLOADEDDOCS ?
+                  <MenuItem onClick={this.showUploadList.bind(this)}>
+                    <Icon name="upload" />
+                    &nbsp;
+                    Upload New Document
+                  </MenuItem>
+                : null
+              }
+              <MenuItem>
+                <Icon name="link" />
+                &nbsp;
+                Web Link
+              </MenuItem>
+              <MenuItem>
+                <Icon name="book" />
+                &nbsp;
+                Hardcopy
+              </MenuItem>
             </DropdownButton>
 
             <div id="doc_mgt-search_wrapper">
