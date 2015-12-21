@@ -304,3 +304,24 @@ textarea{
     max-height: 60px;
   }
 }
+
+.workflow-avatars {
+  img {
+    border-radius: 20px;
+    width: 30px;
+    text-align: center;
+    margin: 15px 3px;
+    display: inline;
+    float: left;
+  }
+  .divider-vertical {
+    height: 30px;
+    border-left: 1px solid gray;
+    opacity: 0.5;    
+    margin: 15px 3px;
+    float: left;
+  } 
+  .fa {
+    margin-top: 15px;
+  }
+}
