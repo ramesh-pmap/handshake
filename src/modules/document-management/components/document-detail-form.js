@@ -4,7 +4,7 @@ import React from 'react';
 // import {LinkContainer} from 'react-router-bootstrap';
 
 // Core components.
-import {Button, ButtonGroup, DropdownButton, MenuItem, Input, FormControls} from 'react-bootstrap';
+import {Button, Input, FormControls} from 'react-bootstrap';
 // import Icon from 'react-fa';
 
 // Define class.
@@ -26,16 +26,13 @@ class Layout extends React.Component {
   render() {
     return (
       <div>
-
-        <div className="fixed-title">
-          <ButtonGroup className="title-dropdown">
-            <DropdownButton id="doc_mgt-actions_dropdown" title="All Tasks" bsStyle="link" bsSize="lg">
-              <MenuItem eventKey="1">Pending <small>(2)</small></MenuItem>
-              <MenuItem eventKey="2">Ready for Release <small>(1)</small></MenuItem>
-              <MenuItem eventKey="3">Change Requests <small>(7)</small></MenuItem>
-              <MenuItem eventKey="4">All Tasks</MenuItem>
-            </DropdownButton>
-          </ButtonGroup>
+        <div className="fixed-title clearfix">
+          <h3 className="pull-left">Selected File</h3>
+          <div className="pull-right">
+            <Button bsStyle="info" bsSize="sm" onClick={this.showDetail.bind(this)}>
+              Save
+            </Button>
+          </div>
         </div>
 
         <div className="form-horizontal">
@@ -53,9 +50,9 @@ class Layout extends React.Component {
             <option>Author 3</option>
           </Input>
           <FormControls.Static label="Uploaded/Referenced By" labelClassName="col-md-4" wrapperClassName="col-md-8" value="John Doe"/>
-          <FormControls.Static label="Date Uploaded/Referenced" labelClassName="col-md-4" wrapperClassName="col-md-8" value="12/19/2015"/>
+          <FormControls.Static label="Date Uploaded/Referenced" labelClassName="col-md-4" wrapperClassName="col-md-8" value="11/7/2015"/>
           <FormControls.Static label="Modified By" labelClassName="col-md-4" wrapperClassName="col-md-8" value="John Doe"/>
-          <FormControls.Static label="Modified Date" labelClassName="col-md-4" wrapperClassName="col-md-8" value="12/20/2015"/>
+          <FormControls.Static label="Modified Date" labelClassName="col-md-4" wrapperClassName="col-md-8" value="11/8/2015"/>
           <FormControls.Static label="Document Status" labelClassName="col-md-4" wrapperClassName="col-md-8" value="Pending Approval"/>
           <Input type="select" label="Document Type" labelClassName="col-md-4" wrapperClassName="col-md-8">
             <option>Option1</option>
@@ -91,12 +88,6 @@ class Layout extends React.Component {
           <FormControls.Static label="File Name" labelClassName="col-md-4" wrapperClassName="col-md-8" value="OSHA_V2.0.docx"/>
           <FormControls.Static label="File Size" labelClassName="col-md-4" wrapperClassName="col-md-8" value="2.5 MB"/>
         </div>
-
-        <br />
-        <Button bsStyle="info" bsSize="sm" onClick={this.showDetail.bind(this)}>
-          Save
-        </Button>
-
       </div>
     );
   }
