@@ -7,9 +7,6 @@ import React from 'react';
 import {Button, ButtonGroup, DropdownButton, MenuItem, FormControls} from 'react-bootstrap';
 // import Icon from 'react-fa';
 
-// Stylesheets.
-import '../../../modules/document-management/styles.scss';
-
 
 // Define class.
 class Layout extends React.Component {
@@ -45,7 +42,26 @@ class Layout extends React.Component {
         <div className="form-horizontal static">
           <FormControls.Static label="Title" labelClassName="col-md-4" wrapperClassName="col-md-8" value="Doc Title" />
           <FormControls.Static label="Internal Document ID" labelClassName="col-md-4" wrapperClassName="col-md-8" value="123456789-0" />
-          <FormControls.Static label="Textarea" labelClassName="col-md-4" wrapperClassName="col-md-8" rows="6" />
+          <FormControls.Static label="Version" labelClassName="col-md-4" wrapperClassName="col-md-8" value="1.0"/>
+          <FormControls.Static label="Document Owner" labelClassName="col-md-4" wrapperClassName="col-md-8" value="John Doe"/>
+          <FormControls.Static label="Author" labelClassName="col-md-4" wrapperClassName="col-md-8" value="John Doe"/>
+          <FormControls.Static label="Uploaded/Referenced By" labelClassName="col-md-4" wrapperClassName="col-md-8" value="John Doe"/>
+          <FormControls.Static label="Date Uploaded/Referenced" labelClassName="col-md-4" wrapperClassName="col-md-8" value="12/19/2015"/>
+          <FormControls.Static label="Modified By" labelClassName="col-md-4" wrapperClassName="col-md-8" value="John Doe"/>
+          <FormControls.Static label="Modified Date" labelClassName="col-md-4" wrapperClassName="col-md-8" value="12/20/2015"/>
+          <FormControls.Static label="Document Status" labelClassName="col-md-4" wrapperClassName="col-md-8" value="Pending Approval"/>
+          <FormControls.Static label="Document Type" labelClassName="col-md-4" wrapperClassName="col-md-8" value="Document"/>
+          <FormControls.Static label="Document Level" labelClassName="col-md-4" wrapperClassName="col-md-8" value="Level 1"/>
+          <FormControls.Static label="Display Folders" labelClassName="col-md-4" wrapperClassName="col-md-8" value=""/>
+          <FormControls.Static label="Description" labelClassName="col-md-4" wrapperClassName="col-md-8" value="John Doe"/>
+          <FormControls.Static label="Keywords/Tags" labelClassName="col-md-4" wrapperClassName="col-md-8" value=""/>
+          <FormControls.Static label="Reference Documents" labelClassName="col-md-4" wrapperClassName="col-md-8" value=""/>
+          <FormControls.Static label="Regulatory References" labelClassName="col-md-4" wrapperClassName="col-md-8" value=""/>
+          <FormControls.Static label="Review Date" labelClassName="col-md-4" wrapperClassName="col-md-8" value="12/20/2015"/>
+          <FormControls.Static label="Retention Period" labelClassName="col-md-4" wrapperClassName="col-md-8" value=""/>
+          <FormControls.Static label="Reason for Change" labelClassName="col-md-4" wrapperClassName="col-md-8" value="Slight revisions"/>
+          <FormControls.Static label="File Name" labelClassName="col-md-4" wrapperClassName="col-md-8" value="OSHA_V2.0.docx"/>
+          <FormControls.Static label="File Size" labelClassName="col-md-4" wrapperClassName="col-md-8" value="2.5 MB"/>
         </div>
 
         <br />
