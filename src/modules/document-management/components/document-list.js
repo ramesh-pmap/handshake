@@ -17,9 +17,26 @@ class Layout extends React.Component {
     super(props);
   }
 
-  handleRowClick(e) {
+  componentDidUpdate() {
+    let targetElement = document.getElementsByClassName('selected')[0];
+    let focusElement = document.activeElement;
+    console.log('currently focused on: ');
+    console.log(focusElement);
+
+    targetElement.focus();
+    focusElement = document.activeElement;
+    console.log('forced focus on: ');
+    console.log(focusElement);
+  }
+
+  showDetail(e) {
     e.preventDefault();
-    this.props.onRowClick();
+    this.props.showDetail();
+  }
+  showActivity(e) {
+    e.preventDefault();
+    this.props.showActivity();
+    console.log('unselect');
   }
 
   // Render method.
@@ -55,7 +72,7 @@ class Layout extends React.Component {
 
         <ListGroup className="doc_mgt-list">
 
-            <ListGroupItem>
+            <ListGroupItem onClick={this.showActivity.bind(this)}>
               <Row>
                 <Col sm={6}>
                   <Button href="#/" bsStyle="link" bsSize="xs">
@@ -72,7 +89,7 @@ class Layout extends React.Component {
               </Row>
             </ListGroupItem>
 
-            <ListGroupItem>
+            <ListGroupItem onClick={this.showActivity.bind(this)}>
               <Row>
                 <Col sm={6}>
                   <Button href="#/" bsStyle="link" bsSize="xs">
@@ -89,7 +106,7 @@ class Layout extends React.Component {
               </Row>
             </ListGroupItem>
 
-            <ListGroupItem onClick={this.handleRowClick.bind(this)}>
+            <ListGroupItem onClick={this.showDetail.bind(this)} eventKey={3}>
               <Row>
                 <Col sm={6}>
                   <Button href="#/" bsStyle="link" bsSize="xs">
@@ -188,9 +205,10 @@ class Layout extends React.Component {
   }
 }
 
-// Validation.
+// Parent Functions.
 Layout.propTypes = {
-  onRowClick: React.PropTypes.func
+  showDetail: React.PropTypes.func,
+  showActivity: React.PropTypes.func
 };
 
 // Export.

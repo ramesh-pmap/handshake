@@ -12,8 +12,9 @@ import Icon from 'react-fa';
 import Main from '../../../layouts/shell-demo/main';
 import DocumentListHeader from '../components/document-list-header';
 import DocumentList from '../components/document-list';
-// import DocumentActivityList from '../components/document-activity-list';
-import DocumentActivityList from '../components/document-detail-form';
+import DocumentActivityList from '../components/document-activity-list';
+import DocumentDetail from '../components/document-detail';
+import DocumentDetailForm from '../components/document-detail-form';
 
 
 // Stylesheets.
@@ -23,7 +24,7 @@ import '../../../modules/document-management/styles.scss';
 import utils from '../../../utils';
 
 // Json file with document list data.
-const DocumentListData = '../../../../static/data/document-list.json';
+// const DocumentListData = '../../../../static/data/document-list.json';
 
 const ACTIVITY = 'activity';
 const DETAIL = 'detail';
@@ -95,13 +96,19 @@ class Page extends React.Component {
     window.addEventListener('resize', this.updateDimensions.bind(this));
 
     // Fetch Json data.
-    fetch(DocumentListData).then(r => r.json())
-      .then(data => {this.setState({data}); })
-      .catch(error => {this.setState({error}); });
+    // fetch(DocumentListData).then(r => r.json())
+    //   .then(data => {this.setState({data}); })
+    //   .catch(error => {this.setState({error}); });
   }
 
-  handleRowClick() {
+  showDetail() {
     this.setState({ rightPanel: DETAIL });
+  }
+  showDetailForm() {
+    this.setState({ rightPanel: DETAILFORM });
+  }
+  showActivity() {
+    this.setState({ rightPanel: ACTIVITY });
   }
 
   // Render method.
@@ -114,10 +121,10 @@ class Page extends React.Component {
       rightPanelArea = <DocumentActivityList />;
       break;
     case DETAIL:
-      rightPanelArea = <div>Detail area</div>;
+      rightPanelArea = <DocumentDetail showDetailForm={this.showDetailForm.bind(this)} />;
       break;
     case DETAILFORM:
-      rightPanelArea = <div>Detail Form area</div>;
+      rightPanelArea = <DocumentDetailForm showDetail={this.showDetail.bind(this)} />;
       break;
     default:
       rightPanelArea = <DocumentActivityList />;
@@ -130,7 +137,10 @@ class Page extends React.Component {
 
             <DocumentListHeader />
 
-            <DocumentList onRowClick={this.handleRowClick.bind(this)} />
+            <DocumentList
+              showDetail={this.showDetail.bind(this)}
+              showActivity={this.showActivity.bind(this)}
+            />
 
           </Col>
 

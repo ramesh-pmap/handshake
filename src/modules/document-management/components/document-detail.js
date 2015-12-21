@@ -4,11 +4,12 @@ import React from 'react';
 // import {LinkContainer} from 'react-router-bootstrap';
 
 // Core components.
-import {Button, ButtonGroup, DropdownButton, MenuItem, Input} from 'react-bootstrap';
+import {Button, ButtonGroup, DropdownButton, MenuItem, FormControls} from 'react-bootstrap';
 // import Icon from 'react-fa';
 
 // Stylesheets.
 import '../../../modules/document-management/styles.scss';
+
 
 // Define class.
 class Layout extends React.Component {
@@ -20,9 +21,9 @@ class Layout extends React.Component {
     };
   }
 
-  showDetail(e) {
+  showDetailForm(e) {
     e.preventDefault();
-    this.props.showDetail();
+    this.props.showDetailForm();
   }
 
   // Render method.
@@ -41,16 +42,15 @@ class Layout extends React.Component {
           </ButtonGroup>
         </div>
 
-        <div className="form-horizontal">
-          <Input type="text" label="Title" labelClassName="col-md-4 required" wrapperClassName="col-md-8" />
-          <Input type="text" label="Title" labelClassName="col-md-4" wrapperClassName="col-md-8" />
-          <Input type="number" label="Version" labelClassName="col-md-4" wrapperClassName="col-md-8" />
-          <Input type="textarea" label="Textarea" labelClassName="col-md-4" wrapperClassName="col-md-8" />
+        <div className="form-horizontal static">
+          <FormControls.Static label="Title" labelClassName="col-md-4" wrapperClassName="col-md-8" value="Doc Title" />
+          <FormControls.Static label="Internal Document ID" labelClassName="col-md-4" wrapperClassName="col-md-8" value="123456789-0" />
+          <FormControls.Static label="Textarea" labelClassName="col-md-4" wrapperClassName="col-md-8" rows="6" />
         </div>
 
         <br />
-        <Button bsStyle="info" bsSize="sm" onClick={this.showDetail.bind(this)}>
-          Save
+        <Button bsStyle="warning" bsSize="sm" onClick={this.showDetailForm.bind(this)}>
+          Edit
         </Button>
 
       </div>
@@ -60,7 +60,7 @@ class Layout extends React.Component {
 
 // Parent Functions.
 Layout.propTypes = {
-  showDetail: React.PropTypes.func
+  showDetailForm: React.PropTypes.func
 };
 
 // Export.
