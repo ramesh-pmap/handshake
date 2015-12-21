@@ -12,7 +12,8 @@ import Icon from 'react-fa';
 import Main from '../../../layouts/shell-demo/main';
 import DocumentListHeader from '../components/document-list-header';
 import DocumentList from '../components/document-list';
-import DocumentActivityList from '../components/document-activity-list';
+// import DocumentActivityList from '../components/document-activity-list';
+import DocumentActivityList from '../components/document-detail-form';
 
 
 // Stylesheets.
@@ -72,7 +73,7 @@ class Page extends React.Component {
     let g = d.getElementsByTagName('body')[0];
     let x = w.innerWidth || e.clientWidth || g.clientWidth;
     let y = w.innerHeight || e.clientHeight || g.clientHeight;
-    // let nav = document.getElementById('sidebar-wrapper');
+    // let nav = d.getElementsByClassName('sidebar-wrapper');
     // let navWidth = nav.innerWidth || nav.clientWidth;
     // x = ( Math.floor((navWidth / 25) * 100) - navWidth );
     this.setState({width: x, height: y});
