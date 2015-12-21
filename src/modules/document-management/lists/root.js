@@ -7,9 +7,6 @@ import React from 'react';
 import {Row, Col, Button, ListGroup, ListGroupItem} from 'react-bootstrap';
 import Icon from 'react-fa';
 
-// Stylesheets.
-import '../../../modules/document-management/styles.scss';
-
 // Define class.
 class Layout extends React.Component {
   constructor(props) {

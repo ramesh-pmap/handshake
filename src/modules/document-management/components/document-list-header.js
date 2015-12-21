@@ -7,9 +7,6 @@ import {LinkContainer} from 'react-router-bootstrap';
 import {Row, Col, ListGroup, ListGroupItem, ButtonGroup, DropdownButton, MenuItem, Breadcrumb, BreadcrumbItem, Input} from 'react-bootstrap';
 import Icon from 'react-fa';
 
-// Stylesheets.
-import '../../../modules/document-management/styles.scss';
-
 // Define class.
 class Layout extends React.Component {
   constructor(props) {
@@ -42,7 +39,8 @@ class Layout extends React.Component {
             <DropdownButton id="doc_mgt-docs_dropdown" title="All Documents" bsStyle="link" bsSize="lg">
               <MenuItem eventKey="1">All Documents</MenuItem>
               <MenuItem eventKey="2">My Documents</MenuItem>
-              <MenuItem eventKey="3">Recent Dcouments</MenuItem>
+              <MenuItem eventKey="3">My Uploads</MenuItem>
+              <MenuItem eventKey="4">Recent Dcouments</MenuItem>
             </DropdownButton>
 
             <Breadcrumb>

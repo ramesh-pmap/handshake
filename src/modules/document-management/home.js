@@ -9,27 +9,28 @@ import {Row, Col, Button, Modal, ProgressBar} from 'react-bootstrap';
 import Icon from 'react-fa';
 
 // Layouts.
-import Main from '../../../layouts/shell-demo/main';
-import DocumentListHeader from '../components/document-list-header';
-import DocumentList from '../components/document-list';
-import DocumentActivityList from '../components/document-activity-list';
-import DocumentDetail from '../components/document-detail';
-import DocumentDetailForm from '../components/document-detail-form';
+import Main from '../../layouts/shell-demo/main';
+import DocumentListHeader from './components/document-list-header';
+import RootList from './lists/root';
+// import UploadList from './lists/upload';
 
-
-// Stylesheets.
-import '../../../modules/document-management/styles.scss';
+import DocumentActivityList from './components/document-activity-list';
+import DocumentDetail from './components/document-detail';
+import DocumentDetailForm from './components/document-detail-form';
 
 // Utility methods.
-import utils from '../../../utils';
+import utils from '../../utils';
 
-// Json file with document list data.
-// const DocumentListData = '../../../../static/data/document-list.json';
-
+// Define const.
+// List Views
+const ALLDOCS = 'All Documents';
+// const MYDOCS = 'My Documents';
+// const RECENTDOCS = 'Recent Documents';
+// const UPLOADEDDOCS = 'Recent Documents';
+// Right Panel
 const ACTIVITY = 'activity';
 const DETAIL = 'detail';
 const DETAILFORM = 'detail-form';
-
 
 // Define class.
 class Page extends React.Component {
@@ -47,7 +48,8 @@ class Page extends React.Component {
       width: 0,
       height: 0,
       showListHeader: 'titles',
-      rightPanel: ACTIVITY // activity | detail | detail-form
+      rightPanel: ACTIVITY,
+      currentListView: ALLDOCS
     };
   }
 
@@ -94,13 +96,14 @@ class Page extends React.Component {
   componentDidMount() {
     // Window Resizing.
     window.addEventListener('resize', this.updateDimensions.bind(this));
-
-    // Fetch Json data.
-    // fetch(DocumentListData).then(r => r.json())
-    //   .then(data => {this.setState({data}); })
-    //   .catch(error => {this.setState({error}); });
   }
 
+  // List view functions
+  showRootList() {
+    this.setState({ rightPanel: DETAIL });
+  }
+
+  // Right panel functions
   showDetail() {
     this.setState({ rightPanel: DETAIL });
   }
@@ -137,7 +140,7 @@ class Page extends React.Component {
 
             <DocumentListHeader />
 
-            <DocumentList
+            <RootList
               showDetail={this.showDetail.bind(this)}
               showActivity={this.showActivity.bind(this)}
             />
