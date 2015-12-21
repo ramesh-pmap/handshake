@@ -21,10 +21,6 @@ class Login extends React.Component {
   render() {
     return (
       <div>
-          <div className="panel panel-primary">
-            <div className="panel-heading">ProcessMAP : Login</div>
-          </div>
-
            <div className="container">
             <div className="row">
               <div className="col-sm-6 col-md-4 col-md-offset-4">
