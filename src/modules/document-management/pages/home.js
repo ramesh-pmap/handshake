@@ -24,6 +24,11 @@ import utils from '../../../utils';
 // Json file with document list data.
 const DocumentListData = '../../../../static/data/document-list.json';
 
+const ACTIVITY = 'activity';
+const DETAIL = 'detail';
+const DETAILFORM = 'detail-form';
+
+
 // Define class.
 class Page extends React.Component {
   constructor(props) {
@@ -39,7 +44,8 @@ class Page extends React.Component {
       files: [],
       width: 0,
       height: 0,
-      showListHeader: 'titles'
+      showListHeader: 'titles',
+      rightPanel: ACTIVITY // activity | detail | detail-form
     };
   }
 
@@ -93,8 +99,29 @@ class Page extends React.Component {
       .catch(error => {this.setState({error}); });
   }
 
+  handleRowClick() {
+    this.setState({ rightPanel: DETAIL });
+  }
+
   // Render method.
   render() {
+    const rightPanel = this.state.rightPanel;
+    let rightPanelArea;
+
+    switch (rightPanel) {
+    case ACTIVITY:
+      rightPanelArea = <DocumentActivityList />;
+      break;
+    case DETAIL:
+      rightPanelArea = <div>Detail area</div>;
+      break;
+    case DETAILFORM:
+      rightPanelArea = <div>Detail Form area</div>;
+      break;
+    default:
+      rightPanelArea = <DocumentActivityList />;
+    }
+
     return (
       <Main>
         <Row>
@@ -102,14 +129,14 @@ class Page extends React.Component {
 
             <DocumentListHeader />
 
-            <DocumentList />
+            <DocumentList onRowClick={this.handleRowClick.bind(this)} />
 
           </Col>
 
           <Col sm={3} id="doc_mgt-right_column" className="sidebar-wrapper">
             <div className="sidebar" style={{height: this.state.height + 'px'}}>
 
-              <DocumentActivityList />
+              {rightPanelArea}
 
             </div>
           </Col>
