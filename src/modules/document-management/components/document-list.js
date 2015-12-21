@@ -17,6 +17,11 @@ class Layout extends React.Component {
     super(props);
   }
 
+  handleRowClick(e) {
+    e.preventDefault();
+    this.props.onRowClick();
+  }
+
   // Render method.
   render() {
     return (
@@ -84,7 +89,7 @@ class Layout extends React.Component {
               </Row>
             </ListGroupItem>
 
-            <ListGroupItem>
+            <ListGroupItem onClick={this.handleRowClick.bind(this)}>
               <Row>
                 <Col sm={6}>
                   <Button href="#/" bsStyle="link" bsSize="xs">
@@ -183,6 +188,10 @@ class Layout extends React.Component {
   }
 }
 
+// Validation.
+Layout.propTypes = {
+  onRowClick: React.PropTypes.func
+};
 
 // Export.
 export default Layout;
