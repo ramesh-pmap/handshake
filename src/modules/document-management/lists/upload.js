@@ -2,9 +2,10 @@
 import React from 'react';
 // import {Link} from 'react-router';
 // import {LinkContainer} from 'react-router-bootstrap';
+import Dropzone from 'react-dropzone';
 
 // Core components.
-import {Row, Col, Button, ListGroup, ListGroupItem} from 'react-bootstrap';
+import {Row, Col, Button, ListGroup, ListGroupItem, ProgressBar} from 'react-bootstrap';
 import Icon from 'react-fa';
 
 // Define class.
@@ -12,6 +13,10 @@ class Layout extends React.Component {
   constructor(props) {
     // Pass `props` into scope.
     super(props);
+
+    this.state = {
+      files: []
+    };
   }
 
   showDetail(e) {
@@ -24,87 +29,96 @@ class Layout extends React.Component {
     console.log('unselect');
   }
 
+  // Dropzone.
+  onDrop(uploadedFiles) {
+    this.setState({ files: uploadedFiles });
+    console.log(uploadedFiles);
+  }
+  onOpenClick() {
+    this.refs.dropzone.open();
+  }
+
   // Render method.
   render() {
     return (
-      <div className="card">
-        <div className="doc_mgt-list_header">
+      <div><br/>
 
-          <Row className="doc_mgt-list_actions">
-            <Col sm={12}>
-              <Button href="#/" bsStyle="link" bsSize="xs">
-                <Icon name="folder-open" className="text-info" /> Share
+        {
+          this.state.files.length < 1 ?
+            <Dropzone id="Upload_Dropzone" ref="dropzone" onDrop={this.onDrop.bind(this)} className="dropzone">
+              <p>
+                <Icon name="upload" className="fa-2x text-success" />
+              </p>
+              Drag and drop files here
+              <br className="hidden-xs"/>&nbsp;
+              or click to select files to upload.
+            </Dropzone>
+          : null
+        }
+
+        <div className="card">
+          <div className="doc_mgt-list_header">
+
+            <Row className="doc_mgt-list_actions">
+              <Col sm={12}>
+                <Button href="#/" bsStyle="link" bsSize="xs">
+                  <Icon name="folder-open" className="text-info" /> Share
+                </Button>
+              </Col>
+            </Row>
+
+            <Row className="doc_mgt-list_titles hidden-xs">
+              <Col sm={9}>
+                <strong>Type &nbsp;Name</strong>
+              </Col>
+              <Col sm={3} className="text-center">
+                <strong>Actions</strong>
+              </Col>
+            </Row>
+
+          </div>
+
+          <ListGroup className="doc_mgt-list">
+
+            <ListGroupItem>
+              <Button bsStyle="link" disabled>
+                <Icon name="file-image-o" className="fa-fw fa-lg" />
+                &nbsp;
+                original-sample-image-file-name.jpg
               </Button>
-            </Col>
-          </Row>
-
-          <Row className="doc_mgt-list_titles hidden-xs">
-            <Col sm={6}>
-              <b>Type &nbsp;Name</b>
-            </Col>
-            <Col sm={1} className="text-center">
-              <b>Version</b>
-            </Col>
-            <Col sm={2} className="text-center">
-              <b>Modified</b>
-            </Col>
-            <Col sm={3} className="text-center">
-              <b>Status</b>
-            </Col>
-          </Row>
-
-        </div>
-
-        <ListGroup className="doc_mgt-list">
-
-            <ListGroupItem onClick={this.showDetail.bind(this)} eventKey={3}>
               <Row>
-                <Col sm={6}>
-                  <Button href="#/" bsStyle="link" bsSize="xs">
-                    <Icon name="file-word-o" className="fa-fw fa-lg text-muted" />
-                    &nbsp;
-                    Sample Word Document
+                <Col xs={9}>
+                  <ProgressBar bsStyle="primary" active now={45} label="%(percent)s%" />
+                </Col>
+                <Col xs={3} className="text-right">
+                  <Button href="#/" bsStyle="default" bsSize="xs">
+                    <Icon name="pause" />
                   </Button>
-                </Col>
-                <Col sm={1} className="text-center text-left-xs">
-                  <span className="visible-xs-inline">Version: </span>
-                  <Button href="#" bsStyle="link" bsSize="xs">2</Button>
-                </Col>
-                <Col sm={2} className="text-center text-left-xs">
-                  <span className="visible-xs-inline">Date Modified: </span>
-                  11/8/2015
-                </Col>
-                <Col sm={3} className="text-center text-left-xs">
-                  (Status)
                 </Col>
               </Row>
             </ListGroupItem>
 
             <ListGroupItem>
               <Row>
-                <Col sm={6}>
-                  <Button href="#/" bsStyle="link" bsSize="xs">
-                    <Icon name="file-excel-o" className="fa-fw fa-lg text-muted" />
+                <Col xs={9}>
+                  <Button href="#/" bsStyle="link">
+                    <Icon name="file-word-o" className="fa-fw fa-lg" />
                     &nbsp;
-                    Sample Excel Document
+                    sample-microsoft-word-documnet-file-name.docx
                   </Button>
+                  <ProgressBar bsStyle="success" now={100} label="%(percent)s%" />
                 </Col>
-                <Col sm={1} className="text-center text-left-xs">
-                  <span className="visible-xs-inline">Version: </span>
-                  <Button href="#" bsStyle="link" bsSize="xs">1</Button>
-                </Col>
-                <Col sm={2} className="text-center text-left-xs">
-                  <span className="visible-xs-inline">Date Modified: </span>
-                  11/8/2015
-                </Col>
-                <Col sm={3} className="text-center text-left-xs">
-                  (Status)
+                <Col xs={3} className="text-right">
+                  <Button href="#/" bsStyle="default" bsSize="xs">
+                    <Icon name="pause" />
+                  </Button>
                 </Col>
               </Row>
             </ListGroupItem>
 
           </ListGroup>
 
+        </div>
       </div>
     );
   }
