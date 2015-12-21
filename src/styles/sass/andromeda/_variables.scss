@@ -1,35 +1,33 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,600);
 // Font
 $font-stack: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // Basic Colors
 $default-color: #C2C2C2;  // Default color
-$primary-color: #1C84C6;  // Primary color
+$primary-color: #0081C6;  // Primary color
 $info-color: #23C6C8;     // Info color
 $success-color: #1AB394;  // Success color
 $warning-color: #F8AC59;  // Warrning color
 $danger-color: #ED5565;   // Danger color
 
+// Hover Colors
+$row-hover: #F3FBFF; // Light Blue
+
 // Various colors
 $text-color: #676A6C;
 $gray-color: #F3F3F4;
-$light-gray: lighten($gray-color, 20%);
+$light-gray: #FAFAFA;
 $label-badget-color: #5E5E5E;
 
 // Spiner color and margin
 $spin-color: $primary-color;
 $spin-margin: 0 auto;
 
-// IBOX colors ( default panel colors)
-$border-color: #E7EAEC;   // IBox border
-$ibox-title-bg: white;    // IBox Background header
-$ibox-content-bg: white;  // IBox Background content
+// Border Color
+$border-color: #E7E7E7;   // IBox border
 
 //Sidebar width
 $sidebar-width: 220px;
-
-// Boxed layout width
-$boxed-width: 1200px;
-$boxed-backgound: none;
 
 //Border radius for buttons
 $btn-border-radius: 3px;

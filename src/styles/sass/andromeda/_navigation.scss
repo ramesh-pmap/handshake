@@ -3,16 +3,25 @@
   NAVBAR
 ---------------------------------------------------
 ------------------------------------------------ */
-.navbar-brand{
+.navbar-default{
+  background-color: $gray-color;
+}
 
-  & > img.brand-logo{
+.navbar-brand{
+  
+  img{
+    display: inline-block;
+  }
+
+  & > .brand-logo{
     display: inline-block;
     width: auto;
     max-height: 26px;
     margin-top: -2px;
+    cursor: pointer;
   }
 
-  .btn + img.brand-logo{
+  .btn + .brand-logo{
     margin-left: 16px;
   }
 

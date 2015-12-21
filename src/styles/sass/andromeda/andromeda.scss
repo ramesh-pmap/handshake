@@ -5,30 +5,39 @@
  *
 */
 
-// Google Fonts
+// Google Fonts.
 // @import url("//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&lang=en");
 
 
-// Variables
+// Variables.
 @import "variables";
 
-// Base
+// Base.
 @import "base";
 
-// Typography
+// Flexbox Grid.
+// @import "flexgrid";
+
+// Typography.
 @import "typography";
 
-// Buttons
+// Buttons.
 @import "buttons";
 
-// Navigation
+// Navigation.
 @import "navigation";
 
-// Panels
+// Panels.
 @import "panels";
 
-// Documentation and Exmaple
-@import "docs";
+// Cards.
+@import "cards";
 
-// Icon Grid
-@import "icon-grid";
+// Documentation and Exmaple.
+// @import "docs";
+
+// Icon Grid.
+// @import "icon-grid";
+
+// Icon Grid.
+@import "doc-mgt/styles";

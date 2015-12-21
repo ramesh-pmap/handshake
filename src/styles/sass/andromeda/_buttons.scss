@@ -164,10 +164,6 @@
   border-color: lighten($danger-color, 4%);
 }
 
-.btn-link {
-  color: inherit;
-}
-
 .btn-link:hover, .btn-link:focus, .btn-link:active, .btn-link.active, .open .dropdown-toggle.btn-link {
   color: $primary-color;
   text-decoration: none;

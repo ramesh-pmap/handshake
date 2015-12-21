@@ -7,10 +7,11 @@ import utils from '../../../utils';
 // Core components.
 import {Grid, Row, Col} from 'react-bootstrap';
 
+// Layouts.
+import Main from '../../../layouts/main';
+
 // Common components.
-import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
-import Sidebar from '../../../components/SidebarLeft';
 
 // Partials.
 import RightNav from './right-nav';
@@ -158,12 +159,7 @@ class Page extends React.Component {
   // Render method.
   render() {
     return (
-      <div id="shellWrapper" className="shell-wrapper doc-wrapper">
-
-        <Sidebar title="mars" />
-
-        <Header />
-
+      <Main>
         <div className="page-content-wrapper">
           <Grid fluid>
             <Row>
@@ -489,7 +485,7 @@ class Page extends React.Component {
           <Footer />
 
         </div>
-      </div>
+      </Main>
     );
   }
 }

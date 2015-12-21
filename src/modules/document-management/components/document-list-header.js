@@ -1,0 +1,118 @@
+// Dependencies.
+import React from 'react';
+// import {Link} from 'react-router';
+import {LinkContainer} from 'react-router-bootstrap';
+
+// Core components.
+import {Row, Col, ListGroup, ListGroupItem, ButtonGroup, DropdownButton, MenuItem, Breadcrumb, BreadcrumbItem, Input} from 'react-bootstrap';
+import Icon from 'react-fa';
+
+// Stylesheets.
+import '../../../modules/document-management/styles.scss';
+
+// Define class.
+class Layout extends React.Component {
+  constructor(props) {
+    // Pass `props` into scope.
+    super(props);
+
+    this.state = {
+      showResults: ''
+    };
+  }
+
+  // Search & Results.
+  onFocus() {
+    this.setState({
+      showResults: 'results_wrapper--open'
+    });
+  }
+  onBlur() {
+    this.setState({
+      showResults: ''
+    });
+  }
+
+  // Render method.
+  render() {
+    return (
+      <Row>
+        <Col md={6}>
+          <ButtonGroup className="title-dropdown">
+            <DropdownButton id="doc_mgt-docs_dropdown" title="All Documents" bsStyle="link" bsSize="lg">
+              <MenuItem eventKey="1">All Documents</MenuItem>
+              <MenuItem eventKey="2">My Documents</MenuItem>
+              <MenuItem eventKey="3">Recent Dcouments</MenuItem>
+            </DropdownButton>
+
+            <Breadcrumb>
+              <BreadcrumbItem>
+                Smiths
+              </BreadcrumbItem>
+            </Breadcrumb>
+
+          </ButtonGroup>
+        </Col>
+        <Col md={6}>
+          <div className="action-bar-spacing text-right">
+
+            <DropdownButton id="AddDocumentDropdown" title="Add" href="#" bsStyle="success" bsSize="sm" pullRight>
+              <LinkContainer to="/document-management/upload">
+                <MenuItem>
+                  <Icon name="upload" />
+                  &nbsp;
+                  Upload New Document
+                </MenuItem>
+              </LinkContainer>
+              <LinkContainer to="/document-management/upload">
+                <MenuItem>
+                  <Icon name="link" />
+                  &nbsp;
+                  Web Link
+                </MenuItem>
+              </LinkContainer>
+              <LinkContainer to="/document-management/upload">
+                <MenuItem>
+                  <Icon name="book" />
+                  &nbsp;
+                  Hardcopy
+                </MenuItem>
+              </LinkContainer>
+            </DropdownButton>
+
+            <div id="doc_mgt-search_wrapper">
+              <Input type="search" placeholder="Search" bsSize="small"
+                onFocus={this.onFocus.bind(this)}
+                onBlur={this.onBlur.bind(this)}
+              />
+              <ListGroup id="doc_mgt-results_wrapper" className={this.state.showResults}>
+                <ListGroupItem href="#">
+                  <Icon name="file-word-o" className="fa-fw fa-lg text-muted" />
+                  &nbsp;
+                  <b>Sample Word Document</b>
+                  <p className="small">/OSHA/</p>
+                  <p className="small">/OSHA/Procedures/</p>
+                </ListGroupItem>
+                <ListGroupItem href="#">
+                  <Icon name="folder-open" className="fa-fw fa-lg text-info" />
+                  &nbsp;
+                  <b>Policies</b>
+                </ListGroupItem>
+                <ListGroupItem href="#">
+                  <Icon name="file-excel-o" className="fa-fw fa-lg text-success" />
+                  &nbsp;
+                  <b>Sample Excel Document</b>
+                </ListGroupItem>
+              </ListGroup>
+            </div>
+
+          </div>
+        </Col>
+      </Row>
+    );
+  }
+}
+
+
+// Export.
+export default Layout;

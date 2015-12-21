@@ -1,34 +1,34 @@
-// Dependencies.
 import React from 'react';
-import ReactDOM from 'react-dom';
-import createBrowserHistory from 'history/lib/createBrowserHistory';
-import { Router, Route } from 'react-router';
+import { connect } from 'react-redux';
 
-// Pages.
-import LoginPage from './modules/global/pages/login';
-import ToolkitHome from './modules/toolkit/pages/home';
-import DataPage from './modules/global/pages/data';
-import IconsPage from './modules/global/pages/icon-grid';
+// Define class.
+class App extends React.Component {
+  constructor(props) {
+    // Pass `props` into scope.
+    super(props);
+  }
 
-// import ToolkitCSS from './modules/toolkit/pages/css';
+  // Render method.
+  render() {
+    // const { state } = this.props;
+    // console.log('App:state:', state);
+    return (
+			<div>
+				{this.props.children}
+			</div>
+    );
+  }
+}
 
-// Stylesheets.
-import './styles/sass/andromeda/andromeda.scss';
+// Validation.
+App.propTypes = {
+  children: React.PropTypes.node,
+  state: React.PropTypes.object
+};
 
+const mapStateToProps = (state) => ({
+  state
+});
 
-// Routes template.
-const template = (
-	<Router history={createBrowserHistory()}>
-
-		<Route path="/" component={LoginPage} title="Login Page" />
-		<Route path="toolkit" component={ToolkitHome} title="Toolkit Page" />
-		<Route path="data" component={DataPage} title="Data Sample Page" />
-		<Route path="icons" component={IconsPage} title="Icons Page" />
-
-	</Router>
-);
-
-// Insertion point.
-const el = document.getElementById('app');
-
-ReactDOM.render(template, el);
+// Export.
+export default connect(mapStateToProps)(App);

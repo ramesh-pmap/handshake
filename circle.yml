@@ -1,0 +1,11 @@
+test:
+  post:
+    - npm run build
+
+#deployment:
+#  push_to_cosmos:
+#    branch: document-mgt
+#    commands:
+#      - rsync -avz --exclude=node_modules * circleci@64.80.61.75:/Library/Server/Web/Data/Sites/cosmos
+#      - rsync -avz build circleci@64.80.61.75:/Library/Server/Web/Data/Sites/cosmos
+#      - ssh -v circleci@64.80.61.75 /Library/Server/Web/Data/Sites/cosmos/build-script.sh
