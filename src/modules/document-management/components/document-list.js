@@ -17,18 +17,6 @@ class Layout extends React.Component {
     super(props);
   }
 
-  componentDidUpdate() {
-    let targetElement = document.getElementsByClassName('selected')[0];
-    let focusElement = document.activeElement;
-    console.log('currently focused on: ');
-    console.log(focusElement);
-
-    targetElement.focus();
-    focusElement = document.activeElement;
-    console.log('forced focus on: ');
-    console.log(focusElement);
-  }
-
   showDetail(e) {
     e.preventDefault();
     this.props.showDetail();
