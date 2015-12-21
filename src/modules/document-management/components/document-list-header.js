@@ -7,6 +7,12 @@ import {LinkContainer} from 'react-router-bootstrap';
 import {Row, Col, ListGroup, ListGroupItem, ButtonGroup, DropdownButton, MenuItem, Breadcrumb, BreadcrumbItem, Input} from 'react-bootstrap';
 import Icon from 'react-fa';
 
+// Define const.
+const ALLDOCS = 'All Documents';
+const MYDOCS = 'My Documents';
+const UPLOADEDDOCS = 'My Pending Uploads';
+const RECENTDOCS = 'Recent Documents';
+
 // Define class.
 class Layout extends React.Component {
   constructor(props) {
@@ -14,11 +20,12 @@ class Layout extends React.Component {
     super(props);
 
     this.state = {
-      showResults: ''
+      showResults: '',
+      sectionTitle: ALLDOCS
     };
   }
 
-  // Search & Results.
+  // Search & results.
   onFocus() {
     this.setState({
       showResults: 'results_wrapper--open'
@@ -30,17 +37,29 @@ class Layout extends React.Component {
     });
   }
 
+  // Change list view.
+  showRootList(e) {
+    e.preventDefault();
+    this.props.showRootList();
+    this.state.sectionTitle = ALLDOCS;
+  }
+  showUploadList(e) {
+    e.preventDefault();
+    this.props.showUploadList();
+    this.state.sectionTitle = UPLOADEDDOCS;
+  }
+
   // Render method.
   render() {
     return (
       <Row>
         <Col md={6}>
           <ButtonGroup className="title-dropdown">
-            <DropdownButton id="doc_mgt-docs_dropdown" title="All Documents" bsStyle="link" bsSize="lg">
-              <MenuItem eventKey="1">All Documents</MenuItem>
-              <MenuItem eventKey="2">My Documents</MenuItem>
-              <MenuItem eventKey="3">My Uploads</MenuItem>
-              <MenuItem eventKey="4">Recent Dcouments</MenuItem>
+            <DropdownButton id="doc_mgt-docs_dropdown" title={this.state.sectionTitle} bsStyle="link" bsSize="lg">
+              <MenuItem eventKey="1" onClick={this.showRootList.bind(this)}>{ALLDOCS}</MenuItem>
+              <MenuItem eventKey="2">{MYDOCS}</MenuItem>
+              <MenuItem eventKey="3" onClick={this.showUploadList.bind(this)}>{UPLOADEDDOCS}</MenuItem>
+              <MenuItem eventKey="4">{RECENTDOCS}</MenuItem>
             </DropdownButton>
 
             <Breadcrumb>
@@ -111,6 +130,11 @@ class Layout extends React.Component {
   }
 }
 
+// Parent Functions.
+Layout.propTypes = {
+  showRootList: React.PropTypes.func,
+  showUploadList: React.PropTypes.func
+};
 
 // Export.
 export default Layout;
