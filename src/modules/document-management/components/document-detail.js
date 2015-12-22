@@ -4,10 +4,24 @@ import React from 'react';
 // import {LinkContainer} from 'react-router-bootstrap';
 
 // Core components.
-import {FormControls} from 'react-bootstrap';
+import {FormControls, Tooltip, OverlayTrigger} from 'react-bootstrap';
 import Icon from 'react-fa';
 
-
+const tooltipOwner = (
+  <Tooltip>This is the Owner of the Document.</Tooltip>
+);
+const tooltipApprover1 = (
+  <Tooltip>If the status is green, Person #2 has approved the document on 12/19/2015.</Tooltip>
+);
+const tooltipApprover2 = (
+  <Tooltip>If the status is yellow, it is pending approval from Person #3 on 12/20/2015.</Tooltip>
+);
+const tooltipApprover3 = (
+  <Tooltip>If the status is red, Person #4 has rejected the document on 12/20/2015.</Tooltip>
+);
+const tooltipStatus = (
+  <Tooltip>The document has been approved.</Tooltip>
+);
 // Define class.
 class Layout extends React.Component {
   constructor(props) {
@@ -29,35 +43,47 @@ class Layout extends React.Component {
       <div>
         <div className="fixed-title clearfix">
           <h3 className="pull-left">Selected File</h3>
-          <div className="pull-right">
-            <Icon name="eye" className="fa-fw fa-2x text-muted" />
-            <Icon name="download" className="fa-fw fa-2x text-muted" />
-            <Icon name="pencil" className="fa-fw fa-2x text-muted" onClick={this.showDetailForm.bind(this)}/>
+          <div className="pull-right sidebar-header-actions">
+            <Icon name="eye" className="fa-fw fa-lg text-muted" />
+            <Icon name="download" className="fa-fw fa-lg text-muted" />
+            <Icon name="pencil" className="fa-fw fa-lg text-muted" onClick={this.showDetailForm.bind(this)}/>
           </div>
         </div>
 
         <div className="workflow-avatars">
-          <div className="avatar default">
-            <img src="/static/images/a1.jpg" alt="image"/>
-          </div>
+          <OverlayTrigger placement="bottom" overlay={tooltipOwner}>
+            <div className="avatar default">
+              <img src="/static/images/a1.jpg" alt="image"/>
+            </div>
+          </OverlayTrigger>
           <div className="divider-vertical"></div>
-          <div className="avatar approved">
-            <img src="/static/images/a2.jpg" alt="image"/>
-          </div>
-          <div className="avatar pending">
-            <img src="/static/images/a3.jpg" alt="image"/>
-          </div>
-          <div className="avatar rejected">
-            <img src="/static/images/a4.jpg" alt="image"/>
-          </div>
+          <OverlayTrigger placement="bottom" overlay={tooltipApprover1}>
+            <div className="avatar approved">
+              <img src="/static/images/a2.jpg" alt="image"/>
+            </div>
+          </OverlayTrigger>
+          <OverlayTrigger placement="bottom" overlay={tooltipApprover2}>
+            <div className="avatar pending">
+              <img src="/static/images/a3.jpg" alt="image"/>
+            </div>
+          </OverlayTrigger>
+          <OverlayTrigger placement="bottom" overlay={tooltipApprover3}>
+            <div className="avatar rejected">
+              <img src="/static/images/a4.jpg" alt="image"/>
+            </div>
+          </OverlayTrigger>
           <div className="divider-vertical"></div>
-          <div className="avatar rejected">
-            <img src="/static/images/a4.jpg" alt="image"/>
-          </div>
+          <OverlayTrigger placement="bottom" overlay={tooltipApprover3}>
+            <div className="avatar rejected">
+              <img src="/static/images/a4.jpg" alt="image"/>
+            </div>
+          </OverlayTrigger>
           <div className="divider-vertical"></div>
-          <div className="avatar checked">
-            <Icon name="check" className="fa-lg" />
-          </div>
+          <OverlayTrigger placement="bottom" overlay={tooltipStatus}>
+            <div className="avatar checked">
+              <Icon name="check" className="fa-lg" />
+            </div>
+          </OverlayTrigger>
         </div>
 
         <div className="form-horizontal static">
