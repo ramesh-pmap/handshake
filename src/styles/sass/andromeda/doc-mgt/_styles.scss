@@ -34,6 +34,10 @@
   }
 }
 
+.breadcrumb{
+  background: transparent;
+}
+
 
 
 /* ----------------------------------------
@@ -486,6 +490,10 @@ textarea{
     width: 100%;
     padding: 14px 20px 0;
     background: #000000;
+    
+    .btn:hover{
+      color: #FFFFFF !important;
+    }
   }
   
   img{

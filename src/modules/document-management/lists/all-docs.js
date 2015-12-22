@@ -29,6 +29,7 @@ class Layout extends React.Component {
     e.preventDefault();
     this.props.showDetail();
   }
+
   showActivity(e) {
     e.preventDefault();
     this.props.showActivity();
@@ -39,10 +40,16 @@ class Layout extends React.Component {
     this.props.showActivity();
     this.setState({ currentFolder: FOLDER_ROOT });
   }
+
   showSampleFolder(e) {
     e.preventDefault();
     this.props.showSampleFolder();
     this.setState({ currentFolder: SAMPLE_FOLDER });
+  }
+
+  showPreview(e) {
+    e.preventDefault();
+    this.props.showPreview();
   }
 
   // Render method.
@@ -96,7 +103,7 @@ class Layout extends React.Component {
           <ListGroupItem onClick={this.showDetail.bind(this)}>
             <Row>
               <Col sm={6}>
-                <Button href="#/" bsStyle="link" bsSize="xs">
+                <Button href="#/" bsStyle="link" bsSize="xs" onClick={this.showPreview.bind(this)}>
                   <Icon name="file-word-o" className="fa-fw fa-lg text-muted" />
                   &nbsp;
                   Incident Management
@@ -118,7 +125,7 @@ class Layout extends React.Component {
           <ListGroupItem onClick={this.showDetail.bind(this)}>
             <Row>
               <Col sm={6}>
-                <Button href="#/" bsStyle="link" bsSize="xs">
+                <Button href="#/" bsStyle="link" bsSize="xs" onClick={this.showPreview.bind(this)}>
                   <Icon name="file-word-o" className="fa-fw fa-lg text-muted" />
                   &nbsp;
                   Incident Investigation
@@ -351,7 +358,8 @@ Layout.propTypes = {
   showActivity: React.PropTypes.func,
   showRootList: React.PropTypes.func,
   showUploadList: React.PropTypes.func,
-  showSampleFolder: React.PropTypes.func
+  showSampleFolder: React.PropTypes.func,
+  showPreview: React.PropTypes.func,
 };
 
 // Export.

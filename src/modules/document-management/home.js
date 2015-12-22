@@ -164,6 +164,7 @@ class Page extends React.Component {
         showRootList={this.showRootList.bind(this)}
         showUploadList={this.showUploadList.bind(this)}
         showSampleFolder={this.showSampleFolder.bind(this)}
+        showPreview={this.showPreview.bind(this)}
       />);
       break;
     case UPLOADEDDOCS:
@@ -233,17 +234,25 @@ class Page extends React.Component {
               sample-word-document.docx
             </div>
             <ButtonGroup className="pull-right">
-              <Button bsStyle="link">
-                <Icon name="print" className="fa-lg text-muted" />
+              <Button bsStyle="link" bsSize="sm" className="text-muted">
+                <Icon name="print" className="fa-lg" />
+                &nbsp;
+                Print
               </Button>
-              <Button bsStyle="link">
-                <Icon name="share-square-o" className="fa-lg text-muted" />
+              <Button bsStyle="link" bsSize="sm" className="text-muted">
+                <Icon name="download" className="fa-lg" />
+                &nbsp;
+                Download
               </Button>
-              <Button bsStyle="link">
-                <Icon name="info-circle" className="fa-lg text-muted" />
+              <Button bsStyle="link" bsSize="sm" className="text-muted">
+                <Icon name="share-square-o" className="fa-lg" />
+                &nbsp;
+                Share
               </Button>
-              <Button bsStyle="link" onClick={this.closePreview.bind(this)}>
-                <Icon name="times" className="fa-lg text-muted" />
+              <Button bsStyle="link" bsSize="sm" className="text-muted" onClick={this.closePreview.bind(this)}>
+                <Icon name="times" className="fa-lg" />
+                &nbsp;
+                Close
               </Button>
             </ButtonGroup>
             <div className="pull-right">
