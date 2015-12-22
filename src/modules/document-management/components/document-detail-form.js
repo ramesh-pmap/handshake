@@ -41,14 +41,14 @@ class Layout extends React.Component {
             <Input type="text" label="Internal Document ID" labelClassName="" wrapperClassName="" />
             <Input type="number" label="Version" labelClassName=" required" wrapperClassName="" />
             <Input type="select" multiple label="Document Owner" labelClassName=" required" wrapperClassName="">
-              <option>Owner 1</option>
-              <option>Owner 2</option>
-              <option>Owner 3</option>
+              <option>John Smith</option>
+              <option>Bob Roberts</option>
+              <option>Janette Walls</option>
             </Input>
             <Input type="select" multiple label="Author" labelClassName="" wrapperClassName="">
-              <option>Author 1</option>
-              <option>Author 2</option>
-              <option>Author 3</option>
+              <option>John Smith</option>
+              <option>Bob Roberts</option>
+              <option>Janette Walls</option>x
             </Input>
             <FormControls.Static label="Uploaded/Referenced By" labelClassName="" wrapperClassName="" value="John Doe"/>
             <FormControls.Static label="Date Uploaded/Referenced" labelClassName="" wrapperClassName="" value="11/7/2015"/>
@@ -56,19 +56,20 @@ class Layout extends React.Component {
             <FormControls.Static label="Modified Date" labelClassName="" wrapperClassName="" value="11/8/2015"/>
             <FormControls.Static label="Document Status" labelClassName="" wrapperClassName="" value="Pending Approval"/>
             <Input type="select" label="Document Type" labelClassName="" wrapperClassName="">
-              <option>Option1</option>
-              <option>Option2</option>
-              <option>Option3</option>
+              <option>Document</option>
+              <option>Images</option>
+              <option>Photo</option>
+              <option>Spreadsheet</option>
             </Input>
             <Input type="select" label="Document Level" labelClassName=" required" wrapperClassName="">
-              <option>Option1</option>
-              <option>Option2</option>
-              <option>Option3</option>
+              <option>Level 1</option>
+              <option>Level 2</option>
+              <option>Level 3</option>
+              <option>Level 4</option>
             </Input>
             <Input type="select" multiple label="Display Folders" labelClassName=" required" wrapperClassName="">
-              <option>Folder 1</option>
-              <option>Folder 2</option>
-              <option>Folder 3</option>
+              <option>1.01 Incident and Emergency Management</option>
+              <option>2.0 Quality Management System</option>
             </Input>
             <Input type="textarea" label="Description" labelClassName="" wrapperClassName="" />
             <Input type="textarea" label="Keywords/Tags" labelClassName="" wrapperClassName="" />
