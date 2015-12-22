@@ -39,5 +39,5 @@ $nav-text-color: #A7B1C2;
 
 // Workflow Avatar Status Colors
 $approved: #3db535;
-$pending: #facd19;
+$pending: darken(#facd19, 10%);
 $rejected: #d1111a;
