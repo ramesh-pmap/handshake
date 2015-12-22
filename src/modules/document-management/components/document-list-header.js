@@ -4,7 +4,7 @@ import React from 'react';
 // import {LinkContainer} from 'react-router-bootstrap';
 
 // Core components.
-import {Row, Col, ListGroup, ListGroupItem, ButtonGroup, DropdownButton, MenuItem, Breadcrumb, BreadcrumbItem, Input} from 'react-bootstrap';
+import {Row, Col, ListGroup, ListGroupItem, ButtonGroup, DropdownButton, MenuItem, Input} from 'react-bootstrap';
 import Icon from 'react-fa';
 
 // Define const.
@@ -12,10 +12,6 @@ const ALLDOCS = 'All Documents';
 const MYDOCS = 'My Documents';
 const UPLOADEDDOCS = 'My Pending Uploads';
 const RECENTDOCS = 'Recent Documents';
-
-const BC_ROOT = 'root';
-const BC_UPLOAD = 'upload';
-const BC_SAMPLEFOLDER = 'sample folder';
 
 // Define class.
 class Layout extends React.Component {
@@ -25,8 +21,7 @@ class Layout extends React.Component {
 
     this.state = {
       showResults: '',
-      sectionTitle: ALLDOCS,
-      breadcrumb: BC_ROOT
+      sectionTitle: ALLDOCS
     };
   }
 
@@ -45,45 +40,24 @@ class Layout extends React.Component {
   // Change list view.
   showRootList(e) {
     e.preventDefault();
-    this.props.showRootList();
-    this.state.breadcrumb = BC_ROOT;
+    if ( this.state.sectionTitle !== ALLDOCS ) {
+      this.props.showRootList('root list');
+    }
     this.state.sectionTitle = ALLDOCS;
   }
   showUploadList(e) {
     e.preventDefault();
     this.props.showUploadList();
-    this.state.breadcrumb = BC_UPLOAD;
     this.state.sectionTitle = UPLOADEDDOCS;
+  }
+  showSampleFolder(e) {
+    e.preventDefault();
+    this.props.showSampleFolder();
+    this.state.sectionTitle = ALLDOCS;
   }
 
   // Render method.
   render() {
-    // Breadcrumbs
-    const breadcrumb = this.state.breadcrumb;
-    let breadcrumbsArea;
-
-    switch (breadcrumb) {
-    case BC_UPLOAD:
-      breadcrumbsArea = (<Breadcrumb>
-          <BreadcrumbItem onClick={this.showRootList.bind(this)}><Icon name="home"/></BreadcrumbItem>
-          <BreadcrumbItem active>Uploads</BreadcrumbItem>
-        </Breadcrumb>);
-      break;
-    case BC_SAMPLEFOLDER:
-      breadcrumbsArea = (<Breadcrumb>
-          <BreadcrumbItem><Icon name="home"/></BreadcrumbItem>
-          <BreadcrumbItem>1.0 EH&S Management System</BreadcrumbItem>
-          <BreadcrumbItem>1.01 Incident and Emergency Management</BreadcrumbItem>
-          <BreadcrumbItem>1.01.01 Incident Management</BreadcrumbItem>
-          <BreadcrumbItem active>1.01.01.2 Procedures</BreadcrumbItem>
-        </Breadcrumb>);
-      break;
-    default:
-      breadcrumbsArea = (<Breadcrumb>
-          <BreadcrumbItem active><Icon name="home"/> /</BreadcrumbItem>
-        </Breadcrumb>);
-    }
-
     return (
       <Row>
         <Col md={6}>
@@ -147,10 +121,6 @@ class Layout extends React.Component {
           </div>
         </Col>
 
-        <Col xs={12}>
-          {breadcrumbsArea}
-        </Col>
-
       </Row>
     );
   }
@@ -159,7 +129,8 @@ class Layout extends React.Component {
 // Parent Functions.
 Layout.propTypes = {
   showRootList: React.PropTypes.func,
-  showUploadList: React.PropTypes.func
+  showUploadList: React.PropTypes.func,
+  showSampleFolder: React.PropTypes.func
 };
 
 // Export.
