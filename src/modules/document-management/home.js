@@ -2,13 +2,13 @@
 import React from 'react';
 
 // Core components.
-import {Row, Col} from 'react-bootstrap';
-// import Icon from 'react-fa';
+import {Row, Col, Breadcrumb, BreadcrumbItem, Image} from 'react-bootstrap';
+import Icon from 'react-fa';
 
 // Layouts.
 import Main from '../../layouts/shell-demo/main';
 import DocumentListHeader from './components/document-list-header';
-import RootList from './lists/root';
+import RootList from './lists/all-docs';
 import UploadList from './lists/upload';
 // import UploadList from './lists/upload';
 
@@ -19,10 +19,13 @@ import DocumentDetailForm from './components/document-detail-form';
 // Utility methods.
 import utils from '../../utils';
 
+// Breadcrumb const.
+const BC_ROOT = 'root';
+const BC_UPLOAD = 'upload';
+const BC_SAMPLEFOLDER = 'sample folder';
+
 // List views const.
 const ALLDOCS = 'All Documents';
-// const MYDOCS = 'My Documents';
-// const RECENTDOCS = 'Recent Documents';
 const UPLOADEDDOCS = 'My Pending Uploads';
 
 // Right panel const.
@@ -43,7 +46,9 @@ class Page extends React.Component {
       width: 0,
       height: 0,
       rightPanel: ACTIVITY,
-      currentListView: ALLDOCS
+      currentListView: ALLDOCS,
+      breadcrumb: BC_ROOT,
+      showPreview: 'none'
     };
   }
 
@@ -73,12 +78,14 @@ class Page extends React.Component {
 
   // List views.
   showRootList() {
-    console.log('all docs view');
-    this.setState({ currentListView: ALLDOCS });
+    this.setState({ currentListView: ALLDOCS, breadcrumb: BC_ROOT });
   }
   showUploadList() {
-    console.log('upload view');
-    this.setState({ currentListView: UPLOADEDDOCS });
+    this.setState({ currentListView: UPLOADEDDOCS, breadcrumb: BC_UPLOAD });
+  }
+  showSampleFolder() {
+    this.showActivity();
+    this.setState({ currentListView: ALLDOCS, breadcrumb: BC_SAMPLEFOLDER });
   }
 
   // Right panels.
@@ -92,8 +99,45 @@ class Page extends React.Component {
     this.setState({ rightPanel: ACTIVITY });
   }
 
+  // Close preview.
+  closePreview() {
+    this.setState({ showPreview: 'none' });
+  }
+  showPreview() {
+    this.setState({ showPreview: 'block' });
+  }
+
   // Render method.
   render() {
+    // Breadcrumbs
+    const breadcrumb = this.state.breadcrumb;
+    let breadcrumbsArea;
+
+    switch (breadcrumb) {
+    case BC_ROOT:
+      breadcrumbsArea = (<Breadcrumb>
+          <BreadcrumbItem active><Icon name="home"/> /</BreadcrumbItem>
+        </Breadcrumb>);
+      break;
+    case BC_UPLOAD:
+      breadcrumbsArea = (<Breadcrumb>
+          <BreadcrumbItem onClick={this.showRootList.bind(this)}><Icon name="home"/></BreadcrumbItem>
+          <BreadcrumbItem active>Uploads</BreadcrumbItem>
+        </Breadcrumb>);
+      break;
+    case BC_SAMPLEFOLDER:
+      breadcrumbsArea = (<Breadcrumb>
+          <BreadcrumbItem><Icon name="home"/></BreadcrumbItem>
+          <BreadcrumbItem>1.0 EH&S Management System</BreadcrumbItem>
+          <BreadcrumbItem>1.01 Incident and Emergency Management</BreadcrumbItem>
+          <BreadcrumbItem>1.01.01 Incident Management</BreadcrumbItem>
+          <BreadcrumbItem active>1.01.01.2 Procedures</BreadcrumbItem>
+        </Breadcrumb>);
+      break;
+    default:
+      breadcrumbsArea = null;
+    }
+
     // Left List View
     const currentListView = this.state.currentListView;
     let listArea;
@@ -104,6 +148,9 @@ class Page extends React.Component {
         showDetail={this.showDetail.bind(this)}
         showDetailForm={this.showDetailForm.bind(this)}
         showActivity={this.showActivity.bind(this)}
+        showRootList={this.showRootList.bind(this)}
+        showUploadList={this.showUploadList.bind(this)}
+        showSampleFolder={this.showSampleFolder.bind(this)}
       />);
       break;
     case UPLOADEDDOCS:
@@ -114,11 +161,7 @@ class Page extends React.Component {
       />);
       break;
     default:
-      listArea = (<RootList
-        showDetail={this.showDetail.bind(this)}
-        showDetailForm={this.showDetailForm.bind(this)}
-        showActivity={this.showActivity.bind(this)}
-      />);
+      listArea = null;
     }
 
     // Right Panel
@@ -130,7 +173,10 @@ class Page extends React.Component {
       rightPanelArea = <DocumentActivityList />;
       break;
     case DETAIL:
-      rightPanelArea = <DocumentDetail showDetailForm={this.showDetailForm.bind(this)} />;
+      rightPanelArea = (<DocumentDetail
+        showDetailForm={this.showDetailForm.bind(this)}
+        showPreview={this.showPreview.bind(this)}
+      />);
       break;
     case DETAILFORM:
       rightPanelArea = <DocumentDetailForm showDetail={this.showDetail.bind(this)} />;
@@ -140,29 +186,37 @@ class Page extends React.Component {
     }
 
     return (
-      <Main>
-        <Row>
-          <Col sm={9} id="doc_mgt-left_column">
+      <div>
+        <Main>
+          <Row>
+            <Col sm={9} id="doc_mgt-left_column">
 
-            <DocumentListHeader
-              showRootList={this.showRootList.bind(this)}
-              showUploadList={this.showUploadList.bind(this)}
-            />
+              <DocumentListHeader
+                showRootList={this.showRootList.bind(this)}
+                showUploadList={this.showUploadList.bind(this)}
+                showSampleFolder={this.showSampleFolder.bind(this)}
+              />
 
-            {listArea}
+              {breadcrumbsArea}
 
-          </Col>
+              {listArea}
 
-          <Col sm={3} id="doc_mgt-right_column" className="sidebar-wrapper">
-            <div className="sidebar" style={{height: this.state.height + 'px'}}>
+            </Col>
 
-              {rightPanelArea}
+            <Col sm={3} id="doc_mgt-right_column" className="sidebar-wrapper">
+              <div className="sidebar" style={{height: this.state.height + 'px'}}>
 
-            </div>
-          </Col>
-        </Row>
+                {rightPanelArea}
 
-      </Main>
+              </div>
+            </Col>
+          </Row>
+
+        </Main>
+
+        <Image src="/static/images/sample-doc-preview.png" onClick={this.closePreview.bind(this)} style={{ display: this.state.showPreview, position: 'absolute', top: 0, left: 0, width: '100%', height: 'auto', zIndex: 999999 }} />
+
+      </div>
     );
   }
 }

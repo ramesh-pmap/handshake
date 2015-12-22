@@ -7,11 +7,22 @@ import React from 'react';
 import {Row, Col, Button, ListGroup, ListGroupItem} from 'react-bootstrap';
 import Icon from 'react-fa';
 
+// Folder components.
+// import RootFolder from './folders/root';
+
+// Define const.
+const FOLDER_ROOT = 'root';
+const SAMPLE_FOLDER = 'sample_folder';
+
 // Define class.
 class Layout extends React.Component {
   constructor(props) {
     // Pass `props` into scope.
     super(props);
+
+    this.state = {
+      currentFolder: FOLDER_ROOT
+    };
   }
 
   showDetail(e) {
@@ -21,11 +32,118 @@ class Layout extends React.Component {
   showActivity(e) {
     e.preventDefault();
     this.props.showActivity();
-    console.log('unselect');
+  }
+
+  showRootFolder(e) {
+    e.preventDefault();
+    this.props.showActivity();
+    this.setState({ currentFolder: FOLDER_ROOT });
+  }
+  showSampleFolder(e) {
+    e.preventDefault();
+    this.props.showSampleFolder();
+    this.setState({ currentFolder: SAMPLE_FOLDER });
   }
 
   // Render method.
   render() {
+    // Left List View
+    const currentFolder = this.state.currentFolder;
+    let folderArea;
+
+    switch (currentFolder) {
+    case FOLDER_ROOT:
+      folderArea = (
+        <ListGroup className="doc_mgt-list">
+          <ListGroupItem onClick={this.showSampleFolder.bind(this)}>
+            <Row>
+              <Col sm={6}>
+                <Button href="#/" bsStyle="link" bsSize="xs">
+                  <Icon name="folder-open" className="fa-fw fa-lg text-muted" />
+                  &nbsp;
+                  1.01 Incident and Emergency Management
+                </Button>
+              </Col>
+              <Col sm={1} className="text-center hidden-xs" />
+              <Col sm={2} className="text-center text-left-xs">
+                <span className="visible-xs-inline">Date Modified: </span>
+                11/8/2015
+              </Col>
+            </Row>
+          </ListGroupItem>
+          <ListGroupItem onClick={this.showSampleFolder.bind(this)}>
+            <Row>
+              <Col sm={6}>
+                <Button href="#/" bsStyle="link" bsSize="xs">
+                  <Icon name="folder-open" className="fa-fw fa-lg text-muted" />
+                  &nbsp;
+                  2.0 Quality Management System
+                </Button>
+              </Col>
+              <Col sm={1} className="text-center hidden-xs" />
+              <Col sm={2} className="text-center text-left-xs">
+                <span className="visible-xs-inline">Date Modified: </span>
+                11/8/2015
+              </Col>
+            </Row>
+          </ListGroupItem>
+        </ListGroup>
+      );
+      break;
+    case SAMPLE_FOLDER:
+      folderArea = (
+        <ListGroup className="doc_mgt-list">
+          <ListGroupItem onClick={this.showDetail.bind(this)}>
+            <Row>
+              <Col sm={6}>
+                <Button href="#/" bsStyle="link" bsSize="xs">
+                  <Icon name="file-word-o" className="fa-fw fa-lg text-muted" />
+                  &nbsp;
+                  Incident Management
+                </Button>
+              </Col>
+              <Col sm={1} className="text-center text-left-xs">
+                <span className="visible-xs-inline">Version: </span>
+                <Button href="#" bsStyle="link" bsSize="xs">1</Button>
+              </Col>
+              <Col sm={2} className="text-center text-left-xs">
+                <span className="visible-xs-inline">Date Modified: </span>
+                9/22/2015
+              </Col>
+              <Col sm={3} className="text-center text-left-xs">
+                (Status)
+              </Col>
+            </Row>
+          </ListGroupItem>
+          <ListGroupItem onClick={this.showDetail.bind(this)}>
+            <Row>
+              <Col sm={6}>
+                <Button href="#/" bsStyle="link" bsSize="xs">
+                  <Icon name="file-word-o" className="fa-fw fa-lg text-muted" />
+                  &nbsp;
+                  Incident Investigation
+                </Button>
+              </Col>
+              <Col sm={1} className="text-center text-left-xs">
+                <span className="visible-xs-inline">Version: </span>
+                <Button href="#" bsStyle="link" bsSize="xs">3</Button>
+              </Col>
+              <Col sm={2} className="text-center text-left-xs">
+                <span className="visible-xs-inline">Date Modified: </span>
+                11/8/2015
+              </Col>
+              <Col sm={3} className="text-center text-left-xs">
+                (Status)
+              </Col>
+            </Row>
+          </ListGroupItem>
+        </ListGroup>
+      );
+      break;
+    default:
+      folderArea = null;
+    }
+
     return (
       <div className="card">
         <div className="doc_mgt-list_header">
@@ -55,7 +173,44 @@ class Layout extends React.Component {
 
         </div>
 
-        <ListGroup className="doc_mgt-list">
+        {folderArea}
+
+        {/*
+          <ListGroup className="doc_mgt-list">
+
+            <ListGroupItem onClick={this.showActivity.bind(this)}>
+              <Row>
+                <Col sm={6}>
+                  <Button href="#/" bsStyle="link" bsSize="xs">
+                    <Icon name="folder-open" className="fa-fw fa-lg text-muted" />
+                    &nbsp;
+                    1.0 EH&S Management System
+                  </Button>
+                </Col>
+                <Col sm={1} className="text-center hidden-xs" />
+                <Col sm={2} className="text-center text-left-xs">
+                  <span className="visible-xs-inline">Date Modified: </span>
+                  11/8/2015
+                </Col>
+              </Row>
+            </ListGroupItem>
+
+            <ListGroupItem onClick={this.showActivity.bind(this)}>
+              <Row>
+                <Col sm={6}>
+                  <Button href="#/" bsStyle="link" bsSize="xs">
+                    <Icon name="folder-open" className="fa-fw fa-lg text-muted" />
+                    &nbsp;
+                    2.0 Quality Management System
+                  </Button>
+                </Col>
+                <Col sm={1} className="text-center hidden-xs" />
+                <Col sm={2} className="text-center text-left-xs">
+                  <span className="visible-xs-inline">Date Modified: </span>
+                  11/8/2015
+                </Col>
+              </Row>
+            </ListGroupItem>
 
             <ListGroupItem onClick={this.showActivity.bind(this)}>
               <Row>
@@ -182,8 +337,8 @@ class Layout extends React.Component {
                 </Col>
               </Row>
             </ListGroupItem>
-
           </ListGroup>
+        */}
 
       </div>
     );
@@ -193,7 +348,10 @@ class Layout extends React.Component {
 // Parent Functions.
 Layout.propTypes = {
   showDetail: React.PropTypes.func,
-  showActivity: React.PropTypes.func
+  showActivity: React.PropTypes.func,
+  showRootList: React.PropTypes.func,
+  showUploadList: React.PropTypes.func,
+  showSampleFolder: React.PropTypes.func
 };
 
 // Export.

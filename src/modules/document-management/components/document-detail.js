@@ -27,14 +27,15 @@ class Layout extends React.Component {
   constructor(props) {
     // Pass `props` into scope.
     super(props);
-
-    this.state = {
-    };
   }
 
   showDetailForm(e) {
     e.preventDefault();
     this.props.showDetailForm();
+  }
+  showPreview(e) {
+    e.preventDefault();
+    this.props.showPreview();
   }
 
   // Render method.
@@ -44,7 +45,7 @@ class Layout extends React.Component {
         <div className="fixed-title clearfix">
           <h3 className="pull-left">Selected File</h3>
           <div className="pull-right sidebar-header-actions">
-            <Icon name="eye" className="fa-fw fa-lg text-muted" />
+            <Icon name="eye" className="fa-fw fa-lg text-muted" onClick={this.showPreview.bind(this)} />
             <Icon name="download" className="fa-fw fa-lg text-muted" />
             <Icon name="pencil" className="fa-fw fa-lg text-muted" onClick={this.showDetailForm.bind(this)}/>
           </div>
@@ -120,7 +121,8 @@ class Layout extends React.Component {
 
 // Parent Functions.
 Layout.propTypes = {
-  showDetailForm: React.PropTypes.func
+  showDetailForm: React.PropTypes.func,
+  showPreview: React.PropTypes.func
 };
 
 // Export.
