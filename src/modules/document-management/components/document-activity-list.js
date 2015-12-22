@@ -64,7 +64,7 @@ class Layout extends React.Component {
 
       {/* Card Item Drafts Pending Submittals */}
       <ListGroupItem href="#link1">
-        <div className="list-card pending">
+        <div className="list-card neutral">
           <h4>Submit a Request to Add, Remove, or Change Documents.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
@@ -87,7 +87,7 @@ class Layout extends React.Component {
 
       {/* Card Item Pending Approvals */}
       <ListGroupItem href="#link1">
-        <div className="list-card pending">
+        <div className="list-card neutral">
           <h4>Submit a Request to Add, Remove, or Change Documents.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
@@ -133,7 +133,7 @@ class Layout extends React.Component {
 
       {/* Card Item Pending Release Notification */}
       <ListGroupItem href="#link1">
-        <div className="list-card pending">
+        <div className="list-card neutral">
           <h4>Submit a Request to Add, Remove, or Change Documents.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
@@ -155,7 +155,7 @@ class Layout extends React.Component {
       docList = (<ListGroup bsStyle="info">
       {/* Card Item Pending Change Requests */}
       <ListGroupItem href="#link1">
-        <div className="list-card pending">
+        <div className="list-card neutral">
           <h4>Submit a Request to Add, Remove, or Change Documents.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
@@ -177,7 +177,7 @@ class Layout extends React.Component {
       docList = (<ListGroup bsStyle="info">
       {/* Card Item Pending Periodic Reviews */}
       <ListGroupItem href="#link1">
-        <div className="list-card pending">
+        <div className="list-card neutral">
           <h4>Submit a Request to Add, Remove, or Change Documents.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
@@ -199,7 +199,7 @@ class Layout extends React.Component {
 
       {/* Card Item Uploaded Pending Details */}
       <ListGroupItem href="#link1">
-        <div className="list-card approved">
+        <div className="list-card neutral">
           <h4>Submit a Request to Add, Remove, or Change Documents.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
@@ -208,7 +208,7 @@ class Layout extends React.Component {
               <p className="pull-right">10/11/2015</p>
             </div>
             <div className="clearfix">
-              <p className="approved pull-right">Uploaded Pending Details </p>
+              <p className="neutral pull-right">Uploaded Pending Details </p>
             </div>
           </div>
           <div className="folder-wrapper clearfix">
@@ -221,7 +221,7 @@ class Layout extends React.Component {
 
       {/* Card Item Drafts Pending Submittals */}
       <ListGroupItem href="#link1">
-        <div className="list-card pending">
+        <div className="list-card neutral">
           <h4>Submit a Request to Add, Remove, or Change Documents.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
@@ -272,7 +272,7 @@ class Layout extends React.Component {
 
       {/* Card Item Pending Release Notification */}
       <ListGroupItem href="#link1">
-        <div className="list-card pending">
+        <div className="list-card neutral">
           <h4>Submit a Request to Add, Remove, or Change Documents.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
@@ -289,7 +289,7 @@ class Layout extends React.Component {
 
       {/* Card Item Pending Change Requests */}
       <ListGroupItem href="#link1">
-        <div className="list-card pending">
+        <div className="list-card neutral">
           <h4>Submit a Request to Add, Remove, or Change Documents.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
@@ -306,7 +306,7 @@ class Layout extends React.Component {
 
       {/* Card Item Pending Periodic Reviews */}
       <ListGroupItem href="#link1">
-        <div className="list-card pending">
+        <div className="list-card neutral">
           <h4>Submit a Request to Add, Remove, or Change Documents.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
@@ -323,7 +323,7 @@ class Layout extends React.Component {
 
       {/* Card Item Pending Approvals */}
       <ListGroupItem href="#link1">
-        <div className="list-card pending">
+        <div className="list-card neutral">
           <h4>Submit a Request to Add, Remove, or Change Documents.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
@@ -347,13 +347,13 @@ class Layout extends React.Component {
           <ButtonGroup className="title-dropdown">
             <DropdownButton id="doc_mgt-actions_dropdown" title={this.state.selectedValue} bsStyle="link" bsSize="lg" onSelect={this.handleSelect.bind(this)}>
               <MenuItem eventKey="default">All Tasks</MenuItem>
-              <MenuItem eventKey="1">Uploaded Pending Details</MenuItem>
-              <MenuItem eventKey="2">Drafts Pending Submittal <small>(2)</small></MenuItem>
+              <MenuItem eventKey="1">Uploaded Pending Details <small>(1)</small></MenuItem>
+              <MenuItem eventKey="2">Drafts Pending Submittal <small>(1)</small></MenuItem>
               <MenuItem eventKey="3">Pending Approvals <small>(1)</small></MenuItem>
-              <MenuItem eventKey="4">Rejected Pending Revision <small>(7)</small></MenuItem>
-              <MenuItem eventKey="5">Pending Release Notification</MenuItem>
-              <MenuItem eventKey="6">Pending Change Requests</MenuItem>
-              <MenuItem eventKey="7">Pending Periodic Reviews</MenuItem>
+              <MenuItem eventKey="4">Rejected Pending Revision <small>(1)</small></MenuItem>
+              <MenuItem eventKey="5">Pending Release Notification <small>(1)</small></MenuItem>
+              <MenuItem eventKey="6">Pending Change Requests <small>(1)</small></MenuItem>
+              <MenuItem eventKey="7">Pending Periodic Reviews <small>(1)</small></MenuItem>
             </DropdownButton>
           </ButtonGroup>
         </div>
