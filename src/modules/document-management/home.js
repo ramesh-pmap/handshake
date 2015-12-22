@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Core components.
-import {Row, Col, Breadcrumb, BreadcrumbItem, Image} from 'react-bootstrap';
+import {Row, Col, Breadcrumb, BreadcrumbItem, ButtonGroup, Button, Image} from 'react-bootstrap';
 import Icon from 'react-fa';
 
 // Layouts.
@@ -10,6 +10,7 @@ import Main from '../../layouts/shell-demo/main';
 import DocumentListHeader from './components/document-list-header';
 import RootList from './lists/all-docs';
 import UploadList from './lists/upload';
+
 // import UploadList from './lists/upload';
 
 import DocumentActivityList from './components/document-activity-list';
@@ -48,7 +49,7 @@ class Page extends React.Component {
       rightPanel: ACTIVITY,
       currentListView: ALLDOCS,
       breadcrumb: BC_ROOT,
-      showPreview: 'none'
+      showPreview: 'none',
     };
   }
 
@@ -60,17 +61,22 @@ class Page extends React.Component {
     let g = d.getElementsByTagName('body')[0];
     let x = w.innerWidth || e.clientWidth || g.clientWidth;
     let y = w.innerHeight || e.clientHeight || g.clientHeight;
+
     // let nav = d.getElementsByClassName('sidebar-wrapper');
     // let navWidth = nav.innerWidth || nav.clientWidth;
     // x = ( Math.floor((navWidth / 25) * 100) - navWidth );
+
     this.setState({width: x, height: y});
   }
+
   componentWillMount() {
     this.updateDimensions();
   }
+
   componentWillUnmount() {
     window.removeEventListener('resize', this.updateDimensions.bind(this));
   }
+
   componentDidMount() {
     // Window Resizing.
     window.addEventListener('resize', this.updateDimensions.bind(this));
@@ -81,10 +87,12 @@ class Page extends React.Component {
     this.showActivity();
     this.setState({ currentListView: ALLDOCS, breadcrumb: BC_ROOT });
   }
+
   showUploadList() {
     this.showActivity();
     this.setState({ currentListView: UPLOADEDDOCS, breadcrumb: BC_UPLOAD });
   }
+
   showSampleFolder() {
     this.showActivity();
     this.setState({ currentListView: ALLDOCS, breadcrumb: BC_SAMPLEFOLDER });
@@ -94,9 +102,11 @@ class Page extends React.Component {
   showDetail() {
     this.setState({ rightPanel: DETAIL });
   }
+
   showDetailForm() {
     this.setState({ rightPanel: DETAILFORM });
   }
+
   showActivity() {
     this.setState({ rightPanel: ACTIVITY });
   }
@@ -105,6 +115,7 @@ class Page extends React.Component {
   closePreview() {
     this.setState({ showPreview: 'none' });
   }
+
   showPreview() {
     this.setState({ showPreview: 'block' });
   }
@@ -216,7 +227,30 @@ class Page extends React.Component {
 
         </Main>
 
-        <Image src="/static/images/sample-doc-preview.png" onClick={this.closePreview.bind(this)} style={{ display: this.state.showPreview, position: 'absolute', top: 0, left: 0, width: '100%', height: 'auto', zIndex: 999999 }} />
+        <div className="preview-panel" style={{ display: this.state.showPreview }}>
+          <div className="preview-panel-toolbar clearfix">
+            <div className="pull-left lead">
+              sample-word-document.docx
+            </div>
+            <ButtonGroup className="pull-right">
+              <Button bsStyle="link">
+                <Icon name="print" className="fa-lg text-muted" />
+              </Button>
+              <Button bsStyle="link">
+                <Icon name="share-square-o" className="fa-lg text-muted" />
+              </Button>
+              <Button bsStyle="link">
+                <Icon name="info-circle" className="fa-lg text-muted" />
+              </Button>
+              <Button bsStyle="link" onClick={this.closePreview.bind(this)}>
+                <Icon name="times" className="fa-lg text-muted" />
+              </Button>
+            </ButtonGroup>
+            <div className="pull-right">
+            </div>
+          </div>
+          <Image src="/static/images/sample-doc-preview.png" />
+        </div>
 
       </div>
     );

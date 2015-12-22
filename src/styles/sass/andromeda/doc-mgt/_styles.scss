@@ -444,3 +444,33 @@ textarea{
     margin: 5px;
   }
 }
+
+
+.preview-panel{
+  display: block;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  color: #FFFFFF;
+  text-align: center;
+  background: rgba(0,0,0,.8);
+  z-index: 999999;
+  
+  .preview-panel-toolbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 14px 20px 0;
+    background: #000000;
+  }
+  
+  img{
+    max-width: 50%;
+    display: inline-block;
+    margin-top: 60px;
+  }
+}
