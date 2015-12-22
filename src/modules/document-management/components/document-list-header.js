@@ -13,6 +13,10 @@ const MYDOCS = 'My Documents';
 const UPLOADEDDOCS = 'My Pending Uploads';
 const RECENTDOCS = 'Recent Documents';
 
+const BC_ROOT = 'root';
+const BC_UPLOAD = 'upload';
+const BC_SAMPLEFOLDER = 'sample folder';
+
 // Define class.
 class Layout extends React.Component {
   constructor(props) {
@@ -21,7 +25,8 @@ class Layout extends React.Component {
 
     this.state = {
       showResults: '',
-      sectionTitle: ALLDOCS
+      sectionTitle: ALLDOCS,
+      breadcrumb: BC_ROOT
     };
   }
 
@@ -41,16 +46,44 @@ class Layout extends React.Component {
   showRootList(e) {
     e.preventDefault();
     this.props.showRootList();
+    this.state.breadcrumb = BC_ROOT;
     this.state.sectionTitle = ALLDOCS;
   }
   showUploadList(e) {
     e.preventDefault();
     this.props.showUploadList();
+    this.state.breadcrumb = BC_UPLOAD;
     this.state.sectionTitle = UPLOADEDDOCS;
   }
 
   // Render method.
   render() {
+    // Breadcrumbs
+    const breadcrumb = this.state.breadcrumb;
+    let breadcrumbsArea;
+
+    switch (breadcrumb) {
+    case BC_UPLOAD:
+      breadcrumbsArea = (<Breadcrumb>
+          <BreadcrumbItem onClick={this.showRootList.bind(this)}><Icon name="home"/></BreadcrumbItem>
+          <BreadcrumbItem active>Uploads</BreadcrumbItem>
+        </Breadcrumb>);
+      break;
+    case BC_SAMPLEFOLDER:
+      breadcrumbsArea = (<Breadcrumb>
+          <BreadcrumbItem><Icon name="home"/></BreadcrumbItem>
+          <BreadcrumbItem>1.0 EH&S Management System</BreadcrumbItem>
+          <BreadcrumbItem>1.01 Incident and Emergency Management</BreadcrumbItem>
+          <BreadcrumbItem>1.01.01 Incident Management</BreadcrumbItem>
+          <BreadcrumbItem active>1.01.01.2 Procedures</BreadcrumbItem>
+        </Breadcrumb>);
+      break;
+    default:
+      breadcrumbsArea = (<Breadcrumb>
+          <BreadcrumbItem active><Icon name="home"/> /</BreadcrumbItem>
+        </Breadcrumb>);
+    }
+
     return (
       <Row>
         <Col md={6}>
@@ -61,28 +94,18 @@ class Layout extends React.Component {
               <MenuItem eventKey="3" onClick={this.showUploadList.bind(this)}>{UPLOADEDDOCS}</MenuItem>
               <MenuItem eventKey="4">{RECENTDOCS}</MenuItem>
             </DropdownButton>
-
-            <Breadcrumb>
-              <BreadcrumbItem>
-                Smiths
-              </BreadcrumbItem>
-            </Breadcrumb>
-
           </ButtonGroup>
         </Col>
+
         <Col md={6}>
           <div className="action-bar-spacing text-right">
 
             <DropdownButton id="AddDocumentDropdown" title="Add" href="#" bsStyle="success" bsSize="sm" pullRight>
-              {
-                this.state.sectionTitle !== UPLOADEDDOCS ?
-                  <MenuItem onClick={this.showUploadList.bind(this)}>
-                    <Icon name="upload" />
-                    &nbsp;
-                    Upload New Document
-                  </MenuItem>
-                : null
-              }
+              <MenuItem onClick={this.showUploadList.bind(this)}>
+                <Icon name="upload" />
+                &nbsp;
+                Upload New Document
+              </MenuItem>
               <MenuItem>
                 <Icon name="link" />
                 &nbsp;
@@ -123,6 +146,11 @@ class Layout extends React.Component {
 
           </div>
         </Col>
+
+        <Col xs={12}>
+          {breadcrumbsArea}
+        </Col>
+
       </Row>
     );
   }
