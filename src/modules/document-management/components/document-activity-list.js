@@ -42,7 +42,7 @@ class Layout extends React.Component {
       {/* Card Item Uploaded Pending Details */}
       <ListGroupItem href="#link1">
         <div className="list-card neutral">
-          <h4>Submit a Request to Add, Remove, or Change Documents.docx</h4>
+          <h4>Incident Management.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
             <div className="clearfix">
@@ -65,7 +65,7 @@ class Layout extends React.Component {
       {/* Card Item Drafts Pending Submittals */}
       <ListGroupItem href="#link1">
         <div className="list-card neutral">
-          <h4>Submit a Request to Add, Remove, or Change Documents.docx</h4>
+          <h4>Incident Investigation.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
             <div className="clearfix">
@@ -88,7 +88,7 @@ class Layout extends React.Component {
       {/* Card Item Pending Approvals */}
       <ListGroupItem href="#link1">
         <div className="list-card neutral">
-          <h4>Submit a Request to Add, Remove, or Change Documents.docx</h4>
+          <h4>Incident Types and Priorities.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
             <div className="clearfix">
@@ -111,7 +111,7 @@ class Layout extends React.Component {
       {/* Card Item Rejected Pending Revision */}
       <ListGroupItem href="#link1">
         <div className="list-card rejected">
-          <h4>Submit a Request to Add, Remove, or Change Documents.docx</h4>
+          <h4>Emergency Preparedness and Planning.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
             <div className="clearfix">
@@ -134,7 +134,7 @@ class Layout extends React.Component {
       {/* Card Item Pending Release Notification */}
       <ListGroupItem href="#link1">
         <div className="list-card neutral">
-          <h4>Submit a Request to Add, Remove, or Change Documents.docx</h4>
+          <h4>Critical Information Summaries.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
             <div className="clearfix">
@@ -156,7 +156,7 @@ class Layout extends React.Component {
       {/* Card Item Pending Change Requests */}
       <ListGroupItem href="#link1">
         <div className="list-card neutral">
-          <h4>Submit a Request to Add, Remove, or Change Documents.docx</h4>
+          <h4>Documents of External Origin Guidance for Sites.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
             <div className="clearfix">
@@ -178,7 +178,7 @@ class Layout extends React.Component {
       {/* Card Item Pending Periodic Reviews */}
       <ListGroupItem href="#link1">
         <div className="list-card neutral">
-          <h4>Submit a Request to Add, Remove, or Change Documents.docx</h4>
+          <h4>Record Management.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
             <div className="clearfix">
@@ -197,32 +197,10 @@ class Layout extends React.Component {
     default:
       docList = (<ListGroup bsStyle="info">
 
-      {/* Card Item Uploaded Pending Details */}
-      <ListGroupItem href="#link1">
-        <div className="list-card neutral">
-          <h4>Submit a Request to Add, Remove, or Change Documents.docx</h4>
-          <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
-          <div className="meta-wrapper">
-            <div className="clearfix">
-              <p className="pull-left">John Doe</p>
-              <p className="pull-right">10/11/2015</p>
-            </div>
-            <div className="clearfix">
-              <p className="neutral pull-right">Uploaded Pending Details </p>
-            </div>
-          </div>
-          <div className="folder-wrapper clearfix">
-            <p className="folder-name">/1.03 Document and Records Management/</p>
-            <p className="folder-name">/../1.03.01 Document Management/</p>
-            <p className="folder-name">/../../1.03.01.3 Work Instructions</p>
-          </div>
-        </div>
-      </ListGroupItem>
-
       {/* Card Item Drafts Pending Submittals */}
       <ListGroupItem href="#link1">
         <div className="list-card neutral">
-          <h4>Submit a Request to Add, Remove, or Change Documents.docx</h4>
+          <h4>Incident Investigation.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
             <div className="clearfix">
@@ -239,7 +217,7 @@ class Layout extends React.Component {
       {/* Card Item Rejected Pending Revision */}
       <ListGroupItem href="#link1">
         <div className="list-card rejected">
-          <h4>Submit a Request to Add, Remove, or Change Documents.docx</h4>
+          <h4>Emergency Preparedness and Planning.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
             <div className="clearfix">
@@ -273,7 +251,7 @@ class Layout extends React.Component {
       {/* Card Item Pending Release Notification */}
       <ListGroupItem href="#link1">
         <div className="list-card neutral">
-          <h4>Submit a Request to Add, Remove, or Change Documents.docx</h4>
+          <h4>Critical Information Summaries.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
             <div className="clearfix">
@@ -290,7 +268,7 @@ class Layout extends React.Component {
       {/* Card Item Pending Change Requests */}
       <ListGroupItem href="#link1">
         <div className="list-card neutral">
-          <h4>Submit a Request to Add, Remove, or Change Documents.docx</h4>
+          <h4>Documents of External Origin Guidance for Sites.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
             <div className="clearfix">
@@ -307,7 +285,7 @@ class Layout extends React.Component {
       {/* Card Item Pending Periodic Reviews */}
       <ListGroupItem href="#link1">
         <div className="list-card neutral">
-          <h4>Submit a Request to Add, Remove, or Change Documents.docx</h4>
+          <h4>Record Management.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
             <div className="clearfix">
@@ -324,7 +302,7 @@ class Layout extends React.Component {
       {/* Card Item Pending Approvals */}
       <ListGroupItem href="#link1">
         <div className="list-card neutral">
-          <h4>Submit a Request to Add, Remove, or Change Documents.docx</h4>
+          <h4>Incident Types and Priorities.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
             <div className="clearfix">
