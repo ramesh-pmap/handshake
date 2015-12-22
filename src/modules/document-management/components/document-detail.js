@@ -176,6 +176,7 @@ class Layout extends React.Component {
             </ListGroupItem>
 
           </ListGroup>
+          <br/><br/>
         </div>
       );
       break;
@@ -228,7 +229,7 @@ class Layout extends React.Component {
             </OverlayTrigger>
             <div className="divider-vertical"></div>
             <OverlayTrigger placement="bottom" overlay={tooltipStatus}>
-              <div className="avatar checked" onClick={this.showWorkflowPreview.bind(this)}>
+              <div className="avatar unchecked" onClick={this.showWorkflowPreview.bind(this)}>
                 <Icon name="check" className="fa-lg" />
               </div>
             </OverlayTrigger>

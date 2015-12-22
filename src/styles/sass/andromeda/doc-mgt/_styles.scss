@@ -426,7 +426,7 @@ textarea{
 }
 
 .avatar {
-  border: 3px solid #eee;
+  border: 3px solid #EEEEEE;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -443,12 +443,17 @@ textarea{
   &.rejected {
     border-color: $rejected;
   }
-  &.checked {
+  &.checked,
+  &.unchecked {
     border-color: $approved;
     background-color: $approved;
-    color: #fff;
+    color: #FFFFFF;
     text-align: center;
     line-height: 23px;
+  }
+  &.unchecked{
+    background-color: $border-color;
+    border-color: darken($border-color, 10%);
   }
 
   img {
