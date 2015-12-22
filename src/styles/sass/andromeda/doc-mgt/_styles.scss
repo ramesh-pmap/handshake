@@ -169,6 +169,11 @@ $search-expanded-width: 400px;
 .sidebar{
   // font-size: 10px;
   background: rgba(255,255,255, .5);
+  
+  .sidebar-header-actions {
+    line-height: 40px;
+    margin-right: 10px;
+  }
 
   .list-group-item{
     margin: 10px 20px;
