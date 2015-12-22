@@ -169,6 +169,11 @@ $search-expanded-width: 400px;
 .sidebar{
   // font-size: 10px;
   background: rgba(255,255,255, .5);
+  
+  .sidebar-details{
+    padding: 0 20px;
+  }
+  
   .document-details {
     label {
       text-transform: uppercase;

@@ -78,9 +78,11 @@ class Page extends React.Component {
 
   // List views.
   showRootList() {
+    this.showActivity();
     this.setState({ currentListView: ALLDOCS, breadcrumb: BC_ROOT });
   }
   showUploadList() {
+    this.showActivity();
     this.setState({ currentListView: UPLOADEDDOCS, breadcrumb: BC_UPLOAD });
   }
   showSampleFolder() {
