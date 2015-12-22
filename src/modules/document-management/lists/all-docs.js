@@ -93,19 +93,47 @@ class Layout extends React.Component {
     case SAMPLE_FOLDER:
       folderArea = (
         <ListGroup className="doc_mgt-list">
-          <ListGroupItem onClick={this.showRootFolder.bind(this)}>
+          <ListGroupItem onClick={this.showDetail.bind(this)}>
             <Row>
               <Col sm={6}>
                 <Button href="#/" bsStyle="link" bsSize="xs">
-                  <Icon name="folder-open" className="fa-fw fa-lg text-muted" />
+                  <Icon name="file-word-o" className="fa-fw fa-lg text-muted" />
                   &nbsp;
-                  1.01.01.2 Procedures
+                  Incident Management
                 </Button>
               </Col>
-              <Col sm={1} className="text-center hidden-xs" />
+              <Col sm={1} className="text-center text-left-xs">
+                <span className="visible-xs-inline">Version: </span>
+                <Button href="#" bsStyle="link" bsSize="xs">1</Button>
+              </Col>
+              <Col sm={2} className="text-center text-left-xs">
+                <span className="visible-xs-inline">Date Modified: </span>
+                9/22/2015
+              </Col>
+              <Col sm={3} className="text-center text-left-xs">
+                (Status)
+              </Col>
+            </Row>
+          </ListGroupItem>
+          <ListGroupItem onClick={this.showDetail.bind(this)}>
+            <Row>
+              <Col sm={6}>
+                <Button href="#/" bsStyle="link" bsSize="xs">
+                  <Icon name="file-word-o" className="fa-fw fa-lg text-muted" />
+                  &nbsp;
+                  Incident Investigation
+                </Button>
+              </Col>
+              <Col sm={1} className="text-center text-left-xs">
+                <span className="visible-xs-inline">Version: </span>
+                <Button href="#" bsStyle="link" bsSize="xs">3</Button>
+              </Col>
               <Col sm={2} className="text-center text-left-xs">
                 <span className="visible-xs-inline">Date Modified: </span>
                 11/8/2015
+              </Col>
+              <Col sm={3} className="text-center text-left-xs">
+                (Status)
               </Col>
             </Row>
           </ListGroupItem>

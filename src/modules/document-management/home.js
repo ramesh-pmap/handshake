@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Core components.
-import {Row, Col, Breadcrumb, BreadcrumbItem} from 'react-bootstrap';
+import {Row, Col, Breadcrumb, BreadcrumbItem, Image} from 'react-bootstrap';
 import Icon from 'react-fa';
 
 // Layouts.
@@ -47,7 +47,8 @@ class Page extends React.Component {
       height: 0,
       rightPanel: ACTIVITY,
       currentListView: ALLDOCS,
-      breadcrumb: BC_ROOT
+      breadcrumb: BC_ROOT,
+      showPreview: 'none'
     };
   }
 
@@ -96,6 +97,14 @@ class Page extends React.Component {
   }
   showActivity() {
     this.setState({ rightPanel: ACTIVITY });
+  }
+
+  // Close preview.
+  closePreview() {
+    this.setState({ showPreview: 'none' });
+  }
+  showPreview() {
+    this.setState({ showPreview: 'block' });
   }
 
   // Render method.
@@ -164,7 +173,10 @@ class Page extends React.Component {
       rightPanelArea = <DocumentActivityList />;
       break;
     case DETAIL:
-      rightPanelArea = <DocumentDetail showDetailForm={this.showDetailForm.bind(this)} />;
+      rightPanelArea = (<DocumentDetail
+        showDetailForm={this.showDetailForm.bind(this)}
+        showPreview={this.showPreview.bind(this)}
+      />);
       break;
     case DETAILFORM:
       rightPanelArea = <DocumentDetailForm showDetail={this.showDetail.bind(this)} />;
@@ -174,32 +186,37 @@ class Page extends React.Component {
     }
 
     return (
-      <Main>
-        <Row>
-          <Col sm={9} id="doc_mgt-left_column">
+      <div>
+        <Main>
+          <Row>
+            <Col sm={9} id="doc_mgt-left_column">
 
-            <DocumentListHeader
-              showRootList={this.showRootList.bind(this)}
-              showUploadList={this.showUploadList.bind(this)}
-              showSampleFolder={this.showSampleFolder.bind(this)}
-            />
+              <DocumentListHeader
+                showRootList={this.showRootList.bind(this)}
+                showUploadList={this.showUploadList.bind(this)}
+                showSampleFolder={this.showSampleFolder.bind(this)}
+              />
 
-            {breadcrumbsArea}
+              {breadcrumbsArea}
 
-            {listArea}
+              {listArea}
 
-          </Col>
+            </Col>
 
-          <Col sm={3} id="doc_mgt-right_column" className="sidebar-wrapper">
-            <div className="sidebar" style={{height: this.state.height + 'px'}}>
+            <Col sm={3} id="doc_mgt-right_column" className="sidebar-wrapper">
+              <div className="sidebar" style={{height: this.state.height + 'px'}}>
 
-              {rightPanelArea}
+                {rightPanelArea}
 
-            </div>
-          </Col>
-        </Row>
+              </div>
+            </Col>
+          </Row>
 
-      </Main>
+        </Main>
+
+        <Image src="/static/images/sample-doc-preview.png" onClick={this.closePreview.bind(this)} style={{ display: this.state.showPreview, position: 'absolute', top: 0, left: 0, width: '100%', height: 'auto', zIndex: 999999 }} />
+
+      </div>
     );
   }
 }
