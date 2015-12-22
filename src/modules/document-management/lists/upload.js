@@ -23,6 +23,10 @@ class Layout extends React.Component {
     e.preventDefault();
     this.props.showDetail();
   }
+  showDetailForm(e) {
+    e.preventDefault();
+    this.props.showDetailForm();
+  }
   showActivity(e) {
     e.preventDefault();
     this.props.showActivity();
@@ -43,25 +47,21 @@ class Layout extends React.Component {
     return (
       <div><br/>
 
-        {
-          this.state.files.length < 1 ?
-            <Dropzone id="Upload_Dropzone" ref="dropzone" onDrop={this.onDrop.bind(this)} className="dropzone">
-              <p>
-                <Icon name="upload" className="fa-2x text-success" />
-              </p>
-              Drag and drop files here
-              <br className="hidden-xs"/>&nbsp;
-              or click to select files to upload.
-            </Dropzone>
-          : null
-        }
+        <Dropzone id="Upload_Dropzone" ref="dropzone" onDrop={this.onDrop.bind(this)} className="dropzone">
+          <p>
+            <Icon name="upload" className="fa-2x text-success" />
+          </p>
+          Drag and drop files here
+          <br className="hidden-xs"/>&nbsp;
+          or click to select files to upload.
+        </Dropzone>
 
         <div className="card">
           <div className="doc_mgt-list_header">
 
             <Row className="doc_mgt-list_actions">
               <Col sm={12}>
-                <Button href="#/" bsStyle="link" bsSize="xs">
+                <Button componentClass="div" bsStyle="link" bsSize="xs">
                   <Icon name="folder-open" className="text-info" /> Share
                 </Button>
               </Col>
@@ -80,37 +80,67 @@ class Layout extends React.Component {
 
           <ListGroup className="doc_mgt-list">
 
-            <ListGroupItem>
-              <Button bsStyle="link" disabled>
-                <Icon name="file-image-o" className="fa-fw fa-lg" />
-                &nbsp;
-                original-sample-image-file-name.jpg
-              </Button>
-              <Row>
-                <Col xs={9}>
-                  <ProgressBar bsStyle="primary" active now={45} label="%(percent)s%" />
-                </Col>
-                <Col xs={3} className="text-right">
-                  <Button href="#/" bsStyle="default" bsSize="xs">
-                    <Icon name="pause" />
-                  </Button>
-                </Col>
-              </Row>
-            </ListGroupItem>
+            {
+              this.state.files.length > 0 ?
+                <div>
 
-            <ListGroupItem>
+                  <ListGroupItem onClick={this.showActivity.bind(this)}>
+                    <Button componentClass="div" bsStyle="link" disabled>
+                      <Icon name="file-image-o" className="fa-fw fa-lg" />
+                      &nbsp;
+                      original-sample-image-file-name.jpg
+                    </Button>
+                    <Row>
+                      <Col xs={10}>
+                        <ProgressBar bsStyle="primary" active now={45} label="%(percent)s%" />
+                      </Col>
+                      <Col xs={2} className="text-right">
+                        <Button componentClass="div" bsStyle="default" bsSize="xs">
+                          <Icon name="pause" />
+                        </Button>
+                      </Col>
+                    </Row>
+                  </ListGroupItem>
+
+                  <ListGroupItem onClick={this.showActivity.bind(this)}>
+                    <Button componentClass="div" bsStyle="link" disabled>
+                      <Icon name="file-image-o" className="fa-fw fa-lg" />
+                      &nbsp;
+                      original-sample-image-file-name.jpg
+                    </Button>
+                    <Row>
+                      <Col xs={10}>
+                        <ProgressBar bsStyle="primary" active now={79} label="%(percent)s%" />
+                      </Col>
+                      <Col xs={2} className="text-right">
+                        <Button componentClass="div" bsStyle="default" bsSize="xs">
+                          <Icon name="pause" />
+                        </Button>
+                      </Col>
+                    </Row>
+                  </ListGroupItem>
+
+                </div>
+              : null
+            }
+
+            <ListGroupItem onClick={this.showDetailForm.bind(this)}>
               <Row>
-                <Col xs={9}>
-                  <Button href="#/" bsStyle="link">
-                    <Icon name="file-word-o" className="fa-fw fa-lg" />
+                <Col xs={10}>
+                  <Button componentClass="div" bsStyle="link">
+                    <Icon name="file-word-o" className="fa-lg" />
                     &nbsp;
                     sample-microsoft-word-documnet-file-name.docx
                   </Button>
-                  <ProgressBar bsStyle="success" now={100} label="%(percent)s%" />
                 </Col>
-                <Col xs={3} className="text-right">
-                  <Button href="#/" bsStyle="default" bsSize="xs">
-                    <Icon name="pause" />
+                <Col xs={2} className="text-right">
+                  <Button componentClass="div" bsStyle="link" bsSize="xs">
+                    <Icon name="trash" className="fa-lg text-muted" />
+                  </Button>
+                  &nbsp;
+                  <Button componentClass="div" bsStyle="link" bsSize="xs">
+                    <Icon name="pencil" className="fa-lg text-muted" />
+                    &nbsp; Edit Details
                   </Button>
                 </Col>
               </Row>
@@ -119,6 +149,7 @@ class Layout extends React.Component {
           </ListGroup>
 
         </div>
+
       </div>
     );
   }
@@ -127,6 +158,7 @@ class Layout extends React.Component {
 // Parent Functions.
 Layout.propTypes = {
   showDetail: React.PropTypes.func,
+  showDetailForm: React.PropTypes.func,
   showActivity: React.PropTypes.func
 };
 

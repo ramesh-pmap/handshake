@@ -100,13 +100,25 @@ class Page extends React.Component {
 
     switch (currentListView) {
     case ALLDOCS:
-      listArea = <RootList showDetail={this.showDetail.bind(this)} />;
+      listArea = (<RootList
+        showDetail={this.showDetail.bind(this)}
+        showDetailForm={this.showDetailForm.bind(this)}
+        showActivity={this.showActivity.bind(this)}
+      />);
       break;
     case UPLOADEDDOCS:
-      listArea = <UploadList />;
+      listArea = (<UploadList
+        showDetail={this.showDetail.bind(this)}
+        showDetailForm={this.showDetailForm.bind(this)}
+        showActivity={this.showActivity.bind(this)}
+      />);
       break;
     default:
-      listArea = <RootList showDetail={this.showDetail.bind(this)} />;
+      listArea = (<RootList
+        showDetail={this.showDetail.bind(this)}
+        showDetailForm={this.showDetailForm.bind(this)}
+        showActivity={this.showActivity.bind(this)}
+      />);
     }
 
     // Right Panel
