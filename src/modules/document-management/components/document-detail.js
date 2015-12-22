@@ -37,13 +37,27 @@ class Layout extends React.Component {
         </div>
 
         <div className="workflow-avatars">
-          <img src="/static/images/a1.jpg" alt="image"/>
+          <div className="avatar default">
+            <img src="/static/images/a1.jpg" alt="image"/>
+          </div>
           <div className="divider-vertical"></div>
-          <img src="/static/images/a2.jpg" alt="image"/>
-          <img src="/static/images/a3.jpg" alt="image"/>
-          <img src="/static/images/a4.jpg" alt="image"/>
+          <div className="avatar approved">
+            <img src="/static/images/a2.jpg" alt="image"/>
+          </div>
+          <div className="avatar pending">
+            <img src="/static/images/a3.jpg" alt="image"/>
+          </div>
+          <div className="avatar rejected">
+            <img src="/static/images/a4.jpg" alt="image"/>
+          </div>
           <div className="divider-vertical"></div>
-          <Icon name="check-circle-o" className="fa-fw fa-3x text-muted" />
+          <div className="avatar rejected">
+            <img src="/static/images/a4.jpg" alt="image"/>
+          </div>
+          <div className="divider-vertical"></div>
+          <div className="avatar checked">
+            <Icon name="check" className="fa-lg" />
+          </div>
         </div>
 
         <div className="form-horizontal static">

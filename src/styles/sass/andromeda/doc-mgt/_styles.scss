@@ -307,23 +307,57 @@ textarea{
 }
 
 .workflow-avatars {
-  img {
-    border-radius: 20px;
+  .avatar {
+    border: 3px solid #eee;
     width: 30px;
-    text-align: center;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
     margin: 15px 3px;
-    display: inline;
-    float: left;
+    
+    &.approved {
+      border-color: $approved;
+    }
+    &.pending {
+      border-color: $pending;
+    }
+    &.rejected {
+      border-color: $rejected;
+    }
+    &.checked {
+      border-color: $approved;
+      background-color: $approved;
+      color: #fff;
+      text-align: center;
+      line-height: 23px;
+    }
+    
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
+
   .divider-vertical {
     height: 30px;
     border-left: 1px solid gray;
     opacity: 0.5;    
     margin: 15px 3px;
-    float: left;
+    display: inline-block;
   } 
+  
+}
+
+.fixed-title {
+  h3{
+    padding-top: 8px;
+  }
   .fa {
-    margin-top: 15px;
+    margin: 10px 5px;
+  }
+  .btn {
+    margin: 5px;
   }
 }
 
