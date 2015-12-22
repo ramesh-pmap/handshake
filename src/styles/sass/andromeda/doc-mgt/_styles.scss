@@ -169,7 +169,21 @@ $search-expanded-width: 400px;
 .sidebar{
   // font-size: 10px;
   background: rgba(255,255,255, .5);
-  
+  .document-details {
+    label {
+      text-transform: uppercase;
+      font-size: 80%;
+      font-weight: normal;
+      color: darken($default-color, 15%);
+      margin: 0;
+    }
+    .form-control-static {
+      min-height: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-bottom: 0;
+}
+  }
   .sidebar-header-actions {
     line-height: 40px;
     margin-right: 10px;

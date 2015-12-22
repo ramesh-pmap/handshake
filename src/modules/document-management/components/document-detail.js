@@ -86,29 +86,29 @@ class Layout extends React.Component {
           </OverlayTrigger>
         </div>
 
-        <div className="form-horizontal static">
-          <FormControls.Static label="Title" labelClassName="col-md-4" wrapperClassName="col-md-8" value="Doc Title" />
-          <FormControls.Static label="Internal Document ID" labelClassName="col-md-4" wrapperClassName="col-md-8" value="123456789-0" />
-          <FormControls.Static label="Version" labelClassName="col-md-4" wrapperClassName="col-md-8" value="2.0"/>
-          <FormControls.Static label="Document Owner" labelClassName="col-md-4" wrapperClassName="col-md-8" value="John Doe"/>
-          <FormControls.Static label="Author" labelClassName="col-md-4" wrapperClassName="col-md-8" value="John Doe"/>
-          <FormControls.Static label="Uploaded/Referenced By" labelClassName="col-md-4" wrapperClassName="col-md-8" value="John Doe"/>
-          <FormControls.Static label="Date Uploaded/Referenced" labelClassName="col-md-4" wrapperClassName="col-md-8" value="11/7/2015"/>
-          <FormControls.Static label="Modified By" labelClassName="col-md-4" wrapperClassName="col-md-8" value="John Doe"/>
-          <FormControls.Static label="Modified Date" labelClassName="col-md-4" wrapperClassName="col-md-8" value="11/8/2015"/>
-          <FormControls.Static label="Document Status" labelClassName="col-md-4" wrapperClassName="col-md-8" value="Pending Approval"/>
-          <FormControls.Static label="Document Type" labelClassName="col-md-4" wrapperClassName="col-md-8" value="Document"/>
-          <FormControls.Static label="Document Level" labelClassName="col-md-4" wrapperClassName="col-md-8" value="Level 1"/>
-          <FormControls.Static label="Display Folders" labelClassName="col-md-4" wrapperClassName="col-md-8" value=""/>
-          <FormControls.Static label="Description" labelClassName="col-md-4" wrapperClassName="col-md-8" value="John Doe"/>
-          <FormControls.Static label="Keywords/Tags" labelClassName="col-md-4" wrapperClassName="col-md-8" value=""/>
-          <FormControls.Static label="Reference Documents" labelClassName="col-md-4" wrapperClassName="col-md-8" value=""/>
-          <FormControls.Static label="Regulatory References" labelClassName="col-md-4" wrapperClassName="col-md-8" value=""/>
-          <FormControls.Static label="Review Date" labelClassName="col-md-4" wrapperClassName="col-md-8" value="12/20/2015"/>
-          <FormControls.Static label="Retention Period" labelClassName="col-md-4" wrapperClassName="col-md-8" value=""/>
-          <FormControls.Static label="Reason for Change" labelClassName="col-md-4" wrapperClassName="col-md-8" value="Slight revisions"/>
-          <FormControls.Static label="File Name" labelClassName="col-md-4" wrapperClassName="col-md-8" value="OSHA_V2.0.docx"/>
-          <FormControls.Static label="File Size" labelClassName="col-md-4" wrapperClassName="col-md-8" value="2.5 MB"/>
+        <div className="document-details">
+          <FormControls.Static label="Title" value="Doc Title" />
+          <FormControls.Static label="Internal Document ID" value="123456789-0" />
+          <FormControls.Static label="Version" value="2.0"/>
+          <FormControls.Static label="Document Owner" value="John Doe"/>
+          <FormControls.Static label="Author" value="John Doe"/>
+          <FormControls.Static label="Uploaded/Referenced By" value="John Doe"/>
+          <FormControls.Static label="Date Uploaded/Referenced" value="11/7/2015"/>
+          <FormControls.Static label="Modified By" value="John Doe"/>
+          <FormControls.Static label="Modified Date" value="11/8/2015"/>
+          <FormControls.Static label="Document Status" value="Pending Approval"/>
+          <FormControls.Static label="Document Type" value="Document"/>
+          <FormControls.Static label="Document Level" value="Level 1"/>
+          <FormControls.Static label="Display Folders" value="-"/>
+          <FormControls.Static label="Description" value="John Doe"/>
+          <FormControls.Static label="Keywords/Tags" value="-"/>
+          <FormControls.Static label="Reference Documents" value="-"/>
+          <FormControls.Static label="Regulatory References" value="-"/>
+          <FormControls.Static label="Review Date" value="12/20/2015"/>
+          <FormControls.Static label="Retention Period" value="-"/>
+          <FormControls.Static label="Reason for Change" value="Slight revisions"/>
+          <FormControls.Static label="File Name" value="OSHA_V2.0.docx"/>
+          <FormControls.Static label="File Size" value="2.5 MB"/>
         </div>
       </div>
     );
