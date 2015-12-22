@@ -10,9 +10,6 @@ import Icon from 'react-fa';
 // Stylesheets.
 import '../../../modules/document-management/styles.scss';
 
-// Define const.
-
-
 // Define class.
 class Layout extends React.Component {
   constructor(props) {
@@ -21,7 +18,7 @@ class Layout extends React.Component {
 
     this.state = {
       selectedKey: 'default',
-      selectedValue: 'All Tasks'
+      selectedValue: 'All Tasks',
     };
   }
 
