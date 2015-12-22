@@ -8,19 +8,19 @@ import {FormControls, Tooltip, OverlayTrigger} from 'react-bootstrap';
 import Icon from 'react-fa';
 
 const tooltipOwner = (
-  <Tooltip>This is the Owner of the Document.</Tooltip>
+  <Tooltip id="tooltip1">This is the Owner of the Document.</Tooltip>
 );
 const tooltipApprover1 = (
-  <Tooltip>If the status is green, Person #2 has approved the document on 12/19/2015.</Tooltip>
+  <Tooltip id="tooltip2">If the status is green, Person #2 has approved the document on 12/19/2015.</Tooltip>
 );
 const tooltipApprover2 = (
-  <Tooltip>If the status is yellow, it is pending approval from Person #3 on 12/20/2015.</Tooltip>
+  <Tooltip id="tooltip3">If the status is yellow, it is pending approval from Person #3 on 12/20/2015.</Tooltip>
 );
 const tooltipApprover3 = (
-  <Tooltip>If the status is red, Person #4 has rejected the document on 12/20/2015.</Tooltip>
+  <Tooltip id="tooltip4">If the status is red, Person #4 has rejected the document on 12/20/2015.</Tooltip>
 );
 const tooltipStatus = (
-  <Tooltip>The document has been approved.</Tooltip>
+  <Tooltip id="tooltip5">The document has been approved.</Tooltip>
 );
 // Define class.
 class Layout extends React.Component {
@@ -51,6 +51,9 @@ class Layout extends React.Component {
         </div>
 
         <div className="workflow-avatars">
+          <div className="document-details">
+            <FormControls.Static label="Workflow" />
+          </div>
           <OverlayTrigger placement="bottom" overlay={tooltipOwner}>
             <div className="avatar default">
               <img src="/static/images/a1.jpg" alt="image"/>
