@@ -225,6 +225,8 @@ $search-expanded-width: 400px;
       line-height: 6px;
       
       h4{
+        font-size: 12px;
+        line-height: 1.2;
         padding-right: 40px;
       }
       p{
@@ -334,7 +336,7 @@ textarea{
 
     .sidebar{
       overflow-y: auto;
-      padding: 60px 6px 6px 0;
+      padding: 50px 6px 6px 0;
 
       .fixed-title:first-child{
         position: absolute;
