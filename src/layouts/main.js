@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import { toggleSidebar } from '../redux/actions';
+
 // Layout components.
 import Header from '../components/Header';
 // import Footer from '../components/Footer';
@@ -11,21 +13,18 @@ class Layout extends React.Component {
   constructor(props) {
     // Pass `props` into scope.
     super(props);
-
-    this.state = {
-      sidebarOpened: false
-    };
   }
 
   handleUserToggle() {
-    this.setState({sidebarOpened: !this.state.sidebarOpened});
+    const { state, dispatch } = this.props;
+    dispatch(toggleSidebar(state.sidebarOpened));
   }
 
   // Render method.
   render() {
-    // const { state } = this.props;
+    const { state } = this.props;
     // console.log('Layout:state:', state);
-    const sidebarOpened = this.state.sidebarOpened;
+    const sidebarOpened = state.sidebarOpened;
     const noHeader = this.props.noHeader;
     let toggle = (sidebarOpened === false) ? 'shell-wrapper doc-wrapper toggled' : 'shell-wrapper doc-wrapper';
 
@@ -53,6 +52,7 @@ class Layout extends React.Component {
 Layout.propTypes = {
   children: React.PropTypes.node,
   noHeader: React.PropTypes.bool,
+  dispatch: React.PropTypes.func,
   state: React.PropTypes.object
 };
 
