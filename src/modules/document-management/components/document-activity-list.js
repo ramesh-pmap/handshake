@@ -320,7 +320,7 @@ class Layout extends React.Component {
 
         <div className="fixed-title">
           <ButtonGroup className="title-dropdown">
-            <DropdownButton id="doc_mgt-actions_dropdown" title={this.state.selectedValue} bsStyle="link" bsSize="lg" onSelect={this.handleSelect.bind(this)}>
+            <DropdownButton id="doc_mgt-actions_dropdown" title={this.state.selectedValue} bsStyle="link" bsSize="md" onSelect={this.handleSelect.bind(this)}>
               <MenuItem eventKey="default">All Tasks</MenuItem>
               <MenuItem eventKey="1">Uploaded Pending Details <small>(1)</small></MenuItem>
               <MenuItem eventKey="2">Drafts Pending Submittal <small>(1)</small></MenuItem>

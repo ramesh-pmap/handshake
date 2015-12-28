@@ -1,0 +1,348 @@
+<Process Name="SimpleWF">
+  <Designer X="-110" Y="-60" />
+  <Actors>
+    <Actor Name="Author" Rule="IsDocumentAuthor" Value="" />
+    <Actor Name="AuthorsBoss" Rule="IsAuthorsBoss" Value="" />
+    <Actor Name="Controller" Rule="IsDocumentController" Value="" />
+    <Actor Name="BigBoss" Rule="CheckRole" Value="Big Boss" />
+    <Actor Name="Accountant" Rule="CheckRole" Value="Accountant" />
+  </Actors>
+  <Parameters>
+    <Parameter Name="Comment" Type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Purpose="Temporary" />
+  </Parameters>
+  <Commands>
+    <Command Name="StartProcessing">
+      <InputParameters>
+        <ParameterRef Name="Comment" NameRef="Comment" />
+      </InputParameters>
+    </Command>
+    <Command Name="Sighting">
+      <InputParameters>
+        <ParameterRef Name="Comment" NameRef="Comment" />
+      </InputParameters>
+    </Command>
+    <Command Name="Denial">
+      <InputParameters>
+        <ParameterRef Name="Comment" NameRef="Comment" />
+      </InputParameters>
+    </Command>
+    <Command Name="Paid">
+      <InputParameters>
+        <ParameterRef Name="Comment" NameRef="Comment" />
+      </InputParameters>
+    </Command>
+  </Commands>
+  <Timers>
+    <Timer Name="ControllerTimer" Type="Interval" Value="120000" NotOverrideIfExists="false" />
+  </Timers>
+  <Activities>
+    <Activity Name="DraftInitial" State="Draft" IsInitial="True" IsFinal="False" IsForSetState="False" IsAutoSchemeUpdate="False">
+      <PreExecutionImplementation>
+        <ActionRef Order="1" NameRef="WriteTransitionHistory" />
+      </PreExecutionImplementation>
+      <Designer X="80" Y="80" />
+    </Activity>
+    <Activity Name="Draft" State="Draft" IsInitial="False" IsFinal="False" IsForSetState="True" IsAutoSchemeUpdate="True">
+      <Implementation>
+        <ActionRef Order="1" NameRef="UpdateTransitionHistory" />
+      </Implementation>
+      <PreExecutionImplementation>
+        <ActionRef Order="1" NameRef="WriteTransitionHistory" />
+      </PreExecutionImplementation>
+      <Designer X="80" Y="680" />
+    </Activity>
+    <Activity Name="DraftStartProcessingExecute" IsInitial="False" IsFinal="False" IsForSetState="False" IsAutoSchemeUpdate="False">
+      <Designer X="330" Y="80" />
+    </Activity>
+    <Activity Name="ControllerSighting" State="ControllerSighting" IsInitial="False" IsFinal="False" IsForSetState="True" IsAutoSchemeUpdate="True">
+      <Implementation>
+        <ActionRef Order="1" NameRef="UpdateTransitionHistory" />
+      </Implementation>
+      <PreExecutionImplementation>
+        <ActionRef Order="1" NameRef="WriteTransitionHistory" />
+      </PreExecutionImplementation>
+      <Designer X="580" Y="80" />
+    </Activity>
+    <Activity Name="ControllerSightingExecute" IsInitial="False" IsFinal="False" IsForSetState="False" IsAutoSchemeUpdate="False">
+      <Designer X="580" Y="230" />
+    </Activity>
+    <Activity Name="AuthorBossSighting" State="AuthorBossSighting" IsInitial="False" IsFinal="False" IsForSetState="True" IsAutoSchemeUpdate="True">
+      <Implementation>
+        <ActionRef Order="1" NameRef="UpdateTransitionHistory" />
+      </Implementation>
+      <PreExecutionImplementation>
+        <ActionRef Order="1" NameRef="WriteTransitionHistory" />
+      </PreExecutionImplementation>
+      <Designer X="830" Y="530" />
+    </Activity>
+    <Activity Name="AuthorConfirmation" State="AuthorConfirmation" IsInitial="False" IsFinal="False" IsForSetState="True" IsAutoSchemeUpdate="True">
+      <Implementation>
+        <ActionRef Order="1" NameRef="UpdateTransitionHistory" />
+      </Implementation>
+      <PreExecutionImplementation>
+        <ActionRef Order="1" NameRef="WriteTransitionHistory" />
+      </PreExecutionImplementation>
+      <Designer X="830" Y="230" />
+    </Activity>
+    <Activity Name="BigBossSighting" State="BigBossSighting" IsInitial="False" IsFinal="False" IsForSetState="True" IsAutoSchemeUpdate="True">
+      <Implementation>
+        <ActionRef Order="1" NameRef="UpdateTransitionHistory" />
+      </Implementation>
+      <PreExecutionImplementation>
+        <ActionRef Order="1" NameRef="WriteTransitionHistory" />
+      </PreExecutionImplementation>
+      <Designer X="1080" Y="230" />
+    </Activity>
+    <Activity Name="AccountantProcessing" State="AccountantProcessing" IsInitial="False" IsFinal="False" IsForSetState="True" IsAutoSchemeUpdate="True">
+      <Implementation>
+        <ActionRef Order="1" NameRef="UpdateTransitionHistory" />
+      </Implementation>
+      <PreExecutionImplementation>
+        <ActionRef Order="1" NameRef="WriteTransitionHistory" />
+      </PreExecutionImplementation>
+      <Designer X="1080" Y="380" />
+    </Activity>
+    <Activity Name="Paid" State="Paid" IsInitial="False" IsFinal="True" IsForSetState="True" IsAutoSchemeUpdate="True">
+      <Implementation>
+        <ActionRef Order="1" NameRef="UpdateTransitionHistory" />
+      </Implementation>
+      <PreExecutionImplementation>
+        <ActionRef Order="1" NameRef="WriteTransitionHistory" />
+      </PreExecutionImplementation>
+      <Designer X="1330" Y="380" />
+    </Activity>
+  </Activities>
+  <Transitions>
+    <Transition Name="DraftInitial" To="DraftStartProcessingExecute" From="DraftInitial" Classifier="Direct" AllowConcatenationType="And" RestrictConcatenationType="And" ConditionsConcatenationType="And" IsFork="false" MergeViaSetState="false" DisableParentStateControl="false">
+      <Restrictions>
+        <Restriction Type="Allow" NameRef="Author" />
+      </Restrictions>
+      <Triggers>
+        <Trigger Type="Command" NameRef="StartProcessing" />
+      </Triggers>
+      <Conditions>
+        <Condition Type="Always" />
+      </Conditions>
+      <Designer Bending="0" />
+    </Transition>
+    <Transition Name="Draft" To="ControllerSighting" From="Draft" Classifier="Direct" AllowConcatenationType="And" RestrictConcatenationType="And" ConditionsConcatenationType="And" IsFork="false" MergeViaSetState="false" DisableParentStateControl="false">
+      <Restrictions>
+        <Restriction Type="Allow" NameRef="Author" />
+      </Restrictions>
+      <Triggers>
+        <Trigger Type="Command" NameRef="StartProcessing" />
+      </Triggers>
+      <Conditions>
+        <Condition Type="Always" />
+      </Conditions>
+      <Designer Bending="0" />
+    </Transition>
+    <Transition Name="DraftStartProcessingExecute_1" To="ControllerSighting" From="DraftStartProcessingExecute" Classifier="Direct" AllowConcatenationType="And" RestrictConcatenationType="And" ConditionsConcatenationType="And" IsFork="false" MergeViaSetState="false" DisableParentStateControl="false">
+      <Triggers>
+        <Trigger Type="Auto" />
+      </Triggers>
+      <Conditions>
+        <Condition Type="Action" NameRef="CheckDocumentHasController" ConditionInversion="false" />
+      </Conditions>
+      <Designer Bending="0" />
+    </Transition>
+    <Transition Name="DraftStartProcessingExecute_2" To="ControllerSightingExecute" From="DraftStartProcessingExecute" Classifier="Direct" AllowConcatenationType="And" RestrictConcatenationType="And" ConditionsConcatenationType="And" IsFork="false" MergeViaSetState="false" DisableParentStateControl="false">
+      <Triggers>
+        <Trigger Type="Auto" />
+      </Triggers>
+      <Conditions>
+        <Condition Type="Otherwise" />
+      </Conditions>
+      <Designer Bending="0" />
+    </Transition>
+    <Transition Name="ControllerSighting" To="ControllerSightingExecute" From="ControllerSighting" Classifier="Direct" AllowConcatenationType="And" RestrictConcatenationType="And" ConditionsConcatenationType="And" IsFork="false" MergeViaSetState="false" DisableParentStateControl="false">
+      <Restrictions>
+        <Restriction Type="Allow" NameRef="Controller" />
+      </Restrictions>
+      <Triggers>
+        <Trigger Type="Command" NameRef="Sighting" />
+      </Triggers>
+      <Conditions>
+        <Condition Type="Always" />
+      </Conditions>
+      <Designer Bending="0.40848372045710795" />
+    </Transition>
+    <Transition Name="ControllerSighting_R" To="Draft" From="ControllerSighting" Classifier="Reverse" AllowConcatenationType="And" RestrictConcatenationType="And" ConditionsConcatenationType="And" IsFork="false" MergeViaSetState="false" DisableParentStateControl="false">
+      <Restrictions>
+        <Restriction Type="Allow" NameRef="Controller" />
+      </Restrictions>
+      <Triggers>
+        <Trigger Type="Command" NameRef="Denial" />
+      </Triggers>
+      <Conditions>
+        <Condition Type="Always" />
+      </Conditions>
+      <Designer Bending="0" />
+    </Transition>
+    <Transition Name="ControllerSightingExecute_1" To="AuthorConfirmation" From="ControllerSightingExecute" Classifier="Direct" AllowConcatenationType="And" RestrictConcatenationType="And" ConditionsConcatenationType="And" IsFork="false" MergeViaSetState="false" DisableParentStateControl="false">
+      <Triggers>
+        <Trigger Type="Auto" />
+      </Triggers>
+      <Conditions>
+        <Condition Type="Action" NameRef="CheckDocumentsAuthorIsBoss" ConditionInversion="false" />
+      </Conditions>
+      <Designer Bending="0" />
+    </Transition>
+    <Transition Name="ControllerSightingExecute_2" To="AuthorBossSighting" From="ControllerSightingExecute" Classifier="Direct" AllowConcatenationType="And" RestrictConcatenationType="And" ConditionsConcatenationType="And" IsFork="false" MergeViaSetState="false" DisableParentStateControl="false">
+      <Triggers>
+        <Trigger Type="Auto" />
+      </Triggers>
+      <Conditions>
+        <Condition Type="Otherwise" />
+      </Conditions>
+      <Designer Bending="0" />
+    </Transition>
+    <Transition Name="AuthorBossSighting" To="AuthorConfirmation" From="AuthorBossSighting" Classifier="Direct" AllowConcatenationType="And" RestrictConcatenationType="And" ConditionsConcatenationType="And" IsFork="false" MergeViaSetState="false" DisableParentStateControl="false">
+      <Restrictions>
+        <Restriction Type="Allow" NameRef="AuthorsBoss" />
+      </Restrictions>
+      <Triggers>
+        <Trigger Type="Command" NameRef="Sighting" />
+      </Triggers>
+      <Conditions>
+        <Condition Type="Always" />
+      </Conditions>
+      <Designer Bending="0" />
+    </Transition>
+    <Transition Name="AuthorBossSighting_R" To="Draft" From="AuthorBossSighting" Classifier="Reverse" AllowConcatenationType="And" RestrictConcatenationType="And" ConditionsConcatenationType="And" IsFork="false" MergeViaSetState="false" DisableParentStateControl="false">
+      <Restrictions>
+        <Restriction Type="Allow" NameRef="AuthorsBoss" />
+      </Restrictions>
+      <Triggers>
+        <Trigger Type="Command" NameRef="Denial" />
+      </Triggers>
+      <Conditions>
+        <Condition Type="Always" />
+      </Conditions>
+      <Designer Bending="0" />
+    </Transition>
+    <Transition Name="AuthorConfirmation_1" To="BigBossSighting" From="AuthorConfirmation" Classifier="Direct" AllowConcatenationType="And" RestrictConcatenationType="And" ConditionsConcatenationType="And" IsFork="false" MergeViaSetState="false" DisableParentStateControl="false">
+      <Restrictions>
+        <Restriction Type="Allow" NameRef="Author" />
+      </Restrictions>
+      <Triggers>
+        <Trigger Type="Command" NameRef="Sighting" />
+      </Triggers>
+      <Conditions>
+        <Condition Type="Action" NameRef="CheckBigBossMustSight" ConditionInversion="false" />
+      </Conditions>
+      <Designer Bending="0" />
+    </Transition>
+    <Transition Name="AuthorConfirmation_2" To="AccountantProcessing" From="AuthorConfirmation" Classifier="Direct" AllowConcatenationType="And" RestrictConcatenationType="And" ConditionsConcatenationType="And" IsFork="false" MergeViaSetState="false" DisableParentStateControl="false">
+      <Restrictions>
+        <Restriction Type="Allow" NameRef="Author" />
+      </Restrictions>
+      <Triggers>
+        <Trigger Type="Command" NameRef="Sighting" />
+      </Triggers>
+      <Conditions>
+        <Condition Type="Otherwise" />
+      </Conditions>
+      <Designer Bending="0" />
+    </Transition>
+    <Transition Name="AuthorConfirmation_R" To="Draft" From="AuthorConfirmation" Classifier="Reverse" AllowConcatenationType="And" RestrictConcatenationType="And" ConditionsConcatenationType="And" IsFork="false" MergeViaSetState="false" DisableParentStateControl="false">
+      <Restrictions>
+        <Restriction Type="Allow" NameRef="Author" />
+      </Restrictions>
+      <Triggers>
+        <Trigger Type="Command" NameRef="Denial" />
+      </Triggers>
+      <Conditions>
+        <Condition Type="Always" />
+      </Conditions>
+      <Designer Bending="0" />
+    </Transition>
+    <Transition Name="BigBossSighting" To="AccountantProcessing" From="BigBossSighting" Classifier="Direct" AllowConcatenationType="And" RestrictConcatenationType="And" ConditionsConcatenationType="And" IsFork="false" MergeViaSetState="false" DisableParentStateControl="false">
+      <Restrictions>
+        <Restriction Type="Allow" NameRef="BigBoss" />
+      </Restrictions>
+      <Triggers>
+        <Trigger Type="Command" NameRef="Sighting" />
+      </Triggers>
+      <Conditions>
+        <Condition Type="Always" />
+      </Conditions>
+      <Designer Bending="0" />
+    </Transition>
+    <Transition Name="BigBossSighting_R" To="Draft" From="BigBossSighting" Classifier="Reverse" AllowConcatenationType="And" RestrictConcatenationType="And" ConditionsConcatenationType="And" IsFork="false" MergeViaSetState="false" DisableParentStateControl="false">
+      <Restrictions>
+        <Restriction Type="Allow" NameRef="BigBoss" />
+      </Restrictions>
+      <Triggers>
+        <Trigger Type="Command" NameRef="Denial" />
+      </Triggers>
+      <Conditions>
+        <Condition Type="Always" />
+      </Conditions>
+      <Designer Bending="0" />
+    </Transition>
+    <Transition Name="AccountantProcessing" To="Paid" From="AccountantProcessing" Classifier="Direct" AllowConcatenationType="And" RestrictConcatenationType="And" ConditionsConcatenationType="And" IsFork="false" MergeViaSetState="false" DisableParentStateControl="false">
+      <Restrictions>
+        <Restriction Type="Allow" NameRef="Accountant" />
+      </Restrictions>
+      <Triggers>
+        <Trigger Type="Command" NameRef="Paid" />
+      </Triggers>
+      <Conditions>
+        <Condition Type="Always" />
+      </Conditions>
+      <Designer Bending="0" />
+    </Transition>
+    <Transition Name="AccountantProcessing_R" To="AuthorConfirmation" From="AccountantProcessing" Classifier="Reverse" AllowConcatenationType="And" RestrictConcatenationType="And" ConditionsConcatenationType="And" IsFork="false" MergeViaSetState="false" DisableParentStateControl="false">
+      <Restrictions>
+        <Restriction Type="Allow" NameRef="Accountant" />
+      </Restrictions>
+      <Triggers>
+        <Trigger Type="Command" NameRef="Denial" />
+      </Triggers>
+      <Conditions>
+        <Condition Type="Always" />
+      </Conditions>
+      <Designer Bending="0" />
+    </Transition>
+    <Transition Name="ControllerSighting_ControllerSightingExecute_1" To="ControllerSightingExecute" From="ControllerSighting" Classifier="NotSpecified" AllowConcatenationType="And" RestrictConcatenationType="And" ConditionsConcatenationType="And" IsFork="false" MergeViaSetState="false" DisableParentStateControl="false">
+      <Triggers>
+        <Trigger Type="Timer" NameRef="ControllerTimer" />
+      </Triggers>
+      <Conditions>
+        <Condition Type="Always" />
+      </Conditions>
+      <Designer Bending="-0.44455415338869924" />
+    </Transition>
+  </Transitions>
+  <CodeActions>
+    <CodeAction Name="CheckDocumentHasController" Type="Condition" IsGlobal="False">
+      <ActionCode><![CDATA[using%20(var%20context%20%3d%20new%20DataModelDataContext())%0a%7b%0a%20%20%20%20return%20context.Documents.Count(d%20%3d%3e%20d.Id%20%3d%3d%20processInstance.ProcessId%20%26%26%20d.EmloyeeControlerId.HasValue)%20%3e%200%3b%0a%7d]]></ActionCode>
+      <Usings><![CDATA[System%3bSystem.Collections%3bSystem.Collections.Generic%3bSystem.Linq%3bOptimaJet.Workflow%3bOptimaJet.Workflow.Core.Model%3bWF.Sample.Business%3bWF.Sample.Business.Helpers%3bWF.Sample.Business.Properties%3bWF.Sample.Business.Workflow%3b]]></Usings>
+    </CodeAction>
+    <CodeAction Name="CheckDocumentsAuthorIsBoss" Type="Condition" IsGlobal="False">
+      <ActionCode><![CDATA[using%20(var%20context%20%3d%20new%20DataModelDataContext())%0a%7b%0a%20%20%20%20return%20context.Documents.Count(d%20%3d%3e%20d.Id%20%3d%3d%20processInstance.ProcessId%20%26%26%20d.Employee1.IsHead)%20%3e%200%3b%0a%7d]]></ActionCode>
+      <Usings><![CDATA[System%3bSystem.Collections%3bSystem.Collections.Generic%3bSystem.Linq%3bOptimaJet.Workflow%3bOptimaJet.Workflow.Core.Model%3bWF.Sample.Business%3bWF.Sample.Business.Helpers%3bWF.Sample.Business.Properties%3bWF.Sample.Business.Workflow%3b]]></Usings>
+    </CodeAction>
+    <CodeAction Name="CheckBigBossMustSight" Type="Condition" IsGlobal="False">
+      <ActionCode><![CDATA[using%20(var%20context%20%3d%20new%20DataModelDataContext())%0a%7b%0a%20%20%20%20return%20context.Documents.Count(d%20%3d%3e%20d.Id%20%3d%3d%20processInstance.ProcessId%20%26%26%20d.Sum%20%3e%20100)%20%3e%200%3b%0a%7d]]></ActionCode>
+      <Usings><![CDATA[System%3bSystem.Collections%3bSystem.Collections.Generic%3bSystem.Linq%3bOptimaJet.Workflow%3bOptimaJet.Workflow.Core.Model%3bWF.Sample.Business%3bWF.Sample.Business.Helpers%3bWF.Sample.Business.Properties%3bWF.Sample.Business.Workflow%3b]]></Usings>
+    </CodeAction>
+    <CodeAction Name="WriteTransitionHistory" Type="Action" IsGlobal="False">
+      <ActionCode><![CDATA[if%20(processInstance.IdentityIds%20%3d%3d%20null)%0a%20%20%20%20return%3b%0a%0avar%20currentstate%20%3d%20WorkflowInit.Runtime.GetLocalizedStateName(processInstance.ProcessId%2c%20processInstance.CurrentState)%3b%0a%0avar%20nextState%20%3d%20WorkflowInit.Runtime.GetLocalizedStateName(processInstance.ProcessId%2c%20processInstance.ExecutedActivityState)%3b%0a%0avar%20command%20%3d%20WorkflowInit.Runtime.GetLocalizedCommandName(processInstance.ProcessId%2c%20processInstance.CurrentCommand)%3b%0a%0ausing%20(var%20context%20%3d%20new%20DataModelDataContext())%0a%7b%0a%20%20%20%20var%20historyItem%20%3d%20new%20DocumentTransitionHistory%0a%20%20%20%20%20%20%20%20%20%20%20%20%7b%0a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Id%20%3d%20Guid.NewGuid()%2c%0a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20AllowedToEmployeeNames%20%3d%20WorkflowActions.GetEmployeesString(processInstance.IdentityIds%2c%20context)%2c%0a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20DestinationState%20%3d%20nextState%2c%0a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20DocumentId%20%3d%20processInstance.ProcessId%2c%0a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20InitialState%20%3d%20currentstate%2c%0a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Command%20%3d%20command%0a%20%20%20%20%20%20%20%20%20%20%20%20%7d%3b%0a%20%20%20%20%20%20%20%20%20%20%20%20%0a%20%20%20%20context.DocumentTransitionHistories.InsertOnSubmit(historyItem)%3b%0a%20%20%20%20context.SubmitChanges()%3b%0a%20%20%20%20%0a%7d]]></ActionCode>
+      <Usings><![CDATA[System%3bSystem.Collections%3bSystem.Collections.Generic%3bSystem.Linq%3bOptimaJet.Workflow%3bOptimaJet.Workflow.Core.Model%3bWF.Sample.Business%3bWF.Sample.Business.Helpers%3bWF.Sample.Business.Properties%3bWF.Sample.Business.Workflow%3b]]></Usings>
+    </CodeAction>
+    <CodeAction Name="UpdateTransitionHistory" Type="Action" IsGlobal="False">
+      <ActionCode><![CDATA[var%20currentstate%20%3d%20WorkflowInit.Runtime.GetLocalizedStateName(processInstance.ProcessId%2c%20processInstance.CurrentState)%3b%0a%0avar%20nextState%20%3d%20WorkflowInit.Runtime.GetLocalizedStateName(processInstance.ProcessId%2c%20processInstance.ExecutedActivityState)%3b%0a%0avar%20command%20%3d%20WorkflowInit.Runtime.GetLocalizedCommandName(processInstance.ProcessId%2c%20processInstance.CurrentCommand)%3b%0a%0avar%20isTimer%20%3d%20!string.IsNullOrEmpty(processInstance.ExecutedTimer)%3b%0a%0ausing%20(var%20context%20%3d%20new%20DataModelDataContext())%0a%7b%0a%20%20%20%20var%20historyItem%20%3d%0a%20%20%20%20%20%20%20%20context.DocumentTransitionHistories.FirstOrDefault(%0a%20%20%20%20%20%20%20%20%20%20%20%20h%20%3d%3e%20h.DocumentId%20%3d%3d%20processInstance.ProcessId%20%26%26%20!h.TransitionTime.HasValue%20%26%26%0a%20%20%20%20%20%20%20%20%20%20%20%20h.InitialState%20%3d%3d%20currentstate%20%26%26%20h.DestinationState%20%3d%3d%20nextState)%3b%0a%0a%20%20%20%20if%20(historyItem%20%3d%3d%20null)%0a%20%20%20%20%7b%0a%20%20%20%20%20%20%20%20historyItem%20%3d%20new%20DocumentTransitionHistory%0a%20%20%20%20%20%20%20%20%7b%0a%20%20%20%20%20%20%20%20%20%20%20%20Id%20%3d%20Guid.NewGuid()%2c%0a%20%20%20%20%20%20%20%20%20%20%20%20AllowedToEmployeeNames%20%3d%20string.Empty%2c%0a%20%20%20%20%20%20%20%20%20%20%20%20DestinationState%20%3d%20nextState%2c%0a%20%20%20%20%20%20%20%20%20%20%20%20DocumentId%20%3d%20processInstance.ProcessId%2c%0a%20%20%20%20%20%20%20%20%20%20%20%20InitialState%20%3d%20currentstate%0a%20%20%20%20%20%20%20%20%7d%3b%0a%0a%20%20%20%20%20%20%20%20context.DocumentTransitionHistories.InsertOnSubmit(historyItem)%3b%0a%0a%20%20%20%20%7d%0a%0a%20%20%20%20historyItem.Command%20%3d%20!isTimer%20%3f%20command%20%3a%20string.Format(%22Timer%3a%20%7b0%7d%22%2cprocessInstance.ExecutedTimer)%3b%0a%20%20%20%20historyItem.TransitionTime%20%3d%20DateTime.Now%3b%0a%0a%20%20%20%20if%20(string.IsNullOrWhiteSpace(processInstance.IdentityId))%0a%20%20%20%20%20%20%20%20historyItem.EmployeeId%20%3d%20null%3b%0a%20%20%20%20else%0a%20%20%20%20%20%20%20%20historyItem.EmployeeId%20%3d%20new%20Guid(processInstance.IdentityId)%3b%0a%0a%20%20%20%20context.SubmitChanges()%3b%0a%7d]]></ActionCode>
+      <Usings><![CDATA[System%3bSystem.Collections%3bSystem.Collections.Generic%3bSystem.Linq%3bOptimaJet.Workflow%3bOptimaJet.Workflow.Core.Model%3bWF.Sample.Business%3bWF.Sample.Business.Helpers%3bWF.Sample.Business.Properties%3bWF.Sample.Business.Workflow%3b]]></Usings>
+    </CodeAction>
+  </CodeActions>
+  <Localization>
+    <Localize Type="State" IsDefault="True" Culture="en-US" ObjectName="ControllerSighting" Value="Controller sighting" />
+    <Localize Type="State" IsDefault="True" Culture="en-US" ObjectName="AuthorBossSighting" Value="Author's boss sighting" />
+    <Localize Type="State" IsDefault="True" Culture="en-US" ObjectName="AuthorConfirmation" Value="Author confirmation" />
+    <Localize Type="State" IsDefault="True" Culture="en-US" ObjectName="BigBossSighting" Value="BigBoss sighting" />
+    <Localize Type="State" IsDefault="True" Culture="en-US" ObjectName="AccountantProcessing" Value="Accountant processing" />
+    <Localize Type="Command" IsDefault="True" Culture="en-US" ObjectName="StartProcessing" Value="Start processing" />
+  </Localization>
+</Process>
