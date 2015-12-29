@@ -1,5 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
+import { toggleSidebar } from '../../redux/actions';
 // Layout components.
 import Header from '../../components/shell-demo/Header';
 import Sidebar from '../../components/shell-demo/SidebarLeft';
@@ -9,19 +11,17 @@ class Layout extends React.Component {
   constructor(props) {
     // Pass `props` into scope.
     super(props);
-
-    this.state = {
-      sidebarOpened: false
-    };
   }
 
   handleUserToggle() {
-    this.setState({sidebarOpened: !this.state.sidebarOpened});
+    const { state, dispatch } = this.props;
+    dispatch(toggleSidebar(state.sidebarOpened));
   }
 
   // Render method.
   render() {
-    const sidebarOpened = this.state.sidebarOpened;
+    const { state } = this.props;
+    const sidebarOpened = state.sidebarOpened;
     let toggle = (sidebarOpened === false) ? 'shell-wrapper doc-wrapper toggled' : 'shell-wrapper doc-wrapper';
 
     return (
@@ -40,8 +40,14 @@ class Layout extends React.Component {
 
 // propTypes.
 Layout.propTypes = {
-  children: React.PropTypes.node
+  children: React.PropTypes.node,
+  dispatch: React.PropTypes.func,
+  state: React.PropTypes.object
 };
 
+const mapStateToProps = (state) => ({
+  state
+});
+
 // Export.
-export default Layout;
+export default connect(mapStateToProps)(Layout);

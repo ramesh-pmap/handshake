@@ -18,7 +18,7 @@ import './styles/sass/andromeda/andromeda.scss';
 let store = createStore(DocMgtApp);
 
 // Set initial sidebar state;
-store.dispatch(toggleSidebar(false));
+store.dispatch(toggleSidebar(true));
 
 // console.log(store.getState());
 // // Every time the state changes, log it
