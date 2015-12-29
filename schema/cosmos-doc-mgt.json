@@ -1,6 +1,6 @@
 {
-  "document_types" : {
-    "document_type" : {
+  "document_type" : [
+    {
       "doc_type_id" : 0,
       "doc_type_name" : "",
       "doc_type_is_office" : "",
@@ -10,9 +10,9 @@
       "doc_type_last_update_date" : "",
       "doc_type_is_active" : true
     }
-  },
-  "document_statuses" : {
-    "document_status" : {
+  ],
+  "document_status" : [
+    {
       "doc_status_id" : 0,
       "doc_status_name" : "",
       "doc_status_description" : "",
@@ -22,16 +22,29 @@
       "doc_status_last_update_date" : "",
       "doc_status_is_active" : true
     }
-  },
-  "document_levels" : {
-    "document_level" : {
+  ],
+  "document_level" : [
+    {
       "doc_level" : 0,
       "doc_level_description" : "Level 1",
       "doc_level_is_active" : true
     }
-  },
-  "documents" : {
-    "document" : {
+  ],
+  "document_category" : [
+    {
+      "doc_cat_id" : 0,
+      "parent_doc_cat_id" : 0,
+      "doc_cat_name" : "",
+      "doc_cat_comment" : "",
+      "doc_cat_status" : "",
+      "doc_cat_created_by" : "",
+      "doc_cat_created_date" : "",
+      "doc_cat_updated_by" : "",
+      "doc_cat_updated_date" : ""
+    }
+  ],
+  "document" : [
+    {
       "doc_id" : 0,
       "doc_type_id" : 0,
       "doc_level" : 0,
@@ -81,5 +94,5 @@
       "mod_references" : "",
       "view_date_time" : ""
     }
-  }
+  ]
 }
