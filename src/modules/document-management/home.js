@@ -1,5 +1,8 @@
 // Dependencies.
 import React from 'react';
+import { connect } from 'react-redux';
+// import { toggleSidebar } from '../../redux/actions';
+import { updateSidePanelWidth } from '../../utils';
 
 // Core components.
 import {Row, Col, Breadcrumb, BreadcrumbItem, ButtonGroup, Button, Image} from 'react-bootstrap';
@@ -44,8 +47,6 @@ class Page extends React.Component {
     utils.title(props);
 
     this.state = {
-      width: 0,
-      height: 0,
       rightPanel: ACTIVITY,
       currentListView: ALLDOCS,
       breadcrumb: BC_ROOT,
@@ -53,24 +54,10 @@ class Page extends React.Component {
     };
   }
 
-  // Window Resizing.
   updateDimensions() {
-    let w = window;
-    let d = document;
-    let e = d.documentElement;
-    let g = d.getElementsByTagName('body')[0];
-    let x = w.innerWidth || e.clientWidth || g.clientWidth;
-    let y = w.innerHeight || e.clientHeight || g.clientHeight;
-
-    // let nav = d.getElementsByClassName('sidebar-wrapper');
-    // let navWidth = nav.innerWidth || nav.clientWidth;
-    // x = ( Math.floor((navWidth / 25) * 100) - navWidth );
-
-    this.setState({width: x, height: y});
-  }
-
-  componentWillMount() {
-    this.updateDimensions();
+    const { state } = this.props;
+    const sidebarOpened = state.sidebarOpened;
+    updateSidePanelWidth(sidebarOpened);
   }
 
   componentWillUnmount() {
@@ -78,6 +65,7 @@ class Page extends React.Component {
   }
 
   componentDidMount() {
+    this.updateDimensions();
     // Window Resizing.
     window.addEventListener('resize', this.updateDimensions.bind(this));
   }
@@ -266,6 +254,13 @@ class Page extends React.Component {
   }
 }
 
+// propTypes.
+Page.propTypes = {
+  state: React.PropTypes.object
+};
+const mapStateToProps = (state) => ({
+  state
+});
 
 // Export.
-export default Page;
+export default connect(mapStateToProps)(Page);

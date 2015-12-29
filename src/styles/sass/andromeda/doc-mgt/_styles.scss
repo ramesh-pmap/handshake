@@ -333,6 +333,9 @@ textarea{
     top: 50px;
     right: 0;
     padding: 0;
+    -webkit-transition: width .5s ease;
+    -moz-transition: width .5s ease;
+    transition: width .5s ease;
 
     .sidebar{
       overflow-y: auto;

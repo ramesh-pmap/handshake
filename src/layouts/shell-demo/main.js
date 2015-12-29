@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import { updateSidePanelWidth } from '../../utils';
+
 import { toggleSidebar } from '../../redux/actions';
 // Layout components.
 import Header from '../../components/shell-demo/Header';
@@ -16,6 +18,7 @@ class Layout extends React.Component {
   handleUserToggle() {
     const { state, dispatch } = this.props;
     dispatch(toggleSidebar(state.sidebarOpened));
+    updateSidePanelWidth(!state.sidebarOpened);
   }
 
   // Render method.
@@ -29,9 +32,7 @@ class Layout extends React.Component {
         <Sidebar title="mars" />
         <Header onUserToggle={this.handleUserToggle.bind(this)} />
         <div className="page-content-wrapper">
-
           {this.props.children}
-
         </div>
       </div>
     );
