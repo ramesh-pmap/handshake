@@ -1,5 +1,5 @@
 {
-  "documents_type" : {
+  "document_types" : {
     "document_type" : {
       "doc_type_id" : 0,
       "doc_type_name" : "",
@@ -7,10 +7,11 @@
       "doc_type_created_by" : "",
       "doc_type_created_date" : "",
       "doc_type_last_update_by" : "",
-      "doc_type_last_update_date" : ""
+      "doc_type_last_update_date" : "",
+      "doc_type_is_active" : true
     }
   },
-  "documents_status" : {
+  "document_statuses" : {
     "document_status" : {
       "doc_status_id" : 0,
       "doc_status_name" : "",
@@ -18,13 +19,15 @@
       "doc_status_created_by" : "",
       "doc_status_created_date" : "",
       "doc_status_last_update_by" : "",
-      "doc_status_last_update_date" : ""
+      "doc_status_last_update_date" : "",
+      "doc_status_is_active" : true
     }
   },
-  "documents_level" : {
+  "document_levels" : {
     "document_level" : {
       "doc_level" : 0,
-      "doc_level_description" : "Level 1"
+      "doc_level_description" : "Level 1",
+      "doc_level_is_active" : true
     }
   },
   "documents" : {
@@ -33,12 +36,12 @@
       "doc_type_id" : 0,
       "doc_level" : 0,
       "doc_status_id" : 0,
-      "rec_id" : 0,
       "usr_company_id" : 0,
       "usr_location_id" : 0,
-      "viewer_list_id" : 0,
+      "viewer_list_array" : [],
       "user_id" : 0,
       "document_details" : {
+        "doc_is_active" : true,
         "doc_is_private" : false,
         "rec_status" : "",
         "doc_title" : "",
