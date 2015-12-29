@@ -43,7 +43,6 @@
       "document_details" : {
         "doc_is_active" : true,
         "doc_is_private" : false,
-        "rec_status" : "",
         "doc_title" : "",
         "doc_applicability" : "",
         "doc_author" : "",
