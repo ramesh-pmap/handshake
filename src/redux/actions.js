@@ -1,10 +1,4 @@
 import { TOGGLE_SIDEBAR, UPLOAD_FILE, COMPLETE_UPLOAD } from './constants';
-// Other constants
-// export const VisibilityFilters = {
-//   SHOW_ALL: 'SHOW_ALL',
-//   SHOW_COMPLETED: 'SHOW_COMPLETED',
-//   SHOW_ACTIVE: 'SHOW_ACTIVE'
-// };
 
  // Action creators
 export function toggleSidebar(value) {
