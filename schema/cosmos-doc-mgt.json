@@ -1,1 +1,104 @@
-{"document_type":[{"doc_type_id":0,"doc_type_name":"","doc_type_is_office":"","doc_type_created_by":"","doc_type_created_date":"","doc_type_last_update_by":"","doc_type_last_update_date":"","doc_type_is_active":true}],"document_status":[{"doc_status_id":0,"doc_status_name":"","doc_status_description":"","doc_status_created_by":"","doc_status_created_date":"","doc_status_last_update_by":"","doc_status_last_update_date":"","doc_status_is_active":true}],"document_level":[{"doc_level":0,"doc_level_description":"Level 1","doc_level_is_active":true}],"document_folder":[{"folder_id":0,"parent_folder_id":0,"folder_name":"","folder_comment":"","folder_status":"","folder_created_by":"","folder_created_date":"","folder_updated_by":"","folder_updated_date":"","folder_breadcrumb":[{"breadcrumb_id":"","breadcrumb_name":""}]}],"document":[{"doc_id":0,"doc_type_id":0,"doc_level":0,"doc_status_id":0,"usr_company_id":0,"usr_location_id":0,"viewer_list_array":[],"user_id":0,"doc_is_active":true,"doc_is_private":false,"doc_title":"","doc_applicability":"","doc_author":"","doc_change_request":"","doc_created_by":"","doc_created_date":"","doc_description":"","doc_display_folders":"","doc_expiration_date":"","doc_issued_date":"","doc_keywords":"","doc_last_update_by":"","doc_last_update_date":"","doc_location":"","doc_location_physycal":"","doc_modified_by":"","doc_modified_date":"","doc_owner":"","doc_parent":"","doc_permalink":"","doc_retention_period":"","doc_review_date":"","doc_status_comment":"","doc_status_date":"","doc_url":"","doc_version":"","ext_regulatory_ref":"","ext_reference_documents":"","ext_resource_type":"","ext_website_author":"","file_location":"","file_name":"","file_size":"","file_type":"","file_uploaded_by":"","file_uploaded_date":"","mod_references":"","view_date_time":""}]}
+{
+  "document_type" : [
+    {
+      "doc_type_id" : 0,
+      "doc_type_name" : "",
+      "doc_type_is_office" : "",
+      "doc_type_created_by" : "",
+      "doc_type_created_date" : "",
+      "doc_type_last_update_by" : "",
+      "doc_type_last_update_date" : "",
+      "doc_type_is_active" : true
+    }
+  ],
+  "document_status" : [
+    {
+      "doc_status_id" : 0,
+      "doc_status_name" : "",
+      "doc_status_description" : "",
+      "doc_status_created_by" : "",
+      "doc_status_created_date" : "",
+      "doc_status_last_update_by" : "",
+      "doc_status_last_update_date" : "",
+      "doc_status_is_active" : true
+    }
+  ],
+  "document_level" : [
+    {
+      "doc_level" : 0,
+      "doc_level_description" : "Level 1",
+      "doc_level_is_active" : true
+    }
+  ],
+  "document_folder" : [
+    {
+      "folder_id" : 0,
+      "parent_folder_id" : 0,
+      "folder_name" : "",
+      "folder_comment" : "",
+      "folder_status" : "",
+      "folder_created_by" : "",
+      "folder_created_date" : "",
+      "folder_updated_by" : "",
+      "folder_updated_date" : "",
+      "folder_breadcrumb" : [
+        {
+          "breadcrumb_id" : "",
+          "breadcrumb_name" : ""
+        }
+      ]
+    }
+  ],
+  "document" : [
+    {
+      "doc_id" : 0,
+      "doc_type_id" : 0,
+      "doc_level" : 0,
+      "doc_status_id" : 0,
+      "usr_company_id" : 0,
+      "usr_location_id" : 0,
+      "viewer_list_array" : [],
+      "user_id" : 0,
+      "doc_is_active" : true,
+      "doc_is_private" : false,
+      "doc_title" : "",
+      "doc_applicability" : "",
+      "doc_author" : "",
+      "doc_change_request" : "",
+      "doc_created_by" : "",
+      "doc_created_date" : "",
+      "doc_description" : "",
+      "doc_display_folders" : "",
+      "doc_expiration_date" : "",
+      "doc_issued_date" : "",
+      "doc_keywords" : "",
+      "doc_last_update_by" : "",
+      "doc_last_update_date" : "",
+      "doc_location" : "",
+      "doc_location_physycal" : "",
+      "doc_modified_by" : "",
+      "doc_modified_date" : "",
+      "doc_owner" : "",
+      "doc_parent" : "",
+      "doc_permalink" : "",
+      "doc_retention_period" : "",
+      "doc_review_date" : "",
+      "doc_status_comment" : "",
+      "doc_status_date" : "",
+      "doc_url" : "",
+      "doc_version" : "",
+      "ext_regulatory_ref" : "",
+      "ext_reference_documents" : "",
+      "ext_resource_type" : "",
+      "ext_website_author" : "",
+      "file_location" : "",
+      "file_name" : "",
+      "file_size" : "",
+      "file_type" : "",
+      "file_uploaded_by" : "",
+      "file_uploaded_date" : "",
+      "mod_references" : "",
+      "view_date_time" : ""
+    }
+  ]
+}
