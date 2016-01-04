@@ -74,9 +74,8 @@ class Layout extends React.Component {
             <Input type="textarea" label="Description" labelClassName="" wrapperClassName="" />
             <Input type="textarea" label="Keywords/Tags" labelClassName="" wrapperClassName="" />
             <Input type="select" multiple label="Reference Documents" labelClassName="" wrapperClassName="">
-              <option>Document 1</option>
-              <option>Document 2</option>
-              <option>Document 3</option>
+              <option>Incident Management</option>
+              <option>Incident Investigation</option>
             </Input>
             <Input type="textarea" label="Regulatory References" labelClassName="" wrapperClassName="" />
             <FormControls.Static label="Review Date" labelClassName="" wrapperClassName="" value="12/20/2015"/>
