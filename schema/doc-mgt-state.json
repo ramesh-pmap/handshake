@@ -1,0 +1,19 @@
+{
+  "userId" : "",
+  "isSidebarOpened" : false,
+  "isFileSelected" : false,
+  "isFilePreviewOpened" : false,
+  "isSearching" : false,
+  "addDocumentSelection" : "",
+  "currentDocumentList" : "",
+  "currentTaskList" : "",
+  "folderDetails" : {
+    "id" : "",
+    "name" : ""
+  },
+  "fileDetails" : {
+    "id" : "",
+    "name" : ""
+  },
+  "documentsData" : {}
+}
