@@ -23,7 +23,7 @@ class Page extends React.Component {
 
   handleLogin(loginName) {
     if (loginName === 'pmap') {
-      this.props.history.pushState(null, '/document-management');
+      this.props.history.pushState(null, '/document-management2');
     }
     if (loginName === 'pmap2') {
       this.props.history.pushState(null, '/home');

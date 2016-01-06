@@ -40,6 +40,7 @@ class Header extends React.Component {
               <li><Link to="/home">Home</Link></li>
               <li><Link to="/data">Data Sample</Link></li>
               <li><Link to="/document-management">Document Mgt</Link></li>
+              <li><Link to="/document-management2">Document Mgt 2</Link></li>
             </ul>
           </CollapsibleNav>
 

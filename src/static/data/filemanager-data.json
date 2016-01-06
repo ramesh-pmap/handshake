@@ -1,20 +1,4 @@
 {
-  "userId" : "",
-  "isSidebarOpened" : false,
-  "isFileSelected" : false,
-  "isFilePreviewOpened" : false,
-  "isSearching" : false,
-  "addDocumentSelection" : "",
-  "currentDocumentList" : "",
-  "currentTaskList" : "",
-  "folderDetails" : {
-    "id" : "",
-    "name" : ""
-  },
-  "fileDetails" : {
-    "id" : "",
-    "name" : ""
-  },
   "fileManager" : [
     {
       "type" : "folder",
@@ -57,6 +41,55 @@
           "type" : "folder",
           "name" : "Forms, Checklist and Documents",
           "path" : "/EHS/Forms, Checklist and Documents"
+        },
+        {
+          "type" : "folder",
+          "name" : "EHS Obsolete",
+          "path" : "/EHS/EHS Obsolete"
+        }
+      ]
+    },
+    {
+      "type" : "folder",
+      "name" : "Test",
+      "path" : "/Test",
+      "children" : [
+        {
+          "type" : "folder",
+          "name" : "Policies",
+          "path" : "/Test/Policies",
+          "children" : [
+            {
+              "type" : "folder",
+              "name" : "Sample Folder",
+              "path" : "/Test/Policies/Sample Folder"
+            },
+            {
+              "type" : "word",
+              "name" : "Word file sample.doc",
+              "path" : "/Test/Policies/Word file sample.doc"
+            },
+            {
+              "type" : "pdf",
+              "name" : "PDF file sample.pdf",
+              "path" : "/Test/Policies/PDF file sample.pdf"
+            }
+          ]
+        },
+        {
+          "type" : "folder",
+          "name" : "Procedures",
+          "path" : "/Test/Procedures"
+        },
+        {
+          "type" : "folder",
+          "name" : "Work Instructions",
+          "path" : "/Test/Work Instructions"
+        },
+        {
+          "type" : "folder",
+          "name" : "Forms, Checklist and Documents",
+          "path" : "/Test/Forms, Checklist and Documents"
         },
         {
           "type" : "folder",
