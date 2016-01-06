@@ -15,7 +15,7 @@ import Iframe from './modules/global/pages/iframe';
 // Routes template.
 export default (
 	<Router history={createBrowserHistory()}>
-		<Route path="/" component={LoginPage} title="Login Page" />
+		<Route path="/index.html" component={LoginPage} title="Login Page" />
 		<Route path="/home" component={HomePage} title="Home" />
 		<Route path="/data" component={DataPage} title="Data Sample Page" />
 		<Route path="/document-management" component={DocMgtPage} title="Document Management" />
