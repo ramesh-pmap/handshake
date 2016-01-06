@@ -17,9 +17,9 @@ export default (
 	<Router history={createBrowserHistory()}>
 		<Route path="/" component={LoginPage} title="Login Page" />
 		<Route path="/home" component={HomePage} title="Home" />
-		<Route path="data" component={DataPage} title="Data Sample Page" />
-		<Route path="document-management" component={DocMgtPage} title="Document Management" />
-		<Route path="document-management2" component={DocMgtPage2} title="Document Management 2" />
+		<Route path="/data" component={DataPage} title="Data Sample Page" />
+		<Route path="/document-management" component={DocMgtPage} title="Document Management" />
+		<Route path="/document-management2" component={DocMgtPage2} title="Document Management 2" />
 		<Route path="/iframe" component={Iframe} title="iframe Demo" />
 	</Router>
 );
