@@ -5,7 +5,7 @@ import React from 'react';
 // import {LinkContainer} from 'react-router-bootstrap';
 
 // Core components.
-import {FormControls, Tooltip, OverlayTrigger, ListGroup, ListGroupItem, Button} from 'react-bootstrap';
+import {FormControls, Tooltip, OverlayTrigger, ListGroup, ListGroupItem, Button /* , Input */ } from 'react-bootstrap';
 import Icon from 'react-fa';
 
 // Tooltip const.
@@ -68,6 +68,21 @@ class Layout extends React.Component {
     case DETAIL_PANEL:
       panelsArea = (
         <div className="document-details">
+
+          {/*
+          <Button bsStyle="default" bsSize="xs">Comment</Button>
+          &nbsp;
+          or
+          &nbsp;
+          <Button bsStyle="danger" bsSize="xs">Reject</Button>
+          &nbsp;
+          <Button bsStyle="success" bsSize="xs">Approve</Button>
+          <hr />
+          <Input type="textarea" label="Enter any questions or comments" />
+          <Button bsStyle="info" bsSize="xs">Submit</Button>
+          <hr />
+          */}
+
           <FormControls.Static label="Title" value="Doc Title" />
           <FormControls.Static label="Internal Document ID" value="123456789-0" />
           <FormControls.Static label="Version" value="2.0"/>
@@ -162,7 +177,6 @@ class Layout extends React.Component {
               <div className="list-card rejected">
                 <h4>Bob Roberts</h4>
                 <br />
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 <div className="avatar default corner-icon" onClick={this.showWorkflowPreview.bind(this)}>
                   <img src="/static/images/a4.jpg" alt="image"/>
                 </div>
@@ -217,13 +231,13 @@ class Layout extends React.Component {
               </div>
             </OverlayTrigger>
             <OverlayTrigger placement="bottom" overlay={tooltipApprover3}>
-              <div className="avatar rejected" onClick={this.showWorkflowPreview.bind(this)}>
+              <div className="avatar pending" onClick={this.showWorkflowPreview.bind(this)}>
                 <img src="/static/images/a4.jpg" alt="image"/>
               </div>
             </OverlayTrigger>
             <div className="divider-vertical"></div>
             <OverlayTrigger placement="bottom" overlay={tooltipApprover3}>
-              <div className="avatar rejected" onClick={this.showWorkflowPreview.bind(this)}>
+              <div className="avatar default" onClick={this.showWorkflowPreview.bind(this)}>
                 <img src="/static/images/a4.jpg" alt="image"/>
               </div>
             </OverlayTrigger>

@@ -9,6 +9,7 @@ import HomePage from './modules/global/pages/home';
 import DataPage from './modules/global/pages/data';
 import DocMgtPage from './modules/document-management/home';
 import DocMgtPage2 from './modules/document-management/home2';
+import Iframe from './modules/global/pages/iframe';
 
 
 // Routes template.
@@ -19,5 +20,6 @@ export default (
 		<Route path="data" component={DataPage} title="Data Sample Page" />
 		<Route path="document-management" component={DocMgtPage} title="Document Management" />
 		<Route path="document-management2" component={DocMgtPage2} title="Document Management 2" />
+		<Route path="/iframe" component={Iframe} title="iframe Demo" />
 	</Router>
 );

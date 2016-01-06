@@ -51,6 +51,7 @@ class Page extends React.Component {
       currentListView: ALLDOCS,
       breadcrumb: BC_ROOT,
       showPreview: 'none',
+      height: 520,
     };
   }
 
