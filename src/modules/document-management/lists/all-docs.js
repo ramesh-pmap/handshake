@@ -68,7 +68,7 @@ class Layout extends React.Component {
                 <Button href="#/" bsStyle="link" bsSize="xs">
                   <Icon name="folder-open" className="fa-fw fa-lg text-muted" />
                   &nbsp;
-                  1.01 Incident and Emergency Management
+                  1.0 EH&S Management System
                 </Button>
               </Col>
               <Col sm={1} className="text-center hidden-xs" />
