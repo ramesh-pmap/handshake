@@ -14,15 +14,16 @@ class FileManagerBreadcrumb extends React.Component {
   }
 
   handleClick(index) {
-    // const { dispatch } = this.props;
+    const { state } = this.props;
     console.log('index', index);
+    console.log('Breadcrumb State', state);
     // console.log('e.target', e.target);
     // dispatch(changeFolder(data.path, data.children));
   }
 
   // Render method.
   render() {
-    const path = this.props.path;
+    const { path } = this.props;
     const breadcrumbArray = path ? path.split('/') : [''];
     const lastItem = breadcrumbArray.length ? breadcrumbArray[breadcrumbArray.length - 1] : '';
     let breadcrumbs = [];
@@ -50,9 +51,13 @@ class FileManagerBreadcrumb extends React.Component {
 // Validation.
 FileManagerBreadcrumb.propTypes = {
   path: React.PropTypes.string,
-  dispatch: React.PropTypes.func
+  dispatch: React.PropTypes.func,
+  state: React.PropTypes.object
 };
 
+const mapStateToProps = (state) => ({
+  state
+});
 
 // Export.
-export default connect()(FileManagerBreadcrumb);
+export default connect(mapStateToProps)(FileManagerBreadcrumb);

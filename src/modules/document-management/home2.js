@@ -1,7 +1,7 @@
 // Dependencies.
 import React from 'react';
 import { connect } from 'react-redux';
-import { changeFolder } from '../../redux/actions';
+import { changeFolder, setFileManagerData } from '../../redux/actions';
 import { updateSidePanelWidth } from '../../utils';
 
 // Core components.
@@ -72,8 +72,10 @@ class Page extends React.Component {
     const { dispatch } = this.props;
     // Fetch Json data.
     fetch(FileManagerData).then(r => r.json())
-      .then(data => {dispatch(changeFolder('/', data.fileManager)); })
-      // .then(data => {this.setState({data: data.fileManager}); })
+      .then(data => {
+        dispatch(setFileManagerData(data.fileManager));
+        dispatch(changeFolder(data.fileManager.id, data.fileManager.path, data.fileManager.children));
+      })
       .catch(error => {this.setState({error}); });
 
     this.updateDimensions();
@@ -143,11 +145,11 @@ class Page extends React.Component {
     }
 
     // File Manager data
-    const {state} = this.props;
-    const fileManagerPath = state.path ? state.path : '';
-    const fileManagerData = state.children ? state.children : [];
-    // const fileManagerData = this.state.data ? this.state.data : [];
-    console.log('fileManagerData:', fileManagerData);
+    const { state } = this.props;
+    // const fileManagerId = state.currentFolderId ? state.currentFolderId : '';
+    const fileManagerPath = state.currentFolderPath ? state.currentFolderPath : '';
+    const fileManagerData = state.currentFolderChildren ? state.currentFolderChildren : [];
+    console.log('state:', state);
 
     return (
       <div>
@@ -161,7 +163,7 @@ class Page extends React.Component {
                 showSampleFolder={this.showSampleFolder.bind(this)}
               />
             {/* FileManager component */}
-            <FileManager data={fileManagerData} path={fileManagerPath} />
+            <FileManager path={fileManagerPath} data={fileManagerData} />
             </Col>
 
             <Col sm={3} id="doc_mgt-right_column" className="sidebar-wrapper">
@@ -215,8 +217,8 @@ class Page extends React.Component {
 
 // propTypes.
 Page.propTypes = {
-  state: React.PropTypes.object,
-  dispatch: React.PropTypes.func
+  dispatch: React.PropTypes.func,
+  state: React.PropTypes.object
 };
 const mapStateToProps = (state) => ({
   state

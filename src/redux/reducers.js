@@ -1,5 +1,5 @@
 // import { combineReducers } from 'redux';
-import { TOGGLE_SIDEBAR, CHANGE_FOLDER } from './constants';
+import { TOGGLE_SIDEBAR, CHANGE_FOLDER, SET_FILE_MANAGER_DATA } from './constants';
 // import { fromJS } from 'immutable';
 
 // const INITIAL_STATE = fromJS({
@@ -16,8 +16,14 @@ function docMgtAppReducer(state = {}, action = {}) {
   case CHANGE_FOLDER:
     // console.log('Action:', action);
     return Object.assign({}, state, {
-      path: action.path,
-      children: action.children
+      currentFolderId: action.id,
+      currentFolderPath: action.path,
+      currentFolderChildren: action.children
+    });
+  case SET_FILE_MANAGER_DATA:
+    // console.log('Action:', action);
+    return Object.assign({}, state, {
+      fileManager: action.value
     });
   default:
     return state;

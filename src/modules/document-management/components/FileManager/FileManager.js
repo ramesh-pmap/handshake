@@ -50,9 +50,13 @@ class FileManager extends React.Component {
 // Validation.
 FileManager.propTypes = {
   data: React.PropTypes.array,
-  path: React.PropTypes.string
+  path: React.PropTypes.string,
+  state: React.PropTypes.object
 };
 
+const mapStateToProps = (state) => ({
+  state
+});
 
 // Export.
-export default connect()(FileManager);
+export default connect(mapStateToProps)(FileManager);

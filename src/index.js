@@ -10,7 +10,7 @@ import { Provider } from 'react-redux';
 import Routes from './routes';
 import App from './app';
 import DocMgtApp from './redux/reducers';
-import { toggleSidebar, changeFolder } from './redux/actions';
+import { toggleSidebar } from './redux/actions';
 
 // Stylesheets.
 import './styles/sass/andromeda/andromeda.scss';
@@ -19,7 +19,6 @@ let store = createStore(DocMgtApp);
 
 // Set initial sidebar state;
 store.dispatch(toggleSidebar(true));
-store.dispatch(changeFolder('/', []));
 
 // console.log(store.getState());
 // // Every time the state changes, log it

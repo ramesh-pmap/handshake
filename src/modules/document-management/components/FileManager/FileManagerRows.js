@@ -25,9 +25,9 @@ class FileManagerRows extends React.Component {
     rowsData.forEach(row => {
       console.log('row:', row);
       if (row.type === 'folder') {
-        rows.push(<FileManagerRowFolder data={row} key={row.path} />);
+        rows.push(<FileManagerRowFolder data={row} key={row.id} />);
       } else {
-        rows.push(<FileManagerRowFile data={row} key={row.path} />);
+        rows.push(<FileManagerRowFile data={row} key={row.id} />);
       }
     });
 

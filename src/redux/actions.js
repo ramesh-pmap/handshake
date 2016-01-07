@@ -1,18 +1,14 @@
-import { TOGGLE_SIDEBAR, UPLOAD_FILE, COMPLETE_UPLOAD, CHANGE_FOLDER } from './constants';
+import { TOGGLE_SIDEBAR, CHANGE_FOLDER, SET_FILE_MANAGER_DATA } from './constants';
 
  // Action creators
 export function toggleSidebar(value) {
   return { type: TOGGLE_SIDEBAR, value };
 }
 
-export function changeFolder(path, children) {
-  return { type: CHANGE_FOLDER, path, children };
+export function changeFolder(id, path, children) {
+  return { type: CHANGE_FOLDER, id, path, children };
 }
 
-export function uploadFile(value) {
-  return { type: UPLOAD_FILE, value };
-}
-
-export function completeUpload(value) {
-  return { type: COMPLETE_UPLOAD, value };
+export function setFileManagerData(value) {
+  return { type: SET_FILE_MANAGER_DATA, value };
 }
