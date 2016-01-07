@@ -23,7 +23,8 @@ function docMgtAppReducer(state = {}, action = {}) {
   case SET_FILE_MANAGER_DATA:
     // console.log('Action:', action);
     return Object.assign({}, state, {
-      fileManager: action.value
+      fileManager: action.dataTree,
+      fileMatrix: action.matrix
     });
   default:
     return state;

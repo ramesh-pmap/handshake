@@ -23,14 +23,6 @@ class FileManager extends React.Component {
     const {path, data} = this.props;
     const breadcrumbData = path ? path : '';
     const fileManagerData = data ? data : [];
-    // const breadcrumbData = data[0] ? data[0].path : '';
-    // const fileManagerData = data[0] ? data[0].children : [];
-    // const breadcrumbData = data[0] ? data[0].children[0].path : '';
-    // const fileManagerData = data[0] ? data[0].children[0].children : [];
-
-    console.log('data', data);
-    console.log('breadcrumb', breadcrumbData);
-
 
     return (
       <div>

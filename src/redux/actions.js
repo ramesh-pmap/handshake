@@ -9,6 +9,6 @@ export function changeFolder(id, path, children) {
   return { type: CHANGE_FOLDER, id, path, children };
 }
 
-export function setFileManagerData(value) {
-  return { type: SET_FILE_MANAGER_DATA, value };
+export function setFileManagerData(dataTree, matrix) {
+  return { type: SET_FILE_MANAGER_DATA, dataTree, matrix };
 }

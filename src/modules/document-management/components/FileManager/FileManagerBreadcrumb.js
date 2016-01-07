@@ -2,6 +2,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import { changeFolder } from '../../../../redux/actions';
+
 // Core components.
 import {Breadcrumb, BreadcrumbItem} from 'react-bootstrap';
 import Icon from 'react-fa';
@@ -13,35 +15,46 @@ class FileManagerBreadcrumb extends React.Component {
     super(props);
   }
 
-  handleClick(index) {
-    const { state } = this.props;
-    console.log('index', index);
-    console.log('Breadcrumb State', state);
-    // console.log('e.target', e.target);
-    // dispatch(changeFolder(data.path, data.children));
+  handleClick(data) {
+    const { dispatch } = this.props;
+    // Redux action.
+    dispatch(changeFolder(data.id, data.path, data.children));
   }
 
   // Render method.
   render() {
-    const { path } = this.props;
-    const breadcrumbArray = path ? path.split('/') : [''];
+    const { state } = this.props;
+    const breadcrumbArray = state.currentFolderPath ? state.currentFolderPath.split('/') : [''];
+    // const breadcrumbArray = path ? path.split('/') : [''];
     const lastItem = breadcrumbArray.length ? breadcrumbArray[breadcrumbArray.length - 1] : '';
+    const fileMatrix = state.fileMatrix;
     let breadcrumbs = [];
+    let sPath = '';
 
     breadcrumbArray.forEach(item => {
-      console.log('breadcrumb item:', item);
+      // console.log('breadcrumb item:', item);
       if (item !== '') {
-        if (item === lastItem) {
-          breadcrumbs.push(<BreadcrumbItem active key={item}>{item}</BreadcrumbItem>);
-        } else {
-          breadcrumbs.push(<BreadcrumbItem onClick={this.handleClick.bind(this, item)} key={item}>{item}</BreadcrumbItem>);
+        sPath += '/' + item;
+        for (let i = 0; i < fileMatrix.length; i++) {
+          if (fileMatrix[i].path === sPath) {
+            if (item === lastItem) {
+              breadcrumbs.push(<BreadcrumbItem active key={item}>{item}</BreadcrumbItem>);
+            } else {
+              breadcrumbs.push(<BreadcrumbItem onClick={this.handleClick.bind(this, fileMatrix[i])} key={item}>{item}</BreadcrumbItem>);
+            }
+          }
+        }
+      } else {
+        if (fileMatrix) {
+          if (fileMatrix[0].name === 'root' && breadcrumbs.length === 0) {
+            breadcrumbs.push(<BreadcrumbItem onClick={this.handleClick.bind(this, fileMatrix[0])} key={fileMatrix[0].id}><Icon name="home"/></BreadcrumbItem>);
+          }
         }
       }
     });
 
     return (
       <Breadcrumb>
-        <BreadcrumbItem><Icon name="home"/></BreadcrumbItem>
         {breadcrumbs}
       </Breadcrumb>
     );
@@ -50,7 +63,6 @@ class FileManagerBreadcrumb extends React.Component {
 
 // Validation.
 FileManagerBreadcrumb.propTypes = {
-  path: React.PropTypes.string,
   dispatch: React.PropTypes.func,
   state: React.PropTypes.object
 };

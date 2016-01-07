@@ -73,8 +73,10 @@ class Page extends React.Component {
     // Fetch Json data.
     fetch(FileManagerData).then(r => r.json())
       .then(data => {
-        dispatch(setFileManagerData(data.fileManager));
-        dispatch(changeFolder(data.fileManager.id, data.fileManager.path, data.fileManager.children));
+        // Redux action.
+        // utils.createFolderMatrix([], data.fileManager);
+        dispatch(setFileManagerData(data.fileManager[0], utils.createFolderMatrix([], data.fileManager) ));
+        dispatch(changeFolder(data.fileManager[0].id, data.fileManager[0].path, data.fileManager[0].children));
       })
       .catch(error => {this.setState({error}); });
 
@@ -146,24 +148,20 @@ class Page extends React.Component {
 
     // File Manager data
     const { state } = this.props;
-    // const fileManagerId = state.currentFolderId ? state.currentFolderId : '';
-    const fileManagerPath = state.currentFolderPath ? state.currentFolderPath : '';
     const fileManagerData = state.currentFolderChildren ? state.currentFolderChildren : [];
-    console.log('state:', state);
 
     return (
       <div>
         <Main>
           <Row>
             <Col sm={9} id="doc_mgt-left_column">
-
               <DocumentListHeader
                 showRootList={this.showRootList.bind(this)}
                 showUploadList={this.showUploadList.bind(this)}
                 showSampleFolder={this.showSampleFolder.bind(this)}
               />
-            {/* FileManager component */}
-            <FileManager path={fileManagerPath} data={fileManagerData} />
+              {/* FileManager component */}
+              <FileManager data={fileManagerData} />
             </Col>
 
             <Col sm={3} id="doc_mgt-right_column" className="sidebar-wrapper">
