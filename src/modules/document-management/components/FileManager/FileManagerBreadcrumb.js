@@ -1,5 +1,6 @@
 // Dependencies.
 import React from 'react';
+import { connect } from 'react-redux';
 
 // Core components.
 import {Breadcrumb, BreadcrumbItem} from 'react-bootstrap';
@@ -12,10 +13,17 @@ class FileManagerBreadcrumb extends React.Component {
     super(props);
   }
 
+  handleClick(index) {
+    // const { dispatch } = this.props;
+    console.log('index', index);
+    // console.log('e.target', e.target);
+    // dispatch(changeFolder(data.path, data.children));
+  }
+
   // Render method.
   render() {
-    const breadcrumbString = this.props.data;
-    const breadcrumbArray = breadcrumbString ? breadcrumbString.split('/') : [''];
+    const path = this.props.path;
+    const breadcrumbArray = path ? path.split('/') : [''];
     const lastItem = breadcrumbArray.length ? breadcrumbArray[breadcrumbArray.length - 1] : '';
     let breadcrumbs = [];
 
@@ -25,7 +33,7 @@ class FileManagerBreadcrumb extends React.Component {
         if (item === lastItem) {
           breadcrumbs.push(<BreadcrumbItem active key={item}>{item}</BreadcrumbItem>);
         } else {
-          breadcrumbs.push(<BreadcrumbItem key={item}>{item}</BreadcrumbItem>);
+          breadcrumbs.push(<BreadcrumbItem onClick={this.handleClick.bind(this, item)} key={item}>{item}</BreadcrumbItem>);
         }
       }
     });
@@ -41,9 +49,10 @@ class FileManagerBreadcrumb extends React.Component {
 
 // Validation.
 FileManagerBreadcrumb.propTypes = {
-  data: React.PropTypes.string
+  path: React.PropTypes.string,
+  dispatch: React.PropTypes.func
 };
 
 
 // Export.
-export default FileManagerBreadcrumb;
+export default connect()(FileManagerBreadcrumb);

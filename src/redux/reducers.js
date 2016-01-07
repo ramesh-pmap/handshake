@@ -1,17 +1,23 @@
 // import { combineReducers } from 'redux';
-import { TOGGLE_SIDEBAR} from './constants';
+import { TOGGLE_SIDEBAR, CHANGE_FOLDER } from './constants';
 // import { fromJS } from 'immutable';
 
 // const INITIAL_STATE = fromJS({
 //   sidebarOpened: false
 // });
 
-function toggleSidebarReducer(state = {}, action = {}) {
+function docMgtAppReducer(state = {}, action = {}) {
   switch (action.type) {
   case TOGGLE_SIDEBAR:
     // console.log('Action:', action);
     return Object.assign({}, state, {
       sidebarOpened: !action.value
+    });
+  case CHANGE_FOLDER:
+    // console.log('Action:', action);
+    return Object.assign({}, state, {
+      path: action.path,
+      children: action.children
     });
   default:
     return state;
@@ -46,4 +52,4 @@ function toggleSidebarReducer(state = {}, action = {}) {
 //   fileUploadReducer
 // });
 
-export default toggleSidebarReducer;
+export default docMgtAppReducer;

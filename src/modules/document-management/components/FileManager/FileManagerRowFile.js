@@ -1,5 +1,6 @@
 // Dependencies.
 import React from 'react';
+import { connect } from 'react-redux';
 
 // Core components.
 import {Row, Col, Button, ListGroupItem} from 'react-bootstrap';
@@ -51,4 +52,4 @@ FileManagerRowFile.propTypes = {
 
 
 // Export.
-export default FileManagerRowFile;
+export default connect()(FileManagerRowFile);

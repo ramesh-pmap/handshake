@@ -1,5 +1,8 @@
 // Dependencies.
 import React from 'react';
+import { connect } from 'react-redux';
+
+import {changeFolder } from '../../../../redux/actions';
 
 // Core components.
 import {Row, Col, Button, ListGroupItem} from 'react-bootstrap';
@@ -12,13 +15,19 @@ class FileManagerRowFolder extends React.Component {
     super(props);
   }
 
+  handleClick() {
+    const { dispatch, data } = this.props;
+    console.log('folderData', data);
+    dispatch(changeFolder(data.path, data.children));
+  }
+
   // Render method.
   render() {
     const folderData = this.props.data;
     const folderName = folderData.name;
 
     return (
-      <ListGroupItem>
+      <ListGroupItem onClick={this.handleClick.bind(this)}>
         <Row>
           <Col sm={6}>
             <Button href="#/" bsStyle="link" bsSize="xs">
@@ -40,9 +49,10 @@ class FileManagerRowFolder extends React.Component {
 
 // Validation.
 FileManagerRowFolder.propTypes = {
-  data: React.PropTypes.object
+  data: React.PropTypes.object,
+  dispatch: React.PropTypes.func
 };
 
 
 // Export.
-export default FileManagerRowFolder;
+export default connect()(FileManagerRowFolder);

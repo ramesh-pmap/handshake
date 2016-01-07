@@ -1,5 +1,6 @@
 // Dependencies.
 import React from 'react';
+import { connect } from 'react-redux';
 
 // Core components.
 // import {Row, Col, Button, ListGroup, ListGroupItem} from 'react-bootstrap';
@@ -19,21 +20,22 @@ class FileManager extends React.Component {
 
   // Render method.
   render() {
-    const data = this.props.data;
-    // const breadcrumbData = data ? data.path : '';
-    // const fileManagerData = data ? data : [];
+    const {path, data} = this.props;
+    const breadcrumbData = path ? path : '';
+    const fileManagerData = data ? data : [];
     // const breadcrumbData = data[0] ? data[0].path : '';
     // const fileManagerData = data[0] ? data[0].children : [];
-    const breadcrumbData = data[0] ? data[0].children[0].path : '';
-    const fileManagerData = data[0] ? data[0].children[0].children : [];
+    // const breadcrumbData = data[0] ? data[0].children[0].path : '';
+    // const fileManagerData = data[0] ? data[0].children[0].children : [];
 
     console.log('data', data);
+    console.log('breadcrumb', breadcrumbData);
 
 
     return (
       <div>
         {/* File Manager Breadcrumb */}
-        <FileManagerBreadcrumb data={breadcrumbData} />
+        <FileManagerBreadcrumb path={breadcrumbData} />
         <div className="card">
           {/* File Manager Header */}
           <FileManagerHeader />
@@ -47,9 +49,10 @@ class FileManager extends React.Component {
 
 // Validation.
 FileManager.propTypes = {
-  data: React.PropTypes.array
+  data: React.PropTypes.array,
+  path: React.PropTypes.string
 };
 
 
 // Export.
-export default FileManager;
+export default connect()(FileManager);

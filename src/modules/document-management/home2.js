@@ -1,7 +1,7 @@
 // Dependencies.
 import React from 'react';
 import { connect } from 'react-redux';
-// import { toggleSidebar } from '../../redux/actions';
+import { changeFolder } from '../../redux/actions';
 import { updateSidePanelWidth } from '../../utils';
 
 // Core components.
@@ -69,9 +69,11 @@ class Page extends React.Component {
   }
 
   componentDidMount() {
+    const { dispatch } = this.props;
     // Fetch Json data.
     fetch(FileManagerData).then(r => r.json())
-      .then(data => {this.setState({data}); })
+      .then(data => {dispatch(changeFolder('/', data.fileManager)); })
+      // .then(data => {this.setState({data: data.fileManager}); })
       .catch(error => {this.setState({error}); });
 
     this.updateDimensions();
@@ -141,9 +143,11 @@ class Page extends React.Component {
     }
 
     // File Manager data
-    const fileManagerData = this.state.data.fileManager ? this.state.data.fileManager : [];
-    // const fileManagerData = this.state.data.fileManager ? this.state.data.fileManager : [];
-    // console.log('data:', fileManagerData);
+    const {state} = this.props;
+    const fileManagerPath = state.path ? state.path : '';
+    const fileManagerData = state.children ? state.children : [];
+    // const fileManagerData = this.state.data ? this.state.data : [];
+    console.log('fileManagerData:', fileManagerData);
 
     return (
       <div>
@@ -157,7 +161,7 @@ class Page extends React.Component {
                 showSampleFolder={this.showSampleFolder.bind(this)}
               />
             {/* FileManager component */}
-            <FileManager data={fileManagerData} />
+            <FileManager data={fileManagerData} path={fileManagerPath} />
             </Col>
 
             <Col sm={3} id="doc_mgt-right_column" className="sidebar-wrapper">
@@ -211,7 +215,8 @@ class Page extends React.Component {
 
 // propTypes.
 Page.propTypes = {
-  state: React.PropTypes.object
+  state: React.PropTypes.object,
+  dispatch: React.PropTypes.func
 };
 const mapStateToProps = (state) => ({
   state
