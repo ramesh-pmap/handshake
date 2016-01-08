@@ -10,7 +10,7 @@ import { Provider } from 'react-redux';
 import Routes from './routes';
 import App from './app';
 import DocMgtApp from './redux/reducers';
-import { toggleSidebar } from './redux/actions';
+import { toggleSidebar, changeFrameSource } from './redux/actions';
 
 // Stylesheets.
 import './styles/sass/andromeda/andromeda.scss';
@@ -19,6 +19,9 @@ let store = createStore(DocMgtApp);
 
 // Set initial sidebar state;
 store.dispatch(toggleSidebar(true));
+
+// Set initial sidebar state;
+store.dispatch(changeFrameSource('http://productfacelift.pmapconnect.com/AIMS/WRAIMS/CaseHistory/Case_History_listing.asp?ModuleId=15&Module_Id=15&LocationId=8790&Location_Id=8790'));
 
 // console.log(store.getState());
 // // Every time the state changes, log it

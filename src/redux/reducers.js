@@ -1,12 +1,6 @@
-// import { combineReducers } from 'redux';
-import { TOGGLE_SIDEBAR} from './constants';
-// import { fromJS } from 'immutable';
+import { TOGGLE_SIDEBAR, IFRAME_SOURCE } from './constants';
 
-// const INITIAL_STATE = fromJS({
-//   sidebarOpened: false
-// });
-
-function toggleSidebarReducer(state = {}, action = {}) {
+export default function toggleSidebarReducer(state = {}, action = {}) {
   switch (action.type) {
   case TOGGLE_SIDEBAR:
     // console.log('Action:', action);
@@ -18,32 +12,14 @@ function toggleSidebarReducer(state = {}, action = {}) {
   }
 }
 
-// function fileUploadReducer(state = [], action) {
-//   switch (action.type) {
-//   case UPLOAD_FILE:
-//     return [
-//       ...state,
-//       {
-//         text: action.text,
-//         completed: false
-//       }
-//     ];
-//   case COMPLETE_UPLOAD:
-//     return [
-//       ...state.slice(0, action.index),
-//       Object.assign({}, state[action.index], {
-//         completed: true
-//       }),
-//       ...state.slice(action.index + 1)
-//     ];
-//   default:
-//     return state;
-//   }
-// }
-
-// const DocMgtApp = combineReducers({
-//   toggleSidebarReducer,
-//   fileUploadReducer
-// });
-
-export default toggleSidebarReducer;
+export default function changeFrameSourceReducer(state = {}, action = {}) {
+  switch (action.type) {
+  case IFRAME_SOURCE:
+    console.log('Action:', action);
+    return Object.assign({}, state, {
+      frameUrl: action.value
+    });
+  default:
+    return state;
+  }
+}

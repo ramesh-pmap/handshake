@@ -1,5 +1,6 @@
 // Dependencies.
 import React from 'react';
+import { connect } from 'react-redux';
 
 // Utility methods.
 import utils from '../../../utils';
@@ -23,17 +24,31 @@ class Page extends React.Component {
 
   // Render method.
   render() {
-    // const url = 'http://productfacelift.pmapconnect.com/Home.aspx';
-    const url = 'http://productfacelift.pmapconnect.com/LandingPage/MainLandingPage.aspx';
+    const { state } = this.props;
+
+    // const url = 'http://productfacelift.pmapconnect.com/';
+
+    // Angular
+    // const url = 'http://productfacelift.pmapconnect.com/OccHealth/occupational-health-base.html?&ModuleId=45&Module_Id=45&LocationId=8790&Location_Id=8790#/appointmentcentral';
+
+    // ASPX
+    // const url = 'http://productfacelift.pmapconnect.com/AIMS/WRAIMS/WorkRelatedIncidentList.aspx?callerNode=List&ModuleId=15&Module_Id=15&LocationId=8790&Location_Id=8790';
 
     return (
       <Main>
-        <Iframe url={url} />
+        <Iframe url={state.frameUrl} />
       </Main>
     );
   }
 }
 
+// propTypes.
+Page.propTypes = {
+  state: React.PropTypes.object
+};
+const mapStateToProps = (state) => ({
+  state
+});
 
 // Export.
-export default Page;
+export default connect(mapStateToProps)(Page);

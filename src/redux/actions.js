@@ -1,4 +1,4 @@
-import { TOGGLE_SIDEBAR, UPLOAD_FILE, COMPLETE_UPLOAD } from './constants';
+import { TOGGLE_SIDEBAR, UPLOAD_FILE, COMPLETE_UPLOAD, IFRAME_SOURCE } from './constants';
 
  // Action creators
 export function toggleSidebar(value) {
@@ -11,4 +11,8 @@ export function uploadFile(value) {
 
 export function completeUpload(value) {
   return { type: COMPLETE_UPLOAD, value };
+}
+
+export function changeFrameSource(value) {
+  return { type: IFRAME_SOURCE, value };
 }
