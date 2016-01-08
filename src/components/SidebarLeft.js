@@ -1,6 +1,8 @@
 // Dependencies.
 import React from 'react';
 import { connect } from 'react-redux';
+// import {Link} from 'react-router';
+import {LinkContainer} from 'react-router-bootstrap';
 
 // UI components
 import Icon from 'react-fa'; // Example: <Icon name="home" />
@@ -70,15 +72,26 @@ class Sidebar extends React.Component {
 
         */}
 
-        <NavItem href="#" onClick={this.handleFrameUrlChange.bind(this, 'angular')}>
-          <Icon name="html5" className="fa-fw" />
-          Angular
-        </NavItem>
+        <LinkContainer to="/">
+          <NavItem onClick={this.handleFrameUrlChange.bind(this, 'angular')}>
+            <Icon name="html5" className="fa-fw" />
+            Angular
+          </NavItem>
+        </LinkContainer>
 
-        <NavItem href="#" onClick={this.handleFrameUrlChange.bind(this, 'aspx')}>
-          <Icon name="windows" className="fa-fw" />
-          ASPX
-        </NavItem>
+        <LinkContainer to="/">
+          <NavItem onClick={this.handleFrameUrlChange.bind(this, 'aspx')}>
+            <Icon name="windows" className="fa-fw" />
+            ASPX
+          </NavItem>
+        </LinkContainer>
+
+        <LinkContainer to="/document-management2">
+          <NavItem onClick={this.handleFrameUrlChange.bind(this, 'aspx')}>
+            <Icon name="windows" className="fa-fw" />
+            Documnent Management
+          </NavItem>
+        </LinkContainer>
 
       </Nav>
 
