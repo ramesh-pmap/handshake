@@ -9,7 +9,7 @@ import {Row, Col, Breadcrumb, BreadcrumbItem, ButtonGroup, Button, Image} from '
 import Icon from 'react-fa';
 
 // Layouts.
-import Main from '../../layouts/shell-demo/main';
+import Main from '../../layouts/main';
 import DocumentListHeader from './components/document-list-header';
 import RootList from './lists/all-docs';
 import UploadList from './lists/upload';

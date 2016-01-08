@@ -1,4 +1,4 @@
-import { TOGGLE_SIDEBAR, CHANGE_FOLDER, SET_FILE_MANAGER_DATA } from './constants';
+import { TOGGLE_SIDEBAR, CHANGE_FOLDER, SET_FILE_MANAGER_DATA, IFRAME_SOURCE } from './constants';
 
  // Action creators
 export function toggleSidebar(value) {
@@ -11,4 +11,8 @@ export function changeFolder(path) {
 
 export function setFileManagerData(dataTree, matrix) {
   return { type: SET_FILE_MANAGER_DATA, dataTree, matrix };
+}
+
+export function changeFrameSource(value) {
+  return { type: IFRAME_SOURCE, value };
 }

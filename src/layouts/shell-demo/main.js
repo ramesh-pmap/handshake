@@ -6,7 +6,7 @@ import { updateSidePanelWidth } from '../../utils';
 import { toggleSidebar } from '../../redux/actions';
 // Layout components.
 import Header from '../../components/shell-demo/Header';
-import Sidebar from '../../components/shell-demo/SidebarLeft';
+import Sidebar from '../../components/SidebarLeft';
 
 // Define class.
 class Layout extends React.Component {
