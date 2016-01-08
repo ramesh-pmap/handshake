@@ -2,7 +2,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { changeFolder, setFileManagerData } from '../../redux/actions';
-import { updateSidePanelWidth } from '../../utils';
 
 // Core components.
 import {Row, Col, ButtonGroup, Button, Image} from 'react-bootstrap';
@@ -22,7 +21,7 @@ import DocumentDetailForm from './components/document-detail-form';
 // Utility methods.
 import utils from '../../utils';
 
-// Json file with icons data.
+// Json file with folder structure data.
 const FileManagerData = '../../../static/data/filemanager-data.json';
 
 
@@ -61,7 +60,7 @@ class Page extends React.Component {
   updateDimensions() {
     const { state } = this.props;
     const sidebarOpened = state.sidebarOpened;
-    updateSidePanelWidth(sidebarOpened);
+    utils.updateSidePanelWidth(sidebarOpened);
   }
 
   componentWillUnmount() {
@@ -125,6 +124,21 @@ class Page extends React.Component {
 
   // Render method.
   render() {
+    // File Manager data
+    const { state } = this.props;
+    let fileManagerData = []; // state.currentFolderChildren ? state.currentFolderChildren : [];
+    const currentPath = state.currentFolderPath;
+    const fileMatrix = state.fileMatrix;
+
+    if (fileMatrix) {
+      for (let i = 0; i < fileMatrix.length; i++) {
+        if (fileMatrix[i].path === currentPath) {
+          fileManagerData = fileMatrix[i].children;
+        }
+      }
+    }
+    // console.log('STATE', state);
+
     // Right Panel
     const rightPanel = this.state.rightPanel;
     let rightPanelArea;
@@ -145,21 +159,6 @@ class Page extends React.Component {
     default:
       rightPanelArea = <DocumentActivityList />;
     }
-
-    // File Manager data
-    const { state } = this.props;
-    let fileManagerData = []; // state.currentFolderChildren ? state.currentFolderChildren : [];
-    const currentPath = state.currentFolderPath;
-    const fileMatrix = state.fileMatrix;
-
-    if (fileMatrix) {
-      for (let i = 0; i < fileMatrix.length; i++) {
-        if (fileMatrix[i].path === currentPath) {
-          fileManagerData = fileMatrix[i].children;
-        }
-      }
-    }
-    // console.log('STATE', state);
 
     return (
       <div>
