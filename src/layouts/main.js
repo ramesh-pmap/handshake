@@ -18,6 +18,7 @@ class Layout extends React.Component {
   handleUserToggle() {
     const { state, dispatch } = this.props;
     dispatch(toggleSidebar(state.sidebarOpened));
+    console.log(state.sidebarOpened);
   }
 
   // Render method.
