@@ -76,7 +76,7 @@ class Page extends React.Component {
         // Redux action.
         // utils.createFolderMatrix([], data.fileManager);
         dispatch(setFileManagerData(data.fileManager[0], utils.createFolderMatrix([], data.fileManager) ));
-        dispatch(changeFolder(data.fileManager[0].id, data.fileManager[0].path, data.fileManager[0].children));
+        dispatch(changeFolder(data.fileManager[0].path));
       })
       .catch(error => {this.setState({error}); });
 
@@ -148,7 +148,18 @@ class Page extends React.Component {
 
     // File Manager data
     const { state } = this.props;
-    const fileManagerData = state.currentFolderChildren ? state.currentFolderChildren : [];
+    let fileManagerData = []; // state.currentFolderChildren ? state.currentFolderChildren : [];
+    const currentPath = state.currentFolderPath;
+    const fileMatrix = state.fileMatrix;
+
+    if (fileMatrix) {
+      for (let i = 0; i < fileMatrix.length; i++) {
+        if (fileMatrix[i].path === currentPath) {
+          fileManagerData = fileMatrix[i].children;
+        }
+      }
+    }
+    // console.log('STATE', state);
 
     return (
       <div>

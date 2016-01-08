@@ -18,7 +18,7 @@ class FileManagerRowFolder extends React.Component {
   handleClick() {
     const { dispatch, data } = this.props;
     // Redux action.
-    dispatch(changeFolder(data.id, data.path, data.children));
+    dispatch(changeFolder(data.path));
   }
 
   // Render method.

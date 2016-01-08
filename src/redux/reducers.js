@@ -16,9 +16,7 @@ function docMgtAppReducer(state = {}, action = {}) {
   case CHANGE_FOLDER:
     // console.log('Action:', action);
     return Object.assign({}, state, {
-      currentFolderId: action.id,
       currentFolderPath: action.path,
-      currentFolderChildren: action.children
     });
   case SET_FILE_MANAGER_DATA:
     // console.log('Action:', action);

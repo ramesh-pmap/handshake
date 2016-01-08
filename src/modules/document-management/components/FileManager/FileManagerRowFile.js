@@ -17,13 +17,14 @@ class FileManagerRowFile extends React.Component {
   render() {
     const fileData = this.props.data;
     const fileName = fileData.name;
+    const fileType = fileData.type;
 
     return (
       <ListGroupItem>
         <Row>
           <Col sm={6}>
             <Button href="#/" bsStyle="link" bsSize="xs">
-              <Icon name="file-word-o" className="fa-fw fa-lg text-muted" />
+              <Icon name={`file-${fileType}-o`} className="fa-fw fa-lg text-muted" />
               &nbsp;
               {fileName}
             </Button>

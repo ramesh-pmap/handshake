@@ -5,8 +5,8 @@ export function toggleSidebar(value) {
   return { type: TOGGLE_SIDEBAR, value };
 }
 
-export function changeFolder(id, path, children) {
-  return { type: CHANGE_FOLDER, id, path, children };
+export function changeFolder(path) {
+  return { type: CHANGE_FOLDER, path };
 }
 
 export function setFileManagerData(dataTree, matrix) {
