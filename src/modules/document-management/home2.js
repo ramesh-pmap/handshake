@@ -1,22 +1,18 @@
 // Dependencies.
 import React from 'react';
 import { connect } from 'react-redux';
-import { changeFolder, setFileManagerData } from '../../redux/actions';
+import { changeFolder, setFileManagerData, setSidebarHeight, setContentAreaView, setRightPanelAreaView } from '../../redux/actions';
+// import { DEFAULT, ACTIVITY } from '../../redux/constants';
+import { DEFAULT, PREVIEW, UPLOAD, ACTIVITY, DETAIL, DETAILFORM } from '../../redux/constants';
 
 // Core components.
-import {Row, Col, ButtonGroup, Button, Image} from 'react-bootstrap';
-import Icon from 'react-fa';
+import {Row, Col} from 'react-bootstrap';
 
 // Layouts.
 import Main from '../../layouts/shell-demo/main';
 
-// Components
-import FileManager from './components/FileManager/FileManager';
-import DocumentListHeader from './components/document-list-header';
-
-import DocumentActivityList from './components/document-activity-list';
-import DocumentDetail from './components/document-detail';
-import DocumentDetailForm from './components/document-detail-form';
+import ContentArea from './content-area.js';
+import RightPanelArea from './right-panel-area.js';
 
 // Utility methods.
 import utils from '../../utils';
@@ -24,20 +20,6 @@ import utils from '../../utils';
 // Json file with folder structure data.
 const FileManagerData = '../../../static/data/filemanager-data.json';
 
-
-// Breadcrumb const.
-const BC_ROOT = 'root';
-const BC_UPLOAD = 'upload';
-const BC_SAMPLEFOLDER = 'sample folder';
-
-// List views const.
-const ALLDOCS = 'All Documents';
-const UPLOADEDDOCS = 'My Pending Uploads';
-
-// Right panel const.
-const ACTIVITY = 'activity';
-const DETAIL = 'detail';
-const DETAILFORM = 'detail-form';
 
 // Define class.
 class Page extends React.Component {
@@ -47,20 +29,12 @@ class Page extends React.Component {
 
     // Set page title.
     utils.title(props);
-
-    this.state = {
-      data: [],
-      rightPanel: ACTIVITY,
-      currentListView: ALLDOCS,
-      breadcrumb: BC_ROOT,
-      showPreview: 'none',
-    };
   }
 
   updateDimensions() {
     const { state } = this.props;
-    const sidebarOpened = state.sidebarOpened;
-    utils.updateSidePanelWidth(sidebarOpened);
+    const leftSidebarOpened = state.leftSidebarOpened;
+    utils.updateSidePanelWidth(leftSidebarOpened);
   }
 
   componentWillUnmount() {
@@ -79,144 +53,56 @@ class Page extends React.Component {
       })
       .catch(error => {this.setState({error}); });
 
+    // Set initial state.
+    dispatch(setSidebarHeight(540));
+    dispatch(setContentAreaView(DEFAULT));
+    dispatch(setRightPanelAreaView(ACTIVITY));
+
+    // Update dimensions.
     this.updateDimensions();
     // Window Resizing.
     window.addEventListener('resize', this.updateDimensions.bind(this));
   }
 
-  // List views.
-  showRootList() {
-    this.showActivity();
-    this.setState({ currentListView: ALLDOCS, breadcrumb: BC_ROOT });
+  handleContentButtonClick(view) {
+    const { dispatch } = this.props;
+    dispatch(setContentAreaView(view));
   }
 
-  showUploadList() {
-    this.showActivity();
-    this.setState({ currentListView: UPLOADEDDOCS, breadcrumb: BC_UPLOAD });
-  }
-
-  showSampleFolder() {
-    this.showActivity();
-    this.setState({ currentListView: ALLDOCS, breadcrumb: BC_SAMPLEFOLDER });
-  }
-
-  // Right panels.
-  showDetail() {
-    this.setState({ rightPanel: DETAIL });
-  }
-
-  showDetailForm() {
-    this.setState({ rightPanel: DETAILFORM });
-  }
-
-  showActivity() {
-    this.setState({ rightPanel: ACTIVITY });
-  }
-
-  // Close preview.
-  closePreview() {
-    this.setState({ showPreview: 'none' });
-  }
-
-  showPreview() {
-    this.setState({ showPreview: 'block' });
+  handleRightPanelButtonClick(view) {
+    const { dispatch } = this.props;
+    dispatch(setRightPanelAreaView(view));
   }
 
   // Render method.
   render() {
-    // File Manager data
     const { state } = this.props;
-    let fileManagerData = []; // state.currentFolderChildren ? state.currentFolderChildren : [];
-    const currentPath = state.currentFolderPath;
-    const fileMatrix = state.fileMatrix;
-
-    if (fileMatrix) {
-      for (let i = 0; i < fileMatrix.length; i++) {
-        if (fileMatrix[i].path === currentPath) {
-          fileManagerData = fileMatrix[i].children;
-        }
-      }
-    }
-    // console.log('STATE', state);
-
-    // Right Panel
-    const rightPanel = this.state.rightPanel;
-    let rightPanelArea;
-
-    switch (rightPanel) {
-    case ACTIVITY:
-      rightPanelArea = <DocumentActivityList />;
-      break;
-    case DETAIL:
-      rightPanelArea = (<DocumentDetail
-        showDetailForm={this.showDetailForm.bind(this)}
-        showPreview={this.showPreview.bind(this)}
-      />);
-      break;
-    case DETAILFORM:
-      rightPanelArea = <DocumentDetailForm showDetail={this.showDetail.bind(this)} />;
-      break;
-    default:
-      rightPanelArea = <DocumentActivityList />;
-    }
 
     return (
       <div>
         <Main>
+          <button onClick={this.handleContentButtonClick.bind(this, DEFAULT)} > Default </button>
+          <button onClick={this.handleContentButtonClick.bind(this, PREVIEW)} > Preview </button>
+          <button onClick={this.handleContentButtonClick.bind(this, UPLOAD)} > Upload </button>
+          |
+          <button onClick={this.handleRightPanelButtonClick.bind(this, ACTIVITY)} > Activity List </button>
+          <button onClick={this.handleRightPanelButtonClick.bind(this, DETAIL)} > Detail </button>
+          <button onClick={this.handleRightPanelButtonClick.bind(this, DETAILFORM)} > Detail Form </button>
           <Row>
             <Col sm={9} id="doc_mgt-left_column">
-              <DocumentListHeader
-                showRootList={this.showRootList.bind(this)}
-                showUploadList={this.showUploadList.bind(this)}
-                showSampleFolder={this.showSampleFolder.bind(this)}
-              />
-              {/* FileManager component */}
-              <FileManager data={fileManagerData} />
+              {/* ContentArea component */}
+              <ContentArea />
             </Col>
 
             <Col sm={3} id="doc_mgt-right_column" className="sidebar-wrapper">
-              <div className="sidebar" style={{height: this.state.height + 'px'}}>
-
-                {rightPanelArea}
-
+              <div className="sidebar" style={{height: state.sidebarHeight + 'px'}}>
+                {/* RightPanelArea component */}
+                <RightPanelArea />
               </div>
             </Col>
           </Row>
 
         </Main>
-
-        <div className="preview-panel" style={{ display: this.state.showPreview }}>
-          <div className="preview-panel-toolbar clearfix">
-            <div className="pull-left lead">
-              sample-word-document.docx
-            </div>
-            <ButtonGroup className="pull-right">
-              <Button bsStyle="link" bsSize="sm" className="text-muted">
-                <Icon name="print" className="fa-lg" />
-                &nbsp;
-                Print
-              </Button>
-              <Button bsStyle="link" bsSize="sm" className="text-muted">
-                <Icon name="download" className="fa-lg" />
-                &nbsp;
-                Download
-              </Button>
-              <Button bsStyle="link" bsSize="sm" className="text-muted">
-                <Icon name="share-square-o" className="fa-lg" />
-                &nbsp;
-                Share
-              </Button>
-              <Button bsStyle="link" bsSize="sm" className="text-muted" onClick={this.closePreview.bind(this)}>
-                <Icon name="times" className="fa-lg" />
-                &nbsp;
-                Close
-              </Button>
-            </ButtonGroup>
-            <div className="pull-right">
-            </div>
-          </div>
-          <Image src="/static/images/sample-doc-preview.png" />
-        </div>
 
       </div>
     );

@@ -57,8 +57,8 @@ class Page extends React.Component {
 
   updateDimensions() {
     const { state } = this.props;
-    const sidebarOpened = state.sidebarOpened;
-    updateSidePanelWidth(sidebarOpened);
+    const leftSidebarOpened = state.leftSidebarOpened;
+    updateSidePanelWidth(leftSidebarOpened);
   }
 
   componentWillUnmount() {

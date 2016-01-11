@@ -19,7 +19,7 @@ class Sidebar extends React.Component {
 
   handleFrameUrlChange(url) {
     const { state, dispatch } = this.props;
-    console.log(url);
+    // console.log(url);
     switch (url) {
     case 'home':
       dispatch(changeFrameSource('http://productfacelift.pmapconnect.com/LandingPage/MainLandingPage.aspx?LocationId=8790&Location_Id=8790'));

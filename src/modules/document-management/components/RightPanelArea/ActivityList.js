@@ -1,14 +1,13 @@
 // Dependencies.
 import React from 'react';
-// import {Link} from 'react-router';
-// import {LinkContainer} from 'react-router-bootstrap';
+import { connect } from 'react-redux';
 
 // Core components.
 import {ButtonGroup, ListGroup, ListGroupItem, DropdownButton, MenuItem} from 'react-bootstrap';
 import Icon from 'react-fa';
 
 // Define class.
-class Layout extends React.Component {
+class ActivityList extends React.Component {
   constructor(props) {
     // Pass `props` into scope.
     super(props);
@@ -337,6 +336,14 @@ class Layout extends React.Component {
   }
 }
 
+// propTypes.
+ActivityList.propTypes = {
+  dispatch: React.PropTypes.func,
+  state: React.PropTypes.object
+};
+const mapStateToProps = (state) => ({
+  state
+});
 
 // Export.
-export default Layout;
+export default connect(mapStateToProps)(ActivityList);

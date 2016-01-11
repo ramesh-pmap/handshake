@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import { updateSidePanelWidth } from '../../utils';
 
-import { toggleSidebar } from '../../redux/actions';
+import { toggleLeftSidebar } from '../../redux/actions';
 // Layout components.
 import Header from '../../components/shell-demo/Header';
 import Sidebar from '../../components/SidebarLeft';
@@ -17,15 +17,15 @@ class Layout extends React.Component {
 
   handleUserToggle() {
     const { state, dispatch } = this.props;
-    dispatch(toggleSidebar(state.sidebarOpened));
-    updateSidePanelWidth(!state.sidebarOpened);
+    dispatch(toggleLeftSidebar(state.leftSidebarOpened));
+    updateSidePanelWidth(!state.leftSidebarOpened);
   }
 
   // Render method.
   render() {
     const { state } = this.props;
-    const sidebarOpened = state.sidebarOpened;
-    let toggle = (sidebarOpened === false) ? 'shell-wrapper doc-wrapper toggled' : 'shell-wrapper doc-wrapper';
+    const leftSidebarOpened = state.leftSidebarOpened;
+    let toggle = (leftSidebarOpened === false) ? 'shell-wrapper doc-wrapper toggled' : 'shell-wrapper doc-wrapper';
 
     return (
       <div id="shellWrapper" className={`${toggle}`}>

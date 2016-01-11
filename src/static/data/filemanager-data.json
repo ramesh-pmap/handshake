@@ -121,6 +121,20 @@
               "path" : "/Test/EHS Obsolete"
             }
           ]
+        },
+        {
+          "id" : "31",
+          "type" : "folder",
+          "name" : "Uploads",
+          "path" : "/Uploads",
+          "children" : [
+            {
+              "id" : "311",
+              "type" : "word",
+              "name" : "Word file sample.doc",
+              "path" : "/Uploads/Word file sample.doc"
+            }
+          ]
         }
       ]
     }

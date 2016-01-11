@@ -30,13 +30,13 @@ class Layout extends React.Component {
   showActivity(e) {
     e.preventDefault();
     this.props.showActivity();
-    console.log('unselect');
+    // console.log('unselect');
   }
 
   // Dropzone.
   onDrop(uploadedFiles) {
     this.setState({ files: uploadedFiles });
-    console.log(uploadedFiles);
+    // console.log(uploadedFiles);
   }
   onOpenClick() {
     this.refs.dropzone.open();
