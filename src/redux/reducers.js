@@ -12,12 +12,12 @@ import {
 function docMgtAppReducer(state = {}, action = {}) {
   switch (action.type) {
   case TOGGLE_LEFT_SIDEBAR:
-    // console.log('TOGGLE_SIDEBAR Action:', action);
+    // console.log('TOGGLE_LEFT_SIDEBAR Action:', action);
     return Object.assign({}, state, {
       leftSidebarOpened: !action.value
     });
   case TOGGLE_RIGHT_SIDEBAR:
-    // console.log('TOGGLE_SIDEBAR Action:', action);
+    // console.log('TOGGLE_RIGHT_SIDEBAR Action:', action);
     return Object.assign({}, state, {
       rightSidebarOpened: !action.value
     });
@@ -38,12 +38,12 @@ function docMgtAppReducer(state = {}, action = {}) {
       sidebarHeight: action.value
     });
   case SET_CONTENT_AREA_VIEW:
-    // console.log('SET_SIDEBAR_HEIGHT Action:', action);
+    // console.log('SET_CONTENT_AREA_VIEW Action:', action);
     return Object.assign({}, state, {
       contentAreaView: action.value
     });
   case SET_RIGHT_PANEL_AREA_VIEW:
-    // console.log('SET_SIDEBAR_HEIGHT Action:', action);
+    // console.log('SET_RIGHT_PANEL_AREA_VIEW Action:', action);
     return Object.assign({}, state, {
       rightPanelAreaView: action.value
     });

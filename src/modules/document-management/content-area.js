@@ -1,12 +1,13 @@
 // Dependencies.
 import React from 'react';
 import { connect } from 'react-redux';
-import { DEFAULT, PREVIEW, UPLOAD } from '../../redux/constants';
+import { DEFAULT, PREVIEW, UPLOAD, SEARCH_RESULTS } from '../../redux/constants';
 
 // Components.
 import Default from './components/ContentArea/Default';
 import Preview from './components/ContentArea/Preview';
 import Upload from './components/ContentArea/Upload';
+import SearchResults from './components/ContentArea/SearchResults';
 
 // Utility methods.
 // import utils from '../../utils';
@@ -30,16 +31,35 @@ class ContentArea extends React.Component {
 
     switch (currentView) {
     case DEFAULT:
-      contentArea = <Default />;
+      contentArea = (
+        <div className="page-content-wrapper">
+          <Default loadContentAreaView={this.props.loadContentAreaView} />
+        </div>
+      );
       break;
     case PREVIEW:
-      contentArea = <Preview />;
+      contentArea = <Preview loadContentAreaView={this.props.loadContentAreaView} />;
       break;
     case UPLOAD:
-      contentArea = <Upload />;
+      contentArea = (
+        <div className="page-content-wrapper">
+          <Upload loadContentAreaView={this.props.loadContentAreaView} />
+        </div>
+      );
+      break;
+    case SEARCH_RESULTS:
+      contentArea = (
+        <div className="page-content-wrapper">
+          <SearchResults loadContentAreaView={this.props.loadContentAreaView} />
+        </div>
+      );
       break;
     default:
-      contentArea = <Default />;
+      contentArea = (
+        <div className="page-content-wrapper">
+          <Default loadContentAreaView={this.props.loadContentAreaView} />
+        </div>
+      );
     }
     console.log('STATE', state);
 
@@ -53,6 +73,7 @@ class ContentArea extends React.Component {
 
 // propTypes.
 ContentArea.propTypes = {
+  loadContentAreaView: React.PropTypes.func,
   dispatch: React.PropTypes.func,
   state: React.PropTypes.object
 };

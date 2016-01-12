@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { changeFolder, setFileManagerData, setSidebarHeight, setContentAreaView, setRightPanelAreaView } from '../../redux/actions';
 // import { DEFAULT, ACTIVITY } from '../../redux/constants';
-import { DEFAULT, PREVIEW, UPLOAD, ACTIVITY, DETAIL, DETAILFORM } from '../../redux/constants';
+import { DEFAULT, PREVIEW, UPLOAD, ACTIVITY, DETAIL, DETAILFORM, SEARCH_RESULTS } from '../../redux/constants';
 
 // Core components.
 import {Row, Col} from 'react-bootstrap';
@@ -81,17 +81,21 @@ class Page extends React.Component {
     return (
       <div>
         <Main>
-          <button onClick={this.handleContentButtonClick.bind(this, DEFAULT)} > Default </button>
-          <button onClick={this.handleContentButtonClick.bind(this, PREVIEW)} > Preview </button>
-          <button onClick={this.handleContentButtonClick.bind(this, UPLOAD)} > Upload </button>
-          |
-          <button onClick={this.handleRightPanelButtonClick.bind(this, ACTIVITY)} > Activity List </button>
-          <button onClick={this.handleRightPanelButtonClick.bind(this, DETAIL)} > Detail </button>
-          <button onClick={this.handleRightPanelButtonClick.bind(this, DETAILFORM)} > Detail Form </button>
           <Row>
             <Col sm={9} id="doc_mgt-left_column">
+
+              <button onClick={this.handleContentButtonClick.bind(this, DEFAULT)} > Default </button>
+              <button onClick={this.handleContentButtonClick.bind(this, PREVIEW)} > Preview </button>
+              <button onClick={this.handleContentButtonClick.bind(this, UPLOAD)} > Upload </button>
+              <button onClick={this.handleContentButtonClick.bind(this, SEARCH_RESULTS)} > Search Results </button>
+              |
+              <button onClick={this.handleRightPanelButtonClick.bind(this, ACTIVITY)} > Activity List </button>
+              <button onClick={this.handleRightPanelButtonClick.bind(this, DETAIL)} > Detail </button>
+              <button onClick={this.handleRightPanelButtonClick.bind(this, DETAILFORM)} > Detail Form </button>
+
               {/* ContentArea component */}
-              <ContentArea />
+              <ContentArea loadContentAreaView={this.handleContentButtonClick.bind(this)} />
+
             </Col>
 
             <Col sm={3} id="doc_mgt-right_column" className="sidebar-wrapper">
