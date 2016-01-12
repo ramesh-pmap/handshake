@@ -2,6 +2,7 @@ import {
   TOGGLE_LEFT_SIDEBAR,
   TOGGLE_RIGHT_SIDEBAR,
   CHANGE_FOLDER,
+  SELECT_FILE,
   SET_FILE_MANAGER_DATA,
   SET_SIDEBAR_HEIGHT,
   SET_CONTENT_AREA_VIEW,
@@ -25,6 +26,11 @@ function docMgtAppReducer(state = {}, action = {}) {
     // console.log('CHANGE_FOLDER Action:', action);
     return Object.assign({}, state, {
       currentFolderPath: action.path,
+    });
+  case SELECT_FILE:
+    // console.log('SELECT_FILE Action:', action);
+    return Object.assign({}, state, {
+      currentFileId: action.value,
     });
   case SET_FILE_MANAGER_DATA:
     // console.log('SET_FILE_MANAGER_DATA Action:', action);

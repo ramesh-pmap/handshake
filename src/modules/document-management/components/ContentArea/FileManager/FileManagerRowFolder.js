@@ -2,7 +2,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import {changeFolder } from '../../../../../redux/actions';
+import { changeFolder } from '../../../../../redux/actions';
 
 // Core components.
 import {Row, Col, Button, ListGroupItem} from 'react-bootstrap';

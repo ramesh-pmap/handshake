@@ -2,6 +2,7 @@ import {
   TOGGLE_LEFT_SIDEBAR,
   TOGGLE_RIGHT_SIDEBAR,
   CHANGE_FOLDER,
+  SELECT_FILE,
   SET_FILE_MANAGER_DATA,
   SET_SIDEBAR_HEIGHT,
   SET_CONTENT_AREA_VIEW,
@@ -13,12 +14,17 @@ import {
 export function toggleLeftSidebar(value) {
   return { type: TOGGLE_LEFT_SIDEBAR, value };
 }
+
 export function toggleRightSidebar(value) {
   return { type: TOGGLE_RIGHT_SIDEBAR, value };
 }
 
 export function changeFolder(path) {
   return { type: CHANGE_FOLDER, path };
+}
+
+export function selectFile(value) {
+  return { type: SELECT_FILE, value };
 }
 
 export function setFileManagerData(dataTree, matrix) {

@@ -25,10 +25,13 @@
                   "path" : "/EHS/Policies/Sample Folder"
                 },
                 {
-                  "id" : "1112",
+                  "id" : "55",
                   "type" : "word",
-                  "name" : "Word file sample.doc",
-                  "path" : "/EHS/Policies/Word file sample.doc"
+                  "name" : "Stanley Nurek INCIDENT INVESTIGATION REPORT 080614(1).doc",
+                  "path" : "/EHS/Policies/Stanley Nurek INCIDENT INVESTIGATION REPORT 080614(1).doc",
+                  "doc_version": "1",
+                  "doc_modified_date": "10/7/2014",
+                  "doc_status_name": "Final"
                 },
                 {
                   "id" : "1113",
