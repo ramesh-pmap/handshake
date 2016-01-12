@@ -44,23 +44,6 @@ class Sidebar extends React.Component {
 
       <Nav id="sidebar-wrapper" ulClassName="sidebar-nav">
 
-        <Nav ulClassName="nav nav-second-level collapse">
-
-          <LinkContainer to="/">
-            <NavItem onClick={this.handleFrameUrlChange.bind(this, 'angular')}>
-              <Icon name="html5" className="fa-fw" />
-              Occupational Health
-            </NavItem>
-          </LinkContainer>
-
-          <LinkContainer to="/">
-            <NavItem onClick={this.handleFrameUrlChange.bind(this, 'aspx')}>
-              <Icon name="windows" className="fa-fw" />
-              Incident Management
-            </NavItem>
-          </LinkContainer>
-        </Nav>
-
         <LinkContainer to="/">
           <NavItem onClick={this.handleFrameUrlChange.bind(this, 'angular')}>
             <Icon name="html5" className="fa-fw" />

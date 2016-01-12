@@ -1,6 +1,6 @@
 // Dependencies.
 import React from 'react';
-// import {Link} from 'react-router';
+import {Link} from 'react-router';
 
 // UI Components.
 import {Navbar, NavBrand, CollapsibleNav, Button} from 'react-bootstrap';
@@ -36,11 +36,10 @@ class Header extends React.Component {
           </NavBrand>
 
           <CollapsibleNav eventKey={0}>
-            {/*
             <ul className="nav navbar-nav navbar-right">
-              <li><Link to="/">Logout</Link></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/document-management">Document Mgt</Link></li>
             </ul>
-            */}
           </CollapsibleNav>
 
         </Navbar>
