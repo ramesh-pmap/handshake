@@ -20,16 +20,16 @@ export function toggleRightSidebar(value) {
   return { type: TOGGLE_RIGHT_SIDEBAR, value };
 }
 
-export function changeFolder(path) {
-  return { type: CHANGE_FOLDER, path };
+export function changeFolder(id, path) {
+  return { type: CHANGE_FOLDER, id, path };
 }
 
 export function selectFile(value) {
   return { type: SELECT_FILE, value };
 }
 
-export function setFileManagerData(dataTree, matrix) {
-  return { type: SET_FILE_MANAGER_DATA, dataTree, matrix };
+export function setFileManagerData(dataMaster, dataFolders, dataFiles) {
+  return { type: SET_FILE_MANAGER_DATA, dataMaster, dataFolders, dataFiles};
 }
 
 export function setSidebarHeight(value) {

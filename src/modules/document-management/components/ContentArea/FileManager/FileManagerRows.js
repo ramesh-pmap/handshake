@@ -19,14 +19,15 @@ class FileManagerRows extends React.Component {
   render() {
     const rowsData = this.props.data;
     let rows = [];
-
-    rowsData.forEach(row => {
-      if (row.type === 'folder') {
-        rows.push(<FileManagerRowFolder data={row} key={row.id} />);
-      } else {
-        rows.push(<FileManagerRowFile data={row} key={row.id} />);
-      }
-    });
+    if (rowsData) {
+      rowsData.forEach(row => {
+        if (row.folder_id) {
+          rows.push(<FileManagerRowFolder data={row} key={row.folder_id} />);
+        } else {
+          rows.push(<FileManagerRowFile data={row} key={row.id} />);
+        }
+      });
+    }
 
     return (
       <ListGroup className="doc_mgt-list">

@@ -24,14 +24,18 @@ class Default extends React.Component {
   render() {
     // File Manager data
     const { state } = this.props;
-    let fileManagerData = []; // state.currentFolderChildren ? state.currentFolderChildren : [];
-    const currentPath = state.currentFolderPath;
-    const fileMatrix = state.fileMatrix;
+    let breadcrumbData = [];
+    let folderData = []; // state.currentFolderChildren ? state.currentFolderChildren : [];
 
-    if (fileMatrix) {
-      for (let i = 0; i < fileMatrix.length; i++) {
-        if (fileMatrix[i].path === currentPath) {
-          fileManagerData = fileMatrix[i].children;
+    const currentId = state.currentFolderId;
+    // const currentPath = state.currentFolderPath;
+    const docFolders = state.docFolders;
+
+    if (docFolders) {
+      for (let i = 0; i < docFolders.length; i++) {
+        if (docFolders[i].folder_id === currentId) {
+          folderData = docFolders[i].children;
+          breadcrumbData = docFolders[i].folder_breadcrumb ? docFolders[i].folder_breadcrumb : [];
         }
       }
     }
@@ -40,7 +44,7 @@ class Default extends React.Component {
       <div>
         <DocumentListHeader loadContentAreaView={this.props.loadContentAreaView} />
         {/* FileManager component */}
-        <FileManager data={fileManagerData} />
+        <FileManager folderData={folderData} breadcrumbData={breadcrumbData} />
       </div>
     );
   }

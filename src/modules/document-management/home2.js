@@ -18,8 +18,8 @@ import RightPanelArea from './right-panel-area.js';
 import utils from '../../utils';
 
 // Json file with folder structure data.
-const FileManagerData = '../../../static/data/filemanager-data.json';
-
+// const FileManagerData = '../../../static/data/filemanager-data.json';
+const SourceData = '../../../static/data/documents-data.json';
 
 // Define class.
 class Page extends React.Component {
@@ -44,12 +44,24 @@ class Page extends React.Component {
   componentDidMount() {
     const { dispatch } = this.props;
     // Fetch Json data.
-    fetch(FileManagerData).then(r => r.json())
+    // fetch(FileManagerData).then(response => response.json())
+    //   .then(data => {
+    //     // Redux action.
+    //     // utils.createFolderMatrix([], data.fileManager);
+    //     // dispatch(setFileManagerData(data.fileManager[0], utils.createFolderMatrix([], data.fileManager) ));
+    //     // dispatch(changeFolder(data.fileManager[0].id));
+    //   })
+    //   .catch(error => {this.setState({error}); });
+
+    // Fetch Source Json data.
+    fetch(SourceData).then(response => response.json())
       .then(data => {
         // Redux action.
-        // utils.createFolderMatrix([], data.fileManager);
-        dispatch(setFileManagerData(data.fileManager[0], utils.createFolderMatrix([], data.fileManager) ));
-        dispatch(changeFolder(data.fileManager[0].path));
+        const parsedFolders = utils.parseTreeWithBreadcrumb(data.document_folder);
+        const flatFolders = utils.convertToFlatTree([], parsedFolders);
+        const docFiles = data.document;
+        dispatch(setFileManagerData(parsedFolders[0], flatFolders, docFiles));
+        dispatch(changeFolder('0'));
       })
       .catch(error => {this.setState({error}); });
 

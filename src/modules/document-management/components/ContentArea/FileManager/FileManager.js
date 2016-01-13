@@ -20,19 +20,17 @@ class FileManager extends React.Component {
 
   // Render method.
   render() {
-    const {path, data} = this.props;
-    const breadcrumbData = path ? path : '';
-    const fileManagerData = data ? data : [];
+    const {folderData, breadcrumbData} = this.props;
 
     return (
       <div>
         {/* File Manager Breadcrumb */}
-        <FileManagerBreadcrumb path={breadcrumbData} />
+        <FileManagerBreadcrumb data={breadcrumbData} />
         <div className="card">
           {/* File Manager Header */}
           <FileManagerHeader />
           {/* File Manager Rows */}
-          <FileManagerRows data={fileManagerData} />
+          <FileManagerRows data={folderData} />
         </div>
       </div>
     );
@@ -41,8 +39,8 @@ class FileManager extends React.Component {
 
 // Validation.
 FileManager.propTypes = {
-  data: React.PropTypes.array,
-  path: React.PropTypes.string,
+  folderData: React.PropTypes.array,
+  breadcrumbData: React.PropTypes.array,
   state: React.PropTypes.object
 };
 

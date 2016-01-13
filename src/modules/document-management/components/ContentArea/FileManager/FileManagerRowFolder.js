@@ -18,13 +18,14 @@ class FileManagerRowFolder extends React.Component {
   handleClick() {
     const { dispatch, data } = this.props;
     // Redux action.
-    dispatch(changeFolder(data.path));
+    dispatch(changeFolder(data.folder_id));
   }
 
   // Render method.
   render() {
     const folderData = this.props.data;
-    const folderName = folderData.name;
+    const folderName = folderData.folder_name;
+    const folderDate = folderData.folder_updated_date;
 
     return (
       <ListGroupItem onClick={this.handleClick.bind(this)}>
@@ -39,7 +40,7 @@ class FileManagerRowFolder extends React.Component {
           <Col sm={1} className="text-center hidden-xs" />
           <Col sm={2} className="text-center text-left-xs">
             <span className="visible-xs-inline">Date Modified: </span>
-            11/8/2015
+            {folderDate}
           </Col>
         </Row>
       </ListGroupItem>

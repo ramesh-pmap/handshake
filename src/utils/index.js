@@ -3,7 +3,8 @@ import title from './_title';
 import trim from './_trim';
 import toggleClass from './_toggle';
 import updateSidePanelWidth from './_updateSidePanelWidth';
-import createFolderMatrix from './_createFolderMatrix';
+import convertToFlatTree from './_convertToFlatTree';
+import parseTreeWithBreadcrumb from './_parseTreeWithBreadcrumb';
 
 // Export object.
 export default {
@@ -11,5 +12,6 @@ export default {
   trim,
   toggleClass,
   updateSidePanelWidth,
-  createFolderMatrix
+  convertToFlatTree,
+  parseTreeWithBreadcrumb
 };

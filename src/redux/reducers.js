@@ -26,7 +26,8 @@ function docMgtAppReducer(state = {}, action = {}) {
   case CHANGE_FOLDER:
     // console.log('CHANGE_FOLDER Action:', action);
     return Object.assign({}, state, {
-      currentFolderPath: action.path,
+      currentFolderId: action.id
+      // currentFolderPath: action.path
     });
   case SELECT_FILE:
     // console.log('SELECT_FILE Action:', action);
@@ -36,8 +37,9 @@ function docMgtAppReducer(state = {}, action = {}) {
   case SET_FILE_MANAGER_DATA:
     // console.log('SET_FILE_MANAGER_DATA Action:', action);
     return Object.assign({}, state, {
-      fileManager: action.dataTree,
-      fileMatrix: action.matrix
+      docMaster: action.dataMaster,
+      docFolders: action.dataFolders,
+      docFiles: action.dataFiles,
     });
   case SET_SIDEBAR_HEIGHT:
     // console.log('SET_SIDEBAR_HEIGHT Action:', action);
