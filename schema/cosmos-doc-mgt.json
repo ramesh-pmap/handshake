@@ -52,7 +52,7 @@
   "document" : [
     {
       "doc_id" : "",
-      "folder_id" : "",
+      "parent_folder_id" : "",
       "doc_type_id" : "",
       "doc_level" : "",
       "doc_status_id" : "",
