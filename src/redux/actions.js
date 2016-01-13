@@ -7,7 +7,8 @@ import {
   SET_SIDEBAR_HEIGHT,
   SET_CONTENT_AREA_VIEW,
   SET_RIGHT_PANEL_AREA_VIEW,
-  IFRAME_SOURCE
+  IFRAME_SOURCE,
+  SEARCHING_FOR
 } from './constants';
 
  // Action creators
@@ -45,4 +46,8 @@ export function setRightPanelAreaView(value) {
 
 export function changeFrameSource(value) {
   return { type: IFRAME_SOURCE, value };
+}
+
+export function changeSearchingFor(value) {
+  return { type: SEARCHING_FOR, value };
 }

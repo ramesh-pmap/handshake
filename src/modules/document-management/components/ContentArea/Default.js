@@ -38,7 +38,7 @@ class Default extends React.Component {
 
     return (
       <div>
-        <DocumentListHeader />
+        <DocumentListHeader loadContentAreaView={this.props.loadContentAreaView} />
         {/* FileManager component */}
         <FileManager data={fileManagerData} />
       </div>
@@ -48,6 +48,7 @@ class Default extends React.Component {
 
 // propTypes.
 Default.propTypes = {
+  loadContentAreaView: React.PropTypes.func,
   dispatch: React.PropTypes.func,
   state: React.PropTypes.object
 };

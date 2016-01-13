@@ -31,9 +31,9 @@ class Layout extends React.Component {
       <div id="shellWrapper" className={`${toggle}`}>
         <Sidebar title="mars" />
         <Header onUserToggle={this.handleUserToggle.bind(this)} />
-        <div className="page-content-wrapper">
+        {/* <div className="page-content-wrapper"> */}
           {this.props.children}
-        </div>
+        {/* </div> */}
       </div>
     );
   }

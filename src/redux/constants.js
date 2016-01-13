@@ -12,6 +12,8 @@ export const SET_CONTENT_AREA_VIEW = 'SET_CONTENT_AREA_VIEW';
 export const DEFAULT = 'DEFAULT';
 export const PREVIEW = 'PREVIEW';
 export const UPLOAD = 'UPLOAD';
+export const SEARCH_RESULTS = 'SEARCH_RESULTS';
+export const SEARCHING_FOR = 'SEARCHING_FOR';
 
 // Right Panel constants.
 export const SET_RIGHT_PANEL_AREA_VIEW = 'SET_RIGHT_PANEL_AREA_VIEW';
