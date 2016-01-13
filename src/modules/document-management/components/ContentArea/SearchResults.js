@@ -3,6 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 // Components.
+import DocumentListHeader from './ContentAreaHeader';
 
 // Define class.
 class SearchResults extends React.Component {
@@ -16,7 +17,8 @@ class SearchResults extends React.Component {
   render() {
     return (
       <div>
-        Search results page
+        <DocumentListHeader customTitle="Search" loadContentAreaView={this.props.loadContentAreaView} />
+        <h1>Search results page</h1>
       </div>
     );
   }
@@ -24,6 +26,7 @@ class SearchResults extends React.Component {
 
 // propTypes.
 SearchResults.propTypes = {
+  loadContentAreaView: React.PropTypes.func,
   dispatch: React.PropTypes.func,
   state: React.PropTypes.object
 };

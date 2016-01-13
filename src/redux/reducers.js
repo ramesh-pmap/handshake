@@ -7,6 +7,7 @@ import {
   SET_CONTENT_AREA_VIEW,
   SET_RIGHT_PANEL_AREA_VIEW,
   IFRAME_SOURCE,
+  SEARCHING_FOR
 } from './constants';
 
 function docMgtAppReducer(state = {}, action = {}) {
@@ -51,6 +52,11 @@ function docMgtAppReducer(state = {}, action = {}) {
     // console.log('IFRAME_SOURCE Action:', action);
     return Object.assign({}, state, {
       frameUrl: action.value
+    });
+  case SEARCHING_FOR:
+    // console.log('IFRAME_SOURCE Action:', action);
+    return Object.assign({}, state, {
+      searchingFor: action.value
     });
   default:
     return state;

@@ -9,7 +9,7 @@ import { DEFAULT, UPLOAD, SEARCH_RESULTS } from '../../../../redux/constants';
 import {Row, Col, /* ListGroup, ListGroupItem, */ ButtonGroup, DropdownButton, MenuItem, Input} from 'react-bootstrap';
 import Icon from 'react-fa';
 
-import utils from '../../../../utils';
+// import utils from '../../../../utils';
 
 // Define const.
 const ALLDOCS_TITLE = 'All Documents';
@@ -26,11 +26,18 @@ class ContentAreaHeader extends React.Component {
 
     this.state = {
       showResults: '',
-      sectionTitle: ALLDOCS_TITLE
+      sectionTitle: this.props.customTitle || ALLDOCS_TITLE
     };
   }
 
-  // Search & results.
+  // Search Field.
+  handleSearchFieldOnChange(e) {
+    // console.log('Search:', e.target.value);
+    this.setState({ sectionTitle: e.target.value });
+    // const { state } = this.props;
+    // const leftSidebarOpened = state.leftSidebarOpened;
+    // utils.updateSidePanelWidth(leftSidebarOpened);
+  }
   onFocus() {
     this.setState({
       showResults: 'results_wrapper--open'
@@ -61,13 +68,6 @@ class ContentAreaHeader extends React.Component {
       this.state.sectionTitle = ALLDOCS_TITLE;
       this.props.loadContentAreaView(view);
     }
-  }
-
-  handleSearchFieldOnChange(e) {
-    e.preventDefault();
-    const { state } = this.props;
-    const leftSidebarOpened = state.leftSidebarOpened;
-    utils.updateSidePanelWidth(leftSidebarOpened);
   }
 
   // Render method.
@@ -145,6 +145,7 @@ class ContentAreaHeader extends React.Component {
 
 // Parent Functions.
 ContentAreaHeader.propTypes = {
+  customTitle: React.PropTypes.string,
   loadContentAreaView: React.PropTypes.func,
   dispatch: React.PropTypes.func,
   state: React.PropTypes.object
