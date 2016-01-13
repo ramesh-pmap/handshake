@@ -12,11 +12,6 @@ class Default extends React.Component {
   constructor(props) {
     // Pass `props` into scope.
     super(props);
-
-    this.state = {
-      selectedKey: 'default',
-      selectedValue: 'All Tasks',
-    };
   }
 
 
@@ -24,12 +19,10 @@ class Default extends React.Component {
   render() {
     // File Manager data
     const { state } = this.props;
-    let breadcrumbData = [];
-    let folderData = []; // state.currentFolderChildren ? state.currentFolderChildren : [];
-
     const currentId = state.currentFolderId;
-    // const currentPath = state.currentFolderPath;
     const docFolders = state.docFolders;
+    let folderData = [];
+    let breadcrumbData = [];
 
     if (docFolders) {
       for (let i = 0; i < docFolders.length; i++) {
@@ -42,7 +35,7 @@ class Default extends React.Component {
 
     return (
       <div>
-        <DocumentListHeader loadContentAreaView={this.props.loadContentAreaView} />
+        <DocumentListHeader />
         {/* FileManager component */}
         <FileManager folderData={folderData} breadcrumbData={breadcrumbData} />
       </div>
@@ -52,7 +45,6 @@ class Default extends React.Component {
 
 // propTypes.
 Default.propTypes = {
-  loadContentAreaView: React.PropTypes.func,
   dispatch: React.PropTypes.func,
   state: React.PropTypes.object
 };

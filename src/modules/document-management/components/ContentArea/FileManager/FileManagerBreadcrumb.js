@@ -26,12 +26,13 @@ class FileManagerBreadcrumb extends React.Component {
     const breadcrumbsData = this.props.data;
     let breadcrumbs = [];
     // Work in progress.
-    breadcrumbs.push(<BreadcrumbItem onClick={this.handleClick.bind(this, '0')} key={'0'}><Icon name="home"/></BreadcrumbItem>);
 
     if (breadcrumbsData) {
       breadcrumbsData.forEach(item => {
         // console.log('item: ', breadcrumbsData);
-        breadcrumbs.push(<BreadcrumbItem onClick={this.handleClick.bind(this, item.breadcrumb_id)} key={item.breadcrumb_id}>{item.breadcrumb_name}</BreadcrumbItem>);
+        breadcrumbs.push(<BreadcrumbItem onClick={this.handleClick.bind(this, item.breadcrumb_id)} key={item.breadcrumb_id + item.breadcrumb_name}>{item.breadcrumb_name}</BreadcrumbItem>);
+        // console.log(item);
+
         // console.log('breadcrumb item:', item);
         // if (item !== '') {
         //   sPath += '/' + item;
@@ -56,7 +57,8 @@ class FileManagerBreadcrumb extends React.Component {
 
     return (
       <Breadcrumb>
-        {breadcrumbs}
+        <BreadcrumbItem onClick={this.handleClick.bind(this, '0')} key={'0'}><Icon name="home"/></BreadcrumbItem>
+        {breadcrumbs.reverse()}
       </Breadcrumb>
     );
   }
