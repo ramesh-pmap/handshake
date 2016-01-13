@@ -1,7 +1,7 @@
 {
   "document_type" : [
     {
-      "doc_type_id" : 0,
+      "doc_type_id" : "",
       "doc_type_name" : "",
       "doc_type_is_office" : "",
       "doc_type_created_by" : "",
@@ -13,7 +13,7 @@
   ],
   "document_status" : [
     {
-      "doc_status_id" : 0,
+      "doc_status_id" : "",
       "doc_status_name" : "",
       "doc_status_description" : "",
       "doc_status_created_by" : "",
@@ -25,15 +25,15 @@
   ],
   "document_level" : [
     {
-      "doc_level" : 0,
+      "doc_level" : "",
       "doc_level_description" : "Level 1",
       "doc_level_is_active" : true
     }
   ],
   "document_folder" : [
     {
-      "folder_id" : 0,
-      "parent_folder_id" : 0,
+      "folder_id" : "",
+      "parent_folder_id" : "",
       "folder_name" : "",
       "folder_comment" : "",
       "folder_status" : "",
@@ -51,14 +51,15 @@
   ],
   "document" : [
     {
-      "doc_id" : 0,
-      "doc_type_id" : 0,
-      "doc_level" : 0,
-      "doc_status_id" : 0,
-      "usr_company_id" : 0,
-      "usr_location_id" : 0,
+      "doc_id" : "",
+      "folder_id" : "",
+      "doc_type_id" : "",
+      "doc_level" : "",
+      "doc_status_id" : "",
+      "usr_company_id" : "",
+      "usr_location_id" : "",
       "viewer_list_array" : [],
-      "user_id" : 0,
+      "user_id" : "",
       "doc_is_active" : true,
       "doc_is_private" : false,
       "doc_title" : "",
@@ -68,7 +69,7 @@
       "doc_created_by" : "",
       "doc_created_date" : "",
       "doc_description" : "",
-      "doc_display_folders" : "",
+      "doc_display_folders" : [],
       "doc_expiration_date" : "",
       "doc_issued_date" : "",
       "doc_keywords" : "",
