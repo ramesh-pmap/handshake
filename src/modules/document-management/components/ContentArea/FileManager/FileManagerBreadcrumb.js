@@ -28,36 +28,19 @@ class FileManagerBreadcrumb extends React.Component {
     // Work in progress.
 
     if (breadcrumbsData) {
-      breadcrumbsData.forEach(item => {
-        // console.log('item: ', breadcrumbsData);
-        breadcrumbs.push(<BreadcrumbItem onClick={this.handleClick.bind(this, item.breadcrumb_id)} key={item.breadcrumb_id + item.breadcrumb_name}>{item.breadcrumb_name}</BreadcrumbItem>);
-        // console.log(item);
-
-        // console.log('breadcrumb item:', item);
-        // if (item !== '') {
-        //   sPath += '/' + item;
-        //   for (let i = 0; i < fileMatrix.length; i++) {
-        //     if (fileMatrix[i].path === sPath) {
-        //       if (item === lastItem) {
-        //         breadcrumbs.push(<BreadcrumbItem active key={item}>{item}</BreadcrumbItem>);
-        //       } else {
-        //         breadcrumbs.push(<BreadcrumbItem onClick={this.handleClick.bind(this, fileMatrix[i])} key={item}>{item}</BreadcrumbItem>);
-        //       }
-        //     }
-        //   }
-        // } else {
-        //   if (fileMatrix) {
-        //     if (fileMatrix[0].name === 'root' && breadcrumbs.length === 0) {
-        //       breadcrumbs.push(<BreadcrumbItem onClick={this.handleClick.bind(this, fileMatrix[0])} key={fileMatrix[0].id}><Icon name="home"/></BreadcrumbItem>);
-        //     }
-        //   }
-        // }
+      breadcrumbsData.forEach((item, index) => {
+        // Breadcrumb array is reversed.
+        if (index === 0) {
+          breadcrumbs.push(<BreadcrumbItem active key={item.breadcrumb_id}>{item.breadcrumb_name}</BreadcrumbItem>);
+        } else {
+          breadcrumbs.push(<BreadcrumbItem onClick={this.handleClick.bind(this, item.breadcrumb_id)} key={item.breadcrumb_id + item.breadcrumb_name}>{item.breadcrumb_name}</BreadcrumbItem>);
+        }
       });
     }
 
     return (
       <Breadcrumb>
-        <BreadcrumbItem onClick={this.handleClick.bind(this, '0')} key={'0'}><Icon name="home"/></BreadcrumbItem>
+        <BreadcrumbItem onClick={this.handleClick.bind(this, 0)} key={'0'}><Icon name="home"/></BreadcrumbItem>
         {breadcrumbs.reverse()}
       </Breadcrumb>
     );

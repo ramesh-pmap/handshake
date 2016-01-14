@@ -61,7 +61,7 @@ class Page extends React.Component {
         const flatFolders = utils.convertToFlatTree([], parsedFolders);
         const docFiles = data.document;
         dispatch(setFileManagerData(parsedFolders[0], flatFolders, docFiles));
-        dispatch(changeFolder('0'));
+        dispatch(changeFolder(0));
       })
       .catch(error => {this.setState({error}); });
 

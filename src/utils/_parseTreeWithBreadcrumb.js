@@ -35,5 +35,5 @@ export default function parseTreeWithBreadcrumb(data) {
     }
   });
 
-  return [{'folder_id': '0', 'folder_name': 'root', 'children': tree }];
+  return [{'folder_id': 0, 'folder_name': 'root', 'children': tree }];
 }

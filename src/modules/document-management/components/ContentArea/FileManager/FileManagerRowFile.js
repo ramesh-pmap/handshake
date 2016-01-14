@@ -30,13 +30,14 @@ class FileManagerRowFile extends React.Component {
   // Render method.
   render() {
     const fileData = this.props.data;
+    const typesMapping = {'doc': 'word', 'xls': 'excel', 'jpg': 'image'};
 
-    const fileId = fileData.id;
-    const fileName = fileData.name;
-    const fileType = fileData.type;
+    const fileId = fileData.doc_id;
+    const fileName = fileData.file_name;
+    const fileType = typesMapping[fileData.file_type] ? typesMapping[fileData.file_type] : fileData.file_type;
     const fileVersion = fileData.doc_version;
     const fileModifiedDate = fileData.doc_modified_date;
-    const fileStatus = fileData.doc_status_name;
+    const fileStatus = fileData.doc_status_id;
 
     return (
       <ListGroupItem onClick={this.clickListGroupItemHandler.bind(this, fileId)}>

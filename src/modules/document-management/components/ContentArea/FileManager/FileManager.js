@@ -20,7 +20,7 @@ class FileManager extends React.Component {
 
   // Render method.
   render() {
-    const {folderData, breadcrumbData} = this.props;
+    const {foldersData, filesData, breadcrumbData, currentFolderId} = this.props;
 
     return (
       <div>
@@ -30,7 +30,7 @@ class FileManager extends React.Component {
           {/* File Manager Header */}
           <FileManagerHeader />
           {/* File Manager Rows */}
-          <FileManagerRows data={folderData} />
+          <FileManagerRows foldersData={foldersData} filesData={filesData} currentFolderId={currentFolderId}/>
         </div>
       </div>
     );
@@ -39,8 +39,10 @@ class FileManager extends React.Component {
 
 // Validation.
 FileManager.propTypes = {
-  folderData: React.PropTypes.array,
+  foldersData: React.PropTypes.array,
+  filesData: React.PropTypes.array,
   breadcrumbData: React.PropTypes.array,
+  currentFolderId: React.PropTypes.number,
   state: React.PropTypes.object
 };
 

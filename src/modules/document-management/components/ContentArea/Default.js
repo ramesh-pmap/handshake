@@ -21,6 +21,7 @@ class Default extends React.Component {
     const { state } = this.props;
     const currentId = state.currentFolderId;
     const docFolders = state.docFolders;
+    const filesData = state.docFiles;
     let folderData = [];
     let breadcrumbData = [];
 
@@ -37,7 +38,7 @@ class Default extends React.Component {
       <div>
         <DocumentListHeader />
         {/* FileManager component */}
-        <FileManager folderData={folderData} breadcrumbData={breadcrumbData} />
+        <FileManager foldersData={folderData} breadcrumbData={breadcrumbData} filesData={filesData} currentFolderId={currentId} />
       </div>
     );
   }
