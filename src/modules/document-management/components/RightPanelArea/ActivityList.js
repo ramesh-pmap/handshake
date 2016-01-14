@@ -6,6 +6,9 @@ import { connect } from 'react-redux';
 import {ButtonGroup, ListGroup, ListGroupItem, DropdownButton, MenuItem} from 'react-bootstrap';
 import Icon from 'react-fa';
 
+// Utilities.
+import { Scrollbars } from 'react-custom-scrollbars';
+
 // Define class.
 class ActivityList extends React.Component {
   constructor(props) {
@@ -329,7 +332,10 @@ class ActivityList extends React.Component {
           </ButtonGroup>
         </div>
 
-        {docList}
+        <Scrollbars>
+          {docList}
+          <br /><br />
+        </Scrollbars>
 
       </div>
     );
