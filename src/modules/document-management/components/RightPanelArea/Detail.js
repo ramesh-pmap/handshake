@@ -32,34 +32,67 @@ class Detail extends React.Component {
   constructor(props) {
     // Pass `props` into scope.
     super(props);
-
-    this.state = {
-      panelToShow: DETAIL_PANEL
-    };
   }
 
   showDetailForm(e) {
     e.preventDefault();
-    this.props.showDetailForm();
   }
 
   showPreview(e) {
     e.preventDefault();
-    this.props.showPreview();
   }
 
-  showDetailPreview() {
-    this.setState({ panelToShow: DETAIL_PANEL });
+  showDetailPreview(e) {
+    e.preventDefault();
   }
 
-  showWorkflowPreview() {
-    this.setState({ panelToShow: WORKFLOW_PANEL });
+  showWorkflowPreview(e) {
+    e.preventDefault();
   }
 
   // Render method.
   render() {
+    const { state } = this.props;
+    const currentFileId = state.currentFileId;
+    const docFiles = state.docFiles;
+    let fileData = [];
+
+    // Find selected file in the array.
+    if (docFiles) {
+      for (let i = 0; i < docFiles.length; i++) {
+        if (docFiles[i].doc_id === currentFileId) {
+          fileData = docFiles[i];
+        }
+      }
+    }
+
+    // Get file details.
+    const docTitle = fileData.doc_title;
+    const docId = fileData.doc_id;
+    const docVersion = fileData.doc_version;
+    const docOwner = fileData.doc_owner;
+    const docAuthor = fileData.doc_author;
+    const fileUploadedBy = fileData.file_uploaded_by;
+    const fileUploadedDate = fileData.file_uploaded_date;
+    const docModifiedBy = fileData.doc_modified_by;
+    const docModifiedDate = fileData.doc_modified_date;
+    const docStatusId = fileData.doc_status_id;
+    const fileType = fileData.file_type;
+    const docLevel = fileData.doc_level;
+    const docDisplayFolders = fileData.doc_display_folders;
+    const docDescription = fileData.doc_description;
+    const docKeywords = fileData.doc_keywords;
+    const extReferenceDocuments = fileData.ext_reference_documents;
+    const extRegulatoryRef = fileData.ext_regulatory_ref;
+    const docReviewDate = fileData.doc_review_date;
+    const docRetentionPeriod = fileData.doc_retention_period;
+    const docChangeRequest = fileData.doc_change_request;
+    const fileName = fileData.file_name;
+    const fileSize = fileData.file_size;
+
+
     // Panels
-    const panelToShow = this.state.panelToShow;
+    const panelToShow = DETAIL_PANEL;
     let panelsArea;
 
     switch (panelToShow) {
@@ -81,28 +114,28 @@ class Detail extends React.Component {
           <hr />
           */}
 
-          <FormControls.Static label="Title" value="Doc Title" />
-          <FormControls.Static label="Internal Document ID" value="123456789-0" />
-          <FormControls.Static label="Version" value="2.0"/>
-          <FormControls.Static label="Document Owner" value="John Doe"/>
-          <FormControls.Static label="Author" value="John Doe"/>
-          <FormControls.Static label="Uploaded/Referenced By" value="John Doe"/>
-          <FormControls.Static label="Date Uploaded/Referenced" value="11/7/2015"/>
-          <FormControls.Static label="Modified By" value="John Doe"/>
-          <FormControls.Static label="Modified Date" value="11/8/2015"/>
-          <FormControls.Static label="Document Status" value="Pending Approval"/>
-          <FormControls.Static label="Document Type" value="Document"/>
-          <FormControls.Static label="Document Level" value="Level 1"/>
-          <FormControls.Static label="Display Folders" value="-"/>
-          <FormControls.Static label="Description" value="John Doe"/>
-          <FormControls.Static label="Keywords/Tags" value="-"/>
-          <FormControls.Static label="Reference Documents" value="-"/>
-          <FormControls.Static label="Regulatory References" value="-"/>
-          <FormControls.Static label="Review Date" value="12/20/2015"/>
-          <FormControls.Static label="Retention Period" value="-"/>
-          <FormControls.Static label="Reason for Change" value="Slight revisions"/>
-          <FormControls.Static label="File Name" value="OSHA_V2.0.docx"/>
-          <FormControls.Static label="File Size" value="2.5 MB"/>
+          <FormControls.Static label="Title" value={docTitle} />
+          <FormControls.Static label="Internal Document ID" value={docId} />
+          <FormControls.Static label="Version" value={docVersion} />
+          <FormControls.Static label="Document Owner" value={docOwner} />
+          <FormControls.Static label="Author" value={docAuthor} />
+          <FormControls.Static label="Uploaded/Referenced By" value={fileUploadedBy} />
+          <FormControls.Static label="Date Uploaded/Referenced" value={fileUploadedDate} />
+          <FormControls.Static label="Modified By" value={docModifiedBy} />
+          <FormControls.Static label="Modified Date" value={docModifiedDate} />
+          <FormControls.Static label="Document Status" value={docStatusId} />
+          <FormControls.Static label="Document Type" value={fileType} />
+          <FormControls.Static label="Document Level" value={docLevel} />
+          <FormControls.Static label="Display Folders" value={docDisplayFolders} />
+          <FormControls.Static label="Description" value={docDescription} />
+          <FormControls.Static label="Keywords/Tags" value={docKeywords} />
+          <FormControls.Static label="Reference Documents" value={extReferenceDocuments} />
+          <FormControls.Static label="Regulatory References" value={extRegulatoryRef} />
+          <FormControls.Static label="Review Date" value={docReviewDate} />
+          <FormControls.Static label="Retention Period" value={docRetentionPeriod} />
+          <FormControls.Static label="Reason for Change" value={docChangeRequest} />
+          <FormControls.Static label="File Name" value={fileName} />
+          <FormControls.Static label="File Size" value={fileSize} />
         </div>
       );
       break;

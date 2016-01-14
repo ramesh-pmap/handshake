@@ -2,7 +2,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { selectFile } from '../../../../../redux/actions';
+import { selectFile, setRightPanelAreaView } from '../../../../../redux/actions';
+import { DETAIL } from '../../../../../redux/constants';
 
 // Core components.
 import {Row, Col, Button, ListGroupItem} from 'react-bootstrap';
@@ -18,8 +19,9 @@ class FileManagerRowFile extends React.Component {
   clickListGroupItemHandler(fileId, e) {
     const { dispatch } = this.props;
     e.preventDefault();
-    // Redux action.
+    // Redux actions.
     dispatch(selectFile(fileId));
+    dispatch(setRightPanelAreaView(DETAIL));
   }
 
   clickButtonHandler(e) {
