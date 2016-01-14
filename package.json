@@ -73,7 +73,17 @@
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.0",
     "webpack-require": "0.0.15",
-    "whatwg-fetch": "^0.10.1"
+    "whatwg-fetch": "^0.10.1",
+
+    // Dependencies of react-custom-scrollbars
+    "dom-css": "^2.0.0",
+    "add-px-to-style": "^1.0.0",
+    "prefix-style": "^2.0.1",
+    "to-camel-case": "^0.2.1",
+    "to-space-case": "^0.1.2",
+    "to-no-case": "^0.1.1",
+    "raf": "^3.1.0",
+    "performance-now": "^0.2.0",
   },
   "comments": {
     "babel-core": "es6",
