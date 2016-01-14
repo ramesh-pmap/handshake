@@ -1,10 +1,10 @@
 import {
+  WINDOW_DIMENSIONS,
   TOGGLE_LEFT_SIDEBAR,
   TOGGLE_RIGHT_SIDEBAR,
   CHANGE_FOLDER,
   SELECT_FILE,
   SET_FILE_MANAGER_DATA,
-  SET_SIDEBAR_HEIGHT,
   SET_CONTENT_AREA_VIEW,
   SET_RIGHT_PANEL_AREA_VIEW,
   IFRAME_SOURCE,
@@ -12,6 +12,10 @@ import {
 } from './constants';
 
  // Action creators
+export function getWindowDimensions(value) {
+  return { type: WINDOW_DIMENSIONS, value };
+}
+
 export function toggleLeftSidebar(value) {
   return { type: TOGGLE_LEFT_SIDEBAR, value };
 }
@@ -30,10 +34,6 @@ export function selectFile(value) {
 
 export function setFileManagerData(dataMaster, dataFolders, dataFiles) {
   return { type: SET_FILE_MANAGER_DATA, dataMaster, dataFolders, dataFiles};
-}
-
-export function setSidebarHeight(value) {
-  return { type: SET_SIDEBAR_HEIGHT, value };
 }
 
 export function setContentAreaView(value) {

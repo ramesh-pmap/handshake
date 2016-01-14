@@ -1,11 +1,12 @@
 // Action types.
+export const WINDOW_DIMENSIONS = 'WINDOW_DIMENSIONS';
+
 export const TOGGLE_LEFT_SIDEBAR = 'TOGGLE_LEFT_SIDEBAR';
 export const TOGGLE_RIGHT_SIDEBAR = 'TOGGLE_RIGHT_SIDEBAR';
 
 export const CHANGE_FOLDER = 'CHANGE_FOLDER';
 export const SELECT_FILE = 'SELECT_FILE';
 export const SET_FILE_MANAGER_DATA = 'SET_FILE_MANAGER_DATA';
-export const SET_SIDEBAR_HEIGHT = 'SET_SIDEBAR_HEIGHT';
 
 // Main Content Area constants.
 export const SET_CONTENT_AREA_VIEW = 'SET_CONTENT_AREA_VIEW';

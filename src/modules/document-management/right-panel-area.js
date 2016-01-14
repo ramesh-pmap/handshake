@@ -1,12 +1,16 @@
 // Dependencies.
 import React from 'react';
 import { connect } from 'react-redux';
+import { getWindowDimensions } from '../../redux/actions';
 import { ACTIVITY, DETAIL, DETAILFORM } from '../../redux/constants';
 
 // Components.
 import DocumentActivityList from './components/RightPanelArea/ActivityList';
 import DocumentDetail from './components/RightPanelArea/Detail';
 import DocumentDetailForm from './components/RightPanelArea/DetailForm';
+
+// Utility methods.
+import utils from '../../utils';
 
 // Define class.
 class RightPanelArea extends React.Component {
@@ -15,9 +19,30 @@ class RightPanelArea extends React.Component {
     super(props);
   }
 
+  updateDimensions() {
+    const { state, dispatch } = this.props;
+    const leftSidebarOpened = state.leftSidebarOpened;
+    utils.updateSidePanelWidth(leftSidebarOpened);
+
+    const dimensions = utils.getWindowDimensions();
+    dispatch(getWindowDimensions(dimensions));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateDimensions.bind(this));
+  }
+
+  componentDidMount() {
+    // Update dimensions.
+    this.updateDimensions();
+    // Window Resizing.
+    window.addEventListener('resize', this.updateDimensions.bind(this));
+  }
+
   // Render method.
   render() {
     const { state } = this.props;
+    let sidebarHeight = state.windowDimensions.height;
 
     // Right Panel
     const currentView = state.rightPanelAreaView;
@@ -38,7 +63,7 @@ class RightPanelArea extends React.Component {
     }
 
     return (
-      <div>
+      <div className="sidebar" style={{height: sidebarHeight}}>
         {rightPanelArea}
       </div>
     );

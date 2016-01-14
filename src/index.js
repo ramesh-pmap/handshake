@@ -10,14 +10,18 @@ import { Provider } from 'react-redux';
 import Routes from './routes';
 import App from './app';
 import DocMgtApp from './redux/reducers';
-import { toggleLeftSidebar, toggleRightSidebar, changeFrameSource } from './redux/actions';
+import { getWindowDimensions, toggleLeftSidebar, toggleRightSidebar, changeFrameSource } from './redux/actions';
+import utils from './utils';
 
 // Stylesheets.
 import './styles/sass/andromeda/andromeda.scss';
 
 let store = createStore(DocMgtApp);
 
+const dimensions = utils.getWindowDimensions();
+
 // Set initial sidebar state;
+store.dispatch(getWindowDimensions(dimensions));
 store.dispatch(toggleLeftSidebar(true));
 store.dispatch(toggleRightSidebar(false));
 

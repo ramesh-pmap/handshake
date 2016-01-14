@@ -5,6 +5,7 @@ import toggleClass from './_toggle';
 import updateSidePanelWidth from './_updateSidePanelWidth';
 import convertToFlatTree from './_convertToFlatTree';
 import parseTreeWithBreadcrumb from './_parseTreeWithBreadcrumb';
+import getWindowDimensions from './_getWindowDimensions';
 
 // Export object.
 export default {
@@ -13,5 +14,6 @@ export default {
   toggleClass,
   updateSidePanelWidth,
   convertToFlatTree,
-  parseTreeWithBreadcrumb
+  parseTreeWithBreadcrumb,
+  getWindowDimensions
 };

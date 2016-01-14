@@ -1,7 +1,7 @@
 // Dependencies.
 import React from 'react';
 import { connect } from 'react-redux';
-import { changeFolder, setFileManagerData, setSidebarHeight, setContentAreaView, setRightPanelAreaView } from '../../redux/actions';
+import { changeFolder, setFileManagerData, setContentAreaView, setRightPanelAreaView } from '../../redux/actions';
 // import { DEFAULT, ACTIVITY } from '../../redux/constants';
 import { DEFAULT, PREVIEW, UPLOAD, ACTIVITY, DETAIL, DETAILFORM, SEARCH_RESULTS } from '../../redux/constants';
 
@@ -31,16 +31,6 @@ class Page extends React.Component {
     utils.title(props);
   }
 
-  updateDimensions() {
-    const { state } = this.props;
-    const leftSidebarOpened = state.leftSidebarOpened;
-    utils.updateSidePanelWidth(leftSidebarOpened);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateDimensions.bind(this));
-  }
-
   componentDidMount() {
     const { dispatch } = this.props;
     // Fetch Json data.
@@ -66,14 +56,9 @@ class Page extends React.Component {
       .catch(error => {this.setState({error}); });
 
     // Set initial state.
-    dispatch(setSidebarHeight(540));
+    // dispatch(setSidebarHeight(sidebarHeight));
     dispatch(setContentAreaView(DEFAULT));
     dispatch(setRightPanelAreaView(ACTIVITY));
-
-    // Update dimensions.
-    this.updateDimensions();
-    // Window Resizing.
-    window.addEventListener('resize', this.updateDimensions.bind(this));
   }
 
   handleContentButtonClick(view) {
@@ -88,8 +73,6 @@ class Page extends React.Component {
 
   // Render method.
   render() {
-    const { state } = this.props;
-
     return (
       <div>
         <Main>
@@ -111,10 +94,8 @@ class Page extends React.Component {
             </Col>
 
             <Col sm={3} id="doc_mgt-right_column" className="sidebar-wrapper">
-              <div className="sidebar" style={{height: state.sidebarHeight + 'px'}}>
-                {/* RightPanelArea component */}
-                <RightPanelArea />
-              </div>
+              {/* RightPanelArea component */}
+              <RightPanelArea />
             </Col>
           </Row>
 

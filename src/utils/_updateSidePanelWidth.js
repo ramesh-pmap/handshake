@@ -1,13 +1,11 @@
+import getWindowDimensions from './_getWindowDimensions';
+
 // Sidebar Panel Resizing.
 export default function(sidebarOpenedArg) {
   let sidePanel = document.querySelector('#doc_mgt-right_column');
   if (sidePanel != null) {
-    let w = window;
-    let d = document;
-    let e = d.documentElement;
-    let g = d.getElementsByTagName('body')[0];
-    let x = w.innerWidth || e.clientWidth || g.clientWidth;
-    // let y = w.innerHeight || e.clientHeight || g.clientHeight;
+    const dimensions = getWindowDimensions();
+    const x = dimensions.width;
 
     let navWidth = 230;
     let percentageWidth = Math.floor(x / 4);
