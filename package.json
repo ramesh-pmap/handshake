@@ -55,7 +55,6 @@
     "react": "^0.14.0",
     "react-bootstrap": "^0.27.2",
     "react-contextmenu": "^0.3.0",
-    "react-custom-scrollbars": "^2.0.1",
     "react-data-components": "^0.6.0",
     "react-dom": "^0.14.0",
     "react-dropzone": "^3.2.3",
@@ -73,16 +72,7 @@
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.0",
     "webpack-require": "0.0.15",
-    "whatwg-fetch": "^0.10.1",
-
-    "dom-css": "^2.0.0",
-    "add-px-to-style": "^1.0.0",
-    "prefix-style": "^2.0.1",
-    "to-camel-case": "^0.2.1",
-    "to-space-case": "^0.1.2",
-    "to-no-case": "^0.1.1",
-    "raf": "^3.1.0",
-    "performance-now": "^0.2.0"
+    "whatwg-fetch": "^0.10.1"
   },
   "comments": {
     "babel-core": "es6",
@@ -90,7 +80,6 @@
     "fs-extra": "add extra methods such as mkdir -p, cp -r, and rm -rf",
     "glob": "match files using the patterns the shell uses, like stars and stuff.",
     "marked": "markdown parser built for speed",
-    "react-fa": "Font Awesome icons as React components.",
-    "react-custom-scrollbars": "Dependencies of react-custom-scrollbars need to be explicitly set due to future updates in NPM 3+."
+    "react-fa": "Font Awesome icons as React components."
   }
 }
