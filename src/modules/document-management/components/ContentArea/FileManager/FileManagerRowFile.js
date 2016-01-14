@@ -30,7 +30,7 @@ class FileManagerRowFile extends React.Component {
   // Render method.
   render() {
     const fileData = this.props.data;
-    const typesMapping = {'doc': 'word', 'xls': 'excel', 'jpg': 'image'};
+    const typesMapping = {'doc': 'word', 'docx': 'word', 'xls': 'excel', 'jpg': 'image', 'tif': 'image', 'gif': 'image', 'png': 'image', 'ppt': 'powerpoint', 'pptx': 'powerpoint'};
 
     const fileId = fileData.doc_id;
     const fileName = fileData.file_name;

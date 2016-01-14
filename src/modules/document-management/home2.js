@@ -19,7 +19,7 @@ import utils from '../../utils';
 
 // Json file with folder structure data.
 // const FileManagerData = '../../../static/data/filemanager-data.json';
-const SourceData = '../../../static/data/documents-data.json';
+const SourceData = '../../../static/data/documents-data-SKF.json';
 
 // Define class.
 class Page extends React.Component {
