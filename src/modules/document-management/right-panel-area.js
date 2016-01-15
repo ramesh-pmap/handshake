@@ -22,9 +22,40 @@ class RightPanelArea extends React.Component {
   updateDimensions() {
     const { state, dispatch } = this.props;
     const leftSidebarOpened = state.leftSidebarOpened;
-    utils.updateSidePanelWidth(leftSidebarOpened);
+    // utils.updateSidePanelWidth(leftSidebarOpened);
+
+    const sidePanel = document.querySelector('#doc_mgt-right_column');
+    let columnWidth = this.props.columnWidth;
+    const totalColumnGrids = 12;
+    let calculatedColumnWidth = Math.round(columnWidth / totalColumnGrids * 100);
+    console.log(columnWidth, 'is', calculatedColumnWidth, '% of', totalColumnGrids, 'columns.');
 
     const dimensions = utils.getWindowDimensions();
+    const x = dimensions.width;
+
+    let navWidth = 230;
+    let percentageWidth = Math.floor(x * (calculatedColumnWidth / 100));
+    console.log((calculatedColumnWidth / 100));
+
+    if (leftSidebarOpened) {
+      percentageWidth = Math.floor((x - navWidth) / calculatedColumnWidth);
+    }
+    // console.log(x, navWidth, percentageWidth);
+    console.log('percentageWidth:', percentageWidth);
+
+    // console.log('============================');
+    // console.log('open:', leftSidebarOpened);
+    // console.log('x:', x);
+    // console.log('percentageWidth:', percentageWidth);
+    // console.log('navWidth:', navWidth);
+
+    // this.setState({width: x, height: y});
+    if (x >= 768) {
+      sidePanel.style.width = percentageWidth + 'px';
+    } else {
+      sidePanel.style.width = '100%';
+    }
+
     dispatch(getWindowDimensions(dimensions));
   }
 
@@ -72,6 +103,7 @@ class RightPanelArea extends React.Component {
 
 // propTypes.
 RightPanelArea.propTypes = {
+  columnWidth: React.PropTypes.number,
   dispatch: React.PropTypes.func,
   state: React.PropTypes.object
 };

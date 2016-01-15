@@ -9,7 +9,7 @@ import { DEFAULT, PREVIEW, UPLOAD, ACTIVITY, DETAIL, DETAILFORM, SEARCH_RESULTS 
 import {Row, Col} from 'react-bootstrap';
 
 // Layouts.
-import Main from '../../layouts/shell-demo/main';
+import Main from '../../layouts/main';
 
 import ContentArea from './content-area.js';
 import RightPanelArea from './right-panel-area.js';
@@ -73,11 +73,22 @@ class Page extends React.Component {
 
   // Render method.
   render() {
+    const { state } = this.props;
+    const isRightPanelOpen = state.rightPanelAreaToggle;
+
+    let leftColumnSize = 9;
+    let rightColumnSize = 3;
+    if ( !isRightPanelOpen ) {
+      leftColumnSize = 11;
+      rightColumnSize = 1;
+    }
+    // console.log(leftColumnSize, rightColumnSize);
+
     return (
       <div>
         <Main>
           <Row>
-            <Col sm={9} id="doc_mgt-left_column">
+            <Col sm={leftColumnSize} id="doc_mgt-left_column">
 
               <button onClick={this.handleContentButtonClick.bind(this, DEFAULT)} > Default </button>
               <button onClick={this.handleContentButtonClick.bind(this, PREVIEW)} > Preview </button>
@@ -93,9 +104,9 @@ class Page extends React.Component {
 
             </Col>
 
-            <Col sm={3} id="doc_mgt-right_column" className="sidebar-wrapper">
+            <Col sm={rightColumnSize} id="doc_mgt-right_column" className="sidebar-wrapper">
               {/* RightPanelArea component */}
-              <RightPanelArea />
+              <RightPanelArea columnWidth={rightColumnSize} />
             </Col>
           </Row>
 

@@ -61,7 +61,7 @@ class ContentArea extends React.Component {
         </div>
       );
     }
-    console.log('STATE', state);
+    // console.log('STATE', state);
 
     return (
       <div>

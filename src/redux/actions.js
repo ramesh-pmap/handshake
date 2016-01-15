@@ -5,6 +5,7 @@ import {
   CHANGE_FOLDER,
   SELECT_FILE,
   SET_FILE_MANAGER_DATA,
+  SET_RIGHT_PANEL_AREA_TOGGLE,
   SET_CONTENT_AREA_VIEW,
   SET_RIGHT_PANEL_AREA_VIEW,
   IFRAME_SOURCE,
@@ -38,6 +39,10 @@ export function setFileManagerData(dataMaster, dataFolders, dataFiles) {
 
 export function setContentAreaView(value) {
   return { type: SET_CONTENT_AREA_VIEW, value };
+}
+
+export function toggleRightPanelArea(value) {
+  return { type: SET_RIGHT_PANEL_AREA_TOGGLE, value };
 }
 
 export function setRightPanelAreaView(value) {
