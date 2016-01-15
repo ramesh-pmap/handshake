@@ -10,7 +10,7 @@ import { Provider } from 'react-redux';
 import Routes from './routes';
 import App from './app';
 import DocMgtApp from './redux/reducers';
-import { getWindowDimensions, toggleLeftSidebar, toggleRightSidebar, changeFrameSource } from './redux/actions';
+import { getWindowDimensions, toggleLeftSidebar, toggleRightSidebar, toggleRightPanelArea, changeFrameSource } from './redux/actions';
 import utils from './utils';
 
 // Stylesheets.
@@ -24,6 +24,7 @@ const dimensions = utils.getWindowDimensions();
 store.dispatch(getWindowDimensions(dimensions));
 store.dispatch(toggleLeftSidebar(true));
 store.dispatch(toggleRightSidebar(false));
+store.dispatch(toggleRightPanelArea(true));
 
 // Set initial sidebar state;
 store.dispatch(changeFrameSource('http://productfacelift.pmapconnect.com/AIMS/WRAIMS/CaseHistory/Case_History_listing.asp?ModuleId=15&Module_Id=15&LocationId=8790&Location_Id=8790'));

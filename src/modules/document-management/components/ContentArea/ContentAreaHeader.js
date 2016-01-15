@@ -36,7 +36,6 @@ class ContentAreaHeader extends React.Component {
     this.setState({ sectionTitle: e.target.value });
     // const { state } = this.props;
     // const leftSidebarOpened = state.leftSidebarOpened;
-    // utils.updateSidePanelWidth(leftSidebarOpened);
   }
   onFocus() {
     this.setState({
