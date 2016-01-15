@@ -37,7 +37,7 @@ class Header extends React.Component {
 
           <CollapsibleNav eventKey={0}>
             <ul className="nav navbar-nav navbar-right">
-              <li><Link to="/">Home</Link></li>
+              <li><Link to="/home">Home</Link></li>
               <li><Link to="/document-management">Document Mgt</Link></li>
             </ul>
           </CollapsibleNav>
