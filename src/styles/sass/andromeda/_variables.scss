@@ -38,6 +38,7 @@ $nav-profil-pattern: no-repeat;
 $nav-text-color: #A7B1C2;
 
 // Workflow Avatar Status Colors
-$approved: #3db535;
-$pending: darken(#facd19, 10%);
-$rejected: #d1111a;
+// $default-avatar: #EEEEEE;
+$approved-color: #3db535;
+$pending-color: #FBDB0C;
+$rejected-color: #d1111a;
