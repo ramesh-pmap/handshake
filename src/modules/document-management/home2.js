@@ -1,12 +1,11 @@
 // Dependencies.
 import React from 'react';
 import { connect } from 'react-redux';
-import { changeFolder, setFileManagerData, setContentAreaView, setRightPanelAreaView } from '../../redux/actions';
-// import { DEFAULT, ACTIVITY } from '../../redux/constants';
-import { DEFAULT, PREVIEW, UPLOAD, ACTIVITY, DETAIL, DETAILFORM, SEARCH_RESULTS } from '../../redux/constants';
+import { changeFolder, setFileManagerData, setContentAreaView, toggleRightSidebar, setRightPanelAreaView } from '../../redux/actions';
+import { DEFAULT, PREVIEW, UPLOAD, ACTIVITY, DETAIL, DETAILFORM, SEARCH_RESULTS, TOGGLE_RIGHT_SIDEBAR } from '../../redux/constants';
 
 // Core components.
-import {Row, Col} from 'react-bootstrap';
+import {Row, Col, ButtonGroup, Button} from 'react-bootstrap';
 
 // Layouts.
 import Main from '../../layouts/main';
@@ -71,16 +70,21 @@ class Page extends React.Component {
     dispatch(setRightPanelAreaView(view));
   }
 
+  handleRightSidePanelToggle() {
+    const { state, dispatch } = this.props;
+    dispatch(toggleRightSidebar(state.rightSidebarOpened));
+  }
+
   // Render method.
   render() {
     const { state } = this.props;
-    const isRightPanelOpen = state.rightPanelAreaToggle;
+    const isRightPanelOpen = state.rightSidebarOpened;
 
     let leftColumnSize = 9;
     let rightColumnSize = 3;
     if ( !isRightPanelOpen ) {
-      leftColumnSize = 11;
-      rightColumnSize = 1;
+      leftColumnSize = 12;
+      // rightColumnSize = 1;
     }
     // console.log(leftColumnSize, rightColumnSize);
 
@@ -90,14 +94,22 @@ class Page extends React.Component {
           <Row>
             <Col sm={leftColumnSize} id="doc_mgt-left_column">
 
-              <button onClick={this.handleContentButtonClick.bind(this, DEFAULT)} > Default </button>
-              <button onClick={this.handleContentButtonClick.bind(this, PREVIEW)} > Preview </button>
-              <button onClick={this.handleContentButtonClick.bind(this, UPLOAD)} > Upload </button>
-              <button onClick={this.handleContentButtonClick.bind(this, SEARCH_RESULTS)} > Search Results </button>
-              |
-              <button onClick={this.handleRightPanelButtonClick.bind(this, ACTIVITY)} > Activity List </button>
-              <button onClick={this.handleRightPanelButtonClick.bind(this, DETAIL)} > Detail </button>
-              <button onClick={this.handleRightPanelButtonClick.bind(this, DETAILFORM)} > Detail Form </button>
+              <ButtonGroup>
+                <Button bsStyle="default" bsSize="xs" onClick={this.handleContentButtonClick.bind(this, DEFAULT)}> Default </Button>
+                <Button bsStyle="default" bsSize="xs" onClick={this.handleContentButtonClick.bind(this, PREVIEW)}> Preview </Button>
+                <Button bsStyle="default" bsSize="xs" onClick={this.handleContentButtonClick.bind(this, UPLOAD)}> Upload </Button>
+                <Button bsStyle="default" bsSize="xs" onClick={this.handleContentButtonClick.bind(this, SEARCH_RESULTS)}> Search Results </Button>
+              </ButtonGroup>
+              &nbsp;
+              <ButtonGroup>
+                <Button bsStyle="default" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, ACTIVITY)}> Activity List </Button>
+                <Button bsStyle="default" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, DETAIL)}> Detail </Button>
+                <Button bsStyle="default" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, DETAILFORM)}> Detail Form </Button>
+              </ButtonGroup>
+              &nbsp;
+              <ButtonGroup>
+                <Button bsStyle="default" bsSize="xs" onClick={this.handleRightSidePanelToggle.bind(this, TOGGLE_RIGHT_SIDEBAR)}> Toggle Right Panel ({isRightPanelOpen}) </Button>
+              </ButtonGroup>
 
               {/* ContentArea component */}
               <ContentArea loadContentAreaView={this.handleContentButtonClick.bind(this)} />

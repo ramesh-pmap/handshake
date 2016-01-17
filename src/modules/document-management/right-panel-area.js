@@ -26,14 +26,15 @@ class RightPanelArea extends React.Component {
 
     const sidePanel = document.querySelector('#doc_mgt-right_column');
     let columnWidth = this.props.columnWidth;
+
     const totalColumnGrids = 12;
-    let calculatedColumnWidth = Math.round(columnWidth / totalColumnGrids * 100);
+    const calculatedColumnWidth = Math.round(columnWidth / totalColumnGrids * 100);
     console.log(columnWidth, 'is', calculatedColumnWidth, '% of', totalColumnGrids, 'columns.');
 
     const dimensions = utils.getWindowDimensions();
     const x = dimensions.width;
 
-    let navWidth = 230;
+    const navWidth = 230;
     let percentageWidth = Math.floor(x * (calculatedColumnWidth / 100));
     console.log((calculatedColumnWidth / 100));
 
@@ -66,7 +67,7 @@ class RightPanelArea extends React.Component {
   componentDidMount() {
     // Update dimensions.
     this.updateDimensions();
-    // Window Resizing.
+    // Window resizing.
     window.addEventListener('resize', this.updateDimensions.bind(this));
   }
 
@@ -75,7 +76,7 @@ class RightPanelArea extends React.Component {
     const { state } = this.props;
     let sidebarHeight = state.windowDimensions.height;
 
-    // Right Panel
+    // Right panel view.
     const currentView = state.rightPanelAreaView;
     let rightPanelArea;
 
@@ -93,8 +94,16 @@ class RightPanelArea extends React.Component {
       rightPanelArea = <DocumentActivityList />;
     }
 
+    // Toggle right panel.
+    const isRightPanelOpen = state.rightSidebarOpened;
+    let sidePanelDisplay = 'block';
+    if (!isRightPanelOpen) {
+      sidePanelDisplay = 'none';
+    }
+    // console.log(isRightPanelOpen, sidePanelDisplay);
+
     return (
-      <div className="sidebar" style={{height: sidebarHeight}}>
+      <div className="sidebar" style={{height: sidebarHeight, display: sidePanelDisplay}}>
         {rightPanelArea}
       </div>
     );

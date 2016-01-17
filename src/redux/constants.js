@@ -17,7 +17,6 @@ export const SEARCH_RESULTS = 'SEARCH_RESULTS';
 export const SEARCHING_FOR = 'SEARCHING_FOR';
 
 // Right Panel constants.
-export const SET_RIGHT_PANEL_AREA_TOGGLE = 'SET_RIGHT_PANEL_AREA_TOGGLE';
 export const SET_RIGHT_PANEL_AREA_VIEW = 'SET_RIGHT_PANEL_AREA_VIEW';
 export const ACTIVITY = 'ACTIVITY';
 export const DETAIL = 'DETAIL';

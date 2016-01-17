@@ -6,7 +6,6 @@ import {
   SELECT_FILE,
   SET_FILE_MANAGER_DATA,
   SET_CONTENT_AREA_VIEW,
-  SET_RIGHT_PANEL_AREA_TOGGLE,
   SET_RIGHT_PANEL_AREA_VIEW,
   IFRAME_SOURCE,
   SEARCHING_FOR
@@ -58,12 +57,6 @@ function docMgtAppReducer(state = {}, action = {}) {
     // console.log('SET_CONTENT_AREA_VIEW Action:', action);
     return Object.assign({}, state, {
       contentAreaView: action.value
-    });
-
-  case SET_RIGHT_PANEL_AREA_TOGGLE:
-    // console.log('SET_RIGHT_PANEL_AREA_TOGGLE Action:', action);
-    return Object.assign({}, state, {
-      rightPanelAreaToggle: action.value
     });
 
   case SET_RIGHT_PANEL_AREA_VIEW:
