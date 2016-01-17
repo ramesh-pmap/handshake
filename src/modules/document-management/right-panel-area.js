@@ -1,6 +1,7 @@
 // Dependencies.
 import React from 'react';
 import { connect } from 'react-redux';
+import { getWindowDimensions } from '../../redux/actions';
 import { ACTIVITY, DETAIL, DETAILFORM } from '../../redux/constants';
 
 import Icon from 'react-fa';
@@ -11,13 +12,30 @@ import DocumentDetail from './components/RightPanelArea/Detail';
 import DocumentDetailForm from './components/RightPanelArea/DetailForm';
 
 // Utility methods.
-// import utils from '../../utils';
+import utils from '../../utils';
 
 // Define class.
 class RightPanelArea extends React.Component {
   constructor(props) {
     // Pass `props` into scope.
     super(props);
+  }
+
+  updateDimensions() {
+    const { dispatch } = this.props;
+    const dimensions = utils.getWindowDimensions();
+    dispatch(getWindowDimensions(dimensions));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateDimensions.bind(this));
+  }
+
+  componentDidMount() {
+    // Update dimensions.
+    this.updateDimensions();
+    // Window resizing.
+    window.addEventListener('resize', this.updateDimensions.bind(this));
   }
 
   // Render method.
