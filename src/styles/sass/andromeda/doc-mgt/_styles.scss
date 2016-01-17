@@ -183,7 +183,8 @@ $search-expanded-width: 400px;
 .sidebar{
   // font-size: 10px;
   margin-left: 14px;
-  background: rgba(255,255,255, .5);
+  background: lighten($border-color, 10%);
+  border-left: 1px solid $border-color;
 
   .sidebar-details{
     padding: 0 20px;
@@ -210,6 +211,7 @@ $search-expanded-width: 400px;
       margin-bottom: 0;
     }
   }
+
   .sidebar-header-actions {
     line-height: 40px;
     margin-right: 10px;
@@ -329,6 +331,34 @@ $search-expanded-width: 400px;
   }
 }
 
+.sidebar-tabs{
+  position: absolute;
+  top: 6px;
+  left: -15px;
+
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li{
+    margin-bottom: 2px;
+
+    a{
+      display: block;
+      padding: 6px;
+      background: rgba(255,255,255, .8);
+      border: 1px solid $border-color;
+
+      &.active{
+        background: lighten($border-color, 10%);
+        border-right-color: lighten($border-color, 20%);
+      }
+    }
+  }
+}
+
 textarea{
   resize: none;
 }
@@ -434,19 +464,6 @@ textarea{
     margin: 5px;
   }
 }
-
-.fixed-title {
-  h3{
-    padding-top: 8px;
-  }
-  .fa {
-    margin: 10px 5px;
-  }
-  .btn {
-    margin: 5px;
-  }
-}
-
 
 .preview-panel{
   display: block;

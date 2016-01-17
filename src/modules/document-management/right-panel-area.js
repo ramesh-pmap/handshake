@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import { getWindowDimensions } from '../../redux/actions';
 import { ACTIVITY, DETAIL, DETAILFORM } from '../../redux/constants';
 
+import Icon from 'react-fa';
+
 // Components.
 import DocumentActivityList from './components/RightPanelArea/ActivityList';
 import DocumentDetail from './components/RightPanelArea/Detail';
@@ -108,6 +110,22 @@ class RightPanelArea extends React.Component {
           <div className="sidebar" style={sidebarStyles}>
             {rightPanelArea}
           </div>
+
+          <nav className="sidebar-tabs">
+            <ul>
+              <li>
+                <a href="#">
+                  <Icon name="info-circle" className="fa-fw" />
+                </a>
+              </li>
+              <li>
+                <a href="#" className="active">
+                  <Icon name="info-circle" className="fa-fw" />
+                </a>
+              </li>
+            </ul>
+          </nav>
+
         </div>
       </Col>
     );
