@@ -1,12 +1,48 @@
-#doc_mgt-left_column,
-#doc_mgt-right_column{
-  -webkit-transition: all .25s ease;
-  -moz-transition: all .25s ease;
-  transition: all .25s ease;
+.main-col-wrapper{
+  position: relative;
+
+  .main-col{
+    float: left;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    transition: all .25s ease;
+  }
+  .main-col-left{
+    // background: rgba(255,0,0,.4);
+  }
+  .main-col-right{
+    overflow-x: hidden;
+    // background: rgba(0,255,0,.25);
+  }
+
+  &.sidebar--open{
+    .main-col-left{
+      width: 75%;
+    }
+    .main-col-right{
+      width: 25%;
+    }
+  }
+
+  &.sidebar--closed{
+    .main-col-left{
+      width: calc(100% - 40px);
+    }
+    .main-col-right{
+      width: 40px;
+    }
+  }
 }
-#doc_mgt-left_column{
-  padding-right: 60px;
+
+@media (max-width: 767px){
+  .main-col-wrapper{
+    .main-col-left,
+    .main-col-right{
+      width: 100%;
+    }
+  }
 }
+
 
 .title-dropdown{
   margin-bottom: 0 !important;
@@ -182,7 +218,7 @@ $search-expanded-width: 400px;
 ---------------------------------------- */
 .sidebar{
   // font-size: 10px;
-  margin-left: 14px;
+  margin-left: 32px;
   background: lighten($border-color, 10%);
   border-left: 1px solid $border-color;
 
@@ -334,7 +370,7 @@ $search-expanded-width: 400px;
 .sidebar-tabs{
   position: absolute;
   top: 6px;
-  left: -15px;
+  left: 10px;
 
   ul{
     list-style: none;
@@ -372,7 +408,7 @@ textarea{
     position: fixed;
     top: 50px;
     // right: 0;
-    padding: 0;
+    padding: 0 0 0 6px;
 
     &.sidebar-wrapper--open{
       right: 15px !important;

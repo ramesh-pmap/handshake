@@ -58,7 +58,7 @@ class Sidebar extends React.Component {
           </NavItem>
         </LinkContainer>
 
-        <LinkContainer to="/document-management2">
+        <LinkContainer to="/document-management">
           <NavItem onClick={this.handleFrameUrlChange.bind(this, 'doc-mgt')}>
             <Icon name="file-text" className="fa-fw" />
             Documnent Management
