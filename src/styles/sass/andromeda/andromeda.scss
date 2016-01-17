@@ -41,3 +41,14 @@
 
 // Icon Grid.
 @import "doc-mgt/styles";
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  TEMPORARY!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+#doc_mgt-left_column,
+#doc_mgt-right_column{
+  -webkit-transition: width .25s ease-out;
+  -moz-transition: width .25s ease-out;
+  transition: width .25s ease-out;
+}
