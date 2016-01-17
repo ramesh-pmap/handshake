@@ -84,7 +84,7 @@ class Page extends React.Component {
     let rightColumnSize = 3;
     if ( !isRightPanelOpen ) {
       leftColumnSize = 12;
-      // rightColumnSize = 1;
+      rightColumnSize = 1;
     }
     // console.log(leftColumnSize, rightColumnSize);
 
@@ -109,7 +109,7 @@ class Page extends React.Component {
                 </ButtonGroup>
                 &nbsp;
                 <ButtonGroup>
-                  <Button bsStyle="default" bsSize="xs" onClick={this.handleRightSidePanelToggle.bind(this, TOGGLE_RIGHT_SIDEBAR)}> Toggle Right Panel ({isRightPanelOpen}) </Button>
+                  <Button bsStyle="default" bsSize="xs" onClick={this.handleRightSidePanelToggle.bind(this, TOGGLE_RIGHT_SIDEBAR)}> Toggle Right Panel ({state.rightSidebarOpened}) </Button>
                 </ButtonGroup>
               </div>
 

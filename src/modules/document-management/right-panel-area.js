@@ -70,12 +70,23 @@ class RightPanelArea extends React.Component {
   // Render method.
   render() {
     const { state } = this.props;
-    let sidebarHeight = state.windowDimensions.height;
+    const sidebarHeight = state.windowDimensions.height;
+    const isRightPanelOpen = state.rightSidebarOpened;
+
+    // Inline styles.
+    let rightPanelStyles = {
+      width: this.state.panelSize,
+      right: '-' + this.state.panelSize
+    };
+
+    let sidebarStyles = {
+      width: this.state.panelSize,
+      height: sidebarHeight + 10
+    };
 
     // Right panel view.
     const currentView = state.rightPanelAreaView;
     let rightPanelArea;
-
     switch (currentView) {
     case ACTIVITY:
       rightPanelArea = <DocumentActivityList />;
@@ -90,25 +101,13 @@ class RightPanelArea extends React.Component {
       rightPanelArea = <DocumentActivityList />;
     }
 
-    // Toggle right panel.
-    const isRightPanelOpen = state.rightSidebarOpened;
-    // let leftSidePanelDisplay = 'block';
-    // if (!isRightPanelOpen) {
-    //   leftSidePanelDisplay = 'none';
-    // }
-    // console.log(isRightPanelOpen, leftSidePanelDisplay);
-
-    // <div className="sidebar" style={{height: sidebarHeight, display: leftSidePanelDisplay}}>
-
-    const rightPanelStyles = {
-      width: this.state.panelSize,
-      right: sidebarHeight
-    };
-
     return (
-      <Col sm={this.props.columnWidth} id="doc_mgt-right_column" className="sidebar-wrapper">
-        <div className={ isRightPanelOpen ? 'sidebar open' : 'sidebar closed'} style={rightPanelStyles}>
-          {rightPanelArea}
+      <Col sm={this.props.columnWidth}>
+        <div id="doc_mgt-right_column" style={rightPanelStyles}
+             className={ isRightPanelOpen ? 'sidebar-wrapper sidebar-wrapper--open' : 'sidebar-wrapper sidebar-wrapper--closed'}>
+          <div className="sidebar" style={sidebarStyles}>
+            {rightPanelArea}
+          </div>
         </div>
       </Col>
     );

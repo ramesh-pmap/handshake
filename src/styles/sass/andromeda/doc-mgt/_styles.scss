@@ -1,8 +1,11 @@
 #doc_mgt-left_column,
 #doc_mgt-right_column{
-  -webkit-transition: width .25s ease-out;
-  -moz-transition: width .25s ease-out;
-  transition: width .25s ease-out;
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  transition: all .25s ease;
+}
+#doc_mgt-left_column{
+  padding-right: 60px;
 }
 
 .title-dropdown{
@@ -338,15 +341,16 @@ textarea{
   .sidebar-wrapper{
     position: fixed;
     top: 50px;
-    right: 0;
+    // right: 0;
     padding: 0;
-    -webkit-transition: width .5s ease;
-    -moz-transition: width .5s ease;
-    transition: width .5s ease;
+
+    &.sidebar-wrapper--open{
+      right: 15px !important;
+    }
 
     .sidebar{
       overflow-y: auto;
-      padding: 50px 6px 6px 0;
+      padding: 50px 4px 0 6px;
 
       .fixed-title:first-child{
         position: absolute;
@@ -360,7 +364,7 @@ textarea{
       }
 
       .list-group{
-        padding-left: 6px;
+        padding-left: 2px;
 
         .list-group-item{
           // border: none;
