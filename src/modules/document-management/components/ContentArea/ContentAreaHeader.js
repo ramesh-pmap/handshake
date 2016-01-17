@@ -75,7 +75,7 @@ class ContentAreaHeader extends React.Component {
       <Row>
         <Col md={6}>
           <ButtonGroup className="title-dropdown">
-            <DropdownButton id="doc_mgt-docs_dropdown" title={this.state.sectionTitle} bsStyle="link" bsSize="lg">
+            <DropdownButton id="file_manager-docs_dropdown" title={this.state.sectionTitle} bsStyle="link" bsSize="lg">
               <MenuItem eventKey="1" onClick={this.handleDropdownMenuChange.bind(this, DEFAULT)}>{ALLDOCS_TITLE}</MenuItem>
               <MenuItem eventKey="2">{MYDOCS_TITLE}</MenuItem>
               <MenuItem eventKey="3" onClick={this.handleDropdownMenuChange.bind(this, UPLOAD)}>{UPLOADEDDOCS_TITLE}</MenuItem>
@@ -105,33 +105,12 @@ class ContentAreaHeader extends React.Component {
               </MenuItem>
             </DropdownButton>
 
-            <div id="doc_mgt-search_wrapper">
+            <div className="search-wrapper">
               <Input type="search" placeholder="Search" bsSize="small"
                 onFocus={this.onFocus.bind(this)}
                 onBlur={this.onBlur.bind(this)}
                 onChange={this.handleSearchFieldOnChange.bind(this)}
               />
-              {/*
-              <ListGroup id="doc_mgt-results_wrapper" className={this.state.showResults}>
-                <ListGroupItem href="#">
-                  <Icon name="file-word-o" className="fa-fw fa-lg text-muted" />
-                  &nbsp;
-                  <b>Sample Word Document</b>
-                  <p className="small">/OSHA/</p>
-                  <p className="small">/OSHA/Procedures/</p>
-                </ListGroupItem>
-                <ListGroupItem href="#">
-                  <Icon name="folder-open" className="fa-fw fa-lg text-info" />
-                  &nbsp;
-                  <b>Policies</b>
-                </ListGroupItem>
-                <ListGroupItem href="#">
-                  <Icon name="file-excel-o" className="fa-fw fa-lg text-success" />
-                  &nbsp;
-                  <b>Sample Excel Document</b>
-                </ListGroupItem>
-              </ListGroup>
-              */}
             </div>
 
           </div>

@@ -61,7 +61,7 @@ class Layout extends React.Component {
     switch (currentFolder) {
     case FOLDER_ROOT:
       folderArea = (
-        <ListGroup className="doc_mgt-list">
+        <ListGroup className="file_manager-list">
           <ListGroupItem onClick={this.showSampleFolder.bind(this)}>
             <Row>
               <Col sm={6}>
@@ -99,7 +99,7 @@ class Layout extends React.Component {
       break;
     case SAMPLE_FOLDER:
       folderArea = (
-        <ListGroup className="doc_mgt-list">
+        <ListGroup className="file_manager-list">
           <ListGroupItem onClick={this.showDetail.bind(this)}>
             <Row>
               <Col sm={6}>
@@ -153,9 +153,9 @@ class Layout extends React.Component {
 
     return (
       <div className="card">
-        <div className="doc_mgt-list_header">
+        <div className="file_manager-list_header">
 
-          <Row className="doc_mgt-list_actions">
+          <Row className="file_manager-list_actions">
             <Col sm={12}>
               <Button href="#/" bsStyle="link" bsSize="xs">
                 <Icon name="folder-open" className="text-info" /> Share
@@ -163,7 +163,7 @@ class Layout extends React.Component {
             </Col>
           </Row>
 
-          <Row className="doc_mgt-list_titles hidden-xs">
+          <Row className="file_manager-list_titles hidden-xs">
             <Col sm={6}>
               <b>Type &nbsp;Name</b>
             </Col>
@@ -183,7 +183,7 @@ class Layout extends React.Component {
         {folderArea}
 
         {/*
-          <ListGroup className="doc_mgt-list">
+          <ListGroup className="file_manager-list">
 
             <ListGroupItem onClick={this.showActivity.bind(this)}>
               <Row>

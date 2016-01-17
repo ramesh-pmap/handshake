@@ -38,7 +38,7 @@ class FileManagerRows extends React.Component {
     }
 
     return (
-      <ListGroup className="doc_mgt-list">
+      <ListGroup className="file_manager-list">
         {rows}
       </ListGroup>
     );

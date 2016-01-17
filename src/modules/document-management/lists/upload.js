@@ -57,9 +57,9 @@ class Layout extends React.Component {
         </Dropzone>
 
         <div className="card">
-          <div className="doc_mgt-list_header">
+          <div className="file_manager-list_header">
 
-            <Row className="doc_mgt-list_actions">
+            <Row className="file_manager-list_actions">
               <Col sm={12}>
                 <Button componentClass="div" bsStyle="link" bsSize="xs">
                   <Icon name="folder-open" className="text-info" /> Share
@@ -67,7 +67,7 @@ class Layout extends React.Component {
               </Col>
             </Row>
 
-            <Row className="doc_mgt-list_titles hidden-xs">
+            <Row className="file_manager-list_titles hidden-xs">
               <Col sm={9}>
                 <strong>Type &nbsp;Name</strong>
               </Col>
@@ -78,7 +78,7 @@ class Layout extends React.Component {
 
           </div>
 
-          <ListGroup className="doc_mgt-list">
+          <ListGroup className="file_manager-list">
 
             {
               this.state.files.length > 0 ?

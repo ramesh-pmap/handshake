@@ -17,9 +17,9 @@ class FileManagerHeader extends React.Component {
     // const data = this.props.data;
 
     return (
-      <div className="doc_mgt-list_header">
+      <div className="file_manager-list_header">
 
-        <Row className="doc_mgt-list_actions">
+        <Row className="file_manager-list_actions">
           <Col sm={12}>
             <Button href="#/" bsStyle="link" bsSize="xs">
               <Icon name="folder-open" className="text-info" /> Share
@@ -27,7 +27,7 @@ class FileManagerHeader extends React.Component {
           </Col>
         </Row>
 
-        <Row className="doc_mgt-list_titles hidden-xs">
+        <Row className="file_manager-list_titles hidden-xs">
           <Col sm={6}>
             <b>Type &nbsp;Name</b>
           </Col>

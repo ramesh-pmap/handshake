@@ -3,9 +3,9 @@
 
   .main-col{
     float: left;
-    -webkit-transition: all .25s ease;
-    -moz-transition: all .25s ease;
-    transition: all .25s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
   }
   .main-col-left{
     // background: rgba(255,0,0,.4);
@@ -34,11 +34,27 @@
   }
 }
 
+@media (max-width: 1200px){
+  .main-col-wrapper{
+    &.sidebar--open{
+      .main-col-left{
+        width: 60%;
+      }
+      .main-col-right{
+        width: 40%;
+      }
+    }
+  }
+}
+
 @media (max-width: 767px){
   .main-col-wrapper{
+    .main-col{
+      float: none;
+    }
     .main-col-left,
     .main-col-right{
-      width: 100%;
+      width: 100% !important;
     }
   }
 }
@@ -94,33 +110,10 @@
 $search-width: 150px;
 $search-expanded-width: 400px;
 
-#doc_mgt-search_wrapper{
+.search-wrapper{
   position: static;
   display: inline-block;
   width: $search-width;
-
-  #doc_mgt-results_wrapper{
-    display: none;
-    opacity: 0;
-    position: absolute;
-    top: 42px;
-    right: 10px;
-    width: 400px;
-    text-align: left;
-    z-index: 2;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    transition: all .3s ease;
-
-    &.results_wrapper--open{
-      display: block;
-      opacity: 1;
-    }
-
-    .list-group-item:first-child {
-        border-width: 0 1px 1px;
-    }
-  }
 
   input {
     display: block;
@@ -147,16 +140,16 @@ $search-expanded-width: 400px;
   Actions.
 -------------------------------------------
 ---------------------------------------- */
-.doc_mgt-list_header{
+.file_manager-list_header{
 
-  .doc_mgt-list_titles{
+  .file_manager-list_titles{
     padding: 20px 0 6px;
     margin-left: 0;
     margin-right: 0;
     border-bottom: 2px solid darken($border-color, 6%);
   }
 
-  .doc_mgt-list_actions{
+  .file_manager-list_actions{
     display: none;
     padding: 10px 0;
   }
@@ -169,7 +162,7 @@ $search-expanded-width: 400px;
   FOLDER STRUCTURE LIST.
 -------------------------------------------
 ---------------------------------------- */
-.doc_mgt-list{
+.file_manager-list{
 
   .list-group-item{
     border-color: $border-color;
