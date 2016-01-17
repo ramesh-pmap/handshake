@@ -94,32 +94,33 @@ class Page extends React.Component {
           <Row>
             <Col sm={leftColumnSize} id="doc_mgt-left_column">
 
-              <ButtonGroup>
-                <Button bsStyle="default" bsSize="xs" onClick={this.handleContentButtonClick.bind(this, DEFAULT)}> Default </Button>
-                <Button bsStyle="default" bsSize="xs" onClick={this.handleContentButtonClick.bind(this, PREVIEW)}> Preview </Button>
-                <Button bsStyle="default" bsSize="xs" onClick={this.handleContentButtonClick.bind(this, UPLOAD)}> Upload </Button>
-                <Button bsStyle="default" bsSize="xs" onClick={this.handleContentButtonClick.bind(this, SEARCH_RESULTS)}> Search Results </Button>
-              </ButtonGroup>
-              &nbsp;
-              <ButtonGroup>
-                <Button bsStyle="default" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, ACTIVITY)}> Activity List </Button>
-                <Button bsStyle="default" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, DETAIL)}> Detail </Button>
-                <Button bsStyle="default" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, DETAILFORM)}> Detail Form </Button>
-              </ButtonGroup>
-              &nbsp;
-              <ButtonGroup>
-                <Button bsStyle="default" bsSize="xs" onClick={this.handleRightSidePanelToggle.bind(this, TOGGLE_RIGHT_SIDEBAR)}> Toggle Right Panel ({isRightPanelOpen}) </Button>
-              </ButtonGroup>
+              <div style={{ padding: '20px 20px 0', marginBottom: -10 }}>
+                <ButtonGroup>
+                  <Button bsStyle="default" bsSize="xs" onClick={this.handleContentButtonClick.bind(this, DEFAULT)}> Default </Button>
+                  <Button bsStyle="default" bsSize="xs" onClick={this.handleContentButtonClick.bind(this, PREVIEW)}> Preview </Button>
+                  <Button bsStyle="default" bsSize="xs" onClick={this.handleContentButtonClick.bind(this, UPLOAD)}> Upload </Button>
+                  <Button bsStyle="default" bsSize="xs" onClick={this.handleContentButtonClick.bind(this, SEARCH_RESULTS)}> Search Results </Button>
+                </ButtonGroup>
+                &nbsp;
+                <ButtonGroup>
+                  <Button bsStyle="default" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, ACTIVITY)}> Activity List </Button>
+                  <Button bsStyle="default" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, DETAIL)}> Detail </Button>
+                  <Button bsStyle="default" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, DETAILFORM)}> Detail Form </Button>
+                </ButtonGroup>
+                &nbsp;
+                <ButtonGroup>
+                  <Button bsStyle="default" bsSize="xs" onClick={this.handleRightSidePanelToggle.bind(this, TOGGLE_RIGHT_SIDEBAR)}> Toggle Right Panel ({isRightPanelOpen}) </Button>
+                </ButtonGroup>
+              </div>
 
               {/* ContentArea component */}
               <ContentArea loadContentAreaView={this.handleContentButtonClick.bind(this)} />
 
             </Col>
 
-            <Col sm={rightColumnSize} id="doc_mgt-right_column" className="sidebar-wrapper">
-              {/* RightPanelArea component */}
-              <RightPanelArea columnWidth={rightColumnSize} />
-            </Col>
+            {/* RightPanelArea component */}
+            <RightPanelArea columnWidth={rightColumnSize} />
+
           </Row>
 
         </Main>

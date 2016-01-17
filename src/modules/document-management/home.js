@@ -2,7 +2,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 // import { toggleSidebar } from '../../redux/actions';
-import { updateSidePanelWidth } from '../../utils';
 
 // Core components.
 import {Row, Col, Breadcrumb, BreadcrumbItem, ButtonGroup, Button, Image} from 'react-bootstrap';
@@ -56,9 +55,8 @@ class Page extends React.Component {
   }
 
   updateDimensions() {
-    const { state } = this.props;
-    const leftSidebarOpened = state.leftSidebarOpened;
-    updateSidePanelWidth(leftSidebarOpened);
+    // const { state } = this.props;
+    // const leftSidebarOpened = state.leftSidebarOpened;
   }
 
   componentWillUnmount() {

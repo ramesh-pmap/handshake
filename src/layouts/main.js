@@ -40,9 +40,9 @@ class Layout extends React.Component {
                 );
             }
           })()}
-        <div className="page-content-wrapper">
+
           {this.props.children}
-        </div>
+
       </div>
     );
   }

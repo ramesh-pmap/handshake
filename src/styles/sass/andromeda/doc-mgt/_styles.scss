@@ -1,3 +1,10 @@
+#doc_mgt-left_column,
+#doc_mgt-right_column{
+  -webkit-transition: width .25s ease-out;
+  -moz-transition: width .25s ease-out;
+  transition: width .25s ease-out;
+}
+
 .title-dropdown{
   margin-bottom: 0 !important;
 
@@ -518,7 +525,7 @@ textarea{
   margin-bottom: 12px;
   border-bottom: 1px solid darken($gray-color, 5%);
   display: inline-block;
-  
+
   .form-group {
     margin-bottom: 0px;
   }

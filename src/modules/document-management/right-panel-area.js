@@ -1,5 +1,6 @@
 // Dependencies.
 import React from 'react';
+import { Col } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { getWindowDimensions } from '../../redux/actions';
 import { ACTIVITY, DETAIL, DETAILFORM } from '../../redux/constants';
@@ -17,44 +18,39 @@ class RightPanelArea extends React.Component {
   constructor(props) {
     // Pass `props` into scope.
     super(props);
+
+    this.state = {
+      panelSize: '100%'
+    };
   }
 
   updateDimensions() {
     const { state, dispatch } = this.props;
     const leftSidebarOpened = state.leftSidebarOpened;
-    // utils.updateSidePanelWidth(leftSidebarOpened);
-
-    const sidePanel = document.querySelector('#doc_mgt-right_column');
     let columnWidth = this.props.columnWidth;
-
     const totalColumnGrids = 12;
-    const calculatedColumnWidth = Math.round(columnWidth / totalColumnGrids * 100);
-    console.log(columnWidth, 'is', calculatedColumnWidth, '% of', totalColumnGrids, 'columns.');
-
-    const dimensions = utils.getWindowDimensions();
-    const x = dimensions.width;
-
     const navWidth = 230;
-    let percentageWidth = Math.floor(x * (calculatedColumnWidth / 100));
-    console.log((calculatedColumnWidth / 100));
+
+    // Get window dimensions from utils.
+    const dimensions = utils.getWindowDimensions();
+    const windowWidth = dimensions.width;
+
+    // Calculate percentage of columns from total columns. (ie, 3 / 12 * 100 = 25%)
+    const calculatedColumnWidth = Math.round(columnWidth / totalColumnGrids * 100);
+    // console.log(columnWidth, 'is', calculatedColumnWidth, '% of', totalColumnGrids, 'columns.');
+
+    // Calculate by multiplying percentage.
+    let percentageWidth = Math.floor(windowWidth * (calculatedColumnWidth / 100));
+    // console.log((calculatedColumnWidth / 100));
 
     if (leftSidebarOpened) {
-      percentageWidth = Math.floor((x - navWidth) / calculatedColumnWidth);
+      percentageWidth = Math.floor((windowWidth - navWidth) / calculatedColumnWidth);
     }
-    // console.log(x, navWidth, percentageWidth);
-    console.log('percentageWidth:', percentageWidth);
 
-    // console.log('============================');
-    // console.log('open:', leftSidebarOpened);
-    // console.log('x:', x);
-    // console.log('percentageWidth:', percentageWidth);
-    // console.log('navWidth:', navWidth);
-
-    // this.setState({width: x, height: y});
-    if (x >= 768) {
-      sidePanel.style.width = percentageWidth + 'px';
-    } else {
-      sidePanel.style.width = '100%';
+    if (windowWidth >= 768) {
+      this.setState({
+        panelSize: percentageWidth + 'px'
+      });
     }
 
     dispatch(getWindowDimensions(dimensions));
@@ -96,16 +92,25 @@ class RightPanelArea extends React.Component {
 
     // Toggle right panel.
     const isRightPanelOpen = state.rightSidebarOpened;
-    let sidePanelDisplay = 'block';
-    if (!isRightPanelOpen) {
-      sidePanelDisplay = 'none';
-    }
-    // console.log(isRightPanelOpen, sidePanelDisplay);
+    // let leftSidePanelDisplay = 'block';
+    // if (!isRightPanelOpen) {
+    //   leftSidePanelDisplay = 'none';
+    // }
+    // console.log(isRightPanelOpen, leftSidePanelDisplay);
+
+    // <div className="sidebar" style={{height: sidebarHeight, display: leftSidePanelDisplay}}>
+
+    const rightPanelStyles = {
+      width: this.state.panelSize,
+      right: sidebarHeight
+    };
 
     return (
-      <div className="sidebar" style={{height: sidebarHeight, display: sidePanelDisplay}}>
-        {rightPanelArea}
-      </div>
+      <Col sm={this.props.columnWidth} id="doc_mgt-right_column" className="sidebar-wrapper">
+        <div className={ isRightPanelOpen ? 'sidebar open' : 'sidebar closed'} style={rightPanelStyles}>
+          {rightPanelArea}
+        </div>
+      </Col>
     );
   }
 }
