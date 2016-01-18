@@ -1,9 +1,10 @@
 // Dependencies.
 import React from 'react';
 import { connect } from 'react-redux';
-import { getWindowDimensions } from '../../redux/actions';
+import { getWindowDimensions, toggleRightSidebar, setRightPanelAreaView } from '../../redux/actions';
 import { ACTIVITY, DETAIL, DETAILFORM } from '../../redux/constants';
 
+import {Nav, NavItem} from 'react-bootstrap';
 import Icon from 'react-fa';
 
 // Components.
@@ -14,11 +15,19 @@ import DocumentDetailForm from './components/RightPanelArea/DetailForm';
 // Utility methods.
 import utils from '../../utils';
 
+// Const.
+const TAB_TASKS = 'TAB_TASKS';
+const TAB_DETAIL = 'TAB_DETAIL';
+
 // Define class.
 class RightPanelArea extends React.Component {
   constructor(props) {
     // Pass `props` into scope.
     super(props);
+
+    this.state = {
+      currentTab: TAB_TASKS
+    };
   }
 
   updateDimensions() {
@@ -38,6 +47,23 @@ class RightPanelArea extends React.Component {
     window.addEventListener('resize', this.updateDimensions.bind(this));
   }
 
+  handleTabClick(tab) {
+    const { state, dispatch } = this.props;
+    if (!state.rightSidebarOpened) {
+      dispatch(toggleRightSidebar(state.rightSidebarOpened));
+    } else if (state.rightSidebarOpened && tab === this.state.currentTab) {
+      dispatch(toggleRightSidebar(state.rightSidebarOpened));
+    }
+    switch (tab) {
+    case TAB_DETAIL:
+      dispatch(setRightPanelAreaView(DETAIL));
+      break;
+    default:
+      dispatch(setRightPanelAreaView(ACTIVITY));
+    }
+    this.setState({ currentTab: tab });
+  }
+
   // Render method.
   render() {
     const { state } = this.props;
@@ -48,15 +74,19 @@ class RightPanelArea extends React.Component {
     switch (currentView) {
     case ACTIVITY:
       rightPanelArea = <DocumentActivityList />;
+      this.state.currentTab = TAB_TASKS;
       break;
     case DETAIL:
       rightPanelArea = <DocumentDetail />;
+      this.state.currentTab = TAB_DETAIL;
       break;
     case DETAILFORM:
       rightPanelArea = <DocumentDetailForm />;
+      this.state.currentTab = TAB_DETAIL;
       break;
     default:
       rightPanelArea = <DocumentActivityList />;
+      this.state.currentTab = TAB_TASKS;
     }
 
     return (
@@ -65,20 +95,19 @@ class RightPanelArea extends React.Component {
           {rightPanelArea}
         </div>
 
-        <nav className="sidebar-tabs">
-          <ul>
-            <li>
-              <a href="#">
-                <Icon name="info-circle" className="fa-fw" />
-              </a>
-            </li>
-            <li>
-              <a href="#" className="active">
-                <Icon name="info-circle" className="fa-fw" />
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <Nav ulClassName="sidebar-tabs">
+
+          <NavItem onClick={this.handleTabClick.bind(this, TAB_TASKS)}
+            className={this.state.currentTab === TAB_TASKS ? 'active' : ''}>
+            <Icon name="check-square-o" className="fa-fw" />
+          </NavItem>
+
+          <NavItem onClick={this.handleTabClick.bind(this, TAB_DETAIL)}
+            className={this.state.currentTab === TAB_DETAIL ? 'active' : ''}>
+            <Icon name="info-circle" className="fa-fw" />
+          </NavItem>
+
+        </Nav>
 
       </div>
     );

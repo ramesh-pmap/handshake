@@ -2,6 +2,7 @@
   position: relative;
 
   .main-col{
+    position: relative;
     float: left;
     -webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
@@ -376,14 +377,19 @@ $search-expanded-width: 400px;
 
     a{
       display: block;
+      width: 29px;
       padding: 6px;
-      background: rgba(255,255,255, .8);
+      background: rgba(255,255,255, .4);
       border: 1px solid $border-color;
+    }
+    a:hover,
+    a:focus{
+      background: rgba(255,255,255, .8);
+    }
 
-      &.active{
-        background: lighten($border-color, 10%);
-        border-right-color: lighten($border-color, 20%);
-      }
+    &.active a{
+      background: lighten($border-color, 10%);
+      border-right-color: lighten($border-color, 20%);
     }
   }
 }
@@ -510,8 +516,8 @@ textarea{
   .preview-panel-toolbar{
     position: absolute;
     top: 0;
-    left: 15px;
-    width: calc(100% - 30px);
+    left: 0;
+    width: 100%;
     padding: 14px 20px 0;
     background: #000000;
 
