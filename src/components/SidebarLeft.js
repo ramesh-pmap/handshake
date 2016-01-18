@@ -44,14 +44,14 @@ class Sidebar extends React.Component {
 
       <Nav id="sidebar-wrapper" ulClassName="sidebar-nav">
 
-        <LinkContainer to="/">
+        <LinkContainer to="/iframe">
           <NavItem onClick={this.handleFrameUrlChange.bind(this, 'angular')}>
             <Icon name="html5" className="fa-fw" />
             Occupational Health
           </NavItem>
         </LinkContainer>
 
-        <LinkContainer to="/">
+        <LinkContainer to="/iframe">
           <NavItem onClick={this.handleFrameUrlChange.bind(this, 'aspx')}>
             <Icon name="windows" className="fa-fw" />
             Incident Management
