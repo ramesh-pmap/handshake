@@ -2,7 +2,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getWindowDimensions, toggleRightSidebar, setRightPanelAreaView } from '../../redux/actions';
-import { ACTIVITY, DETAIL, DETAILFORM } from '../../redux/constants';
+import { ACTIVITY, DETAIL, DETAILFORM, VIEWER_CHANGE_REQUEST } from '../../redux/constants';
 
 import {Nav, NavItem} from 'react-bootstrap';
 import Icon from 'react-fa';
@@ -11,6 +11,7 @@ import Icon from 'react-fa';
 import DocumentActivityList from './components/RightPanelArea/ActivityList';
 import DocumentDetail from './components/RightPanelArea/Detail';
 import DocumentDetailForm from './components/RightPanelArea/DetailForm';
+// import ChangeRequestSubmit from './components/RightPanelArea/ChangeRequestSubmit';
 
 // Utility methods.
 import utils from '../../utils';
@@ -82,6 +83,10 @@ class RightPanelArea extends React.Component {
       break;
     case DETAILFORM:
       rightPanelArea = <DocumentDetailForm />;
+      this.state.currentTab = TAB_DETAIL;
+      break;
+    case VIEWER_CHANGE_REQUEST:
+      // rightPanelArea = <ChangeRequestSubmit />;
       this.state.currentTab = TAB_DETAIL;
       break;
     default:

@@ -2,7 +2,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { changeFolder, setFileManagerData, setContentAreaView, toggleRightSidebar, setRightPanelAreaView } from '../../redux/actions';
-import { DEFAULT, PREVIEW, UPLOAD, ACTIVITY, DETAIL, DETAILFORM, SEARCH_RESULTS, TOGGLE_RIGHT_SIDEBAR } from '../../redux/constants';
+import {DEFAULT,
+        PREVIEW,
+        UPLOAD,
+        ACTIVITY,
+        DETAIL,
+        DETAILFORM,
+        VIEWER_CHANGE_REQUEST,
+        // OWNER_CHANGE_REQUEST,
+        SEARCH_RESULTS,
+        TOGGLE_RIGHT_SIDEBAR } from '../../redux/constants';
 
 // Core components.
 import { ButtonGroup, Button } from 'react-bootstrap';
@@ -55,7 +64,6 @@ class Page extends React.Component {
       .catch(error => {this.setState({error}); });
 
     // Set initial state.
-    // dispatch(setSidebarHeight(sidebarHeight));
     dispatch(setContentAreaView(DEFAULT));
     dispatch(setRightPanelAreaView(ACTIVITY));
   }
@@ -102,6 +110,7 @@ class Page extends React.Component {
                   <Button bsStyle="default" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, ACTIVITY)}> Activity List</Button>
                   <Button bsStyle="default" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, DETAIL)}> Detail </Button>
                   <Button bsStyle="default" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, DETAILFORM)}> Detail Form </Button>
+                  <Button bsStyle="default" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, VIEWER_CHANGE_REQUEST)}> Change Request </Button>
                 </ButtonGroup>
                 &nbsp;
                 <ButtonGroup>
@@ -110,20 +119,19 @@ class Page extends React.Component {
               </div>
 
               {/* ContentArea component */}
-              <ContentArea loadContentAreaView={this.handleContentButtonClick.bind(this)} />
+              <ContentArea />
 
             </div>
 
             {/* Right (Side Panel) column. */}
             <div className="main-col main-col-right">
+
               {/* RightPanelArea component */}
               <RightPanelArea />
+
             </div>
-
           </div>
-
         </Main>
-
       </div>
     );
   }
