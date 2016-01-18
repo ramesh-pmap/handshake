@@ -101,7 +101,7 @@ class RightPanelArea extends React.Component {
 
     return (
       <div>
-        <div className="sidebar" style={{height: state.windowDimensions.height}}>
+        <div className="sidebar" style={{height: state.windowDimensions.height - 50}}>
           {rightPanelArea}
         </div>
 

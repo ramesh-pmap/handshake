@@ -1,6 +1,7 @@
 // Dependencies.
 import React from 'react';
 import { connect } from 'react-redux';
+import { setContentAreaView } from '../../../../redux/actions';
 import { DEFAULT, UPLOAD, SEARCH_RESULTS } from '../../../../redux/constants';
 // import {Link} from 'react-router';
 // import {LinkContainer} from 'react-router-bootstrap';
@@ -32,8 +33,9 @@ class ContentAreaHeader extends React.Component {
 
   // Search Field.
   handleSearchFieldOnChange(e) {
+    e.preventDefault();
     // console.log('Search:', e.target.value);
-    this.setState({ sectionTitle: e.target.value });
+    // this.setState({ sectionTitle: e.target.value });
     // const { state } = this.props;
     // const leftSidebarOpened = state.leftSidebarOpened;
   }
@@ -51,6 +53,7 @@ class ContentAreaHeader extends React.Component {
   // Change list view.
   handleDropdownMenuChange(view, e) {
     e.preventDefault();
+    const { dispatch } = this.props;
     switch (view) {
     case DEFAULT:
       this.state.sectionTitle = ALLDOCS_TITLE;
@@ -64,6 +67,7 @@ class ContentAreaHeader extends React.Component {
     default:
       this.state.sectionTitle = ALLDOCS_TITLE;
     }
+    dispatch(setContentAreaView(view));
   }
 
   // Render method.

@@ -14,7 +14,7 @@ import {DEFAULT,
         TOGGLE_RIGHT_SIDEBAR } from '../../redux/constants';
 
 // Core components.
-import { ButtonGroup, Button } from 'react-bootstrap';
+import { ButtonGroup, Button, Modal } from 'react-bootstrap';
 
 // Layouts.
 import Main from '../../layouts/main';
@@ -37,6 +37,16 @@ class Page extends React.Component {
 
     // Set page title.
     utils.title(props);
+
+    this.state = { showModal: false };
+  }
+
+  close() {
+    this.setState({ showModal: false });
+  }
+
+  open() {
+    this.setState({ showModal: true });
   }
 
   componentDidMount() {
@@ -115,7 +125,8 @@ class Page extends React.Component {
                 </ButtonGroup>
                 &nbsp;
                 <ButtonGroup>
-                  <Button bsStyle="default" bsSize="xs" onClick={this.handleRightSidePanelToggle.bind(this, TOGGLE_RIGHT_SIDEBAR)}> Toggle Right Panel ({state.rightSidebarOpened}) </Button>
+                  <Button bsStyle="default" bsSize="xs" onClick={this.open.bind(this)}>Share</Button>
+                  <Button bsStyle="default" bsSize="xs" onClick={this.handleRightSidePanelToggle.bind(this, TOGGLE_RIGHT_SIDEBAR)}>Toggle Right Panel</Button>
                 </ButtonGroup>
               </div>
 
@@ -133,6 +144,21 @@ class Page extends React.Component {
             </div>
           </div>
         </Main>
+
+        <Modal show={this.state.showModal} onHide={this.close.bind(this)}>
+          <Modal.Header closeButton>
+            <Modal.Title>Share (Document Name)</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <h4>Text in a modal</h4>
+            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button bsStyle="default" onClick={this.close.bind(this)}>Close</Button>
+            <Button bsStyle="primary">Send</Button>
+          </Modal.Footer>
+        </Modal>
+
       </div>
     );
   }
