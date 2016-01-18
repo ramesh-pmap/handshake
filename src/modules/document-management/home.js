@@ -9,7 +9,7 @@ import {DEFAULT,
         DETAIL,
         DETAILFORM,
         VIEWER_CHANGE_REQUEST,
-        // OWNER_CHANGE_REQUEST,
+        APPROVE_CHANGE_REQUEST,
         SEARCH_RESULTS,
         TOGGLE_RIGHT_SIDEBAR } from '../../redux/constants';
 
@@ -111,6 +111,7 @@ class Page extends React.Component {
                   <Button bsStyle="default" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, DETAIL)}> Detail </Button>
                   <Button bsStyle="default" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, DETAILFORM)}> Detail Form </Button>
                   <Button bsStyle="default" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, VIEWER_CHANGE_REQUEST)}> Change Request </Button>
+                  <Button bsStyle="default" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, APPROVE_CHANGE_REQUEST)}> Approve Change Request </Button>
                 </ButtonGroup>
                 &nbsp;
                 <ButtonGroup>

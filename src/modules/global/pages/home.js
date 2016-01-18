@@ -9,7 +9,7 @@ import Main from '../../../layouts/main';
 
 // Misc components.
 import Mars from '../../../components/Mars';
-import ChangeRequest from '../../components/RightPanelArea/ChangeRequestFromViewer.js';
+// import ChangeRequest from '../../components/RightPanelArea/ChangeRequestFromViewer.js';
 
 // Define class.
 class Page extends React.Component {
@@ -25,7 +25,6 @@ class Page extends React.Component {
   render() {
     return (
       <Main>
-      <ChangeRequest/>
         <Mars title="Home" message="Message goes here" />
       </Main>
     );
