@@ -31,6 +31,9 @@ class DetailForm extends React.Component {
             <Button bsStyle="info" bsSize="sm" onClick={this.handleSaveButtonClick.bind(this)}>
               Save
             </Button>
+            <Button bsStyle="default" bsSize="sm" onClick={this.handleSaveButtonClick.bind(this)}>
+              Cancel
+            </Button>
           </div>
         </div>
 
@@ -41,7 +44,7 @@ class DetailForm extends React.Component {
               <option>Bob Roberts</option>
               <option>Janette Walls</option>
             </Input>
-            <FormControls.Static label="Reviewed Date" labelClassName="" wrapperClassName="" value="1/19/16"/>
+            <FormControls.Static label="Reviewed Date" labelClassName="" wrapperClassName="" value="1/25/16"/>
             <Input type="textarea" label="Change Request Review Comments" maxLength="2000" labelClassName="" wrapperClassName="" />
             <Input type="select" label="Change Request Status" labelClassName=" required">
               <option defaultValue>Pending Review</option>
@@ -51,11 +54,8 @@ class DetailForm extends React.Component {
             <form>
               <label className="control-label">Add Action Item?</label>
               <Input type="radio" name="ActionItem" label="Yes" wrapperClassName="radio-group-item" />
-              <Input type="radio" name="ActionItem" label="No"_form />
+              <Input type="radio" name="ActionItem" label="No" />
             </form>
-            <Button bsStyle="info" bsSize="sm">
-              Submit
-            </Button>
           </div>
         </div>
       </div>

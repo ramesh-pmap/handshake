@@ -31,6 +31,9 @@ class DetailForm extends React.Component {
             <Button bsStyle="info" bsSize="sm" onClick={this.handleSaveButtonClick.bind(this)}>
               Save
             </Button>
+            <Button bsStyle="default" bsSize="sm" onClick={this.handleSaveButtonClick.bind(this)}>
+              Cancel
+            </Button>
           </div>
         </div>
 
@@ -41,7 +44,7 @@ class DetailForm extends React.Component {
               <option>Bob Roberts</option>
               <option>Janette Walls</option>
             </Input>
-            <FormControls.Static label="Requested Date" labelClassName="" wrapperClassName="" value="1/25/16"/>
+            <FormControls.Static label="Requested Date" labelClassName="" wrapperClassName="" value="1/19/16"/>
             <Input type="textarea" label="Reason for Change Request" labelClassName="" wrapperClassName="" />
             <Input type="textarea" label="Requested Changes" labelClassName="" wrapperClassName="" />
             <Input type="select" label="Priority" labelClassName=" required" wrapperClassName="">
@@ -50,9 +53,6 @@ class DetailForm extends React.Component {
               <option>Low</option>
             </Input>
             <Input type="file" label="Add Attachment"/>
-            <Button bsStyle="info" bsSize="sm">
-              Submit
-            </Button>
           </div>
         </div>
       </div>
