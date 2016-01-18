@@ -2,7 +2,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getWindowDimensions, toggleRightSidebar, setRightPanelAreaView } from '../../redux/actions';
-import { ACTIVITY, DETAIL, DETAILFORM, VIEWER_CHANGE_REQUEST } from '../../redux/constants';
+import { ACTIVITY, DETAIL, DETAILFORM, VIEWER_CHANGE_REQUEST, APPROVE_CHANGE_REQUEST } from '../../redux/constants';
 
 import {Nav, NavItem} from 'react-bootstrap';
 import Icon from 'react-fa';
@@ -11,7 +11,8 @@ import Icon from 'react-fa';
 import DocumentActivityList from './components/RightPanelArea/ActivityList';
 import DocumentDetail from './components/RightPanelArea/Detail';
 import DocumentDetailForm from './components/RightPanelArea/DetailForm';
-// import ChangeRequestSubmit from './components/RightPanelArea/ChangeRequestSubmit';
+import ChangeRequestSubmit from './components/RightPanelArea/ChangeRequestSubmit';
+import ChangeRequestApprove from './components/RightPanelArea/ChangeRequestApprove';
 
 // Utility methods.
 import utils from '../../utils';
@@ -86,7 +87,11 @@ class RightPanelArea extends React.Component {
       this.state.currentTab = TAB_DETAIL;
       break;
     case VIEWER_CHANGE_REQUEST:
-      // rightPanelArea = <ChangeRequestSubmit />;
+      rightPanelArea = <ChangeRequestSubmit />;
+      this.state.currentTab = TAB_DETAIL;
+      break;
+    case APPROVE_CHANGE_REQUEST:
+      rightPanelArea = <ChangeRequestApprove />;
       this.state.currentTab = TAB_DETAIL;
       break;
     default:
