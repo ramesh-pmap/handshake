@@ -2,8 +2,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { selectFile, setRightPanelAreaView } from '../../../../../redux/actions';
-import { DETAIL } from '../../../../../redux/constants';
+import { selectFile, setRightPanelAreaView, toggleRightSidebar, setContentAreaView } from '../../../../../redux/actions';
+import { DETAIL, PREVIEW } from '../../../../../redux/constants';
 
 // Core components.
 import {Row, Col, Button, ListGroupItem} from 'react-bootstrap';
@@ -17,16 +17,20 @@ class FileManagerRowFile extends React.Component {
   }
 
   clickListGroupItemHandler(fileId, e) {
-    const { dispatch } = this.props;
+    const { state, dispatch } = this.props;
     e.preventDefault();
     // Redux actions.
     dispatch(selectFile(fileId));
     dispatch(setRightPanelAreaView(DETAIL));
+    if (!state.rightSidebarOpened) {
+      dispatch(toggleRightSidebar(state.rightSidebarOpened));
+    }
   }
 
   clickButtonHandler(e) {
+    const { dispatch } = this.props;
     e.preventDefault();
-    // alert('file link clicked');
+    dispatch(setContentAreaView(PREVIEW));
   }
 
   // Render method.
@@ -71,9 +75,13 @@ class FileManagerRowFile extends React.Component {
 // Validation.
 FileManagerRowFile.propTypes = {
   data: React.PropTypes.object,
+  state: React.PropTypes.func,
   dispatch: React.PropTypes.func
 };
 
+const mapStateToProps = (state) => ({
+  state
+});
 
 // Export.
-export default connect()(FileManagerRowFile);
+export default connect(mapStateToProps)(FileManagerRowFile);

@@ -18,16 +18,29 @@ class Preview extends React.Component {
     this.props.loadContentAreaView(DEFAULT);
   }
 
+  print() {
+    const printableContent = document.querySelector('#printableContent');
+    const pri = printableContent.contentWindow;
+    pri.document.open();
+    pri.document.write(printableContent.innerHTML);
+    pri.document.close();
+    pri.focus();
+    pri.print();
+  }
+
   // Render method.
   render() {
+    const { state } = this.props;
+
     return (
-      <div className="preview-panel">
+      <div className="preview-panel" style={{height: state.windowDimensions.height - 88}}>
         <div className="preview-panel-toolbar clearfix">
           <div className="pull-left lead">
             sample-word-document.docx
           </div>
           <ButtonGroup className="pull-right">
-            <Button bsStyle="link" bsSize="sm" className="text-muted">
+            <Button bsStyle="link" bsSize="sm" className="text-muted"
+              onClick={this.print.bind(this)}>
               <Icon name="print" className="fa-lg" />
               &nbsp;
               Print
@@ -52,6 +65,11 @@ class Preview extends React.Component {
           </div>
         </div>
         <Image src="/static/images/sample-doc-preview.png" />
+
+        <iframe id="printableContent" style={{position: 'absolute', top: 0, left: 0, height: 0, width: 0}}>
+          <Image src="/static/images/sample-doc-preview.png" />
+        </iframe>
+
       </div>
     );
   }
