@@ -54,18 +54,15 @@ class ContentAreaHeader extends React.Component {
     switch (view) {
     case DEFAULT:
       this.state.sectionTitle = ALLDOCS_TITLE;
-      this.props.loadContentAreaView(view);
       break;
     case UPLOAD:
       this.state.sectionTitle = UPLOADEDDOCS_TITLE;
-      this.props.loadContentAreaView(view);
       break;
     case SEARCH_RESULTS:
       this.state.sectionTitle = SEARCH_TITLE;
       break;
     default:
       this.state.sectionTitle = ALLDOCS_TITLE;
-      this.props.loadContentAreaView(view);
     }
   }
 
@@ -124,7 +121,6 @@ class ContentAreaHeader extends React.Component {
 // Parent Functions.
 ContentAreaHeader.propTypes = {
   customTitle: React.PropTypes.string,
-  loadContentAreaView: React.PropTypes.func,
   dispatch: React.PropTypes.func,
   state: React.PropTypes.object
 };

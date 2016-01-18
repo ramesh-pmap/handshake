@@ -16,14 +16,15 @@
       position: fixed;
       top: 50px;
       overflow-x: hidden;
-      width: 40%;
+      width: 30%;
       padding: 0 0 0 6px;
       // background: rgba(0,255,0,.25);
     }
 
     &.sidebar--open{
       .main-col-left{
-        width: 60%;
+        width: 70%;
+        // width: calc(70% - 80px);
       }
       .main-col-right{
         right: 0;
@@ -35,7 +36,17 @@
         width: calc(100% - 40px);
       }
       .main-col-right{
-        right: calc(-40% + 40px);
+        right: calc(-30% + 40px);
+      }
+    }
+  }
+
+  .shell-wrapper.toogled{
+    .main-col-wrapper{
+      &.sidebar--open{
+        .main-col-left{
+          width: 70%;
+        }
       }
     }
   }
@@ -46,6 +57,7 @@
     &.sidebar--open{
       .main-col-left{
         width: 75%;
+        // width: calc(75% - 40px);
       }
       .main-col-right{
         width: 25%;

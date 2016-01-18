@@ -17,7 +17,7 @@ class SearchResults extends React.Component {
   render() {
     return (
       <div>
-        <DocumentListHeader customTitle="Search" loadContentAreaView={this.props.loadContentAreaView} />
+        <DocumentListHeader customTitle="Search" />
         <h1>Search results page</h1>
       </div>
     );
@@ -26,7 +26,6 @@ class SearchResults extends React.Component {
 
 // propTypes.
 SearchResults.propTypes = {
-  loadContentAreaView: React.PropTypes.func,
   dispatch: React.PropTypes.func,
   state: React.PropTypes.object
 };

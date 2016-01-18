@@ -73,7 +73,6 @@ class ContentArea extends React.Component {
 
 // propTypes.
 ContentArea.propTypes = {
-  loadContentAreaView: React.PropTypes.func,
   dispatch: React.PropTypes.func,
   state: React.PropTypes.object
 };
