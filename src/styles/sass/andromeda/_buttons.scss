@@ -256,3 +256,8 @@ button.dim:active:before {
 .btn-group-justified .btn-group + .btn-group{
   border-left: 1px solid #FFFFFF;
 }
+
+.btn-sm,
+.btn-group-sm > .btn{
+  padding: 4px 10px;
+}
