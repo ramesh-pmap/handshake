@@ -2,7 +2,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { changeFolder } from '../../../../../redux/actions';
+import { changeFolder, setRightPanelAreaView } from '../../../../../redux/actions';
+import { ACTIVITY } from '../../../../../redux/constants';
 
 // Core components.
 import {Row, Col, Button, ListGroupItem} from 'react-bootstrap';
@@ -19,6 +20,7 @@ class FileManagerRowFolder extends React.Component {
     const { dispatch, data } = this.props;
     // Redux action.
     dispatch(changeFolder(data.folder_id));
+    dispatch(setRightPanelAreaView(ACTIVITY));
   }
 
   // Render method.

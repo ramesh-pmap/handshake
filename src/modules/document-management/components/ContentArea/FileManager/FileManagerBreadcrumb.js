@@ -2,7 +2,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { changeFolder } from '../../../../../redux/actions';
+import { changeFolder, setRightPanelAreaView } from '../../../../../redux/actions';
+import { ACTIVITY } from '../../../../../redux/constants';
 
 // Core components.
 import {Breadcrumb, BreadcrumbItem} from 'react-bootstrap';
@@ -19,6 +20,7 @@ class FileManagerBreadcrumb extends React.Component {
     const { dispatch } = this.props;
     // Redux action.
     dispatch(changeFolder(id));
+    dispatch(setRightPanelAreaView(ACTIVITY));
   }
 
   // Render method.

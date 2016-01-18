@@ -33,31 +33,31 @@ class ContentArea extends React.Component {
     case DEFAULT:
       contentArea = (
         <div className="page-content-wrapper">
-          <Default loadContentAreaView={this.props.loadContentAreaView} />
+          <Default />
         </div>
       );
       break;
     case PREVIEW:
-      contentArea = <Preview loadContentAreaView={this.props.loadContentAreaView} />;
+      contentArea = <Preview />;
       break;
     case UPLOAD:
       contentArea = (
         <div className="page-content-wrapper">
-          <Upload loadContentAreaView={this.props.loadContentAreaView} />
+          <Upload />
         </div>
       );
       break;
     case SEARCH_RESULTS:
       contentArea = (
         <div className="page-content-wrapper">
-          <SearchResults loadContentAreaView={this.props.loadContentAreaView} />
+          <SearchResults />
         </div>
       );
       break;
     default:
       contentArea = (
         <div className="page-content-wrapper">
-          <Default loadContentAreaView={this.props.loadContentAreaView} />
+          <Default />
         </div>
       );
     }
