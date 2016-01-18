@@ -6,21 +6,27 @@ import { connect } from 'react-redux';
 import {FormControls, Tooltip, OverlayTrigger, ListGroup, ListGroupItem, Button /* , Input */ } from 'react-bootstrap';
 import Icon from 'react-fa';
 
+// Misc. components.
+import Avatar from '../../../../components/Avatar';
+
 // Tooltip const.
 const tooltipOwner = (
   <Tooltip id="tooltip1">This is the Owner of the Document.</Tooltip>
 );
 const tooltipApprover1 = (
-  <Tooltip id="tooltip2">If the status is green, Person #2 has approved the document on 12/19/2015.</Tooltip>
+  <Tooltip id="tooltip2">If the status is green, Approver #1 has approved the document on 12/19/2015.</Tooltip>
 );
 const tooltipApprover2 = (
-  <Tooltip id="tooltip3">If the status is yellow, it is pending approval from Person #3 on 12/20/2015.</Tooltip>
+  <Tooltip id="tooltip3">Approver #2 has approved the document on 12/20/2015.</Tooltip>
 );
 const tooltipApprover3 = (
-  <Tooltip id="tooltip4">If the status is red, Person #4 has rejected the document on 12/20/2015.</Tooltip>
+  <Tooltip id="tooltip4">Approver #3 has approved the document on 12/20/2015.</Tooltip>
+);
+const tooltipApprover4 = (
+  <Tooltip id="tooltip5">If the status is yellow, Final Approver #4 has yet to approve or reject the document.</Tooltip>
 );
 const tooltipStatus = (
-  <Tooltip id="tooltip5">The document has been approved.</Tooltip>
+  <Tooltip id="tooltip6">The document has been approved.</Tooltip>
 );
 
 // Panels const.
@@ -246,31 +252,21 @@ class Detail extends React.Component {
               <FormControls.Static label="Workflow" />
             </div>
             <OverlayTrigger placement="bottom" overlay={tooltipOwner}>
-              <div className="avatar default" onClick={this.showWorkflowPreview.bind(this)}>
-                <img src="/static/images/a1.jpg" alt="image"/>
-              </div>
+              <Avatar src="/static/images/a1.jpg" shape="circle" size="" onClick={this.showWorkflowPreview.bind(this)}/>
             </OverlayTrigger>
             <div className="divider-vertical"></div>
             <OverlayTrigger placement="bottom" overlay={tooltipApprover1}>
-              <div className="avatar approved" onClick={this.showWorkflowPreview.bind(this)}>
-                <img src="/static/images/a2.jpg" alt="image"/>
-              </div>
+              <Avatar src="/static/images/a2.jpg" status="approved" shape="circle" size="" onClick={this.showWorkflowPreview.bind(this)}/>
             </OverlayTrigger>
             <OverlayTrigger placement="bottom" overlay={tooltipApprover2}>
-              <div className="avatar pending" onClick={this.showWorkflowPreview.bind(this)}>
-                <img src="/static/images/a3.jpg" alt="image"/>
-              </div>
+              <Avatar src="/static/images/a3.jpg" status="approved" shape="circle" size="" onClick={this.showWorkflowPreview.bind(this)}/>
             </OverlayTrigger>
             <OverlayTrigger placement="bottom" overlay={tooltipApprover3}>
-              <div className="avatar pending" onClick={this.showWorkflowPreview.bind(this)}>
-                <img src="/static/images/a4.jpg" alt="image"/>
-              </div>
+              <Avatar src="/static/images/a4.jpg" status="approved" shape="circle" size="" onClick={this.showWorkflowPreview.bind(this)}/>
             </OverlayTrigger>
             <div className="divider-vertical"></div>
-            <OverlayTrigger placement="bottom" overlay={tooltipApprover3}>
-              <div className="avatar default" onClick={this.showWorkflowPreview.bind(this)}>
-                <img src="/static/images/a4.jpg" alt="image"/>
-              </div>
+            <OverlayTrigger placement="bottom" overlay={tooltipApprover4}>
+              <Avatar src="/static/images/a5.jpg" status="pending" shape="circle" size="" onClick={this.showWorkflowPreview.bind(this)}/>
             </OverlayTrigger>
             <div className="divider-vertical"></div>
             <OverlayTrigger placement="bottom" overlay={tooltipStatus}>

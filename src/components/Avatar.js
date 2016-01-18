@@ -43,10 +43,19 @@ class Mars extends React.Component {
       borderRadius: radius
     };
 
-    let classnames = 'avatar ' + this.props.status;
+    const status = this.props.status || '';
+    let classnames = 'avatar ' + status;
+
+    // Image src.
+    const imageSrc = this.props.src || '';
+    let imageTag = '';
+    if (imageSrc.length >= 1) {
+      imageTag = <img src={imageSrc} />;
+    }
 
     return (
       <div className={classnames} style={styles}>
+        {imageTag}
       </div>
     );
   }
@@ -57,7 +66,8 @@ Mars.propTypes = {
   status: React.PropTypes.string,
   shape: React.PropTypes.string,
   size: React.PropTypes.string,
-  border: React.PropTypes.string
+  border: React.PropTypes.string,
+  src: React.PropTypes.string
 };
 
 // Export.
