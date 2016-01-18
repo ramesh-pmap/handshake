@@ -5,7 +5,6 @@
   "description": "processmap cosmos",
   "private": true,
   "scripts": {
-    "expr": "./node_modules/.bin/babel-node server.js",
     "start": "webpack-dev-server --history-api-fallback --devtool eval-source-map --hot --inline --progress --colors",
     "build": "npm run clean && webpack --progress --colors",
     "build-prod": "NODE_ENV=production && npm run clean && webpack -p",
