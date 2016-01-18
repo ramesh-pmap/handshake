@@ -17,8 +17,8 @@ class FileManagerRowFile extends React.Component {
   }
 
   clickListGroupItemHandler(fileId, e) {
-    const { state, dispatch } = this.props;
     e.preventDefault();
+    const { state, dispatch } = this.props;
     // Redux actions.
     dispatch(selectFile(fileId));
     dispatch(setRightPanelAreaView(DETAIL));
@@ -28,8 +28,8 @@ class FileManagerRowFile extends React.Component {
   }
 
   clickButtonHandler(e) {
-    const { dispatch } = this.props;
     e.preventDefault();
+    const { dispatch } = this.props;
     dispatch(setContentAreaView(PREVIEW));
   }
 
@@ -75,10 +75,9 @@ class FileManagerRowFile extends React.Component {
 // Validation.
 FileManagerRowFile.propTypes = {
   data: React.PropTypes.object,
-  state: React.PropTypes.func,
+  state: React.PropTypes.object,
   dispatch: React.PropTypes.func
 };
-
 const mapStateToProps = (state) => ({
   state
 });

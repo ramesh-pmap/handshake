@@ -4,8 +4,9 @@ import { connect } from 'react-redux';
 import { ButtonGroup, Button, Image } from 'react-bootstrap';
 import Icon from 'react-fa';
 
-// Const.
-import { DEFAULT /* , UPLOAD, SEARCH_RESULTS} */ } from '../../../../redux/constants';
+// Redux.
+import { setContentAreaView } from '../../../../redux/actions';
+import { DEFAULT } from '../../../../redux/constants';
 
 // Define class.
 class Preview extends React.Component {
@@ -15,7 +16,8 @@ class Preview extends React.Component {
   }
 
   closePreview() {
-    this.props.loadContentAreaView(DEFAULT);
+    const { dispatch } = this.props;
+    dispatch(setContentAreaView(DEFAULT));
   }
 
   print() {
@@ -77,7 +79,6 @@ class Preview extends React.Component {
 
 // propTypes.
 Preview.propTypes = {
-  loadContentAreaView: React.PropTypes.func,
   dispatch: React.PropTypes.func,
   state: React.PropTypes.object
 };
