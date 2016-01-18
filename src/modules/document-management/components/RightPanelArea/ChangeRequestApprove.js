@@ -13,6 +13,10 @@ class DetailForm extends React.Component {
   constructor(props) {
     // Pass `props` into scope.
     super(props);
+
+    this.state = {
+      actionItemForm: 'none'
+    };
   }
 
   handleSaveButtonClick() {
@@ -21,8 +25,21 @@ class DetailForm extends React.Component {
     dispatch(setRightPanelAreaView(DETAIL));
   }
 
+  handleActionItemOptionChange(e) {
+    const val = e.target.checked;
+    switch (val) {
+    case true:
+      this.setState({ actionItemForm: 'block' });
+      break;
+    default:
+      this.setState({ actionItemForm: 'none' });
+    }
+  }
+
   // Render method.
   render() {
+    const actionItemForm = this.state.actionItemForm;
+
     return (
       <div>
         <div className="fixed-title clearfix">
@@ -39,23 +56,56 @@ class DetailForm extends React.Component {
 
         <div className="sidebar-details">
           <div className="document-details">
-            <Input type="select" multiple label="Reviewed By" labelClassName=" required" wrapperClassName="">
+            <Input type="select" multiple label="Reviewed By" labelClassName=" required">
               <option>John Smith</option>
               <option>Bob Roberts</option>
               <option>Janette Walls</option>
             </Input>
-            <FormControls.Static label="Reviewed Date" labelClassName="" wrapperClassName="" value="1/25/16"/>
-            <Input type="textarea" label="Change Request Review Comments" maxLength="2000" labelClassName="" wrapperClassName="" />
+            <FormControls.Static label="Reviewed Date" value="1/25/16"/>
+            <Input type="textarea" label="Change Request Review Comments" maxLength="2000" />
             <Input type="select" label="Change Request Status" labelClassName=" required">
               <option defaultValue>Pending Review</option>
               <option>Approved</option>
               <option>Rejected</option>
             </Input>
-            <form>
-              <label className="control-label">Add Action Item?</label>
-              <Input type="radio" name="ActionItem" label="Yes" wrapperClassName="radio-group-item" />
-              <Input type="radio" name="ActionItem" label="No" />
-            </form>
+
+            <Input type="checkbox" label="Add Action Item?" onClick={this.handleActionItemOptionChange.bind(this)} />
+
+            <div style={{display: actionItemForm}}>
+              <FormControls.Static label="Source ID" value="US-WestLake-15-ERGO-016"/>
+              <Input type="textarea" label="Action Item Title" />
+              <FormControls.Static label="Action Item Category" value="Ergonomics"/>
+              <Input type="select" label="Action Item Type" labelClassName=" required">
+                <option defaultValue>Corrective Action</option>
+                <option>Action 2</option>
+                <option>Action 3</option>
+                <option>Action 4</option>
+              </Input>
+              <Input type="textarea" label="Action Item Description" maxLength="2000" />
+              <Input type="select" label="Action Item Priority" labelClassName=" required">
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+              </Input>
+              <Input type="text" label="Action Item Due Date"/>
+              <Input type="select" multiple label="Owners" labelClassName=" required">
+                <option>John Smith</option>
+                <option>Bob Roberts</option>
+                <option>Janette Walls</option>
+              </Input>
+              <Input type="checkbox" label="Notify Owners Immediately" onClick={this.handleActionItemOptionChange.bind(this)} />
+              <Input type="select" multiple label="Assigned By" labelClassName=" required">
+                <option>John Smith</option>
+                <option>Bob Roberts</option>
+                <option>Janette Walls</option>
+              </Input>
+              <Input type="select" label="Action Item Status" labelClassName=" required">
+                <option>Open</option>
+                <option>Closed</option>
+              </Input>
+              <Input type="textarea" label="Action Taken" maxLength="2000" />
+              <Input type="file" label="Add Attachment"/>
+            </div>
           </div>
         </div>
       </div>
