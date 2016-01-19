@@ -56,6 +56,15 @@ class DetailForm extends React.Component {
 
         <div className="sidebar-details">
           <div className="document-details">
+            <div className="change-request-summary">
+              <p>Change Request Summary</p>
+
+              <FormControls.Static label="Requested By" value="Jane Doe"/>
+              <FormControls.Static label="Reviewed Date" value="1/25/16"/>
+              <FormControls.Static label="Reason for Change Request" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."/>
+              <FormControls.Static label="Requested Changes" value="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+              <FormControls.Static label="Priority" value="Medium"/>
+            </div>
             <Input type="select" multiple label="Reviewed By" labelClassName=" required">
               <option>John Smith</option>
               <option>Bob Roberts</option>
