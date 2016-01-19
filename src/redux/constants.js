@@ -3,6 +3,7 @@ export const WINDOW_DIMENSIONS = 'WINDOW_DIMENSIONS';
 
 export const TOGGLE_LEFT_SIDEBAR = 'TOGGLE_LEFT_SIDEBAR';
 export const TOGGLE_RIGHT_SIDEBAR = 'TOGGLE_RIGHT_SIDEBAR';
+export const TOGGLE_MODAL = 'TOGGLE_MODAL';
 
 export const CHANGE_FOLDER = 'CHANGE_FOLDER';
 export const SELECT_FILE = 'SELECT_FILE';
@@ -23,5 +24,9 @@ export const DETAIL = 'DETAIL';
 export const DETAILFORM = 'DETAILFORM';
 export const VIEWER_CHANGE_REQUEST = 'VIEWER_CHANGE_REQUEST';
 export const OWNERCHANGE_REQUEST = 'OWNERCHANGE_REQUEST';
+
+// Modal constants.
+export const SET_MODAL_VIEW = 'SET_MODAL_VIEW';
+export const SHARE = 'SHARE';
 
 export const IFRAME_SOURCE = 'IFRAME_SOURCE';

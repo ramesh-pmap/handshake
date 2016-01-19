@@ -1,27 +1,40 @@
 // Dependencies.
 import React from 'react';
 import { connect } from 'react-redux';
-import { changeFolder, setFileManagerData, setContentAreaView, toggleRightSidebar, setRightPanelAreaView } from '../../redux/actions';
-import {DEFAULT,
-        PREVIEW,
-        UPLOAD,
-        ACTIVITY,
-        DETAIL,
-        DETAILFORM,
-        VIEWER_CHANGE_REQUEST,
-        APPROVE_CHANGE_REQUEST,
-        SEARCH_RESULTS,
-        TOGGLE_RIGHT_SIDEBAR } from '../../redux/constants';
+// Actions.
+import {
+  changeFolder,
+  setFileManagerData,
+  setContentAreaView,
+  toggleRightSidebar,
+  setRightPanelAreaView,
+  toggleModal,
+  setModalView
+} from '../../redux/actions';
+// Constants.
+import {
+  DEFAULT,
+  PREVIEW,
+  UPLOAD,
+  ACTIVITY,
+  DETAIL,
+  DETAILFORM,
+  VIEWER_CHANGE_REQUEST,
+  APPROVE_CHANGE_REQUEST,
+  SEARCH_RESULTS,
+  TOGGLE_RIGHT_SIDEBAR,
+  SHARE
+} from '../../redux/constants';
 
 // Core components.
-import { ButtonGroup, Button, Modal, Input } from 'react-bootstrap';
-import Icon from 'react-fa';
+import { ButtonGroup, Button } from 'react-bootstrap';
 
 // Layouts.
 import Main from '../../layouts/main';
 
-import ContentArea from './content-area.js';
-import RightPanelArea from './right-panel-area.js';
+import ContentArea from './content-area';
+import RightPanelArea from './right-panel-area';
+import ModalArea from './modal-area';
 
 // Utility methods.
 import utils from '../../utils';
@@ -38,29 +51,10 @@ class Page extends React.Component {
 
     // Set page title.
     utils.title(props);
-
-    this.state = { showModal: false };
-  }
-
-  close() {
-    this.setState({ showModal: false });
-  }
-
-  open() {
-    this.setState({ showModal: true });
   }
 
   componentDidMount() {
     const { dispatch } = this.props;
-    // Fetch Json data.
-    // fetch(FileManagerData).then(response => response.json())
-    //   .then(data => {
-    //     // Redux action.
-    //     // utils.createFolderMatrix([], data.fileManager);
-    //     // dispatch(setFileManagerData(data.fileManager[0], utils.createFolderMatrix([], data.fileManager) ));
-    //     // dispatch(changeFolder(data.fileManager[0].id));
-    //   })
-    //   .catch(error => {this.setState({error}); });
 
     // Fetch Source Json data.
     fetch(SourceData).then(response => response.json())
@@ -77,6 +71,7 @@ class Page extends React.Component {
     // Set initial state.
     dispatch(setContentAreaView(DEFAULT));
     dispatch(setRightPanelAreaView(ACTIVITY));
+    dispatch(toggleModal(false));
   }
 
   handleContentButtonClick(view) {
@@ -89,6 +84,12 @@ class Page extends React.Component {
     dispatch(setRightPanelAreaView(view));
   }
 
+  handleModalToggle(view) {
+    const { dispatch } = this.props;
+    dispatch(setModalView(view));
+    dispatch(toggleModal(true));
+  }
+
   handleRightSidePanelToggle() {
     const { state, dispatch } = this.props;
     dispatch(toggleRightSidebar(state.rightSidebarOpened));
@@ -97,9 +98,7 @@ class Page extends React.Component {
   // Render method.
   render() {
     const { state } = this.props;
-
-    const innerIcon = <Icon name="file" />;
-
+    // console.log('state:', state);
     return (
       <div>
         <Main>
@@ -128,7 +127,7 @@ class Page extends React.Component {
                 </ButtonGroup>
                 &nbsp;
                 <ButtonGroup>
-                  <Button bsStyle="default" bsSize="xs" onClick={this.open.bind(this)}>Share</Button>
+                  <Button bsStyle="default" bsSize="xs" onClick={this.handleModalToggle.bind(this, SHARE)}>Share</Button>
                   <Button bsStyle="default" bsSize="xs" onClick={this.handleRightSidePanelToggle.bind(this, TOGGLE_RIGHT_SIDEBAR)}>Toggle Right Panel</Button>
                 </ButtonGroup>
               </div>
@@ -148,28 +147,8 @@ class Page extends React.Component {
           </div>
         </Main>
 
-        <Modal show={this.state.showModal} onHide={this.close.bind(this)}>
-          <Modal.Header closeButton>
-            <Modal.Title>Share (Document Name)</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-
-            <Input type="text" label="Document:" value="Document1.docx" addonAfter={innerIcon} />
-
-            <p className="text-muted pull-right">Document Link: <span>https:&#47;&#47;bit.ly/abc123</span></p>
-            <Input type="select" label="Send to:" labelClassName=" required">
-              <option>John Smith</option>
-              <option>Bob Roberts</option>
-              <option>Janette Walls</option>
-            </Input>
-            <Input type="textarea" label="Comment:" maxLength="1000"/>
-          </Modal.Body>
-          <Modal.Footer>
-            <Button bsStyle="default" onClick={this.close.bind(this)}>Close</Button>
-            <Button bsStyle="primary">Send</Button>
-          </Modal.Footer>
-        </Modal>
-
+        {/* Modal view component */}
+        <ModalArea />
       </div>
     );
   }
