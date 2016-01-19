@@ -14,7 +14,8 @@ import {DEFAULT,
         TOGGLE_RIGHT_SIDEBAR } from '../../redux/constants';
 
 // Core components.
-import { ButtonGroup, Button, Modal } from 'react-bootstrap';
+import { ButtonGroup, Button, Modal, Input } from 'react-bootstrap';
+import Icon from 'react-fa';
 
 // Layouts.
 import Main from '../../layouts/main';
@@ -97,6 +98,8 @@ class Page extends React.Component {
   render() {
     const { state } = this.props;
 
+    const innerIcon = <Icon name="file" />;
+
     return (
       <div>
         <Main>
@@ -150,8 +153,16 @@ class Page extends React.Component {
             <Modal.Title>Share (Document Name)</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <h4>Text in a modal</h4>
-            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+
+            <Input type="text" label="Document:" value="Document1.docx" addonAfter={innerIcon} />
+
+            <p className="text-muted pull-right">Document Link: <span>https:&#47;&#47;bit.ly/abc123</span></p>
+            <Input type="select" label="Send to:" labelClassName=" required">
+              <option>John Smith</option>
+              <option>Bob Roberts</option>
+              <option>Janette Walls</option>
+            </Input>
+            <Input type="textarea" label="Comment:" maxLength="1000"/>
           </Modal.Body>
           <Modal.Footer>
             <Button bsStyle="default" onClick={this.close.bind(this)}>Close</Button>
