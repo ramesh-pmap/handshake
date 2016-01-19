@@ -9,18 +9,31 @@ import {Button, Input, FormControls} from 'react-bootstrap';
 // import Icon from 'react-fa';
 import Select from 'react-select';
 
+// DatePicker.
+import DatePicker from 'react-datepicker';
+import moment from 'moment';
+import 'react-datepicker/dist/react-datepicker.css';
+
 
 // Define class.
 class DetailForm extends React.Component {
   constructor(props) {
     // Pass `props` into scope.
     super(props);
+
+    this.state = {
+      startDate: moment()
+    };
   }
 
   handleSaveButtonClick() {
     const { dispatch } = this.props;
     // console.log('Save clicked');
     dispatch(setRightPanelAreaView(DETAIL));
+  }
+
+  handleChange(date) {
+    this.setState({ startDate: date });
   }
 
   // Render method.
@@ -57,8 +70,11 @@ class DetailForm extends React.Component {
 
         <div className="sidebar-details">
           <div className="document-details">
+
             <Input type="text" label="Title" labelClassName=" required" />
+
             <Input type="text" label="Internal Document ID" />
+
             <Input type="number" label="Version" labelClassName=" required" />
 
             <div className="form-group">
@@ -86,9 +102,21 @@ class DetailForm extends React.Component {
             </div>
 
             <FormControls.Static label="Uploaded/Referenced By" value="John Doe"/>
-            <FormControls.Static label="Date Uploaded/Referenced" value="11/7/2015"/>
+
+            <DatePicker
+              className="form-control"
+              selected={this.state.startDate}
+              onChange={this.handleChange.bind(this)}
+              dateFormat="MMMM d, YYYY"
+              // isClearable
+              showYearDropdown
+            />
+            {/* <FormControls.Static label="Date Uploaded/Referenced" value="11/7/2015"/> */}
+
             <FormControls.Static label="Modified By" value="John Doe"/>
+
             <FormControls.Static label="Modified Date" value="11/8/2015"/>
+
             <FormControls.Static label="Document Status" value="Pending Approval"/>
 
             <div className="form-group">
@@ -137,8 +165,11 @@ class DetailForm extends React.Component {
             </Input>
 
             <Input type="textarea" label="Reason for Change" />
+
             <FormControls.Static label="File Name" value="OSHA_V2.0.docx"/>
+
             <FormControls.Static label="File Size" value="2.5 MB"/>
+
           </div>
         </div>
       </div>
