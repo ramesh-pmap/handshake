@@ -55,7 +55,7 @@ class Upload extends React.Component {
           </p>
           Drag and drop files here
           <br className="hidden-xs"/>&nbsp;
-          or click to select files to upload.
+          or click to <a>select files</a> from your computer.
         </Dropzone>
 
         <div className="card">
