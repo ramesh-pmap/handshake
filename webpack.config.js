@@ -5,7 +5,7 @@ const webpack = require('webpack');
 module.exports = {
   entry: {
     javascript: './src/index.js',
-    html: './src/index.html',
+    html: './src/index.html'
   },
 
   output: {
@@ -31,7 +31,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: ['react-hot', 'babel-loader'],
+        loaders: ['react-hot', 'babel-loader?presets[]=react,presets[]=es2015'],
       },
       // HTML.
       {
@@ -83,6 +83,6 @@ module.exports = {
     new webpack.ProvidePlugin({
       'Promise': 'imports?this=>global!exports?global.Promise!es6-promise',
       'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
-    })
+    }),
   ]
 };
