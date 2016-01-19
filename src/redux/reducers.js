@@ -2,11 +2,13 @@ import {
   WINDOW_DIMENSIONS,
   TOGGLE_LEFT_SIDEBAR,
   TOGGLE_RIGHT_SIDEBAR,
+  TOGGLE_MODAL,
   CHANGE_FOLDER,
   SELECT_FILE,
   SET_FILE_MANAGER_DATA,
   SET_CONTENT_AREA_VIEW,
   SET_RIGHT_PANEL_AREA_VIEW,
+  SET_MODAL_VIEW,
   IFRAME_SOURCE,
   SEARCHING_FOR
 } from './constants';
@@ -30,6 +32,12 @@ function docMgtAppReducer(state = {}, action = {}) {
     // console.log('TOGGLE_RIGHT_SIDEBAR Action:', action);
     return Object.assign({}, state, {
       rightSidebarOpened: !action.value
+    });
+
+  case TOGGLE_MODAL:
+    // console.log('TOGGLE_MODAL Action:', action);
+    return Object.assign({}, state, {
+      modalOpened: action.value
     });
 
   case CHANGE_FOLDER:
@@ -65,6 +73,12 @@ function docMgtAppReducer(state = {}, action = {}) {
       rightPanelAreaView: action.value
     });
 
+  case SET_MODAL_VIEW:
+    // console.log('SET_MODAL_VIEW Action:', action);
+    return Object.assign({}, state, {
+      modalView: action.value
+    });
+
   case IFRAME_SOURCE:
     // console.log('IFRAME_SOURCE Action:', action);
     return Object.assign({}, state, {
@@ -72,7 +86,7 @@ function docMgtAppReducer(state = {}, action = {}) {
     });
 
   case SEARCHING_FOR:
-    // console.log('IFRAME_SOURCE Action:', action);
+    // console.log('SEARCHING_FOR Action:', action);
     return Object.assign({}, state, {
       searchingFor: action.value
     });
