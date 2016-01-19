@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { DEFAULT, PREVIEW, UPLOAD, SEARCH_RESULTS } from '../../redux/constants';
 
 // Components.
+import DocumentListHeader from './components/ContentArea/ContentAreaHeader';
 import Default from './components/ContentArea/Default';
 import Preview from './components/ContentArea/Preview';
 import Upload from './components/ContentArea/Upload';
@@ -33,6 +34,7 @@ class ContentArea extends React.Component {
     case DEFAULT:
       contentArea = (
         <div className="page-content-wrapper">
+          <DocumentListHeader />
           <Default />
         </div>
       );
@@ -43,6 +45,8 @@ class ContentArea extends React.Component {
     case UPLOAD:
       contentArea = (
         <div className="page-content-wrapper">
+          <DocumentListHeader />
+          <br/>
           <Upload />
         </div>
       );
@@ -50,6 +54,7 @@ class ContentArea extends React.Component {
     case SEARCH_RESULTS:
       contentArea = (
         <div className="page-content-wrapper">
+          <DocumentListHeader />
           <SearchResults />
         </div>
       );
@@ -57,6 +62,7 @@ class ContentArea extends React.Component {
     default:
       contentArea = (
         <div className="page-content-wrapper">
+          <DocumentListHeader />
           <Default />
         </div>
       );

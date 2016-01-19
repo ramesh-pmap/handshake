@@ -3,7 +3,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 // Components.
-import DocumentListHeader from './ContentAreaHeader';
 import FileManager from './FileManager/FileManager';
 
 
@@ -36,7 +35,6 @@ class Default extends React.Component {
 
     return (
       <div>
-        <DocumentListHeader />
         {/* FileManager component */}
         <FileManager foldersData={folderData} breadcrumbData={breadcrumbData} filesData={filesData} currentFolderId={currentId} />
       </div>

@@ -34,10 +34,11 @@ class ContentAreaHeader extends React.Component {
   // Search Field.
   handleSearchFieldOnChange(e) {
     e.preventDefault();
-    // console.log('Search:', e.target.value);
-    // this.setState({ sectionTitle: e.target.value });
-    // const { state } = this.props;
-    // const leftSidebarOpened = state.leftSidebarOpened;
+    const val = e.target.value;
+    const { dispatch } = this.props;
+    if (val.length > 0) {
+      dispatch(setContentAreaView(SEARCH_RESULTS));
+    }
   }
   onFocus() {
     this.setState({

@@ -10,7 +10,6 @@ import { ACTIVITY, DETAILFORM } from '../../../../redux/constants';
 import {Row, Col, Button, ListGroup, ListGroupItem, ProgressBar} from 'react-bootstrap';
 import Icon from 'react-fa';
 import Dropzone from 'react-dropzone';
-import DocumentListHeader from './ContentAreaHeader';
 
 // Define class.
 class Upload extends React.Component {
@@ -44,10 +43,6 @@ class Upload extends React.Component {
   render() {
     return (
       <div>
-
-        <DocumentListHeader customTitle="Upload" />
-
-        <br/>
 
         <Dropzone id="Upload_Dropzone" ref="dropzone" onDrop={this.onDrop.bind(this)} className="dropzone">
           <p>
