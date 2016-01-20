@@ -3,10 +3,17 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { setRightPanelAreaView } from '../../../../redux/actions';
 import { DETAIL } from '../../../../redux/constants';
+import Icon from 'react-fa';
 
 // Core components.
 import {Button, Input, FormControls} from 'react-bootstrap';
 // import Icon from 'react-fa';
+
+// DatePicker.
+import DatePicker from 'react-datepicker';
+import moment from 'moment';
+import 'react-datepicker/dist/react-datepicker.css';
+
 
 // Define class.
 class DetailForm extends React.Component {
@@ -15,7 +22,8 @@ class DetailForm extends React.Component {
     super(props);
 
     this.state = {
-      actionItemForm: 'none'
+      actionItemForm: 'none',
+      startDate: moment()
     };
   }
 
@@ -36,9 +44,14 @@ class DetailForm extends React.Component {
     }
   }
 
+  handleChange(date) {
+    this.setState({ startDate: date });
+  }
+
   // Render method.
   render() {
     const actionItemForm = this.state.actionItemForm;
+    const innerIcon = <Icon name="file" />;
 
     return (
       <div>
@@ -72,6 +85,7 @@ class DetailForm extends React.Component {
             </Input>
             <FormControls.Static label="Reviewed Date" value="1/25/16"/>
             <Input type="textarea" label="Change Request Review Comments" maxLength="2000" />
+
             <Input type="select" label="Change Request Status" labelClassName=" required">
               <option defaultValue>Pending Review</option>
               <option>Approved</option>
@@ -84,19 +98,35 @@ class DetailForm extends React.Component {
               <FormControls.Static label="Source ID" value="US-WestLake-15-ERGO-016"/>
               <Input type="textarea" label="Action Item Title" />
               <FormControls.Static label="Action Item Category" value="Ergonomics"/>
+
               <Input type="select" label="Action Item Type" labelClassName=" required">
                 <option defaultValue>Corrective Action</option>
                 <option>Action 2</option>
                 <option>Action 3</option>
                 <option>Action 4</option>
               </Input>
+
               <Input type="textarea" label="Action Item Description" maxLength="2000" />
-              <Input type="select" label="Action Item Priority" labelClassName=" required">
+
+              <Input type="select" label="Action Item Priority" labelClassName="required">
                 <option>Low</option>
                 <option>Medium</option>
                 <option>High</option>
               </Input>
-              <Input type="text" label="Action Item Due Date"/>
+
+              <div className="form-group">
+                <label className="control-label">Action Item Due Date</label>
+                <DatePicker
+                  className="form-control"
+                  selected={this.state.startDate}
+                  onChange={this.handleChange.bind(this)}
+                  dateFormat="MMMM d, YYYY"
+                  addonAfter={innerIcon}
+                  // isClearable
+                  showYearDropdown
+                />
+              </div>
+
               <Input type="select" multiple label="Owners" labelClassName=" required">
                 <option>John Smith</option>
                 <option>Bob Roberts</option>

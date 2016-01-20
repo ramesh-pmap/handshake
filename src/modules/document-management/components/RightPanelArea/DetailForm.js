@@ -9,21 +9,12 @@ import {Button, Input, FormControls} from 'react-bootstrap';
 // import Icon from 'react-fa';
 import Select from 'react-select';
 
-// DatePicker.
-import DatePicker from 'react-datepicker';
-import moment from 'moment';
-import 'react-datepicker/dist/react-datepicker.css';
-
 
 // Define class.
 class DetailForm extends React.Component {
   constructor(props) {
     // Pass `props` into scope.
     super(props);
-
-    this.state = {
-      startDate: moment()
-    };
   }
 
   handleSaveButtonClick() {
@@ -103,19 +94,11 @@ class DetailForm extends React.Component {
 
             <FormControls.Static label="Uploaded/Referenced By" value="John Doe"/>
 
-            <DatePicker
-              className="form-control"
-              selected={this.state.startDate}
-              onChange={this.handleChange.bind(this)}
-              dateFormat="MMMM d, YYYY"
-              // isClearable
-              showYearDropdown
-            />
-            {/* <FormControls.Static label="Date Uploaded/Referenced" value="11/7/2015"/> */}
+            <FormControls.Static label="Date Uploaded/Referenced" value="11/07/15"/>
 
             <FormControls.Static label="Modified By" value="John Doe"/>
 
-            <FormControls.Static label="Modified Date" value="11/8/2015"/>
+            <FormControls.Static label="Modified Date" value="11/08/2015"/>
 
             <FormControls.Static label="Document Status" value="Pending Approval"/>
 
