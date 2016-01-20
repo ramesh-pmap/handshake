@@ -1,6 +1,7 @@
 // Dependencies.
 import React from 'react';
 import { connect } from 'react-redux';
+
 // Actions.
 import {
   changeFolder,
@@ -11,6 +12,7 @@ import {
   toggleModal,
   setModalView
 } from '../../redux/actions';
+
 // Constants.
 import {
   DEFAULT,
@@ -40,8 +42,9 @@ import ModalArea from './modal-area';
 import utils from '../../utils';
 
 // Json file with folder structure data.
-// const FileManagerData = '../../../static/data/filemanager-data.json';
-const SourceData = '../../../static/data/documents-data-SKF.json';
+// const SourceData = '../../../static/data/documents-data-SKF.json';
+import Firebase from 'firebase';
+
 
 // Define class.
 class Page extends React.Component {
@@ -55,18 +58,30 @@ class Page extends React.Component {
 
   componentDidMount() {
     const { dispatch } = this.props;
+    // LET'S KEEP IT HERE FOR NOW AS A SAMPLE ON LOADING FROM A STATIC JSON FILE.
+    // // Fetch Source Json data.
+    // fetch(SourceData).then(response => response.json())
+    //   .then(data => {
+    //     // Redux action.
+    //     const parsedFolders = utils.parseTreeWithBreadcrumb(data.document_folder);
+    //     const flatFolders = utils.convertToFlatTree([], parsedFolders);
+    //     const docFiles = data.document;
+    //     dispatch(setFileManagerData(parsedFolders[0], flatFolders, docFiles));
+    //     dispatch(changeFolder(0));
+    //   })
+    //   .catch(error => {this.setState({error}); });
 
-    // Fetch Source Json data.
-    fetch(SourceData).then(response => response.json())
-      .then(data => {
-        // Redux action.
-        const parsedFolders = utils.parseTreeWithBreadcrumb(data.document_folder);
-        const flatFolders = utils.convertToFlatTree([], parsedFolders);
-        const docFiles = data.document;
-        dispatch(setFileManagerData(parsedFolders[0], flatFolders, docFiles));
-        dispatch(changeFolder(0));
-      })
-      .catch(error => {this.setState({error}); });
+    // Fetch Source Json data from Firebase
+    let ref = new Firebase('https://resplendent-heat-3135.firebaseio.com');
+    ref.once('value', data => {
+      // console.log('data from firebase', data.val());
+      // Redux action.
+      const parsedFolders = utils.parseTreeWithBreadcrumb(data.val().document_folder);
+      const flatFolders = utils.convertToFlatTree([], parsedFolders);
+      const docFiles = data.val().document;
+      dispatch(setFileManagerData(parsedFolders[0], flatFolders, docFiles));
+      dispatch(changeFolder(0));
+    });
 
     // Set initial state.
     dispatch(setContentAreaView(DEFAULT));
