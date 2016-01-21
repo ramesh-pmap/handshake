@@ -119,7 +119,9 @@ class Detail extends React.Component {
           <Button bsStyle="info" bsSize="xs">Submit</Button>
           <hr />
           */}
-
+          <div className="form-group">
+            <Button bsSize="xsmall" bsStyle="info" block>Submit for Approval</Button>
+          </div>
           <FormControls.Static label="Title" value={docTitle} />
           <FormControls.Static label="Internal Document ID" value={docId} />
           <FormControls.Static label="Version" value={docVersion} />
@@ -247,7 +249,7 @@ class Detail extends React.Component {
         </div>
 
         <div className="sidebar-details">
-          <div className="workflow-avatars">
+          <div className="workflow-avatars col-md-12">
             <div className="document-details">
               <FormControls.Static label="Workflow" />
             </div>
