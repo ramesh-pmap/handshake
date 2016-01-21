@@ -52,7 +52,7 @@ class DetailForm extends React.Component {
       <div>
         <div className="fixed-title clearfix">
           <h3 className="pull-left">Selected File</h3>
-          <div className="pull-right">
+          <div className="btn-group pull-right">
             <Button bsStyle="info" bsSize="sm" onClick={this.handleSaveButtonClick.bind(this)}>
               Save
             </Button>

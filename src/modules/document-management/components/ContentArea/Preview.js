@@ -41,6 +41,11 @@ class Preview extends React.Component {
             sample-word-document.docx
           </div>
           <ButtonGroup className="pull-right">
+            <Button bsStyle="link" bsSize="sm" className="text-muted">
+              <Icon name="list-alt" className="fa-lg" />
+              &nbsp;
+              View Details
+            </Button>
             <Button bsStyle="link" bsSize="sm" className="text-muted"
               onClick={this.print.bind(this)}>
               <Icon name="print" className="fa-lg" />
