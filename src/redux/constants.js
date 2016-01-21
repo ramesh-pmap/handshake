@@ -29,6 +29,7 @@ export const OWNERCHANGE_REQUEST = 'OWNERCHANGE_REQUEST';
 // Modal constants.
 export const SET_MODAL_VIEW = 'SET_MODAL_VIEW';
 export const SHARE = 'SHARE';
+export const CHECKOUT = 'CHECKOUT';
 
 export const IFRAME_SOURCE = 'IFRAME_SOURCE';
 export const SET_FIREBASE_URL = 'SET_FIREBASE_URL';

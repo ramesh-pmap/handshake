@@ -1,10 +1,11 @@
 // Dependencies.
 import React from 'react';
 import { connect } from 'react-redux';
-import { SHARE } from '../../redux/constants';
+import { SHARE, CHECKOUT } from '../../redux/constants';
 
 // Components.
 import ModalShare from './components/Modal/Share';
+import ModalCheckOut from './components/Modal/CheckOut';
 
 
 // Define class.
@@ -23,6 +24,9 @@ class ModalArea extends React.Component {
     switch (currentView) {
     case SHARE:
       modalView = <ModalShare />;
+      break;
+    case CHECKOUT:
+      modalView = <ModalCheckOut />;
       break;
     default:
       modalView = <ModalShare />;
