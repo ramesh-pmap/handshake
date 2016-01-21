@@ -5,8 +5,13 @@ import { ButtonGroup, Button, Image } from 'react-bootstrap';
 import Icon from 'react-fa';
 
 // Redux.
-import { setContentAreaView } from '../../../../redux/actions';
-import { DEFAULT } from '../../../../redux/constants';
+import {
+  setContentAreaView,
+  setRightPanelAreaView,
+  toggleRightSidebar
+} from '../../../../redux/actions';
+
+import { DEFAULT, DETAIL } from '../../../../redux/constants';
 
 // Define class.
 class Preview extends React.Component {
@@ -30,6 +35,13 @@ class Preview extends React.Component {
     pri.print();
   }
 
+  showDetail() {
+    const { state, dispatch } = this.props;
+    dispatch(setRightPanelAreaView(DETAIL));
+    dispatch(toggleRightSidebar(false));
+    console.log(state.rightSidebarOpened);
+  }
+
   // Render method.
   render() {
     const { state } = this.props;
@@ -41,7 +53,8 @@ class Preview extends React.Component {
             sample-word-document.docx
           </div>
           <ButtonGroup className="pull-right">
-            <Button bsStyle="link" bsSize="sm" className="text-muted">
+            <Button bsStyle="link" bsSize="sm" className="text-muted"
+              onClick={this.showDetail.bind(this)}>
               <Icon name="list-alt" className="fa-lg" />
               &nbsp;
               View Details
