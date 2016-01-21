@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { toggleModal } from '../../../../redux/actions';
 
 import { Button, Modal, Input, FormControls } from 'react-bootstrap';
+import Icon from 'react-fa';
+import Dropzone from 'react-dropzone';
 
 // Define class.
 class UploadNewVersion extends React.Component {
@@ -17,6 +19,15 @@ class UploadNewVersion extends React.Component {
     dispatch(toggleModal(false));
   }
 
+  // Dropzone.
+  onDrop(uploadedFiles) {
+    this.setState({ files: uploadedFiles });
+    // console.log(uploadedFiles);
+  }
+  onOpenClick() {
+    this.refs.dropzone.open();
+  }
+
   // Render method.
   render() {
     const { state } = this.props;
@@ -27,6 +38,14 @@ class UploadNewVersion extends React.Component {
           <Modal.Title>Upload New Version</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          <Dropzone id="Upload_Dropzone" ref="dropzone" onDrop={this.onDrop.bind(this)} className="dropzone">
+            <p>
+              <Icon name="upload" className="fa-2x text-success" />
+            </p>
+            Drag and drop files here
+            <br className="hidden-xs"/>&nbsp;
+            or click to <a>select files</a> from your computer.
+          </Dropzone>
 
           <Input type="textarea" label="Reason:" maxLength="1000"/>
 
