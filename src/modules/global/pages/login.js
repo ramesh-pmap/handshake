@@ -21,13 +21,15 @@ class Page extends React.Component {
     utils.title(props);
   }
 
-  handleLogin(loginName) {
-    if (loginName === 'pmap') {
+  handleLogin(loginName, password) {
+    if (loginName === 'demouser' && password === 'Password2016') {
       this.props.history.pushState(null, '/document-management');
+      return true;
     }
-    if (loginName === 'pmap2') {
-      this.props.history.pushState(null, '/home');
-    }
+    return false;
+    // if (loginName === 'pmap2') {
+    //   this.props.history.pushState(null, '/home');
+    // }
   }
 
   // Render method.

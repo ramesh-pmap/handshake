@@ -1,5 +1,6 @@
 // Dependencies.
 import React from 'react';
+import { Alert } from 'react-bootstrap';
 
 // Load bootstrap CSS.
 import 'bootstrap/dist/css/bootstrap.css';
@@ -10,15 +11,30 @@ class Login extends React.Component {
   constructor(props) {
     // Pass `props` into scope.
     super(props);
+
+    this.state = {
+      loginOk: true
+    };
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.onLogin(this.refs.loginName.value);
+    let userHasPermission = this.props.onLogin(this.refs.loginName.value, this.refs.password.value);
+    this.setState({loginOk: userHasPermission});
   }
 
   // Render method.
   render() {
+    let alertBlock = '';
+    if (!this.state.loginOk) {
+      alertBlock = (
+        <Alert bsStyle="danger">
+          <h4>Incorrect Login/Password.</h4>
+          <p>Please check your credentials and try again.</p>
+        </Alert>
+      );
+    }
+
     return (
       <div>
            <div className="container">
@@ -32,10 +48,9 @@ class Login extends React.Component {
                     <form role="form" action="#" method="POST" onSubmit={this.handleSubmit.bind(this)}>
                       <fieldset>
                         <div className="row">
-                          {/* <div className="center-block">
-                            <img className="profile-img"
-                              src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120" alt="" />
-                          </div>*/}
+                          <div className="center-block">
+                            {alertBlock}
+                          </div>
                         </div>
                         <div className="row">
                           <div className="col-sm-12 col-md-10  col-md-offset-1 ">
@@ -52,7 +67,7 @@ class Login extends React.Component {
                                 <span className="input-group-addon">
                                   <i className="glyphicon glyphicon-lock"></i>
                                 </span>
-                                <input className="form-control" placeholder="Password" name="password" type="password" value="" />
+                                <input className="form-control" placeholder="Password" ref="password" name="password" type="password" />
                               </div>
                             </div>
                             <div className="form-group">
@@ -63,12 +78,10 @@ class Login extends React.Component {
                       </fieldset>
                     </form>
                   </div>
-                  {/* }
                   <div className="panel-footer">
-                    Dont have an account! <a href="#" > Sign Up Here </a>
+                    Don't have an account? <a href="#" > Contact ProcessMAP </a>
                   </div>
-                  {*/ }
-                        </div>
+                </div>
               </div>
             </div>
           </div>
