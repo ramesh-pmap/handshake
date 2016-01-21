@@ -6,7 +6,7 @@ import { selectFile, setRightPanelAreaView, toggleRightSidebar, setContentAreaVi
 import { DETAIL, PREVIEW } from '../../../../../redux/constants';
 
 // Core components.
-import {Row, Col, Button, ListGroupItem} from 'react-bootstrap';
+import {Row, Col, Button, ListGroupItem, MenuItem, ButtonToolbar, DropdownButton} from 'react-bootstrap';
 import Icon from 'react-fa';
 
 // Define class.
@@ -46,8 +46,8 @@ class FileManagerRowFile extends React.Component {
     const fileStatus = fileData.doc_status_id;
 
     return (
-      <ListGroupItem onClick={this.clickListGroupItemHandler.bind(this, fileId)}>
-        <Row>
+      <ListGroupItem>
+        <Row onClick={this.clickListGroupItemHandler.bind(this, fileId)}>
           <Col sm={6}>
             <Button href="#/" bsStyle="link" bsSize="xs" onClick={this.clickButtonHandler.bind(this)}>
               <Icon name={`file-${fileType}-o`} className="fa-fw fa-lg text-muted" />
@@ -64,9 +64,28 @@ class FileManagerRowFile extends React.Component {
             {fileModifiedDate}
           </Col>
           <Col sm={3} className="text-center text-left-xs">
-            {fileStatus}
+          {fileStatus}
           </Col>
         </Row>
+        <ButtonToolbar className="row-options">
+          <DropdownButton
+            bsStyle="default"
+            title={
+              <Icon name="ellipsis-v"/>
+            }
+            pullRight
+            noCaret
+            id="dropdown-no-caret">
+            <MenuItem eventKey="1" onClick={this.clickButtonHandler.bind(this)}>Preview</MenuItem>
+            <MenuItem eventKey="2">Print</MenuItem>
+            <MenuItem eventKey="3">Share</MenuItem>
+            <MenuItem eventKey="4">Download</MenuItem>
+            <MenuItem divider />
+            <MenuItem eventKey="5">Upload New Version</MenuItem>
+            <MenuItem eventKey="6">Check In</MenuItem>
+            <MenuItem eventKey="7">Check Out</MenuItem>
+          </DropdownButton>
+        </ButtonToolbar>
       </ListGroupItem>
     );
   }
