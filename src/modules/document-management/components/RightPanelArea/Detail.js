@@ -80,7 +80,7 @@ class Detail extends React.Component {
       }
     }
     // push back to firebase
-    ref.set(list);
+    // ref.set(list);
   }
 
   // Render method.
