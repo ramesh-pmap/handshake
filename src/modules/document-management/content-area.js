@@ -1,7 +1,7 @@
 // Dependencies.
 import React from 'react';
 import { connect } from 'react-redux';
-import { DEFAULT, PREVIEW, UPLOAD, SEARCH_RESULTS } from '../../redux/constants';
+import { DEFAULT, PREVIEW, UPLOAD, SEARCH_RESULTS, DATAGRID } from '../../redux/constants';
 
 // Components.
 import DocumentListHeader from './components/ContentArea/ContentAreaHeader';
@@ -9,6 +9,7 @@ import Default from './components/ContentArea/Default';
 import Preview from './components/ContentArea/Preview';
 import Upload from './components/ContentArea/Upload';
 import SearchResults from './components/ContentArea/SearchResults';
+import DataGrid from './components/ContentArea/DataGrid';
 
 // Utility methods.
 // import utils from '../../utils';
@@ -56,6 +57,14 @@ class ContentArea extends React.Component {
         <div className="page-content-wrapper">
           <DocumentListHeader />
           <SearchResults />
+        </div>
+      );
+      break;
+    case DATAGRID:
+      contentArea = (
+        <div className="page-content-wrapper">
+          <DocumentListHeader />
+          <DataGrid />
         </div>
       );
       break;

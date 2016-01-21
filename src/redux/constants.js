@@ -16,6 +16,7 @@ export const PREVIEW = 'PREVIEW';
 export const UPLOAD = 'UPLOAD';
 export const SEARCH_RESULTS = 'SEARCH_RESULTS';
 export const SEARCHING_FOR = 'SEARCHING_FOR';
+export const DATAGRID = 'DATAGRID';
 
 // Right Panel constants.
 export const SET_RIGHT_PANEL_AREA_VIEW = 'SET_RIGHT_PANEL_AREA_VIEW';
