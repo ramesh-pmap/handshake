@@ -89,7 +89,7 @@
       position: absolute;
       top: 0;
       width: 90%;
-      padding: 0 20px;
+      padding: 0 12px;
       background: #FFFFFF; // $light-gray;
       border: solid $border-color;
       border-width: 0 0 2px 1px;
@@ -141,7 +141,7 @@
   }
 
   .sidebar-header-actions {
-    line-height: 40px;
+    margin-top: 10px;
     margin-right: 10px;
   }
 
@@ -497,14 +497,11 @@ $search-expanded-width: 400px;
 }
 
 .fixed-title {
-  h3{
-    padding-top: 8px;
-  }
-  .fa {
-    margin: 10px 5px;
-  }
-  .btn {
-    margin: 5px;
+  h1, h2, h3, h4, h5, h6{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 14px 0 12px;
+    margin: 0
   }
 }
 
