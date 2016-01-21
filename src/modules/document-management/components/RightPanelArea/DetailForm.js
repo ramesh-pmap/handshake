@@ -34,6 +34,14 @@ class DetailForm extends React.Component {
       { value: 'Bob Roberts', label: 'Bob Roberts', clearableValue: false },
       { value: 'Janette Walls', label: 'Janette Walls', clearableValue: false }
     ];
+    const businessProcessOptions = [
+      {value: 'EHS', label: 'EHS'},
+      {value: 'Quality', label: 'Quality'},
+      {value: 'Supply Chain', label: 'Supply Chain'},
+      {value: 'Operations', label: 'Operations'},
+      {value: 'Retail', label: 'Retail'},
+      {value: 'Human Resources', label: 'Human Resources'},
+    ];
     const docTypePicklistOptions = [
       { value: 'Document', label: 'Document'},
       { value: 'Images', label: 'Images'},
@@ -46,6 +54,20 @@ class DetailForm extends React.Component {
       { value: '3', label: 'Level 3'},
       { value: '4', label: 'Level 4'}
     ];
+    const documentViewOptions = [
+      { value: 'Public', label: 'Public'},
+      { value: 'Private', label: 'Private'}
+    ];
+    const retentionPeriodOptions = [
+      { value: 'Not Applicable', label: 'Not Applicable'},
+      { value: '6 Months', label: '6 Months'},
+      { value: '1 Year', label: '1 Year'},
+      { value: '3 Years', label: '3 Years'},
+      { value: '5 Years', label: '5 Years'},
+      { value: '10 Years', label: '10 Years'},
+      { value: '15 Years', label: '15 Years'},
+      { value: '30 Years', label: '30 Years'}
+    ];
     const selectNoResultsText = 'Sorry, the name you type cannot be found.';
 
     return (
@@ -54,7 +76,7 @@ class DetailForm extends React.Component {
           <h3 className="pull-left">Selected File</h3>
           <div className="btn-group pull-right">
             <Button bsStyle="info" bsSize="sm" onClick={this.handleSaveButtonClick.bind(this)}>
-              Save
+            Save
             </Button>
           </div>
         </div>
@@ -66,26 +88,56 @@ class DetailForm extends React.Component {
 
             <Input type="text" label="Internal Document ID" />
 
+            <Input type="text" label="URL" labelClassName=" required" />
+
+            <Input type="text" label="Web Site Maintained By" />
+
+            <Input type="text" label="Physical Location" />
+
             <Input type="number" label="Version" labelClassName=" required" />
 
+            <Input type="select" multiple label="Document Scope" labelClassName=" required">
+              <option>Corporate</option>
+              <option>Division</option>
+              <option>Facility</option>
+            </Input>
+
+            <Input type="select" multiple label="Department">
+              <option>Department 1</option>
+              <option>Department 2</option>
+              <option>Department 3</option>
+              <option>Department 4</option>
+            </Input>
+
             <div className="form-group">
-              <label className="control-label">Document Owner</label>
+              <label className="control-label">Business Process</label>
               <Select
                 name="form-control"
-                placeholder="Type to find Document Owner"
+                placeholder="Type to find Business Process"
                 noResultsText={selectNoResultsText}
                 value=""
-                options={employeePicklistOptions}
+                options={businessProcessOptions}
                 // multi
                 // isLoading
               />
             </div>
 
             <div className="form-group">
-              <label className="control-label">Author</label>
+              <label className="control-label required">Document Owner</label>
               <Select
                 name="form-control"
-                placeholder="Type to find Author"
+                placeholder="Type to find Document Owner"
+                noResultsText={selectNoResultsText}
+                value=""
+                options={employeePicklistOptions}
+              />
+            </div>
+
+            <div className="form-group">
+              <label className="control-label">Document Coordinator</label>
+              <Select
+                name="form-control"
+                placeholder="Type to find Document Coordinator"
                 noResultsText={selectNoResultsText}
                 value=""
                 options={employeePicklistOptions}
@@ -114,7 +166,7 @@ class DetailForm extends React.Component {
             </div>
 
             <div className="form-group">
-              <label className="control-label">Document Level</label>
+              <label className="control-label required">Document Level</label>
               <Select
                 name="form-control"
                 placeholder="Type to find Document Level"
@@ -124,30 +176,94 @@ class DetailForm extends React.Component {
               />
             </div>
 
-            <Input type="select" multiple label="Display Folders" labelClassName=" required">
-              <option>1.01 Incident and Emergency Management</option>
-              <option>2.0 Quality Management System</option>
+            <div className="form-group">
+              <label className="control-label required">Auto Release Document</label>
+              <Select
+                name="form-control"
+                placeholder="Type to find Document Level"
+                noResultsText={selectNoResultsText}
+                value=""
+                options={docLevelPicklistOptions}
+              />
+            </div>
+
+            <div className="form-group">
+              <label className="control-label required">Document View</label>
+              <Select
+                name="form-control"
+                noResultsText={selectNoResultsText}
+                value="Public"
+                options={documentViewOptions}
+              />
+            </div>
+
+            <Input type="select" multiple label="Private Viewers">
+              <option selected>Document Owner Name</option>
+              <option selected>Document Coordinator Name</option>
+              <option>Other Viewer</option>
+              <option>Other Viewer</option>
+              <option>Other Viewer</option>
+              <option>Other Viewer</option>
+            </Input>
+
+            <Input type="select" label="Primary Folder" labelClassName=" required">
+              <option>1.0 EHS Management</option>
+              <option>2.0 Environmental Management</option>
+              <option>3.0 Health and Safety</option>
+              <option>4.0 Security and Loss Prevention</option>
+            </Input>
+
+            <Input type="select" multiple label="Additional Display Folders">
+              <option>1.1 Management</option>
+              <option>1.2 People Involvement</option>
+              <option>1.3 Prevention</option>
+              <option>1.4 Knowledge of the Site</option>
+              <option>1.5 Mgmt of Contractors and Suppliers</option>
+              <option>2.1 Compliance</option>
+              <option>2.2 Resources</option>
+              <option>2.3 Specific Themes</option>
+              <option>3.1 Health</option>
+              <option>3.2 Hazardous Activities</option>
             </Input>
 
             <Input type="textarea" label="Description" />
-            <Input type="textarea" label="Keywords/Tags" />
+
+            <Input type="text" label="Keywords/Tags" />
 
             <Input type="select" multiple label="Reference Documents">
               <option>Incident Management</option>
               <option>Incident Investigation</option>
             </Input>
 
-            <Input type="textarea" label="Regulatory References" />
-            <FormControls.Static label="Review Date" value="12/20/2015"/>
-            <Input type="textarea" label="Review Date" />
+            <Input type="text" label="Regulatory References" />
 
-            <Input type="select" label="Retention Period">
-              <option>Option1</option>
-              <option>Option2</option>
-              <option>Option3</option>
-            </Input>
+            <div className="form-group">
+              <label className="control-label required">Periodic Review Frequency</label>
+              <Input type="number" labelClassName=" required"/>
+              <Input type="select" labelClassName=" required">
+                <option>Days</option>
+                <option>Weeks</option>
+                <option>Months</option>
+                <option>Years</option>
+              </Input>
+            </div>
 
-            <Input type="textarea" label="Reason for Change" />
+            <Input
+              type="text"
+              label="Periodic Review Start Date"
+              labelClassName=" required"
+              placeholder="Defaults to 'Final' date"
+            />
+
+            <div className="form-group">
+              <label className="control-label">Retention Period</label>
+              <Select
+                name="form-control"
+                noResultsText={selectNoResultsText}
+                value="Not Applicable"
+                options={retentionPeriodOptions}
+              />
+            </div>
 
             <FormControls.Static label="File Name" value="OSHA_V2.0.docx"/>
 
