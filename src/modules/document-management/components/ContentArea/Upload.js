@@ -11,6 +11,8 @@ import {Row, Col, Button, ListGroup, ListGroupItem, ProgressBar} from 'react-boo
 import Icon from 'react-fa';
 import Dropzone from 'react-dropzone';
 
+import Filestack from 'filepicker-js';
+
 // Define class.
 class Upload extends React.Component {
   constructor(props) {
@@ -32,8 +34,20 @@ class Upload extends React.Component {
 
   // Dropzone.
   onDrop(uploadedFiles) {
-    this.setState({ files: uploadedFiles });
-    // console.log(uploadedFiles);
+    this.setState({ files: uploadedFiles[0] });
+    Filestack.setKey('ApllgXw6MTHiBIIas6R9Dz');
+    Filestack.store(
+      uploadedFiles[0],
+      (blob) => {
+        console.log('Store successful: ', JSON.stringify(blob));
+      },
+      (error) => {
+        console.log(error.toString());
+      },
+      (progress) => {
+        console.log('Loading: ' + progress + ' %');
+      }
+    );
   }
   onOpenClick() {
     this.refs.dropzone.open();
