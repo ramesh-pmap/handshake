@@ -9,6 +9,7 @@ import {
   SET_CONTENT_AREA_VIEW,
   SET_RIGHT_PANEL_AREA_VIEW,
   SET_MODAL_VIEW,
+  SET_FIREBASE_URL,
   IFRAME_SOURCE,
   SEARCHING_FOR
 } from './constants';
@@ -52,6 +53,10 @@ export function setRightPanelAreaView(value) {
 
 export function setModalView(value) {
   return { type: SET_MODAL_VIEW, value };
+}
+
+export function setFirebaseUrl(value) {
+  return { type: SET_FIREBASE_URL, value };
 }
 
 export function changeFrameSource(value) {

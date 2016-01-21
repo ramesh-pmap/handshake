@@ -57,7 +57,7 @@ class Page extends React.Component {
   }
 
   componentDidMount() {
-    const { dispatch } = this.props;
+    const { state, dispatch } = this.props;
     // LET'S KEEP IT HERE FOR NOW AS A SAMPLE ON LOADING FROM A STATIC JSON FILE.
     // // Fetch Source Json data.
     // fetch(SourceData).then(response => response.json())
@@ -72,7 +72,7 @@ class Page extends React.Component {
     //   .catch(error => {this.setState({error}); });
 
     // Fetch Source Json data from Firebase
-    let ref = new Firebase('https://resplendent-heat-3135.firebaseio.com');
+    let ref = new Firebase(state.firebaseUrl);
     ref.once('value', data => {
       // console.log('data from firebase', data.val());
       // Redux action.

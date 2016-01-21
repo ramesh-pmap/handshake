@@ -9,6 +9,7 @@ import {
   SET_CONTENT_AREA_VIEW,
   SET_RIGHT_PANEL_AREA_VIEW,
   SET_MODAL_VIEW,
+  SET_FIREBASE_URL,
   IFRAME_SOURCE,
   SEARCHING_FOR
 } from './constants';
@@ -77,6 +78,12 @@ function docMgtAppReducer(state = {}, action = {}) {
     // console.log('SET_MODAL_VIEW Action:', action);
     return Object.assign({}, state, {
       modalView: action.value
+    });
+
+  case SET_FIREBASE_URL:
+    // console.log('SET_FIREBASE_URL Action:', action);
+    return Object.assign({}, state, {
+      firebaseUrl: action.value
     });
 
   case IFRAME_SOURCE:

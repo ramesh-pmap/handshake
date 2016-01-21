@@ -30,3 +30,4 @@ export const SET_MODAL_VIEW = 'SET_MODAL_VIEW';
 export const SHARE = 'SHARE';
 
 export const IFRAME_SOURCE = 'IFRAME_SOURCE';
+export const SET_FIREBASE_URL = 'SET_FIREBASE_URL';
