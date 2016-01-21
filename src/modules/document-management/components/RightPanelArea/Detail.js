@@ -9,6 +9,9 @@ import Icon from 'react-fa';
 // Misc. components.
 import Avatar from '../../../../components/Avatar';
 
+// Import Firebase
+import Firebase from 'firebase';
+
 // Tooltip const.
 const tooltipOwner = (
   <Tooltip id="tooltip1">This is the Owner of the Document.</Tooltip>
@@ -56,6 +59,30 @@ class Detail extends React.Component {
     e.preventDefault();
   }
 
+  deleteForm() {
+    const { state } = this.props;
+    let ref = new Firebase(state.firebaseUrl + '/document/');
+
+    // initial list
+    let list = [];
+
+    // sync down from server
+    ref.on('value', data => {
+      list = data.val();
+    });
+
+    // for every value in the list
+    for (let value of list) {
+      // if the doc_id of the value matches the currentFileId
+      if (value.doc_id === state.currentFileId) {
+        // assign the doc_is_active value to 0
+        value.doc_is_active = 0;
+      }
+    }
+    // push back to firebase
+    ref.set(list);
+  }
+
   // Render method.
   render() {
     const { state } = this.props;
@@ -95,6 +122,7 @@ class Detail extends React.Component {
     const docChangeRequest = fileData.doc_change_request;
     const fileName = fileData.file_name;
     const fileSize = fileData.file_size;
+    const fileActive = fileData.doc_is_active;
 
 
     // Panels
@@ -144,6 +172,7 @@ class Detail extends React.Component {
           <FormControls.Static label="Reason for Change" value={docChangeRequest} />
           <FormControls.Static label="File Name" value={fileName} />
           <FormControls.Static label="File Size" value={fileSize} />
+          <FormControls.Static label="File Active" value={fileActive} />
         </div>
       );
       break;
@@ -244,7 +273,8 @@ class Detail extends React.Component {
           <div className="pull-right sidebar-header-actions">
             <Icon name="eye" className="fa-fw fa-lg text-muted" onClick={this.showPreview.bind(this)} />
             <Icon name="download" className="fa-fw fa-lg text-muted" />
-            <Icon name="pencil" className="fa-fw fa-lg text-muted" onClick={this.showDetailForm.bind(this)}/>
+            <Icon name="pencil" className="fa-fw fa-lg text-muted" onClick={this.showDetailForm.bind(this)} />
+            <Icon name="trash" className="fa-fw fa-lg text-muted" onClick={this.deleteForm.bind(this)} />
           </div>
         </div>
 
