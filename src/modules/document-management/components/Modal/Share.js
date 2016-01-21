@@ -5,7 +5,7 @@ import { toggleModal } from '../../../../redux/actions';
 
 import { Button, Modal, Input } from 'react-bootstrap';
 import Icon from 'react-fa';
-
+import Select from 'react-select';
 
 // Define class.
 class Share extends React.Component {
@@ -23,6 +23,12 @@ class Share extends React.Component {
   render() {
     const { state } = this.props;
     const innerIcon = <Icon name="file" />;
+    const employeePicklistOptions = [
+      { value: 'John Smith', label: 'John Smith', clearableValue: false },
+      { value: 'Bob Roberts', label: 'Bob Roberts', clearableValue: false },
+      { value: 'Janette Walls', label: 'Janette Walls', clearableValue: false }
+    ];
+    const selectNoResultsText = 'Sorry, the name you type cannot be found.';
 
     return (
       <Modal show={state.modalOpened} onHide={this.handleModalButtonClick.bind(this)}>
@@ -34,11 +40,17 @@ class Share extends React.Component {
           <Input type="text" label="Document:" value="Document1.docx" addonAfter={innerIcon} />
 
           <p className="text-muted pull-right">Document Link: <span>https:&#47;&#47;bit.ly/abc123</span></p>
-          <Input type="select" label="Send to:" labelClassName=" required">
-            <option>John Smith</option>
-            <option>Bob Roberts</option>
-            <option>Janette Walls</option>
-          </Input>
+          <div className="form-group">
+            <label className="control-label">Send to:</label>
+            <Select
+              name="form-control"
+              placeholder="Type to find User"
+              noResultsText={selectNoResultsText}
+              value=""
+              options={employeePicklistOptions}
+            />
+          </div>
+
           <Input type="textarea" label="Comment:" maxLength="1000"/>
         </Modal.Body>
         <Modal.Footer>
