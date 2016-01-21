@@ -88,11 +88,13 @@ class DetailForm extends React.Component {
 
             <Input type="text" label="Internal Document ID" />
 
+            {/*
             <Input type="text" label="URL" labelClassName=" required" />
 
             <Input type="text" label="Web Site Maintained By" />
 
             <Input type="text" label="Physical Location" />
+            */}
 
             <Input type="number" label="Version" labelClassName=" required" />
 
@@ -177,14 +179,8 @@ class DetailForm extends React.Component {
             </div>
 
             <div className="form-group">
-              <label className="control-label required">Auto Release Document</label>
-              <Select
-                name="form-control"
-                placeholder="Type to find Document Level"
-                noResultsText={selectNoResultsText}
-                value=""
-                options={docLevelPicklistOptions}
-              />
+              <label className="control-label required">Auto Release Document</label><br/>
+              <input type="checkbox" />
             </div>
 
             <div className="form-group">
