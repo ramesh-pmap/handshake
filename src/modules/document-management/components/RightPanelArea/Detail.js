@@ -43,22 +43,6 @@ class Detail extends React.Component {
     super(props);
   }
 
-  showDetailForm(e) {
-    e.preventDefault();
-  }
-
-  showPreview(e) {
-    e.preventDefault();
-  }
-
-  showDetailPreview(e) {
-    e.preventDefault();
-  }
-
-  showWorkflowPreview(e) {
-    e.preventDefault();
-  }
-
   deleteForm() {
     const { state } = this.props;
     let ref = new Firebase(state.firebaseUrl + '/document/');
@@ -180,7 +164,7 @@ class Detail extends React.Component {
       panelsArea = (
         <div className="nested-cards">
           <p>
-            <Button bsStyle="link" bsSize="xs" className="text-muted" onClick={this.showDetailPreview.bind(this)}>
+            <Button bsStyle="link" bsSize="xs" className="text-muted">
               <small>
                 <Icon name="chevron-left" />
                 &nbsp;
@@ -195,7 +179,7 @@ class Detail extends React.Component {
               <div className="list-card neutral">
                 <h4>John Doe</h4>
                 <br />
-                <div className="avatar default corner-icon" onClick={this.showWorkflowPreview.bind(this)}>
+                <div className="avatar default corner-icon">
                   <img src="/static/images/a1.jpg" alt="image"/>
                 </div>
                 <div className="meta-wrapper">
@@ -212,7 +196,7 @@ class Detail extends React.Component {
                 <h4>Mark Smith</h4>
                 <br />
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <div className="avatar default corner-icon" onClick={this.showWorkflowPreview.bind(this)}>
+                <div className="avatar default corner-icon">
                   <img src="/static/images/a2.jpg" alt="image"/>
                 </div>
                 <div className="meta-wrapper">
@@ -229,7 +213,7 @@ class Detail extends React.Component {
                 <h4>Janette Walls</h4>
                 <br />
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <div className="avatar default corner-icon" onClick={this.showWorkflowPreview.bind(this)}>
+                <div className="avatar default corner-icon">
                   <img src="/static/images/a3.jpg" alt="image"/>
                 </div>
                 <div className="meta-wrapper">
@@ -245,7 +229,7 @@ class Detail extends React.Component {
               <div className="list-card rejected">
                 <h4>Bob Roberts</h4>
                 <br />
-                <div className="avatar default corner-icon" onClick={this.showWorkflowPreview.bind(this)}>
+                <div className="avatar default corner-icon">
                   <img src="/static/images/a4.jpg" alt="image"/>
                 </div>
                 <div className="meta-wrapper">
@@ -269,12 +253,20 @@ class Detail extends React.Component {
     return (
       <div>
         <div className="fixed-title clearfix">
-          <h3 className="pull-left">Selected File</h3>
+          <h1 className="pull-left">Document Detail</h1>
           <div className="pull-right sidebar-header-actions">
-            <Icon name="eye" className="fa-fw fa-lg text-muted" onClick={this.showPreview.bind(this)} />
-            <Icon name="download" className="fa-fw fa-lg text-muted" />
-            <Icon name="pencil" className="fa-fw fa-lg text-muted" onClick={this.showDetailForm.bind(this)} />
-            <Icon name="trash" className="fa-fw fa-lg text-muted" onClick={this.deleteForm.bind(this)} />
+              <Button bsStyle="link" bsSize="xs">
+                <Icon name="eye" className="fa-fw text-muted" />
+              </Button>
+              <Button bsStyle="link" bsSize="xs">
+                <Icon name="download" className="fa-fw text-muted" />
+              </Button>
+              <Button bsStyle="link" bsSize="xs">
+                <Icon name="pencil" className="fa-fw text-muted" />
+              </Button>
+              <Button bsStyle="link" bsSize="xs" onClick={this.deleteForm.bind(this)}>
+                <Icon name="trash" className="fa-fw text-muted" />
+              </Button>
           </div>
         </div>
 
@@ -284,25 +276,25 @@ class Detail extends React.Component {
               <FormControls.Static label="Workflow" />
             </div>
             <OverlayTrigger placement="bottom" overlay={tooltipOwner}>
-              <Avatar src="/static/images/a1.jpg" shape="circle" size="" onClick={this.showWorkflowPreview.bind(this)}/>
+              <Avatar src="/static/images/a1.jpg" shape="circle" size=""/>
             </OverlayTrigger>
             <div className="divider-vertical"></div>
             <OverlayTrigger placement="bottom" overlay={tooltipApprover1}>
-              <Avatar src="/static/images/a2.jpg" status="approved" shape="circle" size="" onClick={this.showWorkflowPreview.bind(this)}/>
+              <Avatar src="/static/images/a2.jpg" status="approved" shape="circle" size=""/>
             </OverlayTrigger>
             <OverlayTrigger placement="bottom" overlay={tooltipApprover2}>
-              <Avatar src="/static/images/a3.jpg" status="approved" shape="circle" size="" onClick={this.showWorkflowPreview.bind(this)}/>
+              <Avatar src="/static/images/a3.jpg" status="approved" shape="circle" size=""/>
             </OverlayTrigger>
             <OverlayTrigger placement="bottom" overlay={tooltipApprover3}>
-              <Avatar src="/static/images/a4.jpg" status="approved" shape="circle" size="" onClick={this.showWorkflowPreview.bind(this)}/>
+              <Avatar src="/static/images/a4.jpg" status="approved" shape="circle" size=""/>
             </OverlayTrigger>
             <div className="divider-vertical"></div>
             <OverlayTrigger placement="bottom" overlay={tooltipApprover4}>
-              <Avatar src="/static/images/a5.jpg" status="pending" shape="circle" size="" onClick={this.showWorkflowPreview.bind(this)}/>
+              <Avatar src="/static/images/a5.jpg" status="pending" shape="circle" size=""/>
             </OverlayTrigger>
             <div className="divider-vertical"></div>
             <OverlayTrigger placement="bottom" overlay={tooltipStatus}>
-              <div className="avatar unchecked" onClick={this.showWorkflowPreview.bind(this)}>
+              <div className="avatar unchecked">
                 <Icon name="check" className="fa-lg" />
               </div>
             </OverlayTrigger>
@@ -318,8 +310,6 @@ class Detail extends React.Component {
 
 // Parent Functions.
 Detail.propTypes = {
-  showDetailForm: React.PropTypes.func,
-  showPreview: React.PropTypes.func,
   dispatch: React.PropTypes.func,
   state: React.PropTypes.object
 };

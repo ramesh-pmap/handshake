@@ -30,7 +30,7 @@ import {
   CHECKOUT,
   DOWNLOAD,
   UPLOAD_NEW_VERSION,
-  DATAGRID
+  // DATAGRID
 } from '../../redux/constants';
 
 // Core components.
@@ -136,9 +136,8 @@ class Page extends React.Component {
                   <Button bsStyle="default" bsSize="xs" onClick={this.handleContentButtonClick.bind(this, PREVIEW)}> Preview </Button>
                   <Button bsStyle="default" bsSize="xs" onClick={this.handleContentButtonClick.bind(this, UPLOAD)}> Upload </Button>
                   <Button bsStyle="default" bsSize="xs" onClick={this.handleContentButtonClick.bind(this, SEARCH_RESULTS)}> Search Results </Button>
-                  <Button bsStyle="default" bsSize="xs" onClick={this.handleContentButtonClick.bind(this, DATAGRID)}> Data Grid Sample </Button>
                 </ButtonGroup>
-                &nbsp; | &nbsp;
+                &nbsp;
                 <ButtonGroup>
                   <Button bsStyle="default" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, ACTIVITY)}> Activity List</Button>
                   <Button bsStyle="default" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, DETAIL)}> Detail </Button>
@@ -146,7 +145,7 @@ class Page extends React.Component {
                   <Button bsStyle="default" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, VIEWER_CHANGE_REQUEST)}> Change Request </Button>
                   <Button bsStyle="default" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, APPROVE_CHANGE_REQUEST)}> Approve Change Request </Button>
                 </ButtonGroup>
-                &nbsp; | &nbsp;
+                &nbsp;
                 <ButtonGroup>
                   <Button bsStyle="default" bsSize="xs" onClick={this.handleModalToggle.bind(this, SHARE)}>Share</Button>
                   <Button bsStyle="default" bsSize="xs" onClick={this.handleModalToggle.bind(this, CHECKIN)}>Check In</Button>
