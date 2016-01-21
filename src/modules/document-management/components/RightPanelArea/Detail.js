@@ -61,26 +61,27 @@ class Detail extends React.Component {
 
   deleteForm() {
     const { state } = this.props;
+    // Firebase reference.
     let ref = new Firebase(state.firebaseUrl + '/document/');
 
-    // initial list
+    // Initial list.
     let list = [];
 
-    // sync down from server
+    // Sync down from server.
     ref.on('value', data => {
       list = data.val();
-    });
-
-    // for every value in the list
-    for (let value of list) {
-      // if the doc_id of the value matches the currentFileId
-      if (value.doc_id === state.currentFileId) {
-        // assign the doc_is_active value to 0
-        value.doc_is_active = 0;
+      // Loop through list.
+      for (let value of list) {
+        // If the doc_id of the value matches the currentFileId.
+        if (value.doc_id === state.currentFileId) {
+          // Assign the doc_is_active value to 0
+          console.log('before change', value.doc_is_active);
+          value.doc_is_active = 0;
+          console.log('after change', value.doc_is_active);
+        }
       }
-    }
-    // push back to firebase
-    ref.set(list);
+      ref.set(list);
+    });
   }
 
   // Render method.
