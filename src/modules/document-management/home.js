@@ -26,7 +26,10 @@ import {
   SEARCH_RESULTS,
   TOGGLE_RIGHT_SIDEBAR,
   SHARE,
+  CHECKIN,
   CHECKOUT,
+  DOWNLOAD,
+  UPLOAD_NEW_VERSION,
   DATAGRID
 } from '../../redux/constants';
 
@@ -146,7 +149,10 @@ class Page extends React.Component {
                 &nbsp; | &nbsp;
                 <ButtonGroup>
                   <Button bsStyle="default" bsSize="xs" onClick={this.handleModalToggle.bind(this, SHARE)}>Share</Button>
+                  <Button bsStyle="default" bsSize="xs" onClick={this.handleModalToggle.bind(this, CHECKIN)}>Check In</Button>
                   <Button bsStyle="default" bsSize="xs" onClick={this.handleModalToggle.bind(this, CHECKOUT)}>Check Out</Button>
+                  <Button bsStyle="default" bsSize="xs" onClick={this.handleModalToggle.bind(this, DOWNLOAD)}>Download</Button>
+                  <Button bsStyle="default" bsSize="xs" onClick={this.handleModalToggle.bind(this, UPLOAD_NEW_VERSION)}>Upload New Version</Button>
                   <Button bsStyle="default" bsSize="xs" onClick={this.handleRightSidePanelToggle.bind(this, TOGGLE_RIGHT_SIDEBAR)}>Toggle Right Panel</Button>
                 </ButtonGroup>
               </div>
