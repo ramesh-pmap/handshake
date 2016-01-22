@@ -203,7 +203,7 @@ class Detail extends React.Component {
                 <div className="meta-wrapper">
                   <div className="clearfix">
                     <p className="pull-left">10/11/2015</p>
-                    <p className="pull-right approved">Aprroved</p>
+                    <p className="pull-right approved">Approved</p>
                   </div>
                 </div>
               </div>

@@ -2,7 +2,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getWindowDimensions, toggleRightSidebar, setRightPanelAreaView } from '../../redux/actions';
-import { ACTIVITY, DETAIL, DETAILFORM, VIEWER_CHANGE_REQUEST, APPROVE_CHANGE_REQUEST, VERSION_HISTORY } from '../../redux/constants';
+import { ACTIVITY, DETAIL, DETAILFORM, VIEWER_CHANGE_REQUEST, APPROVE_CHANGE_REQUEST, VERSION_HISTORY, APPROVAL_WORKFLOW } from '../../redux/constants';
 
 import {Nav, NavItem, Tooltip, OverlayTrigger} from 'react-bootstrap';
 import Icon from 'react-fa';
@@ -14,6 +14,7 @@ import DocumentDetailForm from './components/RightPanelArea/DetailForm';
 import ChangeRequestSubmit from './components/RightPanelArea/ChangeRequestSubmit';
 import ChangeRequestApprove from './components/RightPanelArea/ChangeRequestApprove';
 import VersionHistory from './components/RightPanelArea/VersionHistory';
+import ApprovalWorkflow from './components/RightPanelArea/ApprovalWorkflow';
 
 // Utility methods.
 import utils from '../../utils';
@@ -100,6 +101,10 @@ class RightPanelArea extends React.Component {
       break;
     case VERSION_HISTORY:
       rightPanelArea = <VersionHistory />;
+      this.state.currentTab = TAB_DETAIL;
+      break;
+    case APPROVAL_WORKFLOW:
+      rightPanelArea = <ApprovalWorkflow />;
       this.state.currentTab = TAB_DETAIL;
       break;
     default:
