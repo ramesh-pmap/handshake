@@ -194,8 +194,8 @@ class DetailForm extends React.Component {
             </div>
 
             <Input type="select" multiple label="Private Viewers">
-              <option selected>Document Owner Name</option>
-              <option selected>Document Coordinator Name</option>
+              <option>Document Owner Name</option>
+              <option>Document Coordinator Name</option>
               <option>Other Viewer</option>
               <option>Other Viewer</option>
               <option>Other Viewer</option>

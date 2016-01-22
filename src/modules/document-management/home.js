@@ -34,7 +34,7 @@ import {
 } from '../../redux/constants';
 
 // Core components.
-import { ButtonGroup, Button } from 'react-bootstrap';
+import { DropdownButton, MenuItem } from 'react-bootstrap';
 
 // Layouts.
 import Main from '../../layouts/main';
@@ -131,29 +131,26 @@ class Page extends React.Component {
 
               <div style={{ padding: '20px 20px 0', marginBottom: -10 }}>
 
-                <ButtonGroup>
-                  <Button bsStyle="default" bsSize="xs" onClick={this.handleContentButtonClick.bind(this, DEFAULT)}> Default </Button>
-                  <Button bsStyle="default" bsSize="xs" onClick={this.handleContentButtonClick.bind(this, PREVIEW)}> Preview </Button>
-                  <Button bsStyle="default" bsSize="xs" onClick={this.handleContentButtonClick.bind(this, UPLOAD)}> Upload </Button>
-                  <Button bsStyle="default" bsSize="xs" onClick={this.handleContentButtonClick.bind(this, SEARCH_RESULTS)}> Search Results </Button>
-                </ButtonGroup>
-                &nbsp;
-                <ButtonGroup>
-                  <Button bsStyle="default" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, ACTIVITY)}> Activity List</Button>
-                  <Button bsStyle="default" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, DETAIL)}> Detail </Button>
-                  <Button bsStyle="default" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, DETAILFORM)}> Detail Form </Button>
-                  <Button bsStyle="default" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, VIEWER_CHANGE_REQUEST)}> Change Request </Button>
-                  <Button bsStyle="default" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, APPROVE_CHANGE_REQUEST)}> Approve Change Request </Button>
-                </ButtonGroup>
-                &nbsp;
-                <ButtonGroup>
-                  <Button bsStyle="default" bsSize="xs" onClick={this.handleModalToggle.bind(this, SHARE)}>Share</Button>
-                  <Button bsStyle="default" bsSize="xs" onClick={this.handleModalToggle.bind(this, CHECKIN)}>Check In</Button>
-                  <Button bsStyle="default" bsSize="xs" onClick={this.handleModalToggle.bind(this, CHECKOUT)}>Check Out</Button>
-                  <Button bsStyle="default" bsSize="xs" onClick={this.handleModalToggle.bind(this, DOWNLOAD)}>Download</Button>
-                  <Button bsStyle="default" bsSize="xs" onClick={this.handleModalToggle.bind(this, UPLOAD_NEW_VERSION)}>Upload New Version</Button>
-                  <Button bsStyle="default" bsSize="xs" onClick={this.handleRightSidePanelToggle.bind(this, TOGGLE_RIGHT_SIDEBAR)}>Toggle Right Panel</Button>
-                </ButtonGroup>
+                <DropdownButton id="tempNavigationDropdown" bsSize="xs" title=" Temporry Navigation">
+                  <MenuItem onClick={this.handleContentButtonClick.bind(this, DEFAULT)}> Default </MenuItem>
+                  <MenuItem onClick={this.handleContentButtonClick.bind(this, PREVIEW)}> Preview </MenuItem>
+                  <MenuItem onClick={this.handleContentButtonClick.bind(this, UPLOAD)}> Upload </MenuItem>
+                  <MenuItem onClick={this.handleContentButtonClick.bind(this, SEARCH_RESULTS)}> Search Results </MenuItem>
+                  <MenuItem className="divider" />
+                  <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, ACTIVITY)}> Activity List</MenuItem>
+                  <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, DETAIL)}> Detail </MenuItem>
+                  <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, DETAILFORM)}> Detail Form </MenuItem>
+                  <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, VIEWER_CHANGE_REQUEST)}> Change Request </MenuItem>
+                  <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, APPROVE_CHANGE_REQUEST)}> Approve Change Request </MenuItem>
+                  <MenuItem className="divider" />
+                  <MenuItem onClick={this.handleModalToggle.bind(this, CHECKIN)}>Check In</MenuItem>
+                  <MenuItem onClick={this.handleModalToggle.bind(this, CHECKOUT)}>Check Out</MenuItem>
+                  <MenuItem onClick={this.handleModalToggle.bind(this, DOWNLOAD)}>Download</MenuItem>
+                  <MenuItem onClick={this.handleModalToggle.bind(this, UPLOAD_NEW_VERSION)}>Upload New Version</MenuItem>
+                  <MenuItem className="divider" />
+                  <MenuItem onClick={this.handleModalToggle.bind(this, SHARE)}>Share</MenuItem>
+                  <MenuItem onClick={this.handleRightSidePanelToggle.bind(this, TOGGLE_RIGHT_SIDEBAR)}>Toggle Right Panel</MenuItem>
+                </DropdownButton>
               </div>
 
               {/* ContentArea component */}
