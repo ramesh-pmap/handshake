@@ -2,7 +2,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { setRightPanelAreaView } from '../../../../redux/actions';
-import { DETAIL, /* VIEWER_CHANGE_REQUEST, */ APPROVE_CHANGE_REQUEST, VERSION_HISTORY, RELEASE_NOTIFICATION, APPROVAL_WORKFLOW } from '../../../../redux/constants';
+import { DETAIL,
+  /* VIEWER_CHANGE_REQUEST, */
+  APPROVE_CHANGE_REQUEST,
+  VERSION_HISTORY,
+  RELEASE_NOTIFICATION,
+  APPROVAL_WORKFLOW,
+  PERIODIC_REVIEW
+} from '../../../../redux/constants';
 
 import { ButtonGroup, DropdownButton, MenuItem } from 'react-bootstrap';
 
@@ -12,6 +19,7 @@ const VERSION_HISTORY_TITLE = 'Version History';
 const APPROVE_CHANGE_REQUEST_TITLE = 'Change Requests';
 const APPROVAL_WORKFLOW_TITLE = 'Approval Workflow';
 const RELEASE_NOTIFICATION_TITLE = 'Release Notification';
+const PERIODIC_REVIEW_TITLE = 'Periodic Review';
 
 // Define class.
 class DetailViewDropdown extends React.Component {
@@ -42,6 +50,9 @@ class DetailViewDropdown extends React.Component {
     case RELEASE_NOTIFICATION:
       this.setState({ currentViewTitle: RELEASE_NOTIFICATION_TITLE });
       break;
+    case PERIODIC_REVIEW:
+      this.setState({ currentViewTitle: PERIODIC_REVIEW_TITLE });
+      break;
     default:
       this.setState({ currentViewTitle: DETAIL_TITLE });
     }
@@ -65,6 +76,7 @@ class DetailViewDropdown extends React.Component {
           <MenuItem onClick={this.handleTabClick.bind(this, VERSION_HISTORY)}> {VERSION_HISTORY_TITLE} </MenuItem>
           <MenuItem onClick={this.handleTabClick.bind(this, APPROVAL_WORKFLOW)}> {APPROVAL_WORKFLOW_TITLE} </MenuItem>
           <MenuItem onClick={this.handleTabClick.bind(this, RELEASE_NOTIFICATION)}> {RELEASE_NOTIFICATION_TITLE} </MenuItem>
+          <MenuItem onClick={this.handleTabClick.bind(this, PERIODIC_REVIEW)}> {PERIODIC_REVIEW_TITLE} </MenuItem>
         </DropdownButton>
       </ButtonGroup>
     );
