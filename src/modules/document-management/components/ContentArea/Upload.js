@@ -23,7 +23,8 @@ class Upload extends React.Component {
       files: [],
       fileName: '',
       progress: 0,
-      success: false
+      success: false,
+      startUpload: false,
     };
   }
 
@@ -37,14 +38,18 @@ class Upload extends React.Component {
 
   // Dropzone.
   onDrop(uploadedFiles) {
-    this.setState({ files: uploadedFiles, fileName: uploadedFiles[0].name });
+    this.setState({
+      files: uploadedFiles,
+      fileName: uploadedFiles[0].name,
+      upload: true});
     Filestack.setKey('ApllgXw6MTHiBIIas6R9Dz');
     Filestack.store(
       uploadedFiles[0],
       (blob) => {
         console.log('Store successful: ', JSON.stringify(blob));
         this.setState({
-          success: true
+          success: true,
+          upload: false
         });
       },
       (error) => {
@@ -90,7 +95,7 @@ class Upload extends React.Component {
           <ListGroup className="file_manager-list">
 
             {
-              this.state.files.length > 0 ?
+              this.state.upload ?
                 <div>
 
                   <ListGroupItem onClick={this.handleUploadedFileClick.bind(this, ACTIVITY)}>
