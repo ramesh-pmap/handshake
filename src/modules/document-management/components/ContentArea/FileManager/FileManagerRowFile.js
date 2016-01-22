@@ -2,8 +2,26 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { selectFile, setRightPanelAreaView, toggleRightSidebar, setContentAreaView } from '../../../../../redux/actions';
-import { DETAIL, PREVIEW } from '../../../../../redux/constants';
+// Actions
+import {
+  selectFile,
+  setRightPanelAreaView,
+  toggleRightSidebar,
+  setContentAreaView,
+  setModalView,
+  toggleModal
+} from '../../../../../redux/actions';
+
+// Constants
+import {
+  DETAIL,
+  PREVIEW,
+  SHARE,
+  CHECKIN,
+  CHECKOUT,
+  DOWNLOAD,
+  UPLOAD_NEW_VERSION
+} from '../../../../../redux/constants';
 
 // Core components.
 import {Row, Col, Button, ListGroupItem, MenuItem, ButtonToolbar, DropdownButton} from 'react-bootstrap';
@@ -31,6 +49,12 @@ class FileManagerRowFile extends React.Component {
     e.preventDefault();
     const { dispatch } = this.props;
     dispatch(setContentAreaView(PREVIEW));
+  }
+
+  handleModalToggle(view) {
+    const { dispatch } = this.props;
+    dispatch(setModalView(view));
+    dispatch(toggleModal(true));
   }
 
   // Render method.
@@ -79,12 +103,12 @@ class FileManagerRowFile extends React.Component {
             className="btn-override">
             <MenuItem eventKey="1" onClick={this.clickButtonHandler.bind(this)}>Preview</MenuItem>
             <MenuItem eventKey="2">Print</MenuItem>
-            <MenuItem eventKey="3">Share</MenuItem>
-            <MenuItem eventKey="4">Download</MenuItem>
+            <MenuItem eventKey="3" onClick={this.handleModalToggle.bind(this, SHARE)}>Share</MenuItem>
+            <MenuItem eventKey="4" onClick={this.handleModalToggle.bind(this, DOWNLOAD)}>Download</MenuItem>
             <MenuItem divider />
-            <MenuItem eventKey="5">Upload New Version</MenuItem>
-            <MenuItem eventKey="6">Check In</MenuItem>
-            <MenuItem eventKey="7">Check Out</MenuItem>
+            <MenuItem eventKey="5" onClick={this.handleModalToggle.bind(this, UPLOAD_NEW_VERSION)}>Upload New Version</MenuItem>
+            <MenuItem eventKey="6" onClick={this.handleModalToggle.bind(this, CHECKIN)}>Check In</MenuItem>
+            <MenuItem eventKey="7" onClick={this.handleModalToggle.bind(this, CHECKOUT)}>Check Out</MenuItem>
           </DropdownButton>
         </ButtonToolbar>
       </ListGroupItem>
