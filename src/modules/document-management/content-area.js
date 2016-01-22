@@ -14,7 +14,6 @@ import DataGrid from './components/ContentArea/DataGrid';
 // Utility methods.
 // import utils from '../../utils';
 
-
 // Define class.
 class ContentArea extends React.Component {
   constructor(props) {

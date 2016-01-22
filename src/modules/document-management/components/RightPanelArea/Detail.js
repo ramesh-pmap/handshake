@@ -267,9 +267,6 @@ class Detail extends React.Component {
               <Button bsStyle="link" bsSize="xs">
                 <Icon name="pencil" className="fa-fw text-muted" />
               </Button>
-              <Button bsStyle="link" bsSize="xs" onClick={this.deleteForm.bind(this)}>
-                <Icon name="trash" className="fa-fw text-muted" />
-              </Button>
           </div>
         </div>
 
