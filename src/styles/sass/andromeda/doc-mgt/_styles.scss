@@ -611,21 +611,14 @@ $search-expanded-width: 400px;
   right: 0px;
   top: 0px;
 
-  .btn {
-    background: inherit;
-    border: none;
-    color: gray;
-    padding: 10px 5px;
-
-    &:hover, .open.dropdown-toggle.btn-default {
-      background: inherit;
-      color: inherit;
-    }
+  .btn-override {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: gray !important;
+    padding: 5px;
   }
 }
-
-
-
 
 /* ----------------------------------------
 -------------------------------------------

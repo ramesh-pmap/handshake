@@ -71,11 +71,12 @@ class FileManagerRowFile extends React.Component {
           <DropdownButton
             bsStyle="default"
             title={
-              <Icon name="ellipsis-v"/>
+            <Icon name="ellipsis-v"/>
             }
             pullRight
             noCaret
-            id="dropdown-no-caret">
+            id="dropdown-no-caret"
+            className="btn-override">
             <MenuItem eventKey="1" onClick={this.clickButtonHandler.bind(this)}>Preview</MenuItem>
             <MenuItem eventKey="2">Print</MenuItem>
             <MenuItem eventKey="3">Share</MenuItem>
