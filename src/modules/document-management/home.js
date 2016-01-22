@@ -47,7 +47,7 @@ import ModalArea from './modal-area';
 import utils from '../../utils';
 
 // Json file with folder structure data.
-// const SourceData = '../../../static/data/documents-data-SKF.json';
+// const SourceData = '../../../static/data/documents-data-DEMO.json';
 import Firebase from 'firebase';
 
 
@@ -63,7 +63,10 @@ class Page extends React.Component {
 
   componentDidMount() {
     const { state, dispatch } = this.props;
-    // LET'S KEEP IT HERE FOR NOW AS A SAMPLE ON LOADING FROM A STATIC JSON FILE.
+    // const { dispatch } = this.props;
+    // Please do not remove the commented area.
+
+    // JSON FILE
     // // Fetch Source Json data.
     // fetch(SourceData).then(response => response.json())
     //   .then(data => {
@@ -76,6 +79,7 @@ class Page extends React.Component {
     //   })
     //   .catch(error => {this.setState({error}); });
 
+    // FIREBASE`
     // Fetch Source Json data from Firebase
     let ref = new Firebase(state.firebaseUrl);
     ref.once('value', data => {
@@ -87,6 +91,19 @@ class Page extends React.Component {
       dispatch(setFileManagerData(parsedFolders[0], flatFolders, docFiles));
       dispatch(changeFolder(0));
     });
+
+    // // RETHINKDB
+    // // Fetching data from RethinkDB.
+    // fetch('http://localhost:3001/documents').then(response => response.json())
+    //   .then(data => {
+    //     // Redux action.
+    //     const parsedFolders = utils.parseTreeWithBreadcrumb(data[0].document_folder);
+    //     const flatFolders = utils.convertToFlatTree([], parsedFolders);
+    //     const docFiles = data[0].document;
+    //     dispatch(setFileManagerData(parsedFolders[0], flatFolders, docFiles));
+    //     dispatch(changeFolder(0));
+    //   })
+    //   .catch(error => {this.setState({error}); });
 
     // Set initial state.
     dispatch(setContentAreaView(DEFAULT));

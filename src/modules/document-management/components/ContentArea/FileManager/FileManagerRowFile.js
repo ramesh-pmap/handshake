@@ -64,7 +64,7 @@ class FileManagerRowFile extends React.Component {
 
     const fileId = fileData.doc_id;
     const fileName = fileData.file_name;
-    const fileType = typesMapping[fileData.file_type] ? typesMapping[fileData.file_type] : fileData.file_type;
+    const fileType = typesMapping[fileData.file_type.toLowerCase()] ? typesMapping[fileData.file_type.toLowerCase()] : fileData.file_type;
     const fileVersion = fileData.doc_version;
     const fileModifiedDate = fileData.doc_modified_date;
     const fileStatus = fileData.doc_status_id;
