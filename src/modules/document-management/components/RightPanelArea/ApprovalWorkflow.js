@@ -60,12 +60,12 @@ class ApprovalWorkflow extends React.Component {
           <div className="pull-left">
             <DetailViewDropdown />
           </div>
-          <div className="pull-right">
-            <Button bsStyle="danger" bsSize="sm" onClick={this.handleSaveButtonClick.bind(this)}>
+          <div className="pull-right sidebar-header-actions">
+            <Button bsStyle="danger" bsSize="xs" onClick={this.handleSaveButtonClick.bind(this)}>
             Reject
             </Button>
             &nbsp;
-            <Button bsStyle="success" bsSize="sm" onClick={this.handleSaveButtonClick.bind(this)}>
+            <Button bsStyle="success" bsSize="xs" onClick={this.handleSaveButtonClick.bind(this)}>
             Approve
             </Button>
           </div>
