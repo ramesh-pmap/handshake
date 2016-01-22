@@ -2,10 +2,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { setRightPanelAreaView } from '../../../../redux/actions';
-import { RELEASE_NOTIFICATION } from '../../../../redux/constants';
+import { DETAIL } from '../../../../redux/constants';
 
 // Core components.
 import {Button, Input, FormControls} from 'react-bootstrap';
+
+// Misc. components.
+import DetailViewDropdown from './DetailViewDropdown';
 
 // DatePicker.
 import DatePicker from 'react-datepicker';
@@ -27,7 +30,7 @@ class ReleaseNotification extends React.Component {
   handleSaveButtonClick() {
     const { dispatch } = this.props;
     // console.log('Save clicked');
-    dispatch(setRightPanelAreaView(RELEASE_NOTIFICATION));
+    dispatch(setRightPanelAreaView(DETAIL));
   }
 
   handleActionItemOptionChange(e) {
@@ -50,7 +53,9 @@ class ReleaseNotification extends React.Component {
     return (
       <div>
         <div className="fixed-title clearfix">
-          <h3 className="pull-left">Selected File</h3>
+          <div className="pull-left">
+            <DetailViewDropdown />
+          </div>
           <div className="pull-right">
             <Button bsStyle="info" bsSize="sm" onClick={this.handleSaveButtonClick.bind(this)}>
               Release

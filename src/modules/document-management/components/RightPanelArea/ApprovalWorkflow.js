@@ -10,6 +10,7 @@ import Icon from 'react-fa';
 
 // Misc. components.
 import Avatar from '../../../../components/Avatar';
+import DetailViewDropdown from './DetailViewDropdown';
 
 // Tooltip const.
 const tooltipOwner = (
@@ -56,7 +57,9 @@ class ApprovalWorkflow extends React.Component {
     return (
       <div>
         <div className="fixed-title clearfix">
-          <h3 className="pull-left">Selected File</h3>
+          <div className="pull-left">
+            <DetailViewDropdown />
+          </div>
           <div className="pull-right">
             <Button bsStyle="danger" bsSize="sm" onClick={this.handleSaveButtonClick.bind(this)}>
             Reject

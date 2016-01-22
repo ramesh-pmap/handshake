@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 // Core components.
 import {Button, ListGroup, ListGroupItem } from 'react-bootstrap';
 import Icon from 'react-fa';
+
+// Misc components.
 import DetailViewDropdown from './DetailViewDropdown';
 
 // Define class.
@@ -37,41 +39,7 @@ class VersionHistory extends React.Component {
 
           <ListGroupItem>
             <div className="list-card neutral">
-              <h4>Version 1 - FINAL</h4>
-              <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
-              <div className="meta-wrapper">
-                <div className="clearfix">
-                  <div className="pull-left">
-                    <strong># of Drafts:</strong> 2
-                  </div>
-                  <div className="pull-right">10/11/2015</div>
-                </div>
-                <br/>
-                <div className="clearfix">
-                  <div className="pull-left">
-                    <strong>Views:</strong>
-                    <Button bsStyle="link" bsSize="xs">105</Button>
-                  </div>
-                  <div className="pull-right"></div>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...</p>
-                <div className="clearfix">
-                  <p className="pull-left">
-                    <Button bsStyle="primary" bsSize="xs">
-                    <Icon name="repeat" className="fa-fw fa-flip-horizontal" /> Restore
-                    </Button>
-                  </p>
-                  <p className="pull-right">
-                    <Button bsStyle="link" bsSize="xs">View Details</Button>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </ListGroupItem>
-
-          <ListGroupItem>
-            <div className="list-card neutral">
-              <h4>Version 2 - FINAL</h4>
+              <h4>Version 2 - FINAL (CURRENT)</h4>
               <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
               <div className="meta-wrapper">
                 <div className="clearfix">
@@ -91,6 +59,40 @@ class VersionHistory extends React.Component {
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...</p>
                 <div className="clearfix">
                   <p className="pull-left hide">
+                    <Button bsStyle="primary" bsSize="xs">
+                      <Icon name="repeat" className="fa-fw fa-flip-horizontal" /> Restore
+                    </Button>
+                  </p>
+                  <p className="pull-right">
+                    <Button bsStyle="link" bsSize="xs">View Details</Button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </ListGroupItem>
+
+          <ListGroupItem>
+            <div className="list-card neutral">
+              <h4>Version 1 - ARCHIVED</h4>
+              <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
+              <div className="meta-wrapper">
+                <div className="clearfix">
+                  <div className="pull-left">
+                    <strong># of Drafts:</strong> 2
+                  </div>
+                  <div className="pull-right">10/11/2015</div>
+                </div>
+                <br/>
+                <div className="clearfix">
+                  <div className="pull-left">
+                    <strong>Views:</strong>
+                    <Button bsStyle="link" bsSize="xs">105</Button>
+                  </div>
+                  <div className="pull-right"></div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...</p>
+                <div className="clearfix">
+                  <p className="pull-left">
                     <Button bsStyle="primary" bsSize="xs">
                     <Icon name="repeat" className="fa-fw fa-flip-horizontal" /> Restore
                     </Button>
