@@ -4,10 +4,12 @@ import { connect } from 'react-redux';
 import { setRightPanelAreaView } from '../../../../redux/actions';
 import { DETAIL } from '../../../../redux/constants';
 
-// Components.
-import {Button, Input, FormControls} from 'react-bootstrap';
+import { Row, Col, Button, Input, FormControls } from 'react-bootstrap';
 // import Icon from 'react-fa';
 import Select from 'react-select';
+
+// Components.
+import Avatar from '../../../../components/Avatar';
 
 
 // Define class.
@@ -15,6 +17,10 @@ class DetailForm extends React.Component {
   constructor(props) {
     // Pass `props` into scope.
     super(props);
+
+    this.state = {
+      workflowFormIsVisible: false
+    };
   }
 
   handleSaveButtonClick() {
@@ -25,6 +31,15 @@ class DetailForm extends React.Component {
 
   handleChange(date) {
     this.setState({ startDate: date });
+  }
+
+  handleDocumentLevelChange(val) {
+    // console.log(val);
+    if (val >= 1) {
+      this.setState({ workflowFormIsVisible: true });
+    } else {
+      this.setState({ workflowFormIsVisible: false });
+    }
   }
 
   // Render method.
@@ -69,6 +84,71 @@ class DetailForm extends React.Component {
       { value: '30 Years', label: '30 Years'}
     ];
     const selectNoResultsText = 'Sorry, the name you type cannot be found.';
+
+    let workflowForm;
+    if (this.state.workflowFormIsVisible) {
+      workflowForm = (
+        <div className="well">
+          <p><small>Assign an approver to each position in the approval process.</small></p>
+          <p><strong>First Stage</strong></p>
+          <hr/>
+          <Row className="form-group">
+            <Col xs={2}>
+              <Avatar />
+            </Col>
+            <Col xs={10}>
+              <Select
+                name="form-control"
+                noResultsText={selectNoResultsText}
+                value=""
+                options={employeePicklistOptions}
+              />
+            </Col>
+          </Row>
+          <Row className="form-group">
+            <Col xs={2}>
+              <Avatar />
+            </Col>
+            <Col xs={10}>
+              <Select
+                name="form-control"
+                noResultsText={selectNoResultsText}
+                value=""
+                options={employeePicklistOptions}
+              />
+            </Col>
+          </Row>
+          <Row className="form-group">
+            <Col xs={2}>
+              <Avatar />
+            </Col>
+            <Col xs={10}>
+              <Select
+                name="form-control"
+                noResultsText={selectNoResultsText}
+                value=""
+                options={employeePicklistOptions}
+              />
+            </Col>
+          </Row>
+          <p><strong>Final Stage</strong></p>
+          <hr/>
+          <Row>
+            <Col xs={2}>
+              <Avatar />
+            </Col>
+            <Col xs={10}>
+              <Select
+                name="form-control"
+                noResultsText={selectNoResultsText}
+                value=""
+                options={employeePicklistOptions}
+              />
+            </Col>
+          </Row>
+        </div>
+      );
+    }
 
     return (
       <div>
@@ -175,8 +255,11 @@ class DetailForm extends React.Component {
                 noResultsText={selectNoResultsText}
                 value=""
                 options={docLevelPicklistOptions}
+                onChange={this.handleDocumentLevelChange.bind(this)}
               />
             </div>
+
+            {workflowForm}
 
             <div className="form-group">
               <label className="control-label required">Auto Release Document</label><br/>

@@ -1,12 +1,10 @@
 // Dependencies.
 import React from 'react';
-
-// UI components
-// import {Panel} from 'react-bootstrap';
+import Icon from 'react-fa';
 
 
 // Define class.
-class Mars extends React.Component {
+class Avatar extends React.Component {
 
   // Render method.
   render() {
@@ -19,7 +17,7 @@ class Mars extends React.Component {
 
     // Size.
     let size = this.props.size;
-    let sizeStyle = 30;
+    let sizeStyle;
     if (size === 'xs') {
       sizeStyle = 16;
     } else if (size === 'sm') {
@@ -28,13 +26,17 @@ class Mars extends React.Component {
       sizeStyle = 48;
     } else if (size === 'xl') {
       sizeStyle = 64;
+    } else {
+      sizeStyle = 30;
     }
 
     // Border.
     let shape = this.props.shape;
-    let radius = '50%';
+    let radius;
     if (shape === 'square') {
       radius = 0;
+    } else {
+      radius = '50%';
     }
 
     let styles = {
@@ -48,27 +50,33 @@ class Mars extends React.Component {
 
     // Image src.
     const imageSrc = this.props.src || '';
-    let imageTag = '';
+
+    // Icon.
+    const icon = this.props.icon || 'user';
+    let contents;
     if (imageSrc.length >= 1) {
-      imageTag = <img src={imageSrc} />;
+      contents = <img src={imageSrc} />;
+    } else {
+      contents = <Icon name={icon} />;
     }
 
     return (
       <div className={classnames} style={styles}>
-        {imageTag}
+        {contents}
       </div>
     );
   }
 }
 
 // Validation.
-Mars.propTypes = {
+Avatar.propTypes = {
   status: React.PropTypes.string,
   shape: React.PropTypes.string,
   size: React.PropTypes.string,
   border: React.PropTypes.string,
-  src: React.PropTypes.string
+  src: React.PropTypes.string,
+  icon: React.PropTypes.string
 };
 
 // Export.
-export default Mars;
+export default Avatar;

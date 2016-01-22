@@ -131,7 +131,7 @@ class Page extends React.Component {
 
               <div style={{ padding: '20px 20px 0', marginBottom: -10 }}>
 
-                <DropdownButton id="tempNavigationDropdown" bsSize="xs" title=" Temporry Navigation">
+                <DropdownButton id="tempNavigationDropdown" bsSize="xs" title=" Temporary Navigation">
                   <MenuItem onClick={this.handleContentButtonClick.bind(this, DEFAULT)}> Default </MenuItem>
                   <MenuItem onClick={this.handleContentButtonClick.bind(this, PREVIEW)}> Preview </MenuItem>
                   <MenuItem onClick={this.handleContentButtonClick.bind(this, UPLOAD)}> Upload </MenuItem>
