@@ -20,7 +20,9 @@ class Upload extends React.Component {
     super(props);
 
     this.state = {
-      files: []
+      files: [],
+      fileName: '',
+      progress: 0
     };
   }
 
@@ -34,7 +36,7 @@ class Upload extends React.Component {
 
   // Dropzone.
   onDrop(uploadedFiles) {
-    this.setState({ files: uploadedFiles[0] });
+    this.setState({ files: uploadedFiles, fileName: uploadedFiles[0].name });
     Filestack.setKey('ApllgXw6MTHiBIIas6R9Dz');
     Filestack.store(
       uploadedFiles[0],
@@ -44,8 +46,8 @@ class Upload extends React.Component {
       (error) => {
         console.log(error.toString());
       },
-      (progress) => {
-        console.log('Loading: ' + progress + ' %');
+      (p) => {
+        this.setState({ progress: p });
       }
     );
   }
@@ -91,11 +93,11 @@ class Upload extends React.Component {
                     <Button componentClass="div" bsStyle="link" disabled>
                       <Icon name="file-image-o" className="fa-fw fa-lg" />
                       &nbsp;
-                      original-sample-image-file-name.jpg
+                      {this.state.fileName};
                     </Button>
                     <Row>
                       <Col xs={10}>
-                        <ProgressBar bsStyle="primary" active now={45} label="%(percent)s%" />
+                        <ProgressBar bsStyle="primary" active now={this.state.progress} label="%(percent)s%" />
                       </Col>
                       <Col xs={2} className="text-right">
                         <Button componentClass="div" bsStyle="default" bsSize="xs">
