@@ -1,5 +1,6 @@
 build
 node_modules
+rethinkdb_data
 .DS_Store
 *.log
 
