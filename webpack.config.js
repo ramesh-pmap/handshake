@@ -21,7 +21,6 @@ module.exports = {
   },
 
   copydocs: [
-    fse.copy('./doc', './build/doc', {clobber: true}),
     fse.copy('./src/static', './build/static', {clobber: true})
   ],
 
@@ -31,7 +30,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: ['react-hot', 'babel-loader'],
+        loaders: ['react-hot', 'babel-loader?presets[]=react,presets[]=es2015'],
       },
       // HTML.
       {
