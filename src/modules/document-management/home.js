@@ -19,20 +19,20 @@ import {
   PREVIEW,
   UPLOAD,
   ACTIVITY,
-  DETAIL,
+  // DETAIL,
   DETAILFORM,
   VIEWER_CHANGE_REQUEST,
   APPROVE_CHANGE_REQUEST,
-  APPROVAL_WORKFLOW,
+  // APPROVAL_WORKFLOW,
   SEARCH_RESULTS,
-  TOGGLE_RIGHT_SIDEBAR,
-  SHARE,
+  // TOGGLE_RIGHT_SIDEBAR,
+  // SHARE,
   CHECKIN,
-  CHECKOUT,
-  DOWNLOAD,
-  UPLOAD_NEW_VERSION,
-  RELEASE_NOTIFICATION,
-  PERIODIC_REVIEW
+  CHECKOUT
+  // DOWNLOAD,
+  // UPLOAD_NEW_VERSION,
+  // RELEASE_NOTIFICATION,
+  // PERIODIC_REVIEW,
   // DATAGRID
 } from '../../redux/constants';
 
@@ -143,10 +143,10 @@ class Page extends React.Component {
       <div>
         <Main>
 
-          {/* Column wrapper. */}
+        {/* Column wrapper. */}
           <div className={ state.rightSidebarOpened ? 'main-col-wrapper sidebar--open clearfix' : 'main-col-wrapper sidebar--closed clearfix' }>
 
-            {/* Left (Main) column. */}
+          {/* Left (Main) column. */}
             <div className="main-col main-col-left">
 
               <div style={{ padding: '20px 20px 0', marginBottom: -10 }}>
@@ -157,22 +157,30 @@ class Page extends React.Component {
                   <MenuItem onClick={this.handleContentButtonClick.bind(this, UPLOAD)}> Upload </MenuItem>
                   <MenuItem onClick={this.handleContentButtonClick.bind(this, SEARCH_RESULTS)}> Search Results </MenuItem>
                   <MenuItem className="divider" />
-                  <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, ACTIVITY)}> Activity List</MenuItem>
-                  <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, DETAIL)}> Detail </MenuItem>
+                  {/*
+                    <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, ACTIVITY)}> Activity List</MenuItem>
+                    <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, DETAIL)}> Detail </MenuItem>
+                  */}
                   <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, DETAILFORM)}> Detail Form </MenuItem>
-                  <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, RELEASE_NOTIFICATION)}> Release Notification </MenuItem>
+                  {/*
+                    <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, RELEASE_NOTIFICATION)}> Release Notification </MenuItem>
+                  */}
                   <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, VIEWER_CHANGE_REQUEST)}> Change Request </MenuItem>
                   <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, APPROVE_CHANGE_REQUEST)}> Approve Change Request </MenuItem>
-                  <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, APPROVAL_WORKFLOW)}> Approval Workflow </MenuItem>
-                  <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, PERIODIC_REVIEW)}> Periodic Review </MenuItem>
+                  {/*
+                    <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, APPROVAL_WORKFLOW)}> Approval Workflow </MenuItem>
+                    <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, PERIODIC_REVIEW)}> Periodic Review </MenuItem>
+                  */}
                   <MenuItem className="divider" />
                   <MenuItem onClick={this.handleModalToggle.bind(this, CHECKIN)}>Check In</MenuItem>
                   <MenuItem onClick={this.handleModalToggle.bind(this, CHECKOUT)}>Check Out</MenuItem>
-                  <MenuItem onClick={this.handleModalToggle.bind(this, DOWNLOAD)}>Download</MenuItem>
-                  <MenuItem onClick={this.handleModalToggle.bind(this, UPLOAD_NEW_VERSION)}>Upload New Version</MenuItem>
-                  <MenuItem className="divider" />
-                  <MenuItem onClick={this.handleModalToggle.bind(this, SHARE)}>Share</MenuItem>
-                  <MenuItem onClick={this.handleRightSidePanelToggle.bind(this, TOGGLE_RIGHT_SIDEBAR)}>Toggle Right Panel</MenuItem>
+                  {/*
+                    <MenuItem onClick={this.handleModalToggle.bind(this, DOWNLOAD)}>Download</MenuItem>
+                    <MenuItem onClick={this.handleModalToggle.bind(this, UPLOAD_NEW_VERSION)}>Upload New Version</MenuItem>
+                    <MenuItem className="divider" />
+                    <MenuItem onClick={this.handleModalToggle.bind(this, SHARE)}>Share</MenuItem>
+                    <MenuItem onClick={this.handleRightSidePanelToggle.bind(this, TOGGLE_RIGHT_SIDEBAR)}>Toggle Right Panel</MenuItem>
+                  */}
                 </DropdownButton>
               </div>
 

@@ -7,6 +7,9 @@ import { DETAIL } from '../../../../redux/constants';
 // Core components.
 import {Button, Input, FormControls, ListGroup, ListGroupItem} from 'react-bootstrap';
 
+// Misc. components.
+import DetailViewDropdown from './DetailViewDropdown';
+
 // Define class.
 class PeriodicReview extends React.Component {
   constructor(props) {
@@ -25,13 +28,15 @@ class PeriodicReview extends React.Component {
     return (
       <div>
         <div className="fixed-title clearfix">
-          <h3 className="pull-left">Selected File</h3>
+          <div className="pull-left">
+            <DetailViewDropdown />
+          </div>
           <div className="pull-right">
             <Button bsStyle="info" bsSize="sm" onClick={this.handleSaveButtonClick.bind(this)}>
-              Save
+            Save
             </Button>
             <Button bsStyle="default" bsSize="sm" onClick={this.handleSaveButtonClick.bind(this)}>
-              Cancel
+            Cancel
             </Button>
           </div>
         </div>
@@ -48,6 +53,9 @@ class PeriodicReview extends React.Component {
             <Input type="textarea" label="Document Review Comments" maxLength="2000" />
           </div>
         </div>
+
+        <hr></hr>
+
         <ListGroup bsStyle="info">
           <ListGroupItem href="#link1">
             <div className="list-card neutral">

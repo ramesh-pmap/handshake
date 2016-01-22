@@ -119,7 +119,7 @@ class Detail extends React.Component {
       panelsArea = (
         <div className="document-details">
 
-          {/*
+        {/*
           <Button bsStyle="default" bsSize="xs">Comment</Button>
           &nbsp;
           or
@@ -134,6 +134,9 @@ class Detail extends React.Component {
           */}
           <div className="form-group">
             <Button bsSize="xsmall" bsStyle="info" block>Submit for Approval</Button>
+          </div>
+          <div className="form-group">
+            <Button bsSize="xsmall" bsStyle="default" block>Archive</Button>
           </div>
           <FormControls.Static label="Title" value={docTitle} />
           <FormControls.Static label="Internal Document ID" value={docId} />
