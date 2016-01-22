@@ -2,7 +2,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getWindowDimensions, toggleRightSidebar, setRightPanelAreaView } from '../../redux/actions';
-import { ACTIVITY, DETAIL, DETAILFORM, VIEWER_CHANGE_REQUEST, APPROVE_CHANGE_REQUEST, VERSION_HISTORY, RELEASE_NOTIFICATION, APPROVAL_WORKFLOW } from '../../redux/constants';
+import { ACTIVITY, DETAIL, DETAILFORM, VIEWER_CHANGE_REQUEST, APPROVE_CHANGE_REQUEST, VERSION_HISTORY, RELEASE_NOTIFICATION, APPROVAL_WORKFLOW, PERIODIC_REVIEW} from '../../redux/constants';
 
 import {Nav, NavItem, Tooltip, OverlayTrigger} from 'react-bootstrap';
 import Icon from 'react-fa';
@@ -16,6 +16,7 @@ import ChangeRequestApprove from './components/RightPanelArea/ChangeRequestAppro
 import VersionHistory from './components/RightPanelArea/VersionHistory';
 import ReleaseNotification from './components/RightPanelArea/ReleaseNotification';
 import ApprovalWorkflow from './components/RightPanelArea/ApprovalWorkflow';
+import PeriodicReview from './components/RightPanelArea/PeriodicReview';
 
 // Utility methods.
 import utils from '../../utils';
@@ -110,6 +111,10 @@ class RightPanelArea extends React.Component {
       break;
     case RELEASE_NOTIFICATION:
       rightPanelArea = <ReleaseNotification />;
+      this.state.currentTab = TAB_DETAIL;
+      break;
+    case PERIODIC_REVIEW:
+      rightPanelArea = <PeriodicReview />;
       this.state.currentTab = TAB_DETAIL;
       break;
     default:
