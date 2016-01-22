@@ -66,7 +66,7 @@ class Page extends React.Component {
     // const { dispatch } = this.props;
     // Please do not remove the commented area.
 
-    // JSON FILE
+    // // JSON FILE
     // // Fetch Source Json data.
     // fetch(SourceData).then(response => response.json())
     //   .then(data => {
