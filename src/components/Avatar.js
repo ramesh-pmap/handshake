@@ -22,12 +22,12 @@ class Avatar extends React.Component {
       sizeStyle = 16;
     } else if (size === 'sm') {
       sizeStyle = 24;
-    } else if (size === 'lg') {
+    } else if (size === 'md') {
       sizeStyle = 48;
-    } else if (size === 'xl') {
+    } else if (size === 'lg') {
       sizeStyle = 64;
     } else {
-      sizeStyle = 30;
+      sizeStyle = 32;
     }
 
     // Border.
