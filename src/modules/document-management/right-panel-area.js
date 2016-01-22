@@ -21,11 +21,9 @@ import utils from '../../utils';
 // Const.
 const TAB_TASKS = 'TAB_TASKS';
 const TAB_DETAIL = 'TAB_DETAIL';
-const TAB_VERSION_HISTORY = 'TAB_VERSION_HISTORY';
 
 const tasksTooltip = <Tooltip id="tasksTooltip">Tasks</Tooltip>;
 const detailTooltip = <Tooltip id="detailTooltip">Document Detail</Tooltip>;
-const versionHistoryTooltip = <Tooltip id="versionHistoryTooltip">Version History</Tooltip>;
 
 // Define class.
 class RightPanelArea extends React.Component {
@@ -66,9 +64,6 @@ class RightPanelArea extends React.Component {
     case TAB_DETAIL:
       dispatch(setRightPanelAreaView(DETAIL));
       break;
-    case TAB_VERSION_HISTORY:
-      dispatch(setRightPanelAreaView(VERSION_HISTORY));
-      break;
     default:
       dispatch(setRightPanelAreaView(ACTIVITY));
     }
@@ -105,7 +100,7 @@ class RightPanelArea extends React.Component {
       break;
     case VERSION_HISTORY:
       rightPanelArea = <VersionHistory />;
-      this.state.currentTab = TAB_VERSION_HISTORY;
+      this.state.currentTab = TAB_DETAIL;
       break;
     default:
       rightPanelArea = <DocumentActivityList />;
@@ -131,13 +126,6 @@ class RightPanelArea extends React.Component {
             <NavItem onClick={this.handleTabClick.bind(this, TAB_DETAIL)}
               className={this.state.currentTab === TAB_DETAIL ? 'active' : ''}>
               <Icon name="info-circle" className="fa-fw" />
-            </NavItem>
-          </OverlayTrigger>
-
-          <OverlayTrigger placement="left" overlay={versionHistoryTooltip}>
-            <NavItem onClick={this.handleTabClick.bind(this, TAB_VERSION_HISTORY)}
-              className={this.state.currentTab === TAB_VERSION_HISTORY ? 'active' : ''}>
-              <Icon name="list-ol" className="fa-fw" />
             </NavItem>
           </OverlayTrigger>
 

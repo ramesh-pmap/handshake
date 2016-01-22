@@ -55,20 +55,12 @@ class ContentAreaHeader extends React.Component {
   handleDropdownMenuChange(view, e) {
     e.preventDefault();
     const { dispatch } = this.props;
-    switch (view) {
-    case DEFAULT:
-      this.state.sectionTitle = ALLDOCS_TITLE;
-      break;
-    case UPLOAD:
-      this.state.sectionTitle = UPLOADEDDOCS_TITLE;
-      break;
-    case SEARCH_RESULTS:
-      this.state.sectionTitle = SEARCH_TITLE;
-      break;
-    default:
-      this.state.sectionTitle = ALLDOCS_TITLE;
-    }
     dispatch(setContentAreaView(view));
+    if (this.props.state === SEARCH_RESULTS) {
+      this.state.sectionTitle = SEARCH_TITLE;
+    } else {
+      this.state.sectionTitle = e.target.innerHTML;
+    }
   }
 
   // Render method.
@@ -78,10 +70,10 @@ class ContentAreaHeader extends React.Component {
         <Col md={6}>
           <ButtonGroup className="title-dropdown">
             <DropdownButton id="file_manager-docs_dropdown" title={this.state.sectionTitle} bsStyle="link" bsSize="lg">
-              <MenuItem eventKey="1" onClick={this.handleDropdownMenuChange.bind(this, DEFAULT)}>{ALLDOCS_TITLE}</MenuItem>
-              <MenuItem eventKey="2">{MYDOCS_TITLE}</MenuItem>
-              <MenuItem eventKey="3" onClick={this.handleDropdownMenuChange.bind(this, UPLOAD)}>{UPLOADEDDOCS_TITLE}</MenuItem>
-              <MenuItem eventKey="4">{RECENTDOCS_TITLE}</MenuItem>
+              <MenuItem onClick={this.handleDropdownMenuChange.bind(this, DEFAULT)}>{ALLDOCS_TITLE}</MenuItem>
+              <MenuItem onClick={this.handleDropdownMenuChange.bind(this, DEFAULT)}>{MYDOCS_TITLE}</MenuItem>
+              <MenuItem onClick={this.handleDropdownMenuChange.bind(this, UPLOAD)}>{UPLOADEDDOCS_TITLE}</MenuItem>
+              <MenuItem onClick={this.handleDropdownMenuChange.bind(this, DEFAULT)}>{RECENTDOCS_TITLE}</MenuItem>
             </DropdownButton>
           </ButtonGroup>
         </Col>
