@@ -6,8 +6,9 @@ import { connect } from 'react-redux';
 import {FormControls, Tooltip, OverlayTrigger, ListGroup, ListGroupItem, Button /* , Input */ } from 'react-bootstrap';
 import Icon from 'react-fa';
 
-// Misc. components.
+// Components.
 import Avatar from '../../../../components/Avatar';
+import DetailViewDropdown from './DetailViewDropdown';
 
 // Import Firebase
 import Firebase from 'firebase';
@@ -253,7 +254,9 @@ class Detail extends React.Component {
     return (
       <div>
         <div className="fixed-title clearfix">
-          <h1 className="pull-left">Document Detail</h1>
+          <div className="pull-left">
+            <DetailViewDropdown />
+          </div>
           <div className="pull-right sidebar-header-actions">
               <Button bsStyle="link" bsSize="xs">
                 <Icon name="eye" className="fa-fw text-muted" />

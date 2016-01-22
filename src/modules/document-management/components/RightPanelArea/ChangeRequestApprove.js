@@ -6,7 +6,8 @@ import { DETAIL } from '../../../../redux/constants';
 import Icon from 'react-fa';
 
 // Core components.
-import {Button, Input, FormControls} from 'react-bootstrap';
+import { Button, Input, FormControls } from 'react-bootstrap';
+import DetailViewDropdown from './DetailViewDropdown';
 // import Icon from 'react-fa';
 
 // DatePicker.
@@ -56,12 +57,13 @@ class DetailForm extends React.Component {
     return (
       <div>
         <div className="fixed-title clearfix">
-          <h3 className="pull-left">Selected File</h3>
-          <div className="pull-right">
-            <Button bsStyle="info" bsSize="sm" onClick={this.handleSaveButtonClick.bind(this)}>
+          <DetailViewDropdown />
+          <div className="pull-right sidebar-header-actions">
+            <Button bsStyle="info" bsSize="xs" onClick={this.handleSaveButtonClick.bind(this)}>
               Save
             </Button>
-            <Button bsStyle="default" bsSize="sm" onClick={this.handleSaveButtonClick.bind(this)}>
+            &nbsp;
+            <Button bsStyle="default" bsSize="xs" onClick={this.handleSaveButtonClick.bind(this)}>
               Cancel
             </Button>
           </div>

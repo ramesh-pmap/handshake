@@ -2,7 +2,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getWindowDimensions, toggleRightSidebar, setRightPanelAreaView } from '../../redux/actions';
-import { ACTIVITY, DETAIL, DETAILFORM, VIEWER_CHANGE_REQUEST, APPROVE_CHANGE_REQUEST, VERSION_HISTORY } from '../../redux/constants';
+import { ACTIVITY, DETAIL, DETAILFORM, VIEWER_CHANGE_REQUEST, APPROVE_CHANGE_REQUEST } from '../../redux/constants';
 
 import {Nav, NavItem, Tooltip, OverlayTrigger} from 'react-bootstrap';
 import Icon from 'react-fa';
@@ -13,7 +13,7 @@ import DocumentDetail from './components/RightPanelArea/Detail';
 import DocumentDetailForm from './components/RightPanelArea/DetailForm';
 import ChangeRequestSubmit from './components/RightPanelArea/ChangeRequestSubmit';
 import ChangeRequestApprove from './components/RightPanelArea/ChangeRequestApprove';
-import VersionHistory from './components/RightPanelArea/VersionHistory';
+// import VersionHistory from './components/RightPanelArea/VersionHistory';
 
 // Utility methods.
 import utils from '../../utils';
@@ -21,11 +21,9 @@ import utils from '../../utils';
 // Const.
 const TAB_TASKS = 'TAB_TASKS';
 const TAB_DETAIL = 'TAB_DETAIL';
-const TAB_VERSION_HISTORY = 'TAB_VERSION_HISTORY';
 
 const tasksTooltip = <Tooltip id="tasksTooltip">Tasks</Tooltip>;
 const detailTooltip = <Tooltip id="detailTooltip">Document Detail</Tooltip>;
-const versionHistoryTooltip = <Tooltip id="versionHistoryTooltip">Version History</Tooltip>;
 
 // Define class.
 class RightPanelArea extends React.Component {
@@ -66,9 +64,6 @@ class RightPanelArea extends React.Component {
     case TAB_DETAIL:
       dispatch(setRightPanelAreaView(DETAIL));
       break;
-    case TAB_VERSION_HISTORY:
-      dispatch(setRightPanelAreaView(VERSION_HISTORY));
-      break;
     default:
       dispatch(setRightPanelAreaView(ACTIVITY));
     }
@@ -103,10 +98,6 @@ class RightPanelArea extends React.Component {
       rightPanelArea = <ChangeRequestApprove />;
       this.state.currentTab = TAB_DETAIL;
       break;
-    case VERSION_HISTORY:
-      rightPanelArea = <VersionHistory />;
-      this.state.currentTab = TAB_VERSION_HISTORY;
-      break;
     default:
       rightPanelArea = <DocumentActivityList />;
       this.state.currentTab = TAB_TASKS;
@@ -131,13 +122,6 @@ class RightPanelArea extends React.Component {
             <NavItem onClick={this.handleTabClick.bind(this, TAB_DETAIL)}
               className={this.state.currentTab === TAB_DETAIL ? 'active' : ''}>
               <Icon name="info-circle" className="fa-fw" />
-            </NavItem>
-          </OverlayTrigger>
-
-          <OverlayTrigger placement="left" overlay={versionHistoryTooltip}>
-            <NavItem onClick={this.handleTabClick.bind(this, TAB_VERSION_HISTORY)}
-              className={this.state.currentTab === TAB_VERSION_HISTORY ? 'active' : ''}>
-              <Icon name="list-ol" className="fa-fw" />
             </NavItem>
           </OverlayTrigger>
 
