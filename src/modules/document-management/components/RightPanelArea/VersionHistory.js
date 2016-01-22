@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 // Core components.
 import {Button, ListGroup, ListGroupItem } from 'react-bootstrap';
 import Icon from 'react-fa';
+import DetailViewDropdown from './DetailViewDropdown';
 
 // Define class.
 class VersionHistory extends React.Component {
@@ -29,7 +30,7 @@ class VersionHistory extends React.Component {
       <div>
 
         <div className="fixed-title">
-          <h1>Version History</h1>
+          <DetailViewDropdown />
         </div>
 
         <ListGroup bsStyle="info">

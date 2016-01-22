@@ -6,8 +6,9 @@ import { connect } from 'react-redux';
 import {FormControls, Tooltip, OverlayTrigger, ListGroup, ListGroupItem, Button /* , Input */ } from 'react-bootstrap';
 import Icon from 'react-fa';
 
-// Misc. components.
+// Components.
 import Avatar from '../../../../components/Avatar';
+import DetailViewDropdown from './DetailViewDropdown';
 
 // Constants.
 import DETAILFORM from '../../../../redux/constants';
@@ -213,7 +214,7 @@ class Detail extends React.Component {
                 <div className="meta-wrapper">
                   <div className="clearfix">
                     <p className="pull-left">10/11/2015</p>
-                    <p className="pull-right approved">Aprroved</p>
+                    <p className="pull-right approved">Approved</p>
                   </div>
                 </div>
               </div>
@@ -264,7 +265,9 @@ class Detail extends React.Component {
     return (
       <div>
         <div className="fixed-title clearfix">
-          <h1 className="pull-left">Document Detail</h1>
+          <div className="pull-left">
+            <DetailViewDropdown />
+          </div>
           <div className="pull-right sidebar-header-actions">
               <Button bsStyle="link" bsSize="xs">
                 <Icon name="eye" className="fa-fw text-muted" />
