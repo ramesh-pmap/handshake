@@ -44,7 +44,7 @@ class DetailForm extends React.Component {
               <option>Bob Roberts</option>
               <option>Janette Walls</option>
             </Input>
-            <FormControls.Static label="Requested Date" labelClassName="" wrapperClassName="" value="1/19/16"/>
+            <FormControls.Static label="Requested Date" labelClassName="" wrapperClassName="" value="1/10/16"/>
             <Input type="textarea" label="Reason for Change Request" labelClassName="" wrapperClassName="" />
             <Input type="textarea" label="Requested Changes" labelClassName="" wrapperClassName="" />
             <Input type="select" label="Priority" labelClassName=" required" wrapperClassName="">

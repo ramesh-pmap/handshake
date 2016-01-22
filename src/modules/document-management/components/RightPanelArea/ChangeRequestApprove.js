@@ -72,7 +72,7 @@ class DetailForm extends React.Component {
             <div className="well">
               <p>Change Request Summary</p>
               <FormControls.Static label="Requested By" value="Jane Doe"/>
-              <FormControls.Static label="Reviewed Date" value="1/25/16"/>
+              <FormControls.Static label="Reviewed Date" value="1/10/16"/>
               <FormControls.Static label="Reason for Change Request" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."/>
               <FormControls.Static label="Requested Changes" value="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
               <FormControls.Static label="Priority" value="Medium"/>
@@ -82,7 +82,7 @@ class DetailForm extends React.Component {
               <option>Bob Roberts</option>
               <option>Janette Walls</option>
             </Input>
-            <FormControls.Static label="Reviewed Date" value="1/25/16"/>
+            <FormControls.Static label="Reviewed Date" value="1/12/16"/>
             <Input type="textarea" label="Change Request Review Comments" maxLength="2000" />
 
             <Input type="select" label="Change Request Status" labelClassName=" required">
@@ -119,7 +119,7 @@ class DetailForm extends React.Component {
                   className="form-control"
                   selected={this.state.startDate}
                   onChange={this.handleChange.bind(this)}
-                  dateFormat="MMMM d, YYYY"
+                  dateFormat="MMMM DD, YYYY"
                   addonAfter={innerIcon}
                   // isClearable
                   showYearDropdown

@@ -2,7 +2,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getWindowDimensions, toggleRightSidebar, setRightPanelAreaView } from '../../redux/actions';
-import { ACTIVITY, DETAIL, DETAILFORM, VIEWER_CHANGE_REQUEST, APPROVE_CHANGE_REQUEST, VERSION_HISTORY } from '../../redux/constants';
+import { ACTIVITY, DETAIL, DETAILFORM, VIEWER_CHANGE_REQUEST, APPROVE_CHANGE_REQUEST, VERSION_HISTORY, RELEASE_NOTIFICATION } from '../../redux/constants';
 
 import {Nav, NavItem, Tooltip, OverlayTrigger} from 'react-bootstrap';
 import Icon from 'react-fa';
@@ -14,6 +14,7 @@ import DocumentDetailForm from './components/RightPanelArea/DetailForm';
 import ChangeRequestSubmit from './components/RightPanelArea/ChangeRequestSubmit';
 import ChangeRequestApprove from './components/RightPanelArea/ChangeRequestApprove';
 import VersionHistory from './components/RightPanelArea/VersionHistory';
+import ReleaseNotification from './components/RightPanelArea/ReleaseNotification';
 
 // Utility methods.
 import utils from '../../utils';
@@ -106,6 +107,10 @@ class RightPanelArea extends React.Component {
     case VERSION_HISTORY:
       rightPanelArea = <VersionHistory />;
       this.state.currentTab = TAB_VERSION_HISTORY;
+      break;
+    case RELEASE_NOTIFICATION:
+      rightPanelArea = <ReleaseNotification />;
+      this.state.currentTab = TAB_DETAIL;
       break;
     default:
       rightPanelArea = <DocumentActivityList />;

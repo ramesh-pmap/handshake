@@ -30,6 +30,7 @@ import {
   CHECKOUT,
   DOWNLOAD,
   UPLOAD_NEW_VERSION,
+  RELEASE_NOTIFICATION
   // DATAGRID
 } from '../../redux/constants';
 
@@ -140,6 +141,7 @@ class Page extends React.Component {
                   <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, ACTIVITY)}> Activity List</MenuItem>
                   <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, DETAIL)}> Detail </MenuItem>
                   <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, DETAILFORM)}> Detail Form </MenuItem>
+                  <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, RELEASE_NOTIFICATION)}> Release Notification </MenuItem>
                   <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, VIEWER_CHANGE_REQUEST)}> Change Request </MenuItem>
                   <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, APPROVE_CHANGE_REQUEST)}> Approve Change Request </MenuItem>
                   <MenuItem className="divider" />
