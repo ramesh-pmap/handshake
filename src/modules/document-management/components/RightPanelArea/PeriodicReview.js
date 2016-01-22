@@ -54,7 +54,7 @@ class PeriodicReview extends React.Component {
               <h4>Bob Roberts</h4>
               <div className="meta-wrapper">
                 <div className="clearfix">
-                  <p className="pull-left">Sed egestas dolor mauris, ut molestie felis lacinia sed. </p>
+                  <p className="pull-left">Fusce dignissim massa lobortis, posuere justo nec, ullamcorper nisl. </p>
                   <p className="pull-right">12/19/2015</p>
                 </div>
                 <div className="clearfix">
