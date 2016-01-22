@@ -17,7 +17,12 @@ module.exports = {
     contentBase: './build',
     hot: true,
     noInfo: false,
-    port: 2015
+    port: 2015,
+    proxy: {
+      '/documents': {
+        target: 'http://localhost:3001'
+      }
+    }
   },
 
   copydocs: [
