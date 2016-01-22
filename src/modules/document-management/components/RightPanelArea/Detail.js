@@ -10,12 +10,6 @@ import Icon from 'react-fa';
 import Avatar from '../../../../components/Avatar';
 import DetailViewDropdown from './DetailViewDropdown';
 
-// Constants.
-import DETAILFORM from '../../../../redux/constants';
-
-// Actions.
-import setRightPanelAreaView from '../../../../redux/actions';
-
 // Import Firebase
 import Firebase from 'firebase';
 
@@ -72,11 +66,6 @@ class Detail extends React.Component {
     }
     // push back to firebase
     // ref.set(list);
-  }
-
-  handleRightPanelButtonClick(view) {
-    const { dispatch } = this.props;
-    dispatch(setRightPanelAreaView(view));
   }
 
   // Render method.
@@ -275,14 +264,14 @@ class Detail extends React.Component {
               <Button bsStyle="link" bsSize="xs">
                 <Icon name="download" className="fa-fw text-muted" />
               </Button>
-              <Button bsStyle="link" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, DETAILFORM)}>
+              <Button bsStyle="link" bsSize="xs">
                 <Icon name="pencil" className="fa-fw text-muted" />
               </Button>
           </div>
         </div>
 
         <div className="sidebar-details">
-          <div className="workflow-avatars">
+          <div className="workflow-avatars col-md-12">
             <div className="document-details">
               <FormControls.Static label="Workflow" />
             </div>
