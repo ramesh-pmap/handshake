@@ -17,8 +17,8 @@ import {
   DETAIL,
   PREVIEW,
   SHARE,
-  CHECKIN,
-  CHECKOUT,
+  // CHECKIN,
+  // CHECKOUT,
   DOWNLOAD,
   UPLOAD_NEW_VERSION
 } from '../../../../../redux/constants';
@@ -106,9 +106,11 @@ class FileManagerRowFile extends React.Component {
             <MenuItem eventKey="3" onClick={this.handleModalToggle.bind(this, SHARE)}>Share</MenuItem>
             <MenuItem eventKey="4" onClick={this.handleModalToggle.bind(this, DOWNLOAD)}>Download</MenuItem>
             <MenuItem divider />
-            <MenuItem eventKey="5" onClick={this.handleModalToggle.bind(this, UPLOAD_NEW_VERSION)}>Upload New Version</MenuItem>
-            <MenuItem eventKey="6" onClick={this.handleModalToggle.bind(this, CHECKIN)}>Check In</MenuItem>
-            <MenuItem eventKey="7" onClick={this.handleModalToggle.bind(this, CHECKOUT)}>Check Out</MenuItem>
+            <MenuItem eventKey="5" onClick={this.handleModalToggle.bind(this, UPLOAD_NEW_VERSION)}>New Version</MenuItem>
+            {/*
+              <MenuItem eventKey="6" onClick={this.handleModalToggle.bind(this, CHECKIN)}>Check In</MenuItem>
+              <MenuItem eventKey="7" onClick={this.handleModalToggle.bind(this, CHECKOUT)}>Check Out</MenuItem>
+            */}
           </DropdownButton>
         </ButtonToolbar>
       </ListGroupItem>

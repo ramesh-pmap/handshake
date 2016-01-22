@@ -35,7 +35,7 @@ class UploadNewVersion extends React.Component {
     return (
       <Modal show={state.modalOpened} onHide={this.handleModalButtonClick.bind(this)}>
         <Modal.Header closeButton>
-          <Modal.Title>Upload New Version</Modal.Title>
+          <Modal.Title>New Version</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Dropzone id="Upload_Dropzone" ref="dropzone" onDrop={this.onDrop.bind(this)} className="dropzone">
@@ -53,7 +53,7 @@ class UploadNewVersion extends React.Component {
 
           <FormControls.Static label="Modified Date" value="1/22/2016"/>
 
-          <FormControls.Static label="Version" value="2.0"/>
+          <FormControls.Static label="Version" value="2.A Draft"/>
 
           <div className="form-group">
             <input type="checkbox" />
