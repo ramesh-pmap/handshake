@@ -31,7 +31,8 @@ import {
   CHECKOUT,
   DOWNLOAD,
   UPLOAD_NEW_VERSION,
-  RELEASE_NOTIFICATION
+  RELEASE_NOTIFICATION,
+  PERIODIC_REVIEW
   // DATAGRID
 } from '../../redux/constants';
 
@@ -163,6 +164,7 @@ class Page extends React.Component {
                   <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, VIEWER_CHANGE_REQUEST)}> Change Request </MenuItem>
                   <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, APPROVE_CHANGE_REQUEST)}> Approve Change Request </MenuItem>
                   <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, APPROVAL_WORKFLOW)}> Approval Workflow </MenuItem>
+                  <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, PERIODIC_REVIEW)}> Periodic Review </MenuItem>
                   <MenuItem className="divider" />
                   <MenuItem onClick={this.handleModalToggle.bind(this, CHECKIN)}>Check In</MenuItem>
                   <MenuItem onClick={this.handleModalToggle.bind(this, CHECKOUT)}>Check Out</MenuItem>
