@@ -2,7 +2,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getWindowDimensions, toggleRightSidebar, setRightPanelAreaView } from '../../redux/actions';
-import { ACTIVITY, DETAIL, DETAILFORM, VIEWER_CHANGE_REQUEST, APPROVE_CHANGE_REQUEST } from '../../redux/constants';
+import { ACTIVITY, DETAIL, DETAILFORM, VIEWER_CHANGE_REQUEST, APPROVE_CHANGE_REQUEST, VERSION_HISTORY } from '../../redux/constants';
 
 import {Nav, NavItem, Tooltip, OverlayTrigger} from 'react-bootstrap';
 import Icon from 'react-fa';
@@ -13,7 +13,7 @@ import DocumentDetail from './components/RightPanelArea/Detail';
 import DocumentDetailForm from './components/RightPanelArea/DetailForm';
 import ChangeRequestSubmit from './components/RightPanelArea/ChangeRequestSubmit';
 import ChangeRequestApprove from './components/RightPanelArea/ChangeRequestApprove';
-// import VersionHistory from './components/RightPanelArea/VersionHistory';
+import VersionHistory from './components/RightPanelArea/VersionHistory';
 
 // Utility methods.
 import utils from '../../utils';
@@ -96,6 +96,10 @@ class RightPanelArea extends React.Component {
       break;
     case APPROVE_CHANGE_REQUEST:
       rightPanelArea = <ChangeRequestApprove />;
+      this.state.currentTab = TAB_DETAIL;
+      break;
+    case VERSION_HISTORY:
+      rightPanelArea = <VersionHistory />;
       this.state.currentTab = TAB_DETAIL;
       break;
     default:

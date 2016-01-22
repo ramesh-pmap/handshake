@@ -40,7 +40,7 @@ class DetailViewDropdown extends React.Component {
   }
 
   handleTabClick(view) {
-    console.log(view);
+    // console.log(view);
     const { dispatch } = this.props;
     dispatch(setRightPanelAreaView(view));
   }
