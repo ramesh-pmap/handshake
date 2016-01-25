@@ -8,10 +8,12 @@ import Icon from 'react-fa';
 import {
   setContentAreaView,
   setRightPanelAreaView,
-  toggleRightSidebar
+  toggleRightSidebar,
+  setModalView,
+  toggleModal
 } from '../../../../redux/actions';
 
-import { DEFAULT, DETAIL } from '../../../../redux/constants';
+import { DEFAULT, DETAIL, DOWNLOAD, SHARE } from '../../../../redux/constants';
 
 // Define class.
 class Preview extends React.Component {
@@ -44,15 +46,24 @@ class Preview extends React.Component {
   // !!!!!!!!!!!!!!!!!!!!
 
   showDetail() {
-    const { dispatch } = this.props;
+    const { state, dispatch } = this.props;
     dispatch(setRightPanelAreaView(DETAIL));
-    dispatch(toggleRightSidebar(false));
-    // console.log(state.rightSidebarOpened);
+    if (!state.rightSidebarOpened) {
+      dispatch(toggleRightSidebar(state.rightSidebarOpened));
+    } else if (state.rightSidebarOpened) {
+      dispatch(toggleRightSidebar(state.rightSidebarOpened));
+    }
   }
 
   iAcknowledgeThisDocument() {
     this.setState({ alertVisible: false });
     alert('Thank you.');
+  }
+
+  handleModalToggle(view) {
+    const { dispatch } = this.props;
+    dispatch(setModalView(view));
+    dispatch(toggleModal(true));
   }
 
   // Render method.
@@ -80,14 +91,14 @@ class Preview extends React.Component {
       <div className="preview-panel" style={{height: state.windowDimensions.height - 88}}>
         <div className="preview-panel-toolbar clearfix">
           <div className="pull-left lead">
-            sample-word-document.docx
+          sample-word-document.docx
           </div>
           <ButtonGroup className="pull-right">
             <Button bsStyle="link" bsSize="sm" className="text-muted"
               onClick={this.showDetail.bind(this)}>
               <Icon name="list-alt" className="fa-lg" />
               &nbsp;
-              View Details
+              { state.rightSidebarOpened ? 'Hide Details' : 'View Details'}
             </Button>
             <Button bsStyle="link" bsSize="sm" className="text-muted"
               onClick={this.print.bind(this)}>
@@ -95,12 +106,12 @@ class Preview extends React.Component {
               &nbsp;
               Print
             </Button>
-            <Button bsStyle="link" bsSize="sm" className="text-muted">
+            <Button bsStyle="link" bsSize="sm" className="text-muted" onClick={this.handleModalToggle.bind(this, DOWNLOAD)}>
               <Icon name="download" className="fa-lg" />
               &nbsp;
               Download
             </Button>
-            <Button bsStyle="link" bsSize="sm" className="text-muted">
+            <Button bsStyle="link" bsSize="sm" className="text-muted" onClick={this.handleModalToggle.bind(this, SHARE)}>
               <Icon name="share-square-o" className="fa-lg" />
               &nbsp;
               Share
