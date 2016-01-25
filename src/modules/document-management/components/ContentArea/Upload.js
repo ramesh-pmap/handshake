@@ -74,7 +74,7 @@ class Upload extends React.Component {
             <Icon name="upload" className="fa-2x text-success" />
           </p>
           Drag and drop files here
-          <br className="hidden-xs"/>
+          <br className="hidden-xs"/>&nbsp;
           or click to <a>select files</a> from your computer.
         </Dropzone>
 
@@ -143,7 +143,29 @@ class Upload extends React.Component {
                   </Row>
                 </ListGroupItem>
                 : null
-          }
+            }
+
+            <ListGroupItem onClick={this.handleUploadedFileClick.bind(this, DETAILFORM)}>
+              <Row>
+                <Col xs={10}>
+                  <Button componentClass="div" bsStyle="link">
+                    <Icon name="file-word-o" className="fa-lg" />
+                    &nbsp;
+                    sample_upload_file.doc
+                  </Button>
+                </Col>
+                <Col xs={2} className="text-right">
+                  <Button componentClass="div" bsStyle="link" bsSize="xs">
+                    <Icon name="trash" className="fa-lg text-muted" />
+                  </Button>
+                  &nbsp;
+                  <Button componentClass="div" bsStyle="link" bsSize="xs">
+                    <Icon name="pencil" className="fa-lg text-muted" />
+                    &nbsp; Edit Details
+                  </Button>
+                </Col>
+              </Row>
+            </ListGroupItem>
 
           </ListGroup>
         </div>
