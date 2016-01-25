@@ -77,7 +77,8 @@ class Upload extends React.Component {
           <br className="hidden-xs"/>
           or click to <a>select files</a> from your computer.
         </Dropzone>
-
+        {
+        this.state.files.length > 0 ?
         <div className="card">
           <div className="file_manager-list_header">
 
@@ -143,10 +144,11 @@ class Upload extends React.Component {
                   </Row>
                 </ListGroupItem>
                 : null
-          }
-
+              }
           </ListGroup>
         </div>
+        : null
+      }
       </div>
     );
   }
