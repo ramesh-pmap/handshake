@@ -1,8 +1,8 @@
 // Dependencies.
 import React from 'react';
 import { connect } from 'react-redux';
-import { setContentAreaView } from '../../../../redux/actions';
-import { DEFAULT, UPLOAD, SEARCH_RESULTS } from '../../../../redux/constants';
+import { setContentAreaView, setRightPanelAreaView } from '../../../../redux/actions';
+import { DEFAULT, UPLOAD, SEARCH_RESULTS, ACTIVITY } from '../../../../redux/constants';
 // import {Link} from 'react-router';
 // import {LinkContainer} from 'react-router-bootstrap';
 
@@ -56,6 +56,7 @@ class ContentAreaHeader extends React.Component {
     e.preventDefault();
     const { dispatch } = this.props;
     dispatch(setContentAreaView(view));
+    dispatch(setRightPanelAreaView(ACTIVITY));
     if (this.props.state === SEARCH_RESULTS) {
       this.state.sectionTitle = SEARCH_TITLE;
     } else {

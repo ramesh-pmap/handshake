@@ -3,7 +3,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 // Core components.
-import {FormControls, Tooltip, OverlayTrigger, ListGroup, ListGroupItem, Button /* , Input */ } from 'react-bootstrap';
+import {
+  FormControls,
+  Tooltip,
+  OverlayTrigger,
+  ListGroup,
+  ListGroupItem,
+  Button
+} from 'react-bootstrap';
 import Icon from 'react-fa';
 
 // Actions.
