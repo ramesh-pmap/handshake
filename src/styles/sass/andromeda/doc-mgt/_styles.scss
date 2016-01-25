@@ -553,6 +553,7 @@ $search-expanded-width: 400px;
   border-radius: 50%;
   display: inline-block;
   overflow: hidden;
+  text-align: center;
   margin: 5px 3px 5px 0;
   &.approved {
     border-color: $approved-color;
@@ -580,6 +581,11 @@ $search-expanded-width: 400px;
      width: 100%;
      height: auto;
    }
+
+  .fa {
+    font-size: 18px;
+    padding-top: 4px;
+  }
 }
 
 .workflow-avatars {
