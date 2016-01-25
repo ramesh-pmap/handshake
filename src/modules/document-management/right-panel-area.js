@@ -2,7 +2,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getWindowDimensions, toggleRightSidebar, setRightPanelAreaView } from '../../redux/actions';
-import { ACTIVITY, DETAIL, DETAILFORM, VIEWER_CHANGE_REQUEST, APPROVE_CHANGE_REQUEST, VERSION_HISTORY, RELEASE_NOTIFICATION, APPROVAL_WORKFLOW, PERIODIC_REVIEW} from '../../redux/constants';
+import {
+  ACTIVITY,
+  DETAIL,
+  DETAILFORM,
+  VIEWER_CHANGE_REQUEST,
+  APPROVE_CHANGE_REQUEST,
+  VERSION_HISTORY,
+  RELEASE_NOTIFICATION,
+  APPROVAL_WORKFLOW,
+  PERIODIC_REVIEW
+} from '../../redux/constants';
 
 import {Nav, NavItem, Tooltip, OverlayTrigger} from 'react-bootstrap';
 import Icon from 'react-fa';

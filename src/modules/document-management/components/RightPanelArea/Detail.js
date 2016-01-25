@@ -6,9 +6,24 @@ import { connect } from 'react-redux';
 import {FormControls, Tooltip, OverlayTrigger, ListGroup, ListGroupItem, Button /* , Input */ } from 'react-bootstrap';
 import Icon from 'react-fa';
 
+// Actions.
+import {
+  setRightPanelAreaView,
+  setContentAreaView,
+  toggleModal,
+  setModalView
+} from '../../../../redux/actions';
+
 // Components.
 import Avatar from '../../../../components/Avatar';
 import DetailViewDropdown from './DetailViewDropdown';
+
+// Constants.
+import {
+  PREVIEW,
+  DETAILFORM,
+  DOWNLOAD
+} from '../../../../redux/constants';
 
 // Import Firebase
 import Firebase from 'firebase';
@@ -66,6 +81,22 @@ class Detail extends React.Component {
     }
     // push back to firebase
     // ref.set(list);
+  }
+
+  handleContentButtonClick(view) {
+    const { dispatch } = this.props;
+    dispatch(setContentAreaView(view));
+  }
+
+  handleRightPanelButtonClick(view) {
+    const { dispatch } = this.props;
+    dispatch(setRightPanelAreaView(view));
+  }
+
+  handleModalToggle(view) {
+    const { dispatch } = this.props;
+    dispatch(setModalView(view));
+    dispatch(toggleModal(true));
   }
 
   // Render method.
@@ -261,13 +292,13 @@ class Detail extends React.Component {
             <DetailViewDropdown />
           </div>
           <div className="pull-right sidebar-header-actions">
-              <Button bsStyle="link" bsSize="xs">
+              <Button bsStyle="link" bsSize="xs" onClick={this.handleContentButtonClick.bind(this, PREVIEW)}>
                 <Icon name="eye" className="fa-fw text-muted" />
               </Button>
-              <Button bsStyle="link" bsSize="xs">
+              <Button bsStyle="link" bsSize="xs" onClick={this.handleModalToggle.bind(this, DOWNLOAD)}>
                 <Icon name="download" className="fa-fw text-muted" />
               </Button>
-              <Button bsStyle="link" bsSize="xs">
+              <Button bsStyle="link" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, DETAILFORM)}>
                 <Icon name="pencil" className="fa-fw text-muted" />
               </Button>
           </div>
