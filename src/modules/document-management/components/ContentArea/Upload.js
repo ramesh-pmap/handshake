@@ -77,8 +77,7 @@ class Upload extends React.Component {
           <br className="hidden-xs"/>&nbsp;
           or click to <a>select files</a> from your computer.
         </Dropzone>
-        {
-        this.state.files.length > 0 ?
+
         <div className="card">
           <div className="file_manager-list_header">
 
@@ -95,56 +94,56 @@ class Upload extends React.Component {
 
           <ListGroup className="file_manager-list">
 
-            {
-              this.state.upload ?
-                <div>
+          {
+            this.state.upload ?
+              <div>
 
-                  <ListGroupItem onClick={this.handleUploadedFileClick.bind(this, ACTIVITY)}>
-                    <Button componentClass="div" bsStyle="link" disabled>
-                      <Icon name="file-image-o" className="fa-fw fa-lg" />
-                      &nbsp;
-                      {this.state.fileName}
-                    </Button>
-                    <Row>
-                      <Col xs={10}>
-                        <ProgressBar bsStyle="primary" active now={this.state.progress} label="%(percent)s%" />
-                      </Col>
-                      <Col xs={2} className="text-right">
-                        <Button componentClass="div" bsStyle="default" bsSize="xs">
-                          <Icon name="pause" />
-                        </Button>
-                      </Col>
-                    </Row>
-                  </ListGroupItem>
-
-                </div>
-              : null
-            }
-            {
-              this.state.success ?
-              <ListGroupItem onClick={this.handleUploadedFileClick.bind(this, DETAILFORM)}>
+                <ListGroupItem onClick={this.handleUploadedFileClick.bind(this, ACTIVITY)}>
+                  <Button componentClass="div" bsStyle="link" disabled>
+                    <Icon name="file-image-o" className="fa-fw fa-lg" />
+                    &nbsp;
+                    {this.state.fileName}
+                  </Button>
                   <Row>
                     <Col xs={10}>
-                      <Button componentClass="div" bsStyle="link">
-                        <Icon name="file-word-o" className="fa-lg" />
-                        &nbsp;
-                        {this.state.fileName}
-                      </Button>
+                      <ProgressBar bsStyle="primary" active now={this.state.progress} label="%(percent)s%" />
                     </Col>
                     <Col xs={2} className="text-right">
-                      <Button componentClass="div" bsStyle="link" bsSize="xs">
-                        <Icon name="trash" className="fa-lg text-muted" />
-                      </Button>
-                      &nbsp;
-                      <Button componentClass="div" bsStyle="link" bsSize="xs">
-                        <Icon name="pencil" className="fa-lg text-muted" />
-                        &nbsp; Edit Details
+                      <Button componentClass="div" bsStyle="default" bsSize="xs">
+                        <Icon name="pause" />
                       </Button>
                     </Col>
                   </Row>
                 </ListGroupItem>
-                : null
-            }
+
+              </div>
+            : null
+          }
+          {
+            this.state.success ?
+              <ListGroupItem onClick={this.handleUploadedFileClick.bind(this, DETAILFORM)}>
+                <Row>
+                  <Col xs={10}>
+                    <Button componentClass="div" bsStyle="link">
+                      <Icon name="file-word-o" className="fa-lg" />
+                      &nbsp;
+                      {this.state.fileName}
+                    </Button>
+                  </Col>
+                  <Col xs={2} className="text-right">
+                    <Button componentClass="div" bsStyle="link" bsSize="xs">
+                      <Icon name="trash" className="fa-lg text-muted" />
+                    </Button>
+                    &nbsp;
+                    <Button componentClass="div" bsStyle="link" bsSize="xs">
+                      <Icon name="pencil" className="fa-lg text-muted" />
+                      &nbsp; Edit Details
+                    </Button>
+                  </Col>
+                </Row>
+              </ListGroupItem>
+            : null
+          }
 
             <ListGroupItem onClick={this.handleUploadedFileClick.bind(this, DETAILFORM)}>
               <Row>
@@ -170,8 +169,7 @@ class Upload extends React.Component {
 
           </ListGroup>
         </div>
-        : null
-      }
+
       </div>
     );
   }
