@@ -74,7 +74,7 @@ class Upload extends React.Component {
             <Icon name="upload" className="fa-2x text-success" />
           </p>
           Drag and drop files here
-          <br className="hidden-xs"/>&nbsp;
+          <br className="hidden-xs"/>
           or click to <a>select files</a> from your computer.
         </Dropzone>
 
@@ -102,7 +102,7 @@ class Upload extends React.Component {
                     <Button componentClass="div" bsStyle="link" disabled>
                       <Icon name="file-image-o" className="fa-fw fa-lg" />
                       &nbsp;
-                      {this.state.fileName};
+                      {this.state.fileName}
                     </Button>
                     <Row>
                       <Col xs={10}>
@@ -127,7 +127,7 @@ class Upload extends React.Component {
                       <Button componentClass="div" bsStyle="link">
                         <Icon name="file-word-o" className="fa-lg" />
                         &nbsp;
-                        {this.state.fileName};
+                        {this.state.fileName}
                       </Button>
                     </Col>
                     <Col xs={2} className="text-right">

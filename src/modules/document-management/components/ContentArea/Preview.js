@@ -64,11 +64,11 @@ class Preview extends React.Component {
       acknowledgementAlert = (
         <div className="acknowledgement-wrapper">
           <Alert bsStyle="info" className="text-center">
-            <p>This document requires that you acknowledge that you read it in its entirety.</p>
+            <p><small>By clicking here, I acknowledge that I have read and understand the content, requirements, and expectations set forth in the attached document.  I understand that if I have any questions, at any time, regarding the document content, requirements, or expectations, I will consult with my immediate supervisor.</small></p>
             <br/>
             <p>
               <Button bsStyle="primary" onClick={this.iAcknowledgeThisDocument.bind(this)}>
-                I acknowledge this document
+                Acknowledge
               </Button>
             </p>
           </Alert>

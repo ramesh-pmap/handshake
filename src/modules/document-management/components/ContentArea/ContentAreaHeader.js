@@ -83,19 +83,13 @@ class ContentAreaHeader extends React.Component {
 
             <DropdownButton id="AddDocumentDropdown" title="Add" href="#" bsStyle="success" bsSize="sm" pullRight>
               <MenuItem onClick={this.handleDropdownMenuChange.bind(this, UPLOAD)}>
-                <Icon name="upload" />
-                &nbsp;
-                Upload New Document
+                <Icon name="upload" /> Upload New Document
               </MenuItem>
               <MenuItem>
-                <Icon name="link" />
-                &nbsp;
-                Web Link
+                <Icon name="link" /> Web Link
               </MenuItem>
               <MenuItem>
-                <Icon name="book" />
-                &nbsp;
-                Hardcopy
+                <Icon name="book" /> Hardcopy
               </MenuItem>
             </DropdownButton>
 

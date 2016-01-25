@@ -136,7 +136,7 @@ class Detail extends React.Component {
             <Button bsSize="xsmall" bsStyle="info" block>Submit for Approval</Button>
           </div>
           <div className="form-group">
-            <Button bsSize="xsmall" bsStyle="default" block>Archive</Button>
+            <Button bsSize="xsmall" bsStyle="danger" block>Archive</Button>
           </div>
           <FormControls.Static label="Title" value={docTitle} />
           <FormControls.Static label="Internal Document ID" value={docId} />
