@@ -19,8 +19,8 @@ module.exports = {
     noInfo: false,
     port: 2015,
     proxy: {
-      '/documents': {
-        target: 'http://localhost:3001'
+      '/api/0/documents': {
+        target: 'http://localhost:2016'
       }
     }
   },
