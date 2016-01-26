@@ -259,6 +259,13 @@
   }
 }
 
+label.required:before{
+  display: inline-block;
+  content: '*';
+  color: $danger-color;
+  margin-right: 2px;
+}
+
 .sidebar-tabs{
   position: absolute;
   top: 6px;
