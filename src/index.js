@@ -14,7 +14,8 @@ import { getWindowDimensions, toggleLeftSidebar, toggleRightSidebar, changeFrame
 import utils from './utils';
 
 // Stylesheets.
-import './styles/sass/andromeda/andromeda.scss';
+// import './styles/sass/andromeda/andromeda.scss';
+import './styles/sass/andromeda/theme/theme.scss';
 
 let store = createStore(DocMgtApp);
 

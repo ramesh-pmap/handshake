@@ -171,10 +171,10 @@ class Detail extends React.Component {
           <hr />
           */}
           <div className="form-group">
-            <Button bsSize="xsmall" bsStyle="info" block>Submit for Approval</Button>
+            <Button bsSize="sm" bsStyle="info" block>Submit for Approval</Button>
           </div>
           <div className="form-group">
-            <Button bsSize="xsmall" bsStyle="danger" block>Archive</Button>
+            <Button bsSize="sm" bsStyle="danger" block>Archive</Button>
           </div>
           <FormControls.Static label="Title" value={docTitle} />
           <FormControls.Static label="Internal Document ID" value={docId} />
