@@ -66,6 +66,11 @@ class Preview extends React.Component {
     dispatch(toggleModal(true));
   }
 
+  handleContentButtonClick(view) {
+    const { dispatch } = this.props;
+    dispatch(setContentAreaView(view));
+  }
+
   // Render method.
   render() {
     const { state } = this.props;
