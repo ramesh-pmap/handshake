@@ -6,6 +6,24 @@ import { connect } from 'react-redux';
 import {ButtonGroup, ListGroup, ListGroupItem, DropdownButton, MenuItem} from 'react-bootstrap';
 import Icon from 'react-fa';
 
+// Constants.
+import {
+  UPLOAD,
+  DETAILFORM,
+  DETAIL,
+  PREVIEW,
+  APPROVAL_WORKFLOW,
+  APPROVE_CHANGE_REQUEST,
+  RELEASE_NOTIFICATION,
+  PERIODIC_REVIEW
+} from '../../../../redux/constants';
+
+// Redux.
+import {
+  setContentAreaView,
+  setRightPanelAreaView
+} from '../../../../redux/actions';
+
 // Define class.
 class ActivityList extends React.Component {
   constructor(props) {
@@ -23,6 +41,30 @@ class ActivityList extends React.Component {
     this.setState({ selectedKey: key });
   }
 
+  handleContentButtonClick(view) {
+    const { dispatch } = this.props;
+    dispatch(setContentAreaView(view));
+  }
+
+  handleTaskClick(view) {
+    const { dispatch } = this.props;
+    dispatch(setRightPanelAreaView(view));
+    // dispatch(setContentAreaView(PREVIEW));
+    switch (view) {
+    case DETAILFORM:
+      dispatch(setContentAreaView(UPLOAD));
+      break;
+    default:
+      dispatch(setContentAreaView(PREVIEW));
+    }
+  }
+
+  // handleTaskDraft(view) {
+  //   const { dispatch } = this.props;
+  //   dispatch(setContentAreaView(view));
+  //   dispatch(setRightPanelAreaView(DETAIL));
+  // }
+
   // Render method.
   render() {
     const selectedKey = parseInt(this.state.selectedKey, 0);
@@ -33,7 +75,7 @@ class ActivityList extends React.Component {
     case 1:
       docList = (<ListGroup bsStyle="info">
       {/* Card Item Uploaded Pending Details */}
-      <ListGroupItem href="#link1">
+      <ListGroupItem onClick={this.handleTaskClick.bind(this, DETAILFORM)}>
         <div className="list-card neutral">
           <h4>Incident Management.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
@@ -56,7 +98,7 @@ class ActivityList extends React.Component {
       docList = (<ListGroup bsStyle="info">
 
       {/* Card Item Drafts Pending Submittals */}
-      <ListGroupItem href="#link1">
+      <ListGroupItem onClick={this.handleTaskClick.bind(this, DETAIL)}>
         <div className="list-card neutral">
           <h4>Incident Investigation.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
@@ -79,7 +121,7 @@ class ActivityList extends React.Component {
       docList = (<ListGroup bsStyle="info">
 
       {/* Card Item Pending Approvals */}
-      <ListGroupItem href="#link1">
+      <ListGroupItem onClick={this.handleTaskClick.bind(this, APPROVAL_WORKFLOW)}>
         <div className="list-card neutral">
           <h4>Incident Types and Priorities.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
@@ -102,7 +144,7 @@ class ActivityList extends React.Component {
       docList = (<ListGroup bsStyle="info">
 
       {/* Card Item Rejected Pending Revision */}
-      <ListGroupItem href="#link1">
+      <ListGroupItem onClick={this.handleTaskClick.bind(this, APPROVAL_WORKFLOW)}>
         <div className="list-card rejected">
           <h4>Emergency Preparedness and Planning.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
@@ -125,7 +167,7 @@ class ActivityList extends React.Component {
       docList = (<ListGroup bsStyle="info">
 
       {/* Card Item Pending Release Notification */}
-      <ListGroupItem href="#link1">
+      <ListGroupItem onClick={this.handleTaskClick.bind(this, RELEASE_NOTIFICATION)}>
         <div className="list-card neutral">
           <h4>Critical Information Summaries.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
@@ -147,7 +189,7 @@ class ActivityList extends React.Component {
     case 6:
       docList = (<ListGroup bsStyle="info">
       {/* Card Item Pending Change Requests */}
-      <ListGroupItem href="#link1">
+      <ListGroupItem onClick={this.handleTaskClick.bind(this, APPROVE_CHANGE_REQUEST)}>
         <div className="list-card neutral">
           <h4>Documents of External Origin Guidance for Sites.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
@@ -169,7 +211,7 @@ class ActivityList extends React.Component {
     case 7:
       docList = (<ListGroup bsStyle="info">
       {/* Card Item Pending Periodic Reviews */}
-      <ListGroupItem href="#link1">
+      <ListGroupItem onClick={this.handleTaskClick.bind(this, PERIODIC_REVIEW)}>
         <div className="list-card neutral">
           <h4>Record Management.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
@@ -191,7 +233,7 @@ class ActivityList extends React.Component {
       docList = (<ListGroup bsStyle="info">
 
       {/* Card Item Drafts Pending Submittals */}
-      <ListGroupItem href="#link1">
+      <ListGroupItem onClick={this.handleTaskClick.bind(this, DETAIL)}>
         <div className="list-card neutral">
           <h4>Incident Investigation.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
@@ -208,7 +250,7 @@ class ActivityList extends React.Component {
       </ListGroupItem>
 
       {/* Card Item Rejected Pending Revision */}
-      <ListGroupItem href="#link1">
+      <ListGroupItem onClick={this.handleTaskClick.bind(this, APPROVAL_WORKFLOW)}>
         <div className="list-card rejected">
           <h4>Emergency Preparedness and Planning.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
@@ -225,7 +267,7 @@ class ActivityList extends React.Component {
       </ListGroupItem>
 
       {/* Card Item Uploaded Pending Details */}
-      <ListGroupItem href="#link1">
+      <ListGroupItem onClick={this.handleTaskClick.bind(this, DETAILFORM)}>
         <div className="list-card neutral">
           <h4>Submit a Request to Add, Remove, or Change Documents.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
@@ -242,7 +284,7 @@ class ActivityList extends React.Component {
       </ListGroupItem>
 
       {/* Card Item Pending Release Notification */}
-      <ListGroupItem href="#link1">
+      <ListGroupItem onClick={this.handleTaskClick.bind(this, RELEASE_NOTIFICATION)}>
         <div className="list-card neutral">
           <h4>Critical Information Summaries.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
@@ -259,7 +301,7 @@ class ActivityList extends React.Component {
       </ListGroupItem>
 
       {/* Card Item Pending Change Requests */}
-      <ListGroupItem href="#link1">
+      <ListGroupItem onClick={this.handleTaskClick.bind(this, APPROVE_CHANGE_REQUEST)}>
         <div className="list-card neutral">
           <h4>Documents of External Origin Guidance for Sites.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
@@ -276,7 +318,7 @@ class ActivityList extends React.Component {
       </ListGroupItem>
 
       {/* Card Item Pending Periodic Reviews */}
-      <ListGroupItem href="#link1">
+      <ListGroupItem onClick={this.handleTaskClick.bind(this, PERIODIC_REVIEW)}>
         <div className="list-card neutral">
           <h4>Record Management.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
@@ -293,7 +335,7 @@ class ActivityList extends React.Component {
       </ListGroupItem>
 
       {/* Card Item Pending Approvals */}
-      <ListGroupItem href="#link1">
+      <ListGroupItem onClick={this.handleTaskClick.bind(this, APPROVAL_WORKFLOW)}>
         <div className="list-card neutral">
           <h4>Incident Types and Priorities.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />

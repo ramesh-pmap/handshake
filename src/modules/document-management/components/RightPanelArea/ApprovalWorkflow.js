@@ -71,7 +71,7 @@ class ApprovalWorkflow extends React.Component {
           </div>
         </div>
 
-        <div>
+        <div className="sidebar-details">
           <div className="workflow-avatars col-md-12">
             <div className="document-details">
               <FormControls.Static label="Workflow" />
