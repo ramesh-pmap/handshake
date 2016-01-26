@@ -70,6 +70,22 @@ class Preview extends React.Component {
   render() {
     const { state } = this.props;
 
+    const currentFileId = state.currentFileId;
+    const docFiles = state.docFiles;
+    let fileData = [];
+
+    // Find selected file in the array.
+    if (docFiles) {
+      for (let i = 0; i < docFiles.length; i++) {
+        if (docFiles[i].doc_id === currentFileId) {
+          fileData = docFiles[i];
+        }
+      }
+    }
+
+    const fileAcknowledgement = fileData.doc_acknowledgement;
+    const docTitle = fileData.doc_title;
+
     let acknowledgementAlert = '';
     if (this.state.alertVisible) {
       acknowledgementAlert = (
@@ -91,7 +107,7 @@ class Preview extends React.Component {
       <div className="preview-panel" style={{height: state.windowDimensions.height - 88}}>
         <div className="preview-panel-toolbar clearfix">
           <div className="pull-left lead">
-          sample-word-document.docx
+          {docTitle}
           </div>
           <ButtonGroup className="pull-right">
             <Button bsStyle="link" bsSize="sm" className="text-muted"
@@ -125,7 +141,7 @@ class Preview extends React.Component {
         </div>
         <Image src="/static/images/sample-doc-preview.png" />
 
-        {acknowledgementAlert}
+        {fileAcknowledgement === 1 ? acknowledgementAlert : null}
 
       </div>
     );
