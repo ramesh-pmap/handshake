@@ -11,6 +11,6 @@ export function getDocuments() {
     return r
     .table('documents')
     .run(conn)
-    .then(cursor => cursor.toArray());
+    .then(cursor => cursor.toArray().then(data => data[0]));
   });
 }
