@@ -31,7 +31,7 @@ class Download extends React.Component {
           <div className="form-group">
             <input type="checkbox" />
             &nbsp;
-            <label className="control-label required">Check Out File</label>
+            <label className="control-label">Check Out File</label>
           </div>
 
         </Modal.Body>

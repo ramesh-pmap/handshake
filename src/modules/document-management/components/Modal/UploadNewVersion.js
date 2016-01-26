@@ -47,7 +47,7 @@ class UploadNewVersion extends React.Component {
             or click to <a>select files</a> from your computer.
           </Dropzone>
 
-          <Input type="textarea" label="Reason:" maxLength="1000"/>
+          <Input type="textarea" label="Reason:" maxLength="1000" labelClassName="required"/>
 
           <FormControls.Static label="Modified By" value="Joann Kim"/>
 
@@ -58,7 +58,7 @@ class UploadNewVersion extends React.Component {
           <div className="form-group">
             <input type="checkbox" />
             &nbsp;
-            <label className="control-label required">Check In File</label>
+            <label className="control-label">Check In File</label>
           </div>
 
         </Modal.Body>

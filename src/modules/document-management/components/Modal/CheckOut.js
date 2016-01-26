@@ -32,7 +32,7 @@ class CheckOut extends React.Component {
           <div className="form-group">
             <input type="checkbox" />
             &nbsp;
-            <label className="control-label required">Auto check in after set time.</label>
+            <label className="control-label">Auto check in after set time.</label>
           </div>
 
         </Modal.Body>

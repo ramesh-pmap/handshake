@@ -78,11 +78,11 @@ class ReleaseNotification extends React.Component {
             <div className="form-group">
               <input type="checkbox" />
               &nbsp;
-              <label className="control-label required">Is Acknowledgement Required?</label>
+              <label className="control-label">Is Acknowledgement Required?</label>
             </div>
 
             <div className="form-group">
-              <label className="control-label" >Acknowledgement Due Date</label>
+              <label className="control-label required" >Acknowledgement Due Date</label>
               <DatePicker
                 className="form-control"
                 selected={this.state.startDate}
@@ -99,19 +99,19 @@ class ReleaseNotification extends React.Component {
               <option>Janette Walls</option>
             </FormControls.Static>
 
-            <Input type="select" multiple label="Additional Release Notifications" labelClassName=" required">
+            <Input type="select" multiple label="Additional Release Notifications" labelClassName="">
               <option>Jane Doe</option>
               <option>Alice Jackson</option>
               <option>Patrick Smith</option>
             </Input>
 
-            <Input type="select" label="Release Scheduling Option" labelClassName=" required">
+            <Input type="select" label="Release Scheduling Option" labelClassName="">
               <option>Release Immediately</option>
               <option>Future Date</option>
             </Input>
 
             <div className="form-group">
-              <label className="control-label">Document Release Date</label>
+              <label className="control-label required">Document Release Date</label>
               <DatePicker
                 className="form-control"
                 selected={this.state.startDate}

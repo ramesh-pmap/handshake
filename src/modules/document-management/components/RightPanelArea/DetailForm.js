@@ -177,21 +177,21 @@ class DetailForm extends React.Component {
         <div className="sidebar-details">
           <div className="document-details">
 
-            <Input type="text" label="Title" labelClassName=" required" />
+            <Input type="text" label="Title" labelClassName="required" />
 
             <Input type="text" label="Internal Document ID" />
 
             {/*
-            <Input type="text" label="URL" labelClassName=" required" />
+            <Input type="text" label="URL" labelClassName="required" />
 
             <Input type="text" label="Web Site Maintained By" />
 
             <Input type="text" label="Physical Location" />
             */}
 
-            <Input type="number" label="Version" labelClassName=" required" />
+            <Input type="number" label="Version" labelClassName="required" />
 
-            <Input type="select" multiple label="Document Scope" labelClassName=" required">
+            <Input type="select" multiple label="Document Scope" labelClassName="required">
               <option>Corporate</option>
               <option>Division</option>
               <option>Facility</option>
@@ -274,7 +274,7 @@ class DetailForm extends React.Component {
 
             {workflowForm}
 
-            <Input type="checkbox" label="Auto Release Document" labelClassName="required" />
+            <Input type="checkbox" label="Auto Release Document"/>
 
             <div className="form-group">
               <label className="control-label required">Document View</label>
@@ -302,7 +302,7 @@ class DetailForm extends React.Component {
               : null
             }
 
-            <Input type="select" label="Primary Folder" labelClassName=" required">
+            <Input type="select" label="Primary Folder" labelClassName="required">
               <option>1.0 EHS Management</option>
               <option>2.0 Environmental Management</option>
               <option>3.0 Health and Safety</option>
@@ -335,8 +335,8 @@ class DetailForm extends React.Component {
 
             <div className="form-group">
               <label className="control-label required">Periodic Review Frequency</label>
-              <Input type="number" labelClassName=" required"/>
-              <Input type="select" labelClassName=" required">
+              <Input type="number" labelClassName="required"/>
+              <Input type="select" labelClassName="required">
                 <option>Days</option>
                 <option>Weeks</option>
                 <option>Months</option>
@@ -347,7 +347,7 @@ class DetailForm extends React.Component {
             <Input
               type="text"
               label="Periodic Review Start Date"
-              labelClassName=" required"
+              labelClassName="required"
               placeholder="Defaults to 'Final' date"
             />
 

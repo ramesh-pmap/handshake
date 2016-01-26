@@ -33,22 +33,32 @@ class DetailForm extends React.Component {
             </Button>
             &nbsp;
             <Button bsStyle="info" bsSize="xs" onClick={this.handleSaveButtonClick.bind(this)}>
-            Save
+            Submit
             </Button>
           </div>
         </div>
 
         <div className="sidebar-details">
           <div className="document-details">
-            <Input type="select" multiple label="Requested By" labelClassName=" required" wrapperClassName="">
+            <Input type="select" multiple label="Requested By" labelClassName="required" wrapperClassName="">
               <option>John Smith</option>
               <option>Bob Roberts</option>
               <option>Janette Walls</option>
             </Input>
             <FormControls.Static label="Requested Date" labelClassName="" wrapperClassName="" value="1/10/16"/>
-            <Input type="textarea" label="Reason for Change Request" labelClassName="" wrapperClassName="" />
-            <Input type="textarea" label="Requested Changes" labelClassName="" wrapperClassName="" />
-            <Input type="select" label="Priority" labelClassName=" required" wrapperClassName="">
+            <Input type="textarea" label="Reason for Change Request" labelClassName="required" wrapperClassName="" />
+            <Input type="select" label="Source of Change" labelClassName="required" wrapperClassName="">
+              <option>Corrective Action</option>
+              <option>Preventative Action</option>
+              <option>Periodic Review</option>
+              <option>Document Revision</option>
+              <option>Process Change</option>
+              <option>Regulatory/Legal</option>
+              <option>Audit Finding</option>
+              <option>Incident</option>
+            </Input>
+            <Input type="textarea" label="Requested Changes" labelClassName="required" wrapperClassName="" />
+            <Input type="select" label="Priority" labelClassName="" wrapperClassName="">
               <option>High</option>
               <option>Medium</option>
               <option>Low</option>
