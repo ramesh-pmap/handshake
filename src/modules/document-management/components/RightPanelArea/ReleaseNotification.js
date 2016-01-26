@@ -9,6 +9,7 @@ import {Button, Input, FormControls} from 'react-bootstrap';
 
 // Misc. components.
 import DetailViewDropdown from './DetailViewDropdown';
+import Select from 'react-select';
 
 // DatePicker.
 import DatePicker from 'react-datepicker';
@@ -23,7 +24,8 @@ class ReleaseNotification extends React.Component {
 
     this.state = {
       actionItemForm: 'none',
-      startDate: moment()
+      startDate: moment(),
+      showFutureDate: false
     };
   }
 
@@ -47,6 +49,14 @@ class ReleaseNotification extends React.Component {
   handleDateChange(date) {
     // this.setState({ startDate: date });
     console.log(date);
+  }
+
+  handleSchedulingOptionChange(val) {
+    if (val === 'Future Date') {
+      this.setState({ showFutureDate: true });
+    } else {
+      this.setState({ showFutureDate: false });
+    }
   }
 
   // Render method.
@@ -99,28 +109,41 @@ class ReleaseNotification extends React.Component {
               <option>Janette Walls</option>
             </FormControls.Static>
 
-            <Input type="select" multiple label="Additional Release Notifications" labelClassName=" required">
+            <Input type="select" multiple label="Additional Release Notifications" labelClassName="required">
               <option>Jane Doe</option>
               <option>Alice Jackson</option>
               <option>Patrick Smith</option>
             </Input>
 
-            <Input type="select" label="Release Scheduling Option" labelClassName=" required">
-              <option>Release Immediately</option>
-              <option>Future Date</option>
-            </Input>
-
             <div className="form-group">
-              <label className="control-label">Document Release Date</label>
-              <DatePicker
-                className="form-control"
-                selected={this.state.startDate}
-                onChange={this.handleDateChange.bind(this)}
-                dateFormat="MMMM DD, YYYY"
-                // isClearable
-                showYearDropdown
+              <label className="control-label required">Release Scheduling Option</label>
+              <Select
+                name="form-control"
+                value=""
+                options={[
+                  { value: 'Release Immediately', label: 'Release Immediately' },
+                  { value: 'Future Date', label: 'Future Date' }
+                ]}
+                onChange={this.handleSchedulingOptionChange.bind(this)}
               />
             </div>
+
+            {
+              this.state.showFutureDate ?
+                <div className="form-group">
+                  <label className="control-label">Future Document Release Date</label>
+                  <DatePicker
+                    className="form-control"
+                    selected={this.state.startDate}
+                    onChange={this.handleDateChange.bind(this)}
+                    dateFormat="MMMM DD, YYYY"
+                    // isClearable
+                    showYearDropdown
+                  />
+                </div>
+              : null
+            }
+
           </div>
         </div>
       </div>
