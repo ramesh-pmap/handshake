@@ -55,7 +55,7 @@ class Share extends React.Component {
         </Modal.Body>
         <Modal.Footer>
           <Button bsStyle="default" onClick={this.handleModalButtonClick.bind(this)}>Close</Button>
-          <Button bsStyle="primary">Send</Button>
+          <Button bsStyle="success">Send</Button>
         </Modal.Footer>
       </Modal>
     );

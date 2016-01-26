@@ -35,7 +35,7 @@ class VersionHistory extends React.Component {
           <DetailViewDropdown />
         </div>
 
-        <ListGroup bsStyle="info">
+        <ListGroup bsStyle="success">
 
           <ListGroupItem>
             <div className="list-card neutral">

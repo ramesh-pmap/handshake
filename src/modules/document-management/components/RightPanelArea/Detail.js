@@ -171,7 +171,8 @@ class Detail extends React.Component {
           <hr />
           */}
           <div className="form-group">
-            <Button bsSize="sm" bsStyle="info" block>Submit for Approval</Button>
+            <Button bsSize="sm" bsStyle="success" block>Submit for Approval</Button>
+
           </div>
           <div className="form-group">
             <Button bsSize="sm" bsStyle="danger" block>Archive</Button>

@@ -178,7 +178,7 @@ class DetailForm extends React.Component {
             Cancel
             </Button>
             &nbsp;
-            <Button bsStyle="info" bsSize="xs" onClick={this.handleSaveButtonClick.bind(this)}>
+            <Button bsStyle="success" bsSize="xs" onClick={this.handleSaveButtonClick.bind(this)}>
             Save
             </Button>
           </div>
