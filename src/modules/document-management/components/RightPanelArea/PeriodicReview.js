@@ -36,7 +36,7 @@ class PeriodicReview extends React.Component {
             Cancel
             </Button>
             &nbsp;
-            <Button bsStyle="info" bsSize="xs" onClick={this.handleSaveButtonClick.bind(this)}>
+            <Button bsStyle="success" bsSize="xs" onClick={this.handleSaveButtonClick.bind(this)}>
             Save
             </Button>
           </div>
@@ -57,22 +57,7 @@ class PeriodicReview extends React.Component {
 
         <hr></hr>
 
-        <ListGroup bsStyle="info">
-          <ListGroupItem href="#link1">
-            <div className="list-card neutral">
-              <h4>Bob Roberts</h4>
-              <div className="meta-wrapper">
-                <div className="clearfix">
-                  <p className="pull-left">Fusce dignissim massa lobortis, posuere justo nec, ullamcorper nisl. </p>
-                  <p className="pull-right">12/19/2015</p>
-                </div>
-                <div className="clearfix">
-                  <p className="pull-right">Archived </p>
-                </div>
-              </div>
-            </div>
-          </ListGroupItem>
-
+        <ListGroup bsStyle="success">
           <ListGroupItem href="#link1">
             <div className="list-card neutral">
               <h4>Bob Roberts</h4>

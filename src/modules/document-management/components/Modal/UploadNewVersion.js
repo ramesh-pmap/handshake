@@ -58,13 +58,13 @@ class UploadNewVersion extends React.Component {
           <div className="form-group">
             <input type="checkbox" />
             &nbsp;
-            <label className="control-label">Check In File</label>
+            <label className="control-label">Keep this document checked out</label>
           </div>
 
         </Modal.Body>
         <Modal.Footer>
           <Button bsStyle="default" onClick={this.handleModalButtonClick.bind(this)}>Close</Button>
-          <Button bsStyle="primary">Continue</Button>
+          <Button bsStyle="success">Continue</Button>
         </Modal.Footer>
       </Modal>
     );

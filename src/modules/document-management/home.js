@@ -20,9 +20,9 @@ import {
   UPLOAD,
   ACTIVITY,
   // DETAIL,
-  DETAILFORM,
-  VIEWER_CHANGE_REQUEST,
-  APPROVE_CHANGE_REQUEST,
+  // DETAILFORM,
+  // VIEWER_CHANGE_REQUEST,
+  // APPROVE_CHANGE_REQUEST,
   // APPROVAL_WORKFLOW,
   SEARCH_RESULTS,
   // TOGGLE_RIGHT_SIDEBAR,
@@ -149,7 +149,7 @@ class Page extends React.Component {
           {/* Left (Main) column. */}
             <div className="main-col main-col-left">
 
-              <div style={{ padding: '20px 20px 0', marginBottom: -10 }}>
+              <div style={{ display: 'none', padding: '20px 20px 0', marginBottom: -10 }}>
 
                 <DropdownButton id="tempNavigationDropdown" bsSize="xs" title=" Temporary Navigation">
                   <MenuItem onClick={this.handleContentButtonClick.bind(this, DEFAULT)}> Default </MenuItem>
@@ -160,18 +160,14 @@ class Page extends React.Component {
                   {/*
                     <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, ACTIVITY)}> Activity List</MenuItem>
                     <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, DETAIL)}> Detail </MenuItem>
-                  */}
-                  <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, DETAILFORM)}> Detail Form </MenuItem>
-                  {/*
+                    <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, DETAILFORM)}> Detail Form </MenuItem>
                     <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, RELEASE_NOTIFICATION)}> Release Notification </MenuItem>
-                  */}
-                  <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, VIEWER_CHANGE_REQUEST)}> Change Request </MenuItem>
-                  <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, APPROVE_CHANGE_REQUEST)}> Approve Change Request </MenuItem>
-                  {/*
+                    <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, VIEWER_CHANGE_REQUEST)}> Change Request </MenuItem>
+                    <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, APPROVE_CHANGE_REQUEST)}> Approve Change Request </MenuItem>
                     <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, APPROVAL_WORKFLOW)}> Approval Workflow </MenuItem>
                     <MenuItem onClick={this.handleRightPanelButtonClick.bind(this, PERIODIC_REVIEW)}> Periodic Review </MenuItem>
+                    <MenuItem className="divider" />
                   */}
-                  <MenuItem className="divider" />
                   <MenuItem onClick={this.handleModalToggle.bind(this, CHECKIN)}>Check In</MenuItem>
                   <MenuItem onClick={this.handleModalToggle.bind(this, CHECKOUT)}>Check Out</MenuItem>
                   {/*

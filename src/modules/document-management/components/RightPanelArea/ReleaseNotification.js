@@ -81,7 +81,7 @@ class ReleaseNotification extends React.Component {
             Cancel
             </Button>
             &nbsp;
-            <Button bsStyle="info" bsSize="xs" onClick={this.handleSaveButtonClick.bind(this)}>
+            <Button bsStyle="success" bsSize="xs" onClick={this.handleSaveButtonClick.bind(this)}>
             Release
             </Button>
           </div>

@@ -37,7 +37,7 @@ class Download extends React.Component {
         </Modal.Body>
         <Modal.Footer>
           <Button bsStyle="default" onClick={this.handleModalButtonClick.bind(this)}>Close</Button>
-          <Button bsStyle="primary">Continue</Button>
+          <Button bsStyle="success">Download</Button>
         </Modal.Footer>
       </Modal>
     );
