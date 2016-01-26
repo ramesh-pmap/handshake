@@ -49,7 +49,6 @@ class ActivityList extends React.Component {
   handleTaskClick(view) {
     const { dispatch } = this.props;
     dispatch(setRightPanelAreaView(view));
-    // dispatch(setContentAreaView(PREVIEW));
     switch (view) {
     case DETAILFORM:
       dispatch(setContentAreaView(UPLOAD));
@@ -58,12 +57,6 @@ class ActivityList extends React.Component {
       dispatch(setContentAreaView(PREVIEW));
     }
   }
-
-  // handleTaskDraft(view) {
-  //   const { dispatch } = this.props;
-  //   dispatch(setContentAreaView(view));
-  //   dispatch(setRightPanelAreaView(DETAIL));
-  // }
 
   // Render method.
   render() {

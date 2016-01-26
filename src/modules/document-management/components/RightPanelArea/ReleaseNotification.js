@@ -57,12 +57,12 @@ class ReleaseNotification extends React.Component {
             <DetailViewDropdown />
           </div>
           <div className="pull-right sidebar-header-actions">
-            <Button bsStyle="info" bsSize="xs" onClick={this.handleSaveButtonClick.bind(this)}>
-            Release
+            <Button bsStyle="default" bsSize="xs" onClick={this.handleSaveButtonClick.bind(this)}>
+            Cancel
             </Button>
             &nbsp;
-            <Button bsStyle="default" bsSize="xs" onClick={this.handleSaveButtonClick.bind(this)}>
-              Cancel
+            <Button bsStyle="info" bsSize="xs" onClick={this.handleSaveButtonClick.bind(this)}>
+            Release
             </Button>
           </div>
         </div>

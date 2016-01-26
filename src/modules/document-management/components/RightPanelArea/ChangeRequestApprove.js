@@ -59,12 +59,12 @@ class DetailForm extends React.Component {
         <div className="fixed-title clearfix">
           <DetailViewDropdown />
           <div className="pull-right sidebar-header-actions">
-            <Button bsStyle="info" bsSize="xs" onClick={this.handleSaveButtonClick.bind(this)}>
-              Save
+            <Button bsStyle="default" bsSize="xs" onClick={this.handleSaveButtonClick.bind(this)}>
+            Cancel
             </Button>
             &nbsp;
-            <Button bsStyle="default" bsSize="xs" onClick={this.handleSaveButtonClick.bind(this)}>
-              Cancel
+            <Button bsStyle="info" bsSize="xs" onClick={this.handleSaveButtonClick.bind(this)}>
+            Save
             </Button>
           </div>
         </div>

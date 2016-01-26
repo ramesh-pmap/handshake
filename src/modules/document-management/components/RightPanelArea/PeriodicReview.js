@@ -32,12 +32,12 @@ class PeriodicReview extends React.Component {
             <DetailViewDropdown />
           </div>
           <div className="pull-right sidebar-header-actions">
-            <Button bsStyle="info" bsSize="xs" onClick={this.handleSaveButtonClick.bind(this)}>
-            Save
-            </Button>
-            &nbsp;
             <Button bsStyle="default" bsSize="xs" onClick={this.handleSaveButtonClick.bind(this)}>
             Cancel
+            </Button>
+            &nbsp;
+            <Button bsStyle="info" bsSize="xs" onClick={this.handleSaveButtonClick.bind(this)}>
+            Save
             </Button>
           </div>
         </div>
