@@ -19,7 +19,8 @@ class DetailForm extends React.Component {
     super(props);
 
     this.state = {
-      workflowFormIsVisible: false
+      workflowFormIsVisible: false,
+      isDocViewPrivate: false
     };
   }
 
@@ -39,6 +40,14 @@ class DetailForm extends React.Component {
       this.setState({ workflowFormIsVisible: true });
     } else {
       this.setState({ workflowFormIsVisible: false });
+    }
+  }
+
+  handleDocViewChange(val) {
+    if (val === 'Private') {
+      this.setState({ isDocViewPrivate: true });
+    } else {
+      this.setState({ isDocViewPrivate: false });
     }
   }
 
@@ -261,10 +270,7 @@ class DetailForm extends React.Component {
 
             {workflowForm}
 
-            <div className="form-group">
-              <label className="control-label required">Auto Release Document</label><br/>
-              <input type="checkbox" />
-            </div>
+            <Input type="checkbox" label="Auto Release Document" labelClassName="required" />
 
             <div className="form-group">
               <label className="control-label required">Document View</label>
@@ -273,17 +279,24 @@ class DetailForm extends React.Component {
                 noResultsText={selectNoResultsText}
                 value="Public"
                 options={documentViewOptions}
+                onChange={this.handleDocViewChange.bind(this)}
               />
             </div>
 
-            <Input type="select" multiple label="Private Viewers">
-              <option>Document Owner Name</option>
-              <option>Document Coordinator Name</option>
-              <option>Other Viewer</option>
-              <option>Other Viewer</option>
-              <option>Other Viewer</option>
-              <option>Other Viewer</option>
-            </Input>
+            {
+              this.state.isDocViewPrivate ?
+                <div className="well well-sm">
+                  <Input type="select" multiple label="Private Viewers">
+                    <option>Document Owner Name</option>
+                    <option>Document Coordinator Name</option>
+                    <option>Other Viewer</option>
+                    <option>Other Viewer</option>
+                    <option>Other Viewer</option>
+                    <option>Other Viewer</option>
+                  </Input>
+                </div>
+              : null
+            }
 
             <Input type="select" label="Primary Folder" labelClassName=" required">
               <option>1.0 EHS Management</option>

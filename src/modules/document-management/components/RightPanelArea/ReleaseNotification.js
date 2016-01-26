@@ -44,8 +44,9 @@ class ReleaseNotification extends React.Component {
     }
   }
 
-  handleChange(date) {
-    this.setState({ startDate: date });
+  handleDateChange(date) {
+    // this.setState({ startDate: date });
+    console.log(date);
   }
 
   // Render method.
@@ -69,34 +70,41 @@ class ReleaseNotification extends React.Component {
 
         <div className="sidebar-details">
           <div className="document-details">
+
             <Input type="textarea" label="Release Notes" maxLength="2000" />
+
             <Input type="textarea" label="Training and Communication Notes" maxLength="2000" />
+
             <div className="form-group">
               <input type="checkbox" />
               &nbsp;
               <label className="control-label required">Is Acknowledgement Required?</label>
             </div>
+
             <div className="form-group">
               <label className="control-label" >Acknowledgement Due Date</label>
               <DatePicker
                 className="form-control"
                 selected={this.state.startDate}
-                onChange={this.handleChange.bind(this)}
+                onChange={this.handleDateChange.bind(this)}
                 dateFormat="MMMM DD, YYYY"
                 // isClearable
                 showYearDropdown
               />
             </div>
+
             <FormControls.Static label="Release Notifications">
               <option>John Smith</option>
               <option>Bob Roberts</option>
               <option>Janette Walls</option>
             </FormControls.Static>
+
             <Input type="select" multiple label="Additional Release Notifications" labelClassName=" required">
               <option>Jane Doe</option>
               <option>Alice Jackson</option>
               <option>Patrick Smith</option>
             </Input>
+
             <Input type="select" label="Release Scheduling Option" labelClassName=" required">
               <option>Release Immediately</option>
               <option>Future Date</option>
@@ -107,7 +115,7 @@ class ReleaseNotification extends React.Component {
               <DatePicker
                 className="form-control"
                 selected={this.state.startDate}
-                onChange={this.handleChange.bind(this)}
+                onChange={this.handleDateChange.bind(this)}
                 dateFormat="MMMM DD, YYYY"
                 // isClearable
                 showYearDropdown
@@ -125,6 +133,7 @@ ReleaseNotification.propTypes = {
   dispatch: React.PropTypes.func,
   state: React.PropTypes.object
 };
+
 const mapStateToProps = (state) => ({
   state
 });
