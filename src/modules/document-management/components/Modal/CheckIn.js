@@ -32,7 +32,7 @@ class CheckIn extends React.Component {
           <div className="form-group">
             <input type="checkbox" />
             &nbsp;
-            <label className="control-label required">Upload New Version.</label>
+            <label className="control-label">Upload New Version.</label>
           </div>
 
         </Modal.Body>

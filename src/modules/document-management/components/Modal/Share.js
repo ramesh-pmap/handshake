@@ -41,7 +41,7 @@ class Share extends React.Component {
 
           <p className="text-muted pull-right">Document Link: <span>https:&#47;&#47;bit.ly/abc123</span></p>
           <div className="form-group">
-            <label className="control-label">Send to:</label>
+            <label className="control-label required">Send to:</label>
             <Select
               name="form-control"
               placeholder="Type to find User"

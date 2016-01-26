@@ -51,6 +51,15 @@ class ReleaseNotification extends React.Component {
     console.log(date);
   }
 
+  handleAcknowledgementChange(e) {
+    const val = e.target.checked;
+    if (val === true) {
+      this.setState({ showAcknowledgementDate: true });
+    } else {
+      this.setState({ showAcknowledgementDate: false });
+    }
+  }
+
   handleSchedulingOptionChange(val) {
     if (val === 'Future Date') {
       this.setState({ showFutureDate: true });
@@ -86,22 +95,26 @@ class ReleaseNotification extends React.Component {
             <Input type="textarea" label="Training and Communication Notes" maxLength="2000" />
 
             <div className="form-group">
-              <input type="checkbox" />
+              <input type="checkbox" onClick={this.handleAcknowledgementChange.bind(this)}/>
               &nbsp;
-              <label className="control-label required">Is Acknowledgement Required?</label>
+              <label className="control-label">Is Acknowledgement Required?</label>
             </div>
 
-            <div className="form-group">
-              <label className="control-label" >Acknowledgement Due Date</label>
-              <DatePicker
-                className="form-control"
-                selected={this.state.startDate}
-                onChange={this.handleDateChange.bind(this)}
-                dateFormat="MMMM DD, YYYY"
-                // isClearable
-                showYearDropdown
-              />
-            </div>
+            {
+              this.state.showAcknowledgementDate ?
+                <div className="form-group">
+                  <label className="control-label required">Acknowledgement Due Date</label>
+                  <DatePicker
+                    className="form-control"
+                    selected={this.state.startDate}
+                    onChange={this.handleDateChange.bind(this)}
+                    dateFormat="MMMM DD, YYYY"
+                    // isClearable
+                    showYearDropdown
+                  />
+                </div>
+              : null
+            }
 
             <FormControls.Static label="Release Notifications">
               <option>John Smith</option>
@@ -109,7 +122,7 @@ class ReleaseNotification extends React.Component {
               <option>Janette Walls</option>
             </FormControls.Static>
 
-            <Input type="select" multiple label="Additional Release Notifications" labelClassName="required">
+            <Input type="select" multiple label="Additional Release Notifications" labelClassName="">
               <option>Jane Doe</option>
               <option>Alice Jackson</option>
               <option>Patrick Smith</option>
@@ -121,17 +134,16 @@ class ReleaseNotification extends React.Component {
                 name="form-control"
                 value=""
                 options={[
-                  { value: 'Release Immediately', label: 'Release Immediately' },
-                  { value: 'Future Date', label: 'Future Date' }
+                { value: 'Release Immediately', label: 'Release Immediately' },
+                { value: 'Future Date', label: 'Future Date' }
                 ]}
-                onChange={this.handleSchedulingOptionChange.bind(this)}
-              />
+                onChange={this.handleSchedulingOptionChange.bind(this)} />
             </div>
 
             {
               this.state.showFutureDate ?
                 <div className="form-group">
-                  <label className="control-label">Future Document Release Date</label>
+                  <label className="control-label required">Future Document Release Date</label>
                   <DatePicker
                     className="form-control"
                     selected={this.state.startDate}

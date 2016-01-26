@@ -46,12 +46,12 @@ class PeriodicReview extends React.Component {
           <div className="document-details">
             <FormControls.Static label="Reviewed By" value="Bob Roberts"/>
             <FormControls.Static label="Reviewed Date" value="1/15/16"/>
-            <Input type="select" label="Document Review" labelClassName=" required" wrapperClassName="">
+            <Input type="select" label="Document Review" labelClassName="required" wrapperClassName="">
               <option>Approve Document As Is</option>
               <option>Revise Document</option>
               <option>Archive Document</option>
             </Input>
-            <Input type="textarea" label="Document Review Comments" maxLength="2000" />
+            <Input type="textarea" label="Document Review Comments" labelClassName="required" maxLength="2000" />
           </div>
         </div>
 

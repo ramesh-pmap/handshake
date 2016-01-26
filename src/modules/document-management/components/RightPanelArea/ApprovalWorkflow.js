@@ -101,7 +101,7 @@ class ApprovalWorkflow extends React.Component {
             </OverlayTrigger>
           </div>
           <div className="document-details">
-            <Input type="textarea" label="Comments" labelClassName="" wrapperClassName="" />
+            <Input type="textarea" label="Comments" labelClassName="required" wrapperClassName="" />
             <Input type="file" label="Add Attachment"/>
           </div>
           <hr></hr>
