@@ -1,0 +1,243 @@
+/* ------------------------------------------------
+---------------------------------------------------
+  NAVBAR
+---------------------------------------------------
+------------------------------------------------ */
+.navbar-default{
+  // background-color: darken($primary-color, 25%);
+  background-color: #2F81B7;
+
+  .navbar-nav{
+    li{
+      a{
+        color: #DDDDDD;
+      }
+      a:hover{
+        color: #FFFFFF;
+      }
+    }
+  }
+}
+
+.navbar-brand{
+
+  img{
+    display: inline-block;
+  }
+
+  & > .brand-logo{
+    display: inline-block;
+    width: auto;
+    max-height: 26px;
+    margin-top: -2px;
+    cursor: pointer;
+  }
+
+  .btn + .brand-logo{
+    margin-left: 16px;
+  }
+
+
+}
+
+
+
+/* ------------------------------------------------
+---------------------------------------------------
+  MAIN LEFT SIDEBAR NAV
+---------------------------------------------------
+------------------------------------------------ */
+/* Wrapper */
+.shell-wrapper {
+  // padding-left: 230px;
+  padding-left: 40px;
+  transition: all 0.5s ease;
+
+  &.toggled{
+    padding-left: 40px;
+
+    #sidebar-wrapper {
+      width: 40px;
+    }
+
+    .page-content-wrapper {
+      position: relative;
+      margin-right: 0;
+    }
+
+    .sidebar-nav > .sidebar-brand{
+      height: 0 !important;
+    }
+
+  }
+
+}
+
+/* Sidebar Wrapper */
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 230px;
+  width: 0;
+  height: 100%;
+  margin-left: -230px;
+  overflow-y: auto;
+  background: $nav-bg;
+  transition: all 0.5s ease;
+
+  /* Sidebar Styles */
+  .sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 230px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .logo {
+      display: block;
+      width: auto;
+      height: 74px;
+      max-width: 100%;
+      margin: 0 auto 10px;
+    }
+
+    li {
+      position: relative;
+      display: block;
+
+      a {
+        display: block;
+        text-decoration: none;
+        color: $nav-text-color;
+        padding: 14px 18px;
+
+        .fa{
+          margin-left: -4px;
+          margin-right: 10px;
+        }
+
+      }
+      a:hover {
+        text-decoration: none;
+        color: #FFFFFF;
+        background-color: darken($nav-bg, 3%);
+      }
+      a:active,
+      a:focus {
+        text-decoration: none;
+      }
+
+    }
+
+    li.active{
+      border-left: 4px solid darken($primary-color, 2%);
+      background-color: darken($nav-bg, 3%);
+
+      a,
+      a:hover,
+      a:active{
+        color: #FFFFFF;
+        text-decoration: none;
+        padding-left: 14px;
+      }
+
+    }
+
+    > .sidebar-brand {
+      height: 140px;
+      overflow: hidden;
+      font-weight: bold;
+      padding: 12px 18px;
+      transition: all 0.5s ease;
+
+      a {
+        color: #FFFFFF;
+        /*color: $nav-text-color;*/
+      }
+      a:hover {
+        color: #FFFFFF;
+        background: none;
+      }
+
+    }
+
+  }
+
+}
+
+/* Page Content Wrapper */
+.page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+}
+
+
+
+
+
+
+
+#sidebar-wrapper {
+  width: 230px;
+}
+
+.page-content-wrapper {
+  padding: 20px;
+  position: relative;
+}
+
+
+
+
+/* ------------------------------------------------
+---------------------------------------------------
+  RIGHT SIDE TEXT NAV
+---------------------------------------------------
+------------------------------------------------ */
+.text-nav.fixed{
+  position: fixed;
+}
+nav.text-nav{
+  ul, li{
+    list-style: none;
+  }
+  ul{
+    padding: 0;
+    margin: 0;
+  }
+  ul ul{
+    display: none;
+    padding-left: 12px;
+  }
+  ul li.active > ul{
+    display: block;
+  }
+
+  li.active{
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    background: none !important;
+  }
+  li a,
+  li.active > a{
+    display: block;
+    color: inherit;
+    padding: 2px 0 !important;
+    margin: 0 !important;
+  }
+  // .nav > li > a{
+  //   color: $blue;
+  // }
+  li.active > a{
+    color: $primary-color;
+  }
+  li a:hover,
+  li a:focus{
+    color: $info-color;
+    border: none !important;
+    background: none !important;
+  }
+}

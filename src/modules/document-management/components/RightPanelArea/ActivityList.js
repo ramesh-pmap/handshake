@@ -92,7 +92,7 @@ class ActivityList extends React.Component {
 
       {/* Card Item Drafts Pending Submittals */}
       <ListGroupItem onClick={this.handleTaskClick.bind(this, DETAIL)}>
-        <div className="list-card neutral">
+        <div className="list-card pending">
           <h4>Incident Investigation.docx</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
@@ -225,23 +225,6 @@ class ActivityList extends React.Component {
     default:
       docList = (<ListGroup bsStyle="info">
 
-      {/* Card Item Drafts Pending Submittals */}
-      <ListGroupItem onClick={this.handleTaskClick.bind(this, DETAIL)}>
-        <div className="list-card neutral">
-          <h4>Incident Investigation.docx</h4>
-          <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
-          <div className="meta-wrapper">
-            <div className="clearfix">
-              <p className="pull-left">John Doe</p>
-              <p className="pull-right">10/11/2015</p>
-            </div>
-            <div className="clearfix">
-              <p className="pending pull-right">Drafts Pending Submittals </p>
-            </div>
-          </div>
-        </div>
-      </ListGroupItem>
-
       {/* Card Item Rejected Pending Revision */}
       <ListGroupItem onClick={this.handleTaskClick.bind(this, APPROVAL_WORKFLOW)}>
         <div className="list-card rejected">
@@ -254,6 +237,23 @@ class ActivityList extends React.Component {
             </div>
             <div className="clearfix">
               <p className="rejected pull-right">Rejected Pending Revision</p>
+            </div>
+          </div>
+        </div>
+      </ListGroupItem>
+
+      {/* Card Item Drafts Pending Submittals */}
+      <ListGroupItem onClick={this.handleTaskClick.bind(this, DETAIL)}>
+        <div className="list-card pending">
+          <h4>Incident Investigation.docx</h4>
+          <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
+          <div className="meta-wrapper">
+            <div className="clearfix">
+              <p className="pull-left">John Doe</p>
+              <p className="pull-right">10/11/2015</p>
+            </div>
+            <div className="clearfix">
+              <p className="pending pull-right">Drafts Pending Submittals </p>
             </div>
           </div>
         </div>

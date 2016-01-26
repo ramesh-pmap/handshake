@@ -1,3 +1,10 @@
+.navbar-default{
+  border: none;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
 @media (min-width: 768px){
   .main-col-wrapper{
     position: relative;
@@ -81,9 +88,12 @@
   .sidebar{
     overflow-y: auto;
     margin-left: 32px;
-    padding: 50px 4px 0 6px;
-    background: lighten($border-color, 10%);
-    border-left: 1px solid $border-color;
+    padding: 40px 4px 0 6px;
+    background: #f9f9f9;
+    border-left: none;
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.25);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,.25);
+    box-shadow: 0 0 10px rgba(0,0,0,.25);
 
     .fixed-title:first-child{
       position: absolute;
@@ -91,7 +101,7 @@
       width: 90%;
       padding: 0 12px;
       background: #FFFFFF; // $light-gray;
-      border: solid $border-color;
+      border: solid darken($border-color, 8%); //$border-color;
       border-width: 0 0 2px 1px;
       z-index: 1;
     }
@@ -104,10 +114,11 @@
         -webkit-border-radius: 0;
         -moz-border-radius: 0;
         border-radius: 0;
+        // background-color: #F90;
 
         &:hover{
-          border-color: transparent;
-          background-color: #FFFFFF;
+          // background-color: #FEFEFE;
+          // border-color: transparent;
         }
         &:nth-child(even),
         &:nth-child(even):hover{
@@ -148,21 +159,14 @@
   .list-group-item{
     margin: 0px;
     padding: 0px;
+    margin-bottom: 2px;
     border: solid darken($border-color, 8%);
     border-width: 0 0 1px 0px;
-    margin-bottom: 6px;
-
-    &:hover .list-card{
-
-      &.neutral,
-      &.pending{
-        background: $row-hover;
-      }
-    }
 
     .list-card {
       padding: 3px 6px;
       line-height: 6px;
+      background-color: darken(#FFFFFF, 1%);
 
       h4{
         font-size: 12px;
@@ -172,7 +176,25 @@
       p{
         line-height: 1.4;
       }
+
+      &.rejected{
+        border-left-color: $rejected-color;
+      }
+
+      &.pending{
+        border-left-color: $pending-color;
+      }
     }
+
+    &:hover .list-card{
+      background-color: $row-hover;
+
+      // &.neutral,
+      // &.pending{
+      //   background-color: $row-hover;
+      // }
+    }
+
     .corner-icon {
       position: absolute;
       top: 10px;
@@ -187,19 +209,19 @@
       font-size: 90%;
       .approved {
         border: none;
-        color: $approved-color;
+        // color: $approved-color;
       }
       .pending {
         border: none;
-        color: $pending-color;
+        // color: $pending-color;
       }
       .rejected {
         border: none;
-        color: $rejected-color;
+        // color: $rejected-color;
       }
       .neutral {
         border: none;
-        color: $pending-color;
+        // color: $pending-color;
       }
     }
     .folder-name {
@@ -284,17 +306,20 @@ label.required:before{
       display: block;
       width: 29px;
       padding: 6px;
-      background: rgba(255,255,255, .4);
-      border: 1px solid $border-color;
+      background: rgba(0,0,0, .1);
+      border: 1px solid darken($border-color, 5%);
+      border-right-color: #EFEFEF;
     }
     a:hover,
     a:focus{
-      background: rgba(255,255,255, .8);
+      background: rgba(255,255,255, .5);
     }
 
     &.active a{
-      background: lighten($border-color, 10%);
-      border-right-color: lighten($border-color, 20%);
+      background: #EFEFEF;
+      border-right-color: #EFEFEF;
+      // background: lighten($border-color, 10%);
+      // border-right-color: lighten($border-color, 20%);
     }
   }
 }
