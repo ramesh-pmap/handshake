@@ -4,7 +4,7 @@ import express from 'express';
 import * as api from './server/api/http';
 
 const app = express();
-const port = 2016;
+const port = 82;
 
 
 app.use((req, res, next) => {
@@ -24,4 +24,4 @@ app.use(express.static('build'));
 app.get('/api/0/documents', api.getDocuments);
 
 
-app.listen(port, () => console.log('browse http://localhost:' + port));
+app.listen(port, () => console.log('Rest API server running on http://cosmos.pmapconnect.com:' + port));
