@@ -249,16 +249,6 @@ class DetailForm extends React.Component {
               />
             </div>
 
-            <FormControls.Static label="Uploaded/Referenced By" value="John Doe"/>
-
-            <FormControls.Static label="Date Uploaded/Referenced" value="11/07/15"/>
-
-            <FormControls.Static label="Modified By" value="John Doe"/>
-
-            <FormControls.Static label="Modified Date" value="11/08/2015"/>
-
-            <FormControls.Static label="Document Status" value="Pending Approval"/>
-
             <div className="form-group">
               <label className="control-label">Document Type</label>
               <Select
@@ -314,22 +304,36 @@ class DetailForm extends React.Component {
 
             <Input type="select" label="Primary Folder" labelClassName="required">
               <option>1.0 EHS Management</option>
-              <option>2.0 Environmental Management</option>
-              <option>3.0 Health and Safety</option>
-              <option>4.0 Security and Loss Prevention</option>
-            </Input>
-
-            <Input type="select" multiple label="Additional Display Folders">
               <option>1.1 Management</option>
               <option>1.2 People Involvement</option>
               <option>1.3 Prevention</option>
               <option>1.4 Knowledge of the Site</option>
               <option>1.5 Mgmt of Contractors and Suppliers</option>
+              <option>2.0 Environmental Management</option>
               <option>2.1 Compliance</option>
               <option>2.2 Resources</option>
               <option>2.3 Specific Themes</option>
+              <option>3.0 Health and Safety</option>
               <option>3.1 Health</option>
               <option>3.2 Hazardous Activities</option>
+              <option>4.0 Security and Loss Prevention</option>
+            </Input>
+
+            <Input type="select" multiple label="Additional Display Folders">
+              <option>1.0 EHS Management</option>
+              <option>1.1 Management</option>
+              <option>1.2 People Involvement</option>
+              <option>1.3 Prevention</option>
+              <option>1.4 Knowledge of the Site</option>
+              <option>1.5 Mgmt of Contractors and Suppliers</option>
+              <option>2.0 Environmental Management</option>
+              <option>2.1 Compliance</option>
+              <option>2.2 Resources</option>
+              <option>2.3 Specific Themes</option>
+              <option>3.0 Health and Safety</option>
+              <option>3.1 Health</option>
+              <option>3.2 Hazardous Activities</option>
+              <option>4.0 Security and Loss Prevention</option>
             </Input>
 
             <Input type="textarea" label="Description" />
@@ -370,6 +374,15 @@ class DetailForm extends React.Component {
                 options={retentionPeriodOptions}
               />
             </div>
+            <FormControls.Static label="Document Status" value="Pending Approval"/>
+
+            <FormControls.Static label="Last Modified By" value="John Doe"/>
+
+            <FormControls.Static label="Last Modified Date" value="11/08/2015"/>
+
+            <FormControls.Static label="Uploaded/Referenced By" value="John Doe"/>
+
+            <FormControls.Static label="Date Uploaded/Referenced" value="11/07/15"/>
 
             <FormControls.Static label="File Name" value="OSHA_V2.0.docx"/>
 
