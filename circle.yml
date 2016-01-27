@@ -6,7 +6,7 @@ deployment:
   push_to_cosmos:
     branch: api
     commands:
-      - rsync -rltzuv --include=".*" --exclude=node_modules * circleci@64.80.61.75:/Library/Server/Web/Data/Sites/cosmos-dev/
-      - rsync -rltzuv .* circleci@64.80.61.75:/Library/Server/Web/Data/Sites/cosmos-dev/dotfiles/
+      - rsync -rltzuv --exclude=node_modules * circleci@64.80.61.75:/Library/Server/Web/Data/Sites/cosmos-dev/
+      - rsync -rltzuv .babelrc circleci@64.80.61.75:/Library/Server/Web/Data/Sites/cosmos-dev/dotfiles/
       - ssh -v circleci@64.80.61.75 'source ~/.bash_profile && cd /Library/Server/Web/Data/Sites/cosmos-dev/ && npm install && npm run build'
 #      - ssh -v circleci@64.80.61.75 'source ~/.bash_profile && cd /Library/Server/Web/Data/Sites/cosmos/ && pkill node && npm run rest-server'
