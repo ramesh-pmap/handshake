@@ -6,6 +6,8 @@ import {
   ACTIVITY,
   DETAIL,
   DETAILFORM,
+  DETAIL_DRAFT,
+  DETAIL_SUBMITTED,
   VIEWER_CHANGE_REQUEST,
   APPROVE_CHANGE_REQUEST,
   VERSION_HISTORY,
@@ -21,6 +23,8 @@ import Icon from 'react-fa';
 import DocumentActivityList from './components/RightPanelArea/ActivityList';
 import DocumentDetail from './components/RightPanelArea/Detail';
 import DocumentDetailForm from './components/RightPanelArea/DetailForm';
+import DocumentDetailDraft from './components/RightPanelArea/DetailDraft';
+import DocumentDetailSubmitted from './components/RightPanelArea/DetailSubmitted';
 import ChangeRequestSubmit from './components/RightPanelArea/ChangeRequestSubmit';
 import ChangeRequestApprove from './components/RightPanelArea/ChangeRequestApprove';
 import VersionHistory from './components/RightPanelArea/VersionHistory';
@@ -101,6 +105,14 @@ class RightPanelArea extends React.Component {
       break;
     case DETAILFORM:
       rightPanelArea = <DocumentDetailForm />;
+      this.state.currentTab = TAB_DETAIL;
+      break;
+    case DETAIL_DRAFT:
+      rightPanelArea = <DocumentDetailDraft />;
+      this.state.currentTab = TAB_DETAIL;
+      break;
+    case DETAIL_SUBMITTED:
+      rightPanelArea = <DocumentDetailSubmitted />;
       this.state.currentTab = TAB_DETAIL;
       break;
     case VIEWER_CHANGE_REQUEST:

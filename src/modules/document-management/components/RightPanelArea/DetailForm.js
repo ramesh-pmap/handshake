@@ -2,7 +2,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { setRightPanelAreaView } from '../../../../redux/actions';
-import { DETAIL } from '../../../../redux/constants';
+import { DETAIL_DRAFT, ACTIVITY } from '../../../../redux/constants';
 
 import { Row, Col, Button, Input, FormControls } from 'react-bootstrap';
 // import Icon from 'react-fa';
@@ -24,10 +24,14 @@ class DetailForm extends React.Component {
     };
   }
 
-  handleSaveButtonClick() {
+  // handleSaveButtonClick(view) {
+  //   const { dispatch } = this.props;
+  //   dispatch(setRightPanelAreaView(view));
+  // }
+
+  handleRightPanelButtonClick(view) {
     const { dispatch } = this.props;
-    // console.log('Save clicked');
-    dispatch(setRightPanelAreaView(DETAIL));
+    dispatch(setRightPanelAreaView(view));
   }
 
   handleChange(date) {
@@ -174,11 +178,11 @@ class DetailForm extends React.Component {
         <div className="fixed-title clearfix">
           <h3 className="pull-left">Selected File</h3>
           <div className="pull-right sidebar-header-actions">
-            <Button bsStyle="default" bsSize="xs" onClick={this.handleSaveButtonClick.bind(this)}>
+            <Button bsStyle="default" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, ACTIVITY)}>
             Cancel
             </Button>
             &nbsp;
-            <Button bsStyle="success" bsSize="xs" onClick={this.handleSaveButtonClick.bind(this)}>
+            <Button bsStyle="success" bsSize="xs" onClick={this.handleRightPanelButtonClick.bind(this, DETAIL_DRAFT)}>
             Save
             </Button>
           </div>

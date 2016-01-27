@@ -137,7 +137,7 @@ class Upload extends React.Component {
                     &nbsp;
                     <Button componentClass="div" bsStyle="link" bsSize="xs">
                       <Icon name="pencil" className="fa-lg text-muted" />
-                      &nbsp; Edit Details
+                      &nbsp; Add Details
                     </Button>
                   </Col>
                 </Row>
@@ -161,7 +161,7 @@ class Upload extends React.Component {
                   &nbsp;
                   <Button componentClass="div" bsStyle="link" bsSize="xs">
                     <Icon name="pencil" className="fa-lg text-muted" />
-                    &nbsp; Edit Details
+                    &nbsp; Add Details
                   </Button>
                 </Col>
               </Row>
