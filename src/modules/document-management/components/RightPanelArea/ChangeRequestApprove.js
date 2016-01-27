@@ -79,12 +79,7 @@ class DetailForm extends React.Component {
                 <FormControls.Static label="Requested Changes" value="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
                 <FormControls.Static label="Priority" value="Medium"/>
               </div>
-              <Input type="select" multiple label="Reviewed By" labelClassName="required">
-                <option>John Smith</option>
-                <option>Bob Roberts</option>
-                <option>Janette Walls</option>
-              </Input>
-              <FormControls.Static label="Reviewed Date" value="1/12/16"/>
+
               <Input type="textarea" label="Change Request Review Comments" labelClassName="required" maxLength="2000" />
 
               <Input type="select" label="Change Request Status" labelClassName="required">
@@ -92,6 +87,10 @@ class DetailForm extends React.Component {
                 <option>Approved</option>
                 <option>Rejected</option>
               </Input>
+
+              <FormControls.Static label="Reviewed By" value="John Smith"/>
+
+              <FormControls.Static label="Reviewed Date" value="1/12/16"/>
 
               <Input type="checkbox" label="Add Action Item?" onClick={this.handleActionItemOptionChange.bind(this)} />
 
@@ -197,7 +196,7 @@ class DetailForm extends React.Component {
             </Button>
             &nbsp;
             <Button bsStyle="success" bsSize="xs" onClick={this.handleSaveButtonClick.bind(this)}>
-            Submit
+            Save
             </Button>
           </div>
         </div>

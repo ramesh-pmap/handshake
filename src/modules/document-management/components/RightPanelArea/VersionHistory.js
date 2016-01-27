@@ -73,14 +73,14 @@ class VersionHistory extends React.Component {
 
           <ListGroupItem>
             <div className="list-card neutral">
-              <h4>Version 1 - ARCHIVED</h4>
+              <h4>Version 1</h4>
               <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
               <div className="meta-wrapper">
                 <div className="clearfix">
                   <div className="pull-left">
                     <strong># of Drafts:</strong> 2
                   </div>
-                  <div className="pull-right">10/11/2015</div>
+                  <div className="pull-right">9/18/2015</div>
                 </div>
                 <br/>
                 <div className="clearfix">

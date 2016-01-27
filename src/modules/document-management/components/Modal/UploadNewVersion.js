@@ -55,11 +55,13 @@ class UploadNewVersion extends React.Component {
 
           <FormControls.Static label="Version" value="2.A Draft"/>
 
-          <div className="form-group">
-            <input type="checkbox" />
-            &nbsp;
-            <label className="control-label">Keep this document checked out</label>
-          </div>
+          {/*
+            <div className="form-group">
+              <input type="checkbox" />
+              &nbsp;
+              <label className="control-label">Keep this document checked out</label>
+            </div>
+          */}
 
         </Modal.Body>
         <Modal.Footer>
