@@ -318,7 +318,7 @@ class Detail extends React.Component {
               <FormControls.Static label="Workflow" />
             </div>
             <OverlayTrigger placement="bottom" overlay={tooltipOwner}>
-              <Avatar src="/static/images/a1.jpg" shape="circle" size=""/>
+              <Avatar src="/static/images/a1.jpg" status="approved" shape="circle" size=""/>
             </OverlayTrigger>
             <div className="divider-vertical"></div>
             <OverlayTrigger placement="bottom" overlay={tooltipApprover1}>

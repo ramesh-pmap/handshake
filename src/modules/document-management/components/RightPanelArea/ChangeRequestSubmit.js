@@ -40,12 +40,6 @@ class DetailForm extends React.Component {
 
         <div className="sidebar-details">
           <div className="document-details">
-            <Input type="select" multiple label="Requested By" labelClassName="required" wrapperClassName="">
-              <option>John Smith</option>
-              <option>Bob Roberts</option>
-              <option>Janette Walls</option>
-            </Input>
-            <FormControls.Static label="Requested Date" labelClassName="" wrapperClassName="" value="1/10/16"/>
             <Input type="textarea" label="Reason for Change Request" labelClassName="required" wrapperClassName="" />
             <Input type="select" label="Source of Change" labelClassName="required" wrapperClassName="">
               <option>Corrective Action</option>
@@ -64,6 +58,8 @@ class DetailForm extends React.Component {
               <option>Low</option>
             </Input>
             <Input type="file" label="Add Attachment"/>
+            <FormControls.Static label="Requested By" value="Janette Walls" labelClassName="" wrapperClassName=""/>
+            <FormControls.Static label="Requested Date" value="1/10/16" labelClassName="" wrapperClassName=""/>
           </div>
         </div>
       </div>
