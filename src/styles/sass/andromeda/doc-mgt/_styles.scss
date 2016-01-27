@@ -494,8 +494,9 @@ $search-expanded-width: 400px;
     border-radius: 0;
     cursor: default;
 
-    &:hover{
-      background-color: $row-hover;
+    &:hover,
+    &.on{
+      background-color: lighten($primary-color, 50%); // $row-hover;
     }
 
     p{

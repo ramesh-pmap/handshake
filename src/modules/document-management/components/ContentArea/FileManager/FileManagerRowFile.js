@@ -1,6 +1,7 @@
 // Dependencies.
 import React from 'react';
 import { connect } from 'react-redux';
+import enhanceWithClickOutside from 'react-click-outside';
 
 // Actions
 import {
@@ -14,6 +15,7 @@ import {
 
 // Constants
 import {
+  ACTIVITY,
   DETAIL,
   PREVIEW,
   SHARE,
@@ -32,6 +34,10 @@ class FileManagerRowFile extends React.Component {
   constructor(props) {
     // Pass `props` into scope.
     super(props);
+
+    this.state = {
+      isFocused: false
+    };
   }
 
   clickListGroupItemHandler(fileId, e) {
@@ -43,6 +49,9 @@ class FileManagerRowFile extends React.Component {
     if (!state.rightSidebarOpened) {
       dispatch(toggleRightSidebar(state.rightSidebarOpened));
     }
+
+    console.log(this.state.isFocused);
+    this.setState({ isFocused: true });
   }
 
   clickButtonHandler(e) {
@@ -55,6 +64,13 @@ class FileManagerRowFile extends React.Component {
     const { dispatch } = this.props;
     dispatch(setModalView(view));
     dispatch(toggleModal(true));
+  }
+
+  handleClickOutside() {
+    const { dispatch } = this.props;
+    dispatch(setRightPanelAreaView(ACTIVITY));
+
+    this.setState({ isFocused: false });
   }
 
   // Render method.
@@ -70,7 +86,7 @@ class FileManagerRowFile extends React.Component {
     const fileStatus = 'Final'; // fileData.doc_status_id;
 
     return (
-      <ListGroupItem>
+      <ListGroupItem className={ this.state.isFocused ? 'on' : null }>
         <Row onClick={this.clickListGroupItemHandler.bind(this, fileId)}>
           <Col sm={6}>
             <Button href="#/" bsStyle="link" bsSize="xs" onClick={this.clickButtonHandler.bind(this)}>
@@ -129,4 +145,4 @@ const mapStateToProps = (state) => ({
 });
 
 // Export.
-export default connect(mapStateToProps)(FileManagerRowFile);
+export default connect(mapStateToProps)(enhanceWithClickOutside(FileManagerRowFile));

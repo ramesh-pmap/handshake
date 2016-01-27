@@ -64,6 +64,7 @@
     "raw-loader": "^0.5.1",
     "react": "^0.14.5",
     "react-bootstrap": "^0.27.2",
+    "react-click-outside": "^2.1.0",
     "react-contextmenu": "^0.3.0",
     "react-data-components": "^0.6.0",
     "react-datepicker": "^0.18.0",
