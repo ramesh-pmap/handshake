@@ -29,7 +29,8 @@ import DetailViewDropdown from './DetailViewDropdown';
 import {
   PREVIEW,
   DETAILFORM,
-  DOWNLOAD
+  DOWNLOAD,
+  VIEWER_CHANGE_REQUEST
 } from '../../../../redux/constants';
 
 // Import Firebase
@@ -171,8 +172,7 @@ class Detail extends React.Component {
           <hr />
           */}
           <div className="form-group">
-            <Button bsSize="sm" bsStyle="success" block>Submit for Approval</Button>
-
+            <Button bsSize="sm" bsStyle="success" block onClick={this.handleRightPanelButtonClick.bind(this, VIEWER_CHANGE_REQUEST)}>Submit Change Request</Button>
           </div>
           <div className="form-group">
             <Button bsSize="sm" bsStyle="danger" block>Archive</Button>
@@ -332,11 +332,11 @@ class Detail extends React.Component {
             </OverlayTrigger>
             <div className="divider-vertical"></div>
             <OverlayTrigger placement="bottom" overlay={tooltipApprover4}>
-              <Avatar src="/static/images/a5.jpg" status="pending" shape="circle" size=""/>
+              <Avatar src="/static/images/a5.jpg" status="approved" shape="circle" size=""/>
             </OverlayTrigger>
             <div className="divider-vertical"></div>
             <OverlayTrigger placement="bottom" overlay={tooltipStatus}>
-              <div className="avatar unchecked">
+              <div className="avatar checked">
                 <Icon name="check" className="fa-lg" />
               </div>
             </OverlayTrigger>
