@@ -25,7 +25,12 @@ class FileManager extends React.Component {
     return (
       <div>
         {/* File Manager Breadcrumb */}
-        <FileManagerBreadcrumb data={breadcrumbData} />
+        {
+          breadcrumbData.length >= 1 ?
+            <FileManagerBreadcrumb data={breadcrumbData} />
+          :
+            <div style={{height: '0px'}}/>
+        }
         <div className="card">
           {/* File Manager Header */}
           <FileManagerHeader />
