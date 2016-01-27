@@ -26,7 +26,7 @@ class DetailForm extends React.Component {
     return (
       <div>
         <div className="fixed-title clearfix">
-          <h3 className="pull-left">Selected File</h3>
+          <h3 className="pull-left">Annual Insurance Risk ...</h3>
           <div className="pull-right sidebar-header-actions">
             <Button bsStyle="default" bsSize="xs" onClick={this.handleSaveButtonClick.bind(this)}>
             Cancel
