@@ -64,7 +64,7 @@ class Page extends React.Component {
 
     // LOCAL API
     // Fetching data from local express server.
-    fetch('http://cosmos.pmapconnect.com:82/api/0/documents').then(response => response.json())
+    fetch('http://cosmos.pmapconnect.com:8081/api/0/documents').then(response => response.json())
       .then(data => {
         // Redux action.
         const parsedFolders = utils.parseTreeWithBreadcrumb(data.document_folder);
