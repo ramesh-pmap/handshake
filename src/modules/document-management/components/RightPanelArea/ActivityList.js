@@ -70,7 +70,7 @@ class ActivityList extends React.Component {
       {/* Card Item Uploaded Pending Details */}
       <ListGroupItem onClick={this.handleTaskClick.bind(this, DETAILFORM)}>
         <div className="list-card neutral">
-          <h4>Incident Management.docx</h4>
+          <h4>Incident Management</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
             <div className="clearfix">
@@ -93,7 +93,7 @@ class ActivityList extends React.Component {
       {/* Card Item Drafts Pending Submittals */}
       <ListGroupItem onClick={this.handleTaskClick.bind(this, DETAIL)}>
         <div className="list-card pending">
-          <h4>Incident Investigation.docx</h4>
+          <h4>Incident Investigation</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
             <div className="clearfix">
@@ -116,7 +116,7 @@ class ActivityList extends React.Component {
       {/* Card Item Pending Approvals */}
       <ListGroupItem onClick={this.handleTaskClick.bind(this, APPROVAL_WORKFLOW)}>
         <div className="list-card neutral">
-          <h4>Incident Types and Priorities.docx</h4>
+          <h4>Incident Types and Priorities</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
             <div className="clearfix">
@@ -139,7 +139,7 @@ class ActivityList extends React.Component {
       {/* Card Item Rejected Pending Revision */}
       <ListGroupItem onClick={this.handleTaskClick.bind(this, APPROVAL_WORKFLOW)}>
         <div className="list-card rejected">
-          <h4>Emergency Preparedness and Planning.docx</h4>
+          <h4>Emergency Preparedness and Planning</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
             <div className="clearfix">
@@ -162,7 +162,7 @@ class ActivityList extends React.Component {
       {/* Card Item Pending Release Notification */}
       <ListGroupItem onClick={this.handleTaskClick.bind(this, RELEASE_NOTIFICATION)}>
         <div className="list-card neutral">
-          <h4>Critical Information Summaries.docx</h4>
+          <h4>Critical Information Summaries</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
             <div className="clearfix">
@@ -184,7 +184,7 @@ class ActivityList extends React.Component {
       {/* Card Item Pending Change Requests */}
       <ListGroupItem onClick={this.handleTaskClick.bind(this, APPROVE_CHANGE_REQUEST)}>
         <div className="list-card neutral">
-          <h4>Documents of External Origin Guidance for Sites.docx</h4>
+          <h4>Documents of External Origin Guidance for Sites</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
             <div className="clearfix">
@@ -206,7 +206,7 @@ class ActivityList extends React.Component {
       {/* Card Item Pending Periodic Reviews */}
       <ListGroupItem onClick={this.handleTaskClick.bind(this, PERIODIC_REVIEW)}>
         <div className="list-card neutral">
-          <h4>Record Management.docx</h4>
+          <h4>Record Management</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
             <div className="clearfix">
@@ -228,7 +228,7 @@ class ActivityList extends React.Component {
       {/* Card Item Rejected Pending Revision */}
       <ListGroupItem onClick={this.handleTaskClick.bind(this, APPROVAL_WORKFLOW)}>
         <div className="list-card rejected">
-          <h4>Emergency Preparedness and Planning.docx</h4>
+          <h4>Emergency Preparedness and Planning</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
             <div className="clearfix">
@@ -245,7 +245,7 @@ class ActivityList extends React.Component {
       {/* Card Item Drafts Pending Submittals */}
       <ListGroupItem onClick={this.handleTaskClick.bind(this, DETAIL)}>
         <div className="list-card pending">
-          <h4>Incident Investigation.docx</h4>
+          <h4>Incident Investigation</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
             <div className="clearfix">
@@ -262,7 +262,7 @@ class ActivityList extends React.Component {
       {/* Card Item Uploaded Pending Details */}
       <ListGroupItem onClick={this.handleTaskClick.bind(this, DETAILFORM)}>
         <div className="list-card neutral">
-          <h4>Submit a Request to Add, Remove, or Change Documents.docx</h4>
+          <h4>Submit a Request to Add, Remove, or Change Documents</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
             <div className="clearfix">
@@ -279,7 +279,7 @@ class ActivityList extends React.Component {
       {/* Card Item Pending Release Notification */}
       <ListGroupItem onClick={this.handleTaskClick.bind(this, RELEASE_NOTIFICATION)}>
         <div className="list-card neutral">
-          <h4>Critical Information Summaries.docx</h4>
+          <h4>Critical Information Summaries</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
             <div className="clearfix">
@@ -296,7 +296,7 @@ class ActivityList extends React.Component {
       {/* Card Item Pending Change Requests */}
       <ListGroupItem onClick={this.handleTaskClick.bind(this, APPROVE_CHANGE_REQUEST)}>
         <div className="list-card neutral">
-          <h4>Documents of External Origin Guidance for Sites.docx</h4>
+          <h4>Documents of External Origin Guidance for Sites</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
             <div className="clearfix">
@@ -313,7 +313,7 @@ class ActivityList extends React.Component {
       {/* Card Item Pending Periodic Reviews */}
       <ListGroupItem onClick={this.handleTaskClick.bind(this, PERIODIC_REVIEW)}>
         <div className="list-card neutral">
-          <h4>Record Management.docx</h4>
+          <h4>Record Management</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
             <div className="clearfix">
@@ -330,7 +330,7 @@ class ActivityList extends React.Component {
       {/* Card Item Pending Approvals */}
       <ListGroupItem onClick={this.handleTaskClick.bind(this, APPROVAL_WORKFLOW)}>
         <div className="list-card neutral">
-          <h4>Incident Types and Priorities.docx</h4>
+          <h4>Incident Types and Priorities</h4>
           <Icon name="file-word-o" className="fa-fw fa-lg text-muted corner-icon" />
           <div className="meta-wrapper">
             <div className="clearfix">

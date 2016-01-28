@@ -4,7 +4,7 @@ test:
 
 deployment:
   push_to_cosmos:
-    branch: master
+    branch: __roadshow__
     commands:
       - rsync -rltzuv --exclude=node_modules * circleci@64.80.61.75:/Library/Server/Web/Data/Sites/cosmos-dev/
       - rsync -rltzuv .babelrc circleci@64.80.61.75:/Library/Server/Web/Data/Sites/cosmos-dev/
