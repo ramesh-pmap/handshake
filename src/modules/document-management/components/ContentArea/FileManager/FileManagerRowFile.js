@@ -70,7 +70,7 @@ class FileManagerRowFile extends React.Component {
     // const { dispatch } = this.props;
     // dispatch(setRightPanelAreaView(ACTIVITY));
 
-    // this.setState({ isFocused: false });
+    this.setState({ isFocused: false });
   }
 
   // Render method.

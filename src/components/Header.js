@@ -7,8 +7,8 @@ import {Navbar, NavBrand, CollapsibleNav, Button} from 'react-bootstrap';
 import Icon from 'react-fa';
 
 // Images.
-// import Logo from '../images/processmap-logo.png';
-import Logo from '../images/smiths-group-logo-white.svg';
+import Logo from '../images/processmap-logo-white.png';
+// import Logo from '../images/smiths-group-logo-white.svg';
 
 
 // Define class.
