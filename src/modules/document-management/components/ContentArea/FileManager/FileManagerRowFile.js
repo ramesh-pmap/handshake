@@ -15,7 +15,7 @@ import {
 
 // Constants
 import {
-  ACTIVITY,
+  // ACTIVITY,
   DETAIL,
   PREVIEW,
   SHARE,
@@ -67,10 +67,10 @@ class FileManagerRowFile extends React.Component {
   }
 
   handleClickOutside() {
-    const { dispatch } = this.props;
-    dispatch(setRightPanelAreaView(ACTIVITY));
+    // const { dispatch } = this.props;
+    // dispatch(setRightPanelAreaView(ACTIVITY));
 
-    this.setState({ isFocused: false });
+    // this.setState({ isFocused: false });
   }
 
   // Render method.
