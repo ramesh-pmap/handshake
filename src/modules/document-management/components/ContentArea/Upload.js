@@ -3,8 +3,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 // Redux.
-import { toggleRightSidebar, setRightPanelAreaView } from '../../../../redux/actions';
-import { ACTIVITY, DETAILFORM } from '../../../../redux/constants';
+import { toggleRightSidebar, setRightPanelAreaView, setContentAreaView } from '../../../../redux/actions';
+import { ACTIVITY, DETAILFORM, PREVIEW } from '../../../../redux/constants';
 
 // Components.
 import {Row, Col, Button, ListGroup, ListGroupItem, ProgressBar} from 'react-bootstrap';
@@ -34,6 +34,7 @@ class Upload extends React.Component {
       dispatch(toggleRightSidebar(state.rightSidebarOpened));
     }
     dispatch(setRightPanelAreaView(panelView));
+    dispatch(setContentAreaView(PREVIEW));
   }
 
   // Dropzone.

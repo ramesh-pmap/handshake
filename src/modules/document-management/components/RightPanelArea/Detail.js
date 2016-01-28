@@ -174,9 +174,6 @@ class Detail extends React.Component {
           <div className="form-group">
             <Button bsSize="sm" bsStyle="success" block onClick={this.handleRightPanelButtonClick.bind(this, VIEWER_CHANGE_REQUEST)}>Submit Change Request</Button>
           </div>
-          <div className="form-group">
-            <Button bsSize="sm" bsStyle="danger" block>Archive</Button>
-          </div>
           <FormControls.Static label="Title" value={docTitle} />
           <FormControls.Static label="Internal Document ID" value={docId} />
           <FormControls.Static label="Version" value={docVersion} />
@@ -200,6 +197,9 @@ class Detail extends React.Component {
           <FormControls.Static label="File Name" value={fileName} />
           <FormControls.Static label="File Size" value={fileSize} />
           <FormControls.Static label="File Active" value={fileActive} />
+          <div className="form-group">
+            <Button bsSize="sm" bsStyle="danger" block>Archive</Button>
+          </div>
         </div>
       );
       break;
