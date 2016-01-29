@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "rest-server": "node server.babel.js",
-    "start": "npm run rest-server & webpack-dev-server --history-api-fallback --devtool eval-source-map --hot --inline --progress --colors",
+    "start": "webpack-dev-server --history-api-fallback --devtool eval-source-map --hot --inline --progress --colors",
     "build": "npm run clean && webpack --progress --colors",
     "build-prod": "NODE_ENV=production && npm run clean && webpack -p",
     "clean": "rimraf build",
