@@ -6,7 +6,8 @@ deployment:
   push_to_cosmos:
     branch: __roadshow__
     commands:
-      - rsync -avz --exclude=node_modules * uxdev1@64.135.103.140:/var/www/cosmos-roadshow/
-      - ssh -v uxdev1@64.135.103.140 'cd /var/www/cosmos-roadshow/ && npm install && npm run build'
-#      - rsync -avz --exclude=node_modules * circleci@64.80.61.75:/Library/Server/Web/Data/Sites/cosmos/
-#      - ssh -v circleci@64.80.61.75 'source ~/.bash_profile && cd /Library/Server/Web/Data/Sites/cosmos/ && npm install && npm run build'
+      - rsync -avz --exclude=node_modules * circleci@64.80.61.75:/Library/Server/Web/Data/Sites/cosmos/
+      - ssh -v circleci@64.80.61.75 'source ~/.bash_profile && cd /Library/Server/Web/Data/Sites/cosmos/ && npm install && npm run build'
+#      - rsync -avz --exclude=node_modules * uxdev1@64.135.103.140:/var/www/cosmos-roadshow/
+#      - ssh -v uxdev1@64.135.103.140 'cd /var/www/cosmos-roadshow/ && npm install && npm run build'
+
