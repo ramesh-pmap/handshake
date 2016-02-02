@@ -22,7 +22,7 @@ class Page extends React.Component {
   }
 
   handleLogin(loginName, password) {
-    if (loginName === 'demouser' && password === 'Password2016') {
+    if (loginName === 'devuser' && password === 'Password2016') {
       this.props.history.pushState(null, '/document-management');
       return true;
     }
