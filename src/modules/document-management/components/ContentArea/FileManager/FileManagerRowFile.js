@@ -89,22 +89,30 @@ class FileManagerRowFile extends React.Component {
       <ListGroupItem className={ this.state.isFocused ? 'on' : null }>
         <Row onClick={this.clickListGroupItemHandler.bind(this, fileId)}>
           <Col sm={6}>
-            <Button href="#/" bsStyle="link" bsSize="xs" onClick={this.clickButtonHandler.bind(this)}>
-              <Icon name={`file-${fileType}-o`} className="fa-fw fa-lg text-muted" />
-              &nbsp;
-              {fileName}
-            </Button>
+            <p>
+              <Button href="#/" bsStyle="link" bsSize="xs" onClick={this.clickButtonHandler.bind(this)}>
+                <Icon name={`file-${fileType}-o`} className="fa-fw fa-lg text-muted" />
+                &nbsp;
+                {fileName}
+              </Button>
+            </p>
           </Col>
           <Col sm={1} className="text-center text-left-xs">
-            <span className="visible-xs-inline">Version: </span>
-            <Button href="#" bsStyle="link" bsSize="xs">{fileVersion}</Button>
+            <p>
+              <span className="visible-xs-inline">Version: </span>
+              <Button href="#" bsStyle="link" bsSize="xs">{fileVersion}</Button>
+            </p>
           </Col>
           <Col sm={2} className="text-center text-left-xs">
-            <span className="visible-xs-inline">Date Modified: </span>
-            {fileModifiedDate}
+          <p>
+              <span className="visible-xs-inline">Date Modified: </span>
+              {fileModifiedDate}
+            </p>
           </Col>
           <Col sm={3} className="text-center text-left-xs">
-          {fileStatus}
+            <p>
+              {fileStatus}
+            </p>
           </Col>
         </Row>
         <ButtonToolbar className="row-options">

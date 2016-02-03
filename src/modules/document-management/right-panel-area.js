@@ -1,7 +1,11 @@
 // Dependencies.
 import React from 'react';
 import { connect } from 'react-redux';
-import { getWindowDimensions, toggleRightSidebar, setRightPanelAreaView } from '../../redux/actions';
+import {
+  getWindowDimensions,
+  toggleRightSidebar,
+  setRightPanelAreaView
+} from '../../redux/actions';
 import {
   ACTIVITY,
   DETAIL,
@@ -16,7 +20,7 @@ import {
   PERIODIC_REVIEW
 } from '../../redux/constants';
 
-import {Nav, NavItem, Tooltip, OverlayTrigger} from 'react-bootstrap';
+import { Nav, NavItem, Tooltip, OverlayTrigger } from 'react-bootstrap';
 import Icon from 'react-fa';
 
 // Components.
@@ -39,8 +43,9 @@ import utils from '../../utils';
 const TAB_TASKS = 'TAB_TASKS';
 const TAB_DETAIL = 'TAB_DETAIL';
 
-const tasksTooltip = <Tooltip id="tasksTooltip">Tasks</Tooltip>;
-const detailTooltip = <Tooltip id="detailTooltip">Document Detail</Tooltip>;
+const expandCollapseTooltip = <Tooltip id="expandCollapseTooltip">Expand/Collapse</Tooltip>;
+// const tasksTooltip = <Tooltip id="tasksTooltip">Tasks</Tooltip>;
+// const detailTooltip = <Tooltip id="detailTooltip">Document Detail</Tooltip>;
 
 // Define class.
 class RightPanelArea extends React.Component {
@@ -85,6 +90,11 @@ class RightPanelArea extends React.Component {
       dispatch(setRightPanelAreaView(ACTIVITY));
     }
     this.setState({ currentTab: tab });
+  }
+
+  handleCloseButtonClick() {
+    const { state, dispatch } = this.props;
+    dispatch(toggleRightSidebar(state.rightSidebarOpened));
   }
 
   // Render method.
@@ -144,14 +154,28 @@ class RightPanelArea extends React.Component {
       this.state.currentTab = TAB_TASKS;
     }
 
+    let sidebarHeight = state.windowDimensions.height;
+    if (state.windowDimensions.width >= 768) {
+      sidebarHeight = state.windowDimensions.height - 50;
+    }
+
     return (
       <div>
-        <div className="sidebar" style={{height: state.windowDimensions.height - 50}}>
+        <div className="sidebar" style={{height: sidebarHeight}}>
           {rightPanelArea}
         </div>
 
         <Nav ulClassName="sidebar-tabs">
 
+          <OverlayTrigger placement="left" overlay={expandCollapseTooltip}>
+            <NavItem onClick={this.handleCloseButtonClick.bind(this, TAB_TASKS)}
+              className="active">
+              {/* className={this.state.currentTab === TAB_TASKS ? 'active' : ''}> */}
+              <Icon name="expand" className="fa-fw" />
+            </NavItem>
+          </OverlayTrigger>
+
+          {/*
           <OverlayTrigger placement="left" overlay={tasksTooltip}>
             <NavItem onClick={this.handleTabClick.bind(this, TAB_TASKS)}
               className={this.state.currentTab === TAB_TASKS ? 'active' : ''}>
@@ -165,6 +189,7 @@ class RightPanelArea extends React.Component {
               <Icon name="info-circle" className="fa-fw" />
             </NavItem>
           </OverlayTrigger>
+          */}
 
         </Nav>
 
