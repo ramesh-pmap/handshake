@@ -336,7 +336,7 @@ class Detail extends React.Component {
             </OverlayTrigger>
             <div className="divider-vertical"></div>
             <OverlayTrigger placement="bottom" overlay={tooltipStatus}>
-              <div className="avatar checked">
+              <div className="avatar unchecked">
                 <Icon name="check" className="fa-lg" />
               </div>
             </OverlayTrigger>

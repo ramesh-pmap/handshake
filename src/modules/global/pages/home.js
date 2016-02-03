@@ -27,7 +27,11 @@ class Page extends React.Component {
   render() {
     return (
       <Main>
-        <Avatar />
+        <Avatar
+          name="Marcelo Paiva"
+          // icon="user"
+          // src="/static/images/a3.jpg"
+        />
         <Card
           title="Hello World"
           subtitle="subtitle"
