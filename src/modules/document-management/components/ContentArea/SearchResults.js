@@ -31,6 +31,15 @@ class SearchResults extends React.Component {
 
   // Render method.
   render() {
+    const businessProcessOptions = [
+      {value: 'EHS', label: 'EHS'},
+      {value: 'Quality', label: 'Quality'},
+      {value: 'Supply Chain', label: 'Supply Chain'},
+      {value: 'Operations', label: 'Operations'},
+      {value: 'Retail', label: 'Retail'},
+      {value: 'Human Resources', label: 'Human Resources'},
+    ];
+
     return (
       <div style={{marginTop: '20px'}}>
 
@@ -97,11 +106,7 @@ class SearchResults extends React.Component {
                         <Select
                           name="form-control"
                           value=""
-                          options={[
-                            { value: 'Lorem', label: 'Lorem' },
-                            { value: 'Ipsum', label: 'Ipsum' },
-                            { value: 'Dolor', label: 'Dolor' }
-                          ]}
+                          options={businessProcessOptions}
                           multi
                         />
                       </Col>
