@@ -4,9 +4,9 @@ test:
 
 deployment:
   push_to_cosmos:
-    branch: master
+    branch: __roadshow__
     commands:
-      - rsync -rltzuv --exclude=node_modules * circleci@64.80.61.75:/Library/Server/Web/Data/Sites/cosmos/
-      - rsync -rltzuv .babelrc circleci@64.80.61.75:/Library/Server/Web/Data/Sites/cosmos/
-      - ssh -v circleci@64.80.61.75 'source ~/.bash_profile && cd /Library/Server/Web/Data/Sites/cosmos/ && npm install && npm run build'
-#      - ssh -v circleci@64.80.61.75 'source ~/.bash_profile && cd /Library/Server/Web/Data/Sites/cosmos/ && pkill node && npm run rest-server'
+      # - rsync -rltzuv --exclude=node_modules * circleci@64.80.61.75:/Library/Server/Web/Data/Sites/cosmos/
+      # - rsync -rltzuv .babelrc circleci@64.80.61.75:/Library/Server/Web/Data/Sites/cosmos/
+      # - ssh -v circleci@64.80.61.75 'source ~/.bash_profile && cd /Library/Server/Web/Data/Sites/cosmos/ && npm install && npm run build'
+      # - ssh -v circleci@64.80.61.75 'source ~/.bash_profile && cd /Library/Server/Web/Data/Sites/cosmos/ && pkill node && npm run rest-server'
