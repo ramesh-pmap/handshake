@@ -1,9 +1,9 @@
 // Dependencies.
 import React from 'react';
-import {Link} from 'react-router';
+// import {Link} from 'react-router';
 
 // UI Components.
-import {Navbar, NavBrand, CollapsibleNav, Button} from 'react-bootstrap';
+import {Navbar, NavBrand, /* CollapsibleNav, */ Button} from 'react-bootstrap';
 import Icon from 'react-fa';
 
 // Images.
@@ -27,7 +27,8 @@ class Header extends React.Component {
   render() {
     return (
       <header>
-        <Navbar fluid fixedTop toggleNavKey={0}>
+        {/* <Navbar fluid fixedTop toggleNavKey={0}> */}
+        <Navbar fluid fixedTop>
 
           <NavBrand>
             <Button bsStyle="primary" bsSize="xs" onClick={this.handleClick.bind(this)}>
@@ -36,17 +37,17 @@ class Header extends React.Component {
             <img src={Logo} className="brand-logo" alt="ProcessMAP" />
           </NavBrand>
 
+          {/*
           <CollapsibleNav eventKey={0}>
             <ul className="nav navbar-nav navbar-right">
               <li><Link to="/home">Home</Link></li>
               <li><Link to="/document-management">Document Mgt</Link></li>
-              {/*
                 <li><Link to="/document-management">Document Mgt 2</Link></li>
                 <li><Link to="/iframe">Iframe</Link></li>
               <li><Link to="/data">Data Sample</Link></li>
-              */}
             </ul>
           </CollapsibleNav>
+          */}
 
         </Navbar>
       </header>

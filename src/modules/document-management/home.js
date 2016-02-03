@@ -49,8 +49,6 @@ import ModalArea from './modal-area';
 // Utility methods.
 import utils from '../../utils';
 
-import Firebase from 'firebase';
-
 // Define class.
 class Page extends React.Component {
   constructor(props) {
@@ -62,33 +60,33 @@ class Page extends React.Component {
   }
 
   componentDidMount() {
-    const { state, dispatch } = this.props;
+    const { dispatch } = this.props;
 
-    // // LOCAL API
-    // // Fetching data from local express server.
-    // fetch('http://localhost:2016/api/0/documents').then(response => response.json())
-    //   .then(data => {
-    //     // Redux action.
-    //     const parsedFolders = utils.parseTreeWithBreadcrumb(data.document_folder);
-    //     const flatFolders = utils.convertToFlatTree([], parsedFolders);
-    //     const docFiles = data.document;
-    //     dispatch(setFileManagerData(parsedFolders[0], flatFolders, docFiles));
-    //     dispatch(changeFolder(0));
-    //   })
-    //   .catch(error => {this.setState({error}); });
+    // LOCAL API
+    // Fetching data from local express server.
+    fetch('http://cosmos.pmapconnect.com:8081/api/0/documents').then(response => response.json())
+      .then(data => {
+        // Redux action.
+        const parsedFolders = utils.parseTreeWithBreadcrumb(data.document_folder);
+        const flatFolders = utils.convertToFlatTree([], parsedFolders);
+        const docFiles = data.document;
+        dispatch(setFileManagerData(parsedFolders[0], flatFolders, docFiles));
+        dispatch(changeFolder(0));
+      })
+      .catch(error => {this.setState({error}); });
 
-    // FIREBASE`
-    // Fetch Source Json data from Firebase
-    let ref = new Firebase(state.firebaseUrl);
-    ref.once('value', data => {
-      // console.log('data from firebase', data.val());
-      // Redux action.
-      const parsedFolders = utils.parseTreeWithBreadcrumb(data.val().document_folder);
-      const flatFolders = utils.convertToFlatTree([], parsedFolders);
-      const docFiles = data.val().document;
-      dispatch(setFileManagerData(parsedFolders[0], flatFolders, docFiles));
-      dispatch(changeFolder(0));
-    });
+    // // FIREBASE`
+    // // Fetch Source Json data from Firebase
+    // let ref = new Firebase(state.firebaseUrl);
+    // ref.once('value', data => {
+    //   // console.log('data from firebase', data.val());
+    //   // Redux action.
+    //   const parsedFolders = utils.parseTreeWithBreadcrumb(data.val().document_folder);
+    //   const flatFolders = utils.convertToFlatTree([], parsedFolders);
+    //   const docFiles = data.val().document;
+    //   dispatch(setFileManagerData(parsedFolders[0], flatFolders, docFiles));
+    //   dispatch(changeFolder(0));
+    // });
 
 
     // Set initial state.

@@ -20,7 +20,7 @@ module.exports = {
     port: 2015,
     proxy: {
       '/api/0/documents': {
-        target: 'http://localhost:2016'
+        target: 'http://cosmos.pmapconnect.com:8081/'
       }
     }
   },

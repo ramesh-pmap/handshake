@@ -1,10 +1,16 @@
-import fetch from 'node-fetch';
+// import sourceData from '../../../../src/static/data/documents-data-DEMO.json';
+import fs from 'fs';
+import path from 'path';
+import promise from 'bluebird';
 
-const sourceData = 'http://localhost:2016/static/data/documents-data-DEMO.json';
+const sourceData = '../../../../src/static/data/documents-data-DEMO.json';
+
+// Promisify fs.
+promise.promisifyAll(fs);
 
 export function getDocuments() {
-  return fetch(sourceData)
-    .then(response => {
-      return response.json();
-    });
+  return fs.readFileAsync(path.join(__dirname, sourceData))
+  .then(data => {
+    return JSON.parse(data);
+  });
 }

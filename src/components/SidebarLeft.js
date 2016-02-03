@@ -58,18 +58,18 @@ class Sidebar extends React.Component {
             Incident Management
           </NavItem>
         </LinkContainer>
-        */}
 
         <LinkContainer to="/iframe">
-          <NavItem onClick={this.handleFrameUrlChange.bind(this, 'home')}>
-            <Icon name="home" className="fa-fw" />
-            Home
-          </NavItem>
+        <NavItem onClick={this.handleFrameUrlChange.bind(this, 'home')}>
+        <Icon name="home" className="fa-fw" />
+        Home
+        </NavItem>
         </LinkContainer>
+        */}
 
         <LinkContainer to="/document-management">
           <NavItem onClick={this.handleFrameUrlChange.bind(this, 'doc-mgt')}>
-            <Icon name="file-text" className="fa-fw" />
+            <Icon name="home" className="fa-fw" />
             Documnent Management
           </NavItem>
         </LinkContainer>

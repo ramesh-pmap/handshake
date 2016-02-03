@@ -1,6 +1,7 @@
-// import * as service from './rethinkdb/service/document';
-import * as service from './firebase/service/document';
+import * as service from './rethinkdb/service/document';
+// import * as service from './firebase/service/document';
 // import * as service from './json/service/document';
+
 
 export function getDocuments(req, res) {
   service.getDocuments()

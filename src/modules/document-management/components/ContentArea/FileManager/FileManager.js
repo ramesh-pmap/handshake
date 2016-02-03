@@ -11,26 +11,12 @@ import FileManagerBreadcrumb from './FileManagerBreadcrumb';
 import FileManagerHeader from './FileManagerHeader';
 import FileManagerRows from './FileManagerRows';
 
-const AUTO_HEIGHT = 'auto';
 
 // Define class.
 class FileManager extends React.Component {
   constructor(props) {
     // Pass `props` into scope.
     super(props);
-
-    this.state = {
-      height: AUTO_HEIGHT
-    };
-  }
-
-  handleFixedHeaderToggle() {
-    const { height } = this.state;
-    if ( height === AUTO_HEIGHT ) {
-      this.setState({ height: 100 });
-    } else {
-      this.setState({ height: AUTO_HEIGHT });
-    }
   }
 
   // Render method.
