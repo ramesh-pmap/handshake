@@ -11,3 +11,28 @@ export function getDocuments(req, res) {
     res.json({error: err});
   });
 }
+
+// Methods to load data through the GraphQL schema.
+export function getDBStatus(resolve, reject) {
+  service.getDocuments()
+  .then((documents) => resolve(documents.document_status))
+  .catch(err => {
+    reject({error: err});
+  });
+}
+
+export function getDBFolder(resolve, reject) {
+  service.getDocuments()
+  .then((documents) => resolve(documents.document_folder))
+  .catch(err => {
+    reject({error: err});
+  });
+}
+
+export function getDBDocument(resolve, reject) {
+  service.getDocuments()
+  .then((documents) => resolve(documents.document))
+  .catch(err => {
+    reject({error: err});
+  });
+}
