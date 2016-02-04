@@ -36,3 +36,12 @@ export function getDBDocument(resolve, reject) {
     reject({error: err});
   });
 }
+
+// Mutation methods.
+export function addDBStatus(obj) {
+  service.addStatus(obj)
+  .then((status) => status)
+  .catch(err => {
+    JSON.stringify({error: err, status: obj});
+  });
+}

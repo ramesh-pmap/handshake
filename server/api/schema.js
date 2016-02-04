@@ -3,7 +3,8 @@ import {
   GraphQLInt,
   GraphQLString,
   GraphQLList,
-  GraphQLSchema
+  GraphQLSchema,
+  GraphQLNonNull
 } from 'graphql';
 
 import * as api from './http';
@@ -139,8 +140,31 @@ const Query = new GraphQLObjectType({
   }
 });
 
+const Mutation = new GraphQLObjectType({
+  name: 'Mutation',
+  description: 'Functions to create data',
+  fields() {
+    return {
+      addStatus: {
+        type: StatusType,
+        args: {
+          name: {
+            type: new GraphQLNonNull(GraphQLString)
+          }
+        },
+        resolve(_, args) {
+          return api.addDBStatus({
+            doc_status_name: args.name
+          });
+        }
+      }
+    };
+  }
+});
+
 const Schema = new GraphQLSchema({
-  query: Query
+  query: Query,
+  mutation: Mutation
 });
 
 export default Schema;

@@ -29,3 +29,16 @@ export function getDocuments() {
     .then(cursor => cursor.toArray().then(data => data[0]));
   });
 }
+
+export function addStatus(status) {
+  return connect()
+  .then(conn => {
+    status.created = new Date();
+    return r
+    .table('demo2')
+    .insert(status).run(conn)
+    .then(response => {
+      return Object.assign({}, status, {id: response.generated_keys[0]});
+    });
+  });
+}
