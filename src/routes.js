@@ -9,7 +9,7 @@ import HomePage from './modules/global/pages/home';
 import DataPage from './modules/global/pages/data';
 import DocMgtPage from './modules/document-management/home';
 import Iframe from './modules/global/pages/iframe';
-
+import GQL from './modules/global/pages/graphqlpoc';
 
 // Routes template.
 export default (
@@ -20,5 +20,6 @@ export default (
 		<Route path="/data" component={DataPage} title="Data Sample Page" />
 		<Route path="/document-management" component={DocMgtPage} title="Document Management" />
 		<Route path="/iframe" component={Iframe} title="iframe Login Demo" />
+		<Route path="/gql" component={GQL} title="GraphQL PoC" />
 	</Router>
 );
