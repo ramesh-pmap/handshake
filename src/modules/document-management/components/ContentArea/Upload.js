@@ -2,16 +2,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import UploadFile from './UploadFile';
+
 // Redux.
 import { toggleRightSidebar, setRightPanelAreaView, setContentAreaView } from '../../../../redux/actions';
-import { ACTIVITY, DETAILFORM, PREVIEW } from '../../../../redux/constants';
+import { DETAILFORM, PREVIEW } from '../../../../redux/constants';
 
 // Components.
-import {Row, Col, Button, ListGroup, ListGroupItem, ProgressBar} from 'react-bootstrap';
+import {Row, Col, Button, ListGroup, ListGroupItem} from 'react-bootstrap';
 import Icon from 'react-fa';
 import Dropzone from 'react-dropzone';
-
-import Filestack from 'filepicker-js';
 
 // Define class.
 class Upload extends React.Component {
@@ -20,11 +20,8 @@ class Upload extends React.Component {
     super(props);
 
     this.state = {
-      files: [],
-      fileName: '',
-      progress: 0,
-      success: false,
-      startUpload: false,
+      droppedFiles: [],
+      success: false
     };
   }
 
@@ -40,26 +37,8 @@ class Upload extends React.Component {
   // Dropzone.
   onDrop(uploadedFiles) {
     this.setState({
-      files: uploadedFiles,
-      fileName: uploadedFiles[0].name,
+      droppedFiles: uploadedFiles,
       upload: true});
-    Filestack.setKey('ApllgXw6MTHiBIIas6R9Dz');
-    Filestack.store(
-      uploadedFiles[0],
-      (blob) => {
-        console.log('Store successful: ', JSON.stringify(blob));
-        this.setState({
-          success: true,
-          upload: false
-        });
-      },
-      (error) => {
-        console.log(error.toString());
-      },
-      (p) => {
-        this.setState({ progress: p });
-      }
-    );
   }
   onOpenClick() {
     this.refs.dropzone.open();
@@ -67,9 +46,13 @@ class Upload extends React.Component {
 
   // Render method.
   render() {
+    // Map droppedFiles to each UploadFile Component.
+    let listOfFiles = this.state.droppedFiles.map((f) => {
+      // Using preview value for unique key.
+      return <UploadFile key={f.preview} file={f} />;
+    });
     return (
       <div>
-
         <Dropzone id="Upload_Dropzone" ref="dropzone" onDrop={this.onDrop.bind(this)} className="dropzone">
           <p>
             <Icon name="upload" className="fa-2x text-success" />
@@ -98,51 +81,8 @@ class Upload extends React.Component {
           {
             this.state.upload ?
               <div>
-
-                <ListGroupItem onClick={this.handleUploadedFileClick.bind(this, ACTIVITY)}>
-                  <Button componentClass="div" bsStyle="link" disabled>
-                    <Icon name="file-image-o" className="fa-fw fa-lg" />
-                    &nbsp;
-                    {this.state.fileName}
-                  </Button>
-                  <Row>
-                    <Col xs={10}>
-                      <ProgressBar bsStyle="primary" active now={this.state.progress} label="%(percent)s%" />
-                    </Col>
-                    <Col xs={2} className="text-right">
-                      <Button componentClass="div" bsStyle="default" bsSize="xs">
-                        <Icon name="pause" />
-                      </Button>
-                    </Col>
-                  </Row>
-                </ListGroupItem>
-
+                {listOfFiles}
               </div>
-            : null
-          }
-          {
-            this.state.success ?
-              <ListGroupItem onClick={this.handleUploadedFileClick.bind(this, DETAILFORM)}>
-                <Row>
-                  <Col xs={10}>
-                    <Button componentClass="div" bsStyle="link">
-                      <Icon name="file-word-o" className="fa-lg" />
-                      &nbsp;
-                      {this.state.fileName}
-                    </Button>
-                  </Col>
-                  <Col xs={2} className="text-right">
-                    <Button componentClass="div" bsStyle="link" bsSize="xs">
-                      <Icon name="trash" className="fa-lg text-muted" />
-                    </Button>
-                    &nbsp;
-                    <Button componentClass="div" bsStyle="link" bsSize="xs">
-                      <Icon name="pencil" className="fa-lg text-muted" />
-                      &nbsp; Add Details
-                    </Button>
-                  </Col>
-                </Row>
-              </ListGroupItem>
             : null
           }
 
