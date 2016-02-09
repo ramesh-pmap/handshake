@@ -22,7 +22,7 @@ class CheckOut extends React.Component {
     const { state } = this.props;
 
     return (
-      <Modal show={state.modalOpened} onHide={this.handleModalButtonClick.bind(this)}>
+      <Modal show={state.ui.modalOpened} onHide={this.handleModalButtonClick.bind(this)}>
         <Modal.Header closeButton>
           <Modal.Title>Check Out</Modal.Title>
         </Modal.Header>

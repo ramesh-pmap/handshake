@@ -47,11 +47,13 @@ class Preview extends React.Component {
 
   showDetail() {
     const { state, dispatch } = this.props;
+    const rightSidebarOpened = state.ui.rightSidebarOpened;
+
     dispatch(setRightPanelAreaView(DETAIL));
-    if (!state.rightSidebarOpened) {
-      dispatch(toggleRightSidebar(state.rightSidebarOpened));
-    } else if (state.rightSidebarOpened) {
-      dispatch(toggleRightSidebar(state.rightSidebarOpened));
+    if (!rightSidebarOpened) {
+      dispatch(toggleRightSidebar(rightSidebarOpened));
+    } else if (rightSidebarOpened) {
+      dispatch(toggleRightSidebar(rightSidebarOpened));
     }
   }
 
@@ -75,8 +77,8 @@ class Preview extends React.Component {
   render() {
     const { state } = this.props;
 
-    const currentFileId = state.currentFileId;
-    const docFiles = state.docFiles;
+    const currentFileId = state.ui.currentFileId;
+    const docFiles = state.ui.docFiles;
     let fileData = [];
 
     // Find selected file in the array.
@@ -109,7 +111,7 @@ class Preview extends React.Component {
     }
 
     return (
-      <div className="preview-panel" style={{height: state.windowDimensions.height - 88}}>
+      <div className="preview-panel" style={{height: state.ui.windowDimensions.height - 88}}>
         <div className="preview-panel-toolbar clearfix">
           <div className="pull-left lead">
           {docTitle}
@@ -119,7 +121,7 @@ class Preview extends React.Component {
               onClick={this.showDetail.bind(this)}>
               <Icon name="list-alt" className="fa-lg" />
               &nbsp;
-              { state.rightSidebarOpened ? 'Hide Details' : 'View Details'}
+              { state.ui.rightSidebarOpened ? 'Hide Details' : 'View Details'}
             </Button>
             <Button bsStyle="link" bsSize="sm" className="text-muted"
               onClick={this.print.bind(this)}>

@@ -21,7 +21,7 @@ class ModalArea extends React.Component {
   render() {
     const { state } = this.props;
     // Modal view.
-    const currentView = state.modalView;
+    const currentView = state.ui.modalView;
     let modalView;
     switch (currentView) {
     case SHARE:

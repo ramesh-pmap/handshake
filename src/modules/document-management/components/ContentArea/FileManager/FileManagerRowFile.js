@@ -46,8 +46,8 @@ class FileManagerRowFile extends React.Component {
     // Redux actions.
     dispatch(selectFile(fileId));
     dispatch(setRightPanelAreaView(DETAIL));
-    if (!state.rightSidebarOpened) {
-      dispatch(toggleRightSidebar(state.rightSidebarOpened));
+    if (!state.ui.rightSidebarOpened) {
+      dispatch(toggleRightSidebar(state.ui.rightSidebarOpened));
     }
 
     console.log(this.state.isFocused);

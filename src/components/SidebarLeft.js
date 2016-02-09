@@ -31,7 +31,7 @@ class Sidebar extends React.Component {
       dispatch(changeFrameSource('http://productfacelift.pmapconnect.com/AIMS/WRAIMS/CaseHistory/Case_History_listing.asp?ModuleId=15&Module_Id=15&LocationId=8790&Location_Id=8790'));
       break;
     default:
-      dispatch(changeFrameSource(state.frameUrl));
+      dispatch(changeFrameSource(state.ui.frameUrl));
       break;
     }
   }

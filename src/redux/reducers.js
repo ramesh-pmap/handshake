@@ -1,3 +1,5 @@
+import { combineReducers } from 'redux';
+
 import {
   WINDOW_DIMENSIONS,
   TOGGLE_LEFT_SIDEBAR,
@@ -11,10 +13,13 @@ import {
   SET_MODAL_VIEW,
   SET_FIREBASE_URL,
   IFRAME_SOURCE,
-  SEARCHING_FOR
+  SEARCHING_FOR,
+  INVALIDATE_FOLDERS,
+  REQUEST_FOLDERS,
+  RECEIVE_FOLDERS
 } from './constants';
 
-function docMgtAppReducer(state = {}, action = {}) {
+function docMgtUIReducer(state = {}, action) {
   switch (action.type) {
 
   case WINDOW_DIMENSIONS:
@@ -103,4 +108,37 @@ function docMgtAppReducer(state = {}, action = {}) {
   }
 }
 
-export default docMgtAppReducer;
+function docMgtDataReducer(state = {
+  isFetching: false,
+  didInvalidate: false,
+  items: []
+}, action) {
+  switch (action.type) {
+  case INVALIDATE_FOLDERS:
+    return Object.assign({}, state, {
+      didInvalidate: true
+    });
+  case REQUEST_FOLDERS:
+    return Object.assign({}, state, {
+      isFetching: true,
+      didInvalidate: false
+    });
+  case RECEIVE_FOLDERS:
+    return Object.assign({}, state, {
+      isFetching: false,
+      didInvalidate: false,
+      items: action.folders,
+      lastUpdated: action.receivedAt
+    });
+  default:
+    return state;
+  }
+}
+
+const rootReducer = combineReducers({
+  ui: docMgtUIReducer,
+  data: docMgtDataReducer
+});
+
+
+export default rootReducer;

@@ -11,10 +11,16 @@ import {
   SET_MODAL_VIEW,
   SET_FIREBASE_URL,
   IFRAME_SOURCE,
-  SEARCHING_FOR
+  SEARCHING_FOR,
+  SELECT_FOLDER
 } from './constants';
 
- // Action creators
+// Async Action creators
+export function selectFolder(id) {
+  return { type: SELECT_FOLDER, id };
+}
+
+// Action creators
 export function getWindowDimensions(value) {
   return { type: WINDOW_DIMENSIONS, value };
 }

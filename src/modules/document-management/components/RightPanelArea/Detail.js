@@ -69,7 +69,7 @@ class Detail extends React.Component {
 
   deleteForm() {
     const { state } = this.props;
-    let ref = new Firebase(state.firebaseUrl + '/document/');
+    let ref = new Firebase(state.ui.firebaseUrl + '/document/');
 
     // initial list
     let list = [];
@@ -82,7 +82,7 @@ class Detail extends React.Component {
     // for every value in the list
     for (let value of list) {
       // if the doc_id of the value matches the currentFileId
-      if (value.doc_id === state.currentFileId) {
+      if (value.doc_id === state.ui.currentFileId) {
         // assign the doc_is_active value to 0
         value.doc_is_active = 0;
       }
@@ -110,8 +110,8 @@ class Detail extends React.Component {
   // Render method.
   render() {
     const { state } = this.props;
-    const currentFileId = state.currentFileId;
-    const docFiles = state.docFiles;
+    const currentFileId = state.ui.currentFileId;
+    const docFiles = state.ui.docFiles;
     let fileData = [];
 
     // Find selected file in the array.

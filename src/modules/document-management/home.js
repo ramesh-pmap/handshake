@@ -77,7 +77,7 @@ class Page extends React.Component {
 
     // // FIREBASE`
     // // Fetch Source Json data from Firebase
-    // let ref = new Firebase(state.firebaseUrl);
+    // let ref = new Firebase(state.ui.firebaseUrl);
     // ref.once('value', data => {
     //   // console.log('data from firebase', data.val());
     //   // Redux action.
@@ -113,7 +113,7 @@ class Page extends React.Component {
 
   handleRightSidePanelToggle() {
     const { state, dispatch } = this.props;
-    dispatch(toggleRightSidebar(state.rightSidebarOpened));
+    dispatch(toggleRightSidebar(state.ui.rightSidebarOpened));
   }
 
   // Render method.
@@ -125,7 +125,7 @@ class Page extends React.Component {
         <Main>
 
         {/* Column wrapper. */}
-          <div className={ state.rightSidebarOpened ? 'main-col-wrapper sidebar--open clearfix' : 'main-col-wrapper sidebar--closed clearfix' }>
+          <div className={ state.ui.rightSidebarOpened ? 'main-col-wrapper sidebar--open clearfix' : 'main-col-wrapper sidebar--closed clearfix' }>
 
           {/* Left (Main) column. */}
             <div className="main-col main-col-left">

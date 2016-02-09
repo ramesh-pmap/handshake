@@ -77,10 +77,10 @@ class RightPanelArea extends React.Component {
 
   handleTabClick(tab) {
     const { state, dispatch } = this.props;
-    if (!state.rightSidebarOpened) {
-      dispatch(toggleRightSidebar(state.rightSidebarOpened));
-    } else if (state.rightSidebarOpened && tab === this.state.currentTab) {
-      dispatch(toggleRightSidebar(state.rightSidebarOpened));
+    if (!state.ui.rightSidebarOpened) {
+      dispatch(toggleRightSidebar(state.ui.rightSidebarOpened));
+    } else if (state.ui.rightSidebarOpened && tab === this.state.currentTab) {
+      dispatch(toggleRightSidebar(state.ui.rightSidebarOpened));
     }
     switch (tab) {
     case TAB_DETAIL:
@@ -94,7 +94,7 @@ class RightPanelArea extends React.Component {
 
   handleCloseButtonClick() {
     const { state, dispatch } = this.props;
-    dispatch(toggleRightSidebar(state.rightSidebarOpened));
+    dispatch(toggleRightSidebar(state.ui.rightSidebarOpened));
   }
 
   // Render method.
@@ -102,7 +102,7 @@ class RightPanelArea extends React.Component {
     const { state } = this.props;
 
     // Right panel view.
-    const currentView = state.rightPanelAreaView;
+    const currentView = state.ui.rightPanelAreaView;
     let rightPanelArea;
     switch (currentView) {
     case ACTIVITY:
@@ -154,9 +154,9 @@ class RightPanelArea extends React.Component {
       this.state.currentTab = TAB_TASKS;
     }
 
-    let sidebarHeight = state.windowDimensions.height;
-    if (state.windowDimensions.width >= 768) {
-      sidebarHeight = state.windowDimensions.height - 50;
+    let sidebarHeight = state.ui.windowDimensions.height;
+    if (state.ui.windowDimensions.width >= 768) {
+      sidebarHeight = state.ui.windowDimensions.height - 50;
     }
 
     return (

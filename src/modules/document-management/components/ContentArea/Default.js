@@ -18,9 +18,9 @@ class Default extends React.Component {
   render() {
     // File Manager data
     const { state } = this.props;
-    const currentId = state.currentFolderId;
-    const docFolders = state.docFolders;
-    const filesData = state.docFiles;
+    const currentId = state.ui.currentFolderId;
+    const docFolders = state.ui.docFolders;
+    const filesData = state.ui.docFiles;
     let folderData = [];
     let breadcrumbData = [];
 

@@ -17,14 +17,14 @@ class Layout extends React.Component {
 
   handleUserToggle() {
     const { state, dispatch } = this.props;
-    dispatch(toggleLeftSidebar(state.leftSidebarOpened));
+    dispatch(toggleLeftSidebar(state.ui.leftSidebarOpened));
   }
 
   // Render method.
   render() {
     const { state } = this.props;
     // console.log('Layout:state:', state);
-    const leftSidebarOpened = state.leftSidebarOpened;
+    const leftSidebarOpened = state.ui.leftSidebarOpened;
     const noHeader = this.props.noHeader;
     let toggle = (leftSidebarOpened === false) ? 'shell-wrapper doc-wrapper toggled' : 'shell-wrapper doc-wrapper';
 

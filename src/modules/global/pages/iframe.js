@@ -36,7 +36,7 @@ class Page extends React.Component {
 
     return (
       <Main>
-        <Iframe url={state.frameUrl} />
+        <Iframe url={state.ui.frameUrl} />
       </Main>
     );
   }

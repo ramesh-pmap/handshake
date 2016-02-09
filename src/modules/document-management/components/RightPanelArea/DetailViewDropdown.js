@@ -34,7 +34,7 @@ class DetailViewDropdown extends React.Component {
 
   componentWillMount() {
     const { state } = this.props;
-    switch (state.rightPanelAreaView) {
+    switch (state.ui.rightPanelAreaView) {
     case DETAIL:
       this.setState({ currentViewTitle: DETAIL_TITLE });
       break;

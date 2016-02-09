@@ -27,7 +27,7 @@ class ContentArea extends React.Component {
     const { state } = this.props;
 
     // Right Panel
-    const currentView = state.contentAreaView;
+    const currentView = state.ui.contentAreaView;
     let contentArea;
 
     switch (currentView) {

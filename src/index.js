@@ -3,13 +3,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router } from 'react-router';
 import createBrowserHistory from 'history/lib/createBrowserHistory';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+import thunkMiddleware from 'redux-thunk';
+import createLogger from 'redux-logger';
 
 // Local Dependencies.
 import Routes from './routes';
 import App from './app';
-import DocMgtApp from './redux/reducers';
+import rootReducer from './redux/reducers';
 import { getWindowDimensions, toggleLeftSidebar, toggleRightSidebar, changeFrameSource, setFirebaseUrl } from './redux/actions';
 import utils from './utils';
 
@@ -17,7 +19,17 @@ import utils from './utils';
 // import './styles/sass/andromeda/andromeda.scss';
 import './styles/sass/andromeda/theme/theme.scss';
 
-let store = createStore(DocMgtApp);
+const loggerMiddleware = createLogger();
+
+let store = createStore(
+  rootReducer,
+  applyMiddleware(
+    thunkMiddleware, // lets us dispatch() functions
+    loggerMiddleware // neat middleware that logs actions
+  )
+);
+
+// console.log(store.getState());
 
 const dimensions = utils.getWindowDimensions();
 

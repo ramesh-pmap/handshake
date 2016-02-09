@@ -27,8 +27,8 @@ class Upload extends React.Component {
 
   handleUploadedFileClick(panelView) {
     const { state, dispatch } = this.props;
-    if (!state.rightSidebarOpened) {
-      dispatch(toggleRightSidebar(state.rightSidebarOpened));
+    if (!state.ui.rightSidebarOpened) {
+      dispatch(toggleRightSidebar(state.ui.rightSidebarOpened));
     }
     dispatch(setRightPanelAreaView(panelView));
     dispatch(setContentAreaView(PREVIEW));
