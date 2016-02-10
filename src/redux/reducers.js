@@ -14,9 +14,10 @@ import {
   SET_FIREBASE_URL,
   IFRAME_SOURCE,
   SEARCHING_FOR,
-  INVALIDATE_FOLDERS,
-  REQUEST_FOLDERS,
-  RECEIVE_FOLDERS
+  // Data / Async
+  FETCH_FOLDERS_REQUEST,
+  FETCH_FOLDERS_SUCCESS,
+  FETCH_FOLDERS_FAILURE
 } from './constants';
 
 function dmUIReducer(state = {}, action) {
@@ -113,21 +114,21 @@ function dmDataReducer(state = {
   items: []
 }, action) {
   switch (action.type) {
-  case INVALIDATE_FOLDERS:
-    return Object.assign({}, state, {
-      didInvalidate: true
-    });
-  case REQUEST_FOLDERS:
+  case FETCH_FOLDERS_REQUEST:
     return Object.assign({}, state, {
       isFetching: true,
       didInvalidate: false
     });
-  case RECEIVE_FOLDERS:
+  case FETCH_FOLDERS_SUCCESS:
     return Object.assign({}, state, {
       isFetching: false,
       didInvalidate: false,
       items: action.folders,
       lastUpdated: action.receivedAt
+    });
+  case FETCH_FOLDERS_FAILURE:
+    return Object.assign({}, state, {
+      didInvalidate: true
     });
   default:
     return state;
