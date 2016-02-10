@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { toggleLeftSidebar } from '../redux/actions';
+import { toggleLeftSidebar } from '../redux/actions/ui-actions';
 
 // Layout components.
 import Header from '../components/Header';

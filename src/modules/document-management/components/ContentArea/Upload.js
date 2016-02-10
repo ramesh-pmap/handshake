@@ -5,8 +5,12 @@ import { connect } from 'react-redux';
 import UploadFile from './UploadFile';
 
 // Redux.
-import { toggleRightSidebar, setRightPanelAreaView, setContentAreaView } from '../../../../redux/actions';
-import { DETAILFORM, PREVIEW } from '../../../../redux/constants';
+import {
+  toggleRightSidebar,
+  setRightPanelAreaView,
+  setContentAreaView
+} from '../../../../redux/actions/ui-actions';
+import { DETAILFORM, PREVIEW } from '../../../../redux/constants/ui-constants';
 
 // Components.
 import {Row, Col, Button, ListGroup, ListGroupItem} from 'react-bootstrap';

@@ -2,8 +2,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { changeFolder, setRightPanelAreaView } from '../../../../../redux/actions';
-import { ACTIVITY } from '../../../../../redux/constants';
+import { changeFolder, setRightPanelAreaView } from '../../../../../redux/actions/ui-actions';
+import { ACTIVITY } from '../../../../../redux/constants/ui-constants';
 
 // Core components.
 import {Breadcrumb, BreadcrumbItem} from 'react-bootstrap';

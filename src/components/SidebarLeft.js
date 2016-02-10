@@ -11,7 +11,7 @@ import {Nav, NavItem} from 'react-bootstrap';
 // Images.
 // import Logo from '../images/mars-logo.png';
 
-import { changeFrameSource } from '../redux/actions';
+import { changeFrameSource } from '../redux/actions/ui-actions';
 
 
 // Define class.

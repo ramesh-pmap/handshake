@@ -16,13 +16,13 @@ import {
   APPROVE_CHANGE_REQUEST,
   RELEASE_NOTIFICATION,
   PERIODIC_REVIEW
-} from '../../../../redux/constants';
+} from '../../../../redux/constants/ui-constants';
 
 // Redux.
 import {
   setContentAreaView,
   setRightPanelAreaView
-} from '../../../../redux/actions';
+} from '../../../../redux/actions/ui-actions';
 
 // Define class.
 class ActivityList extends React.Component {

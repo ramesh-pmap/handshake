@@ -17,9 +17,9 @@ import {
   toggleLeftSidebar,
   toggleRightSidebar,
   changeFrameSource,
-  setFirebaseUrl,
-  fetchFolders
-} from './redux/actions';
+  setFirebaseUrl
+} from './redux/actions/ui-actions';
+import { fetchFolders } from './redux/actions/folders-actions';
 
 import utils from './utils';
 

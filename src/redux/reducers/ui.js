@@ -1,5 +1,3 @@
-import { combineReducers } from 'redux';
-
 import {
   WINDOW_DIMENSIONS,
   TOGGLE_LEFT_SIDEBAR,
@@ -14,11 +12,7 @@ import {
   SET_FIREBASE_URL,
   IFRAME_SOURCE,
   SEARCHING_FOR,
-  // Data / Async
-  FETCH_FOLDERS_REQUEST,
-  FETCH_FOLDERS_SUCCESS,
-  FETCH_FOLDERS_FAILURE
-} from './constants';
+} from '../constants/ui-constants';
 
 function dmUIReducer(state = {}, action) {
   switch (action.type) {
@@ -108,38 +102,5 @@ function dmUIReducer(state = {}, action) {
   }
 }
 
-function dmFoldersReducer(state = {
-  isFetching: false,
-  didInvalidate: false,
-  items: []
-}, action) {
-  switch (action.type) {
-  case FETCH_FOLDERS_REQUEST:
-    return Object.assign({}, state, {
-      isFetching: true,
-      didInvalidate: false
-    });
-  case FETCH_FOLDERS_SUCCESS:
-    return Object.assign({}, state, {
-      isFetching: false,
-      didInvalidate: false,
-      items: action.folders,
-      lastUpdated: action.receivedAt
-    });
-  case FETCH_FOLDERS_FAILURE:
-    return Object.assign({}, state, {
-      didInvalidate: true,
-      error: action.error
-    });
-  default:
-    return state;
-  }
-}
 
-const rootReducer = combineReducers({
-  ui: dmUIReducer,
-  folders: dmFoldersReducer
-});
-
-
-export default rootReducer;
+export default dmUIReducer;

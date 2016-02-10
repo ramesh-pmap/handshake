@@ -5,7 +5,7 @@ import {
   getWindowDimensions,
   toggleRightSidebar,
   setRightPanelAreaView
-} from '../../redux/actions';
+} from '../../redux/actions/ui-actions';
 import {
   ACTIVITY,
   DETAIL,
@@ -18,7 +18,7 @@ import {
   RELEASE_NOTIFICATION,
   APPROVAL_WORKFLOW,
   PERIODIC_REVIEW
-} from '../../redux/constants';
+} from '../../redux/constants/ui-constants';
 
 import { Nav, NavItem, Tooltip, OverlayTrigger } from 'react-bootstrap';
 import Icon from 'react-fa';

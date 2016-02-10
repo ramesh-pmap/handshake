@@ -1,0 +1,2 @@
+// Global.
+export const SET_AUTHORIZATION_TOKEN = 'SET_AUTHORIZATION_TOKEN';

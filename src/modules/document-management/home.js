@@ -11,7 +11,7 @@ import {
   setRightPanelAreaView,
   toggleModal,
   setModalView
-} from '../../redux/actions';
+} from '../../redux/actions/ui-actions';
 
 // Constants.
 import {
@@ -34,7 +34,7 @@ import {
   // RELEASE_NOTIFICATION,
   // PERIODIC_REVIEW,
   // DATAGRID
-} from '../../redux/constants';
+} from '../../redux/constants/ui-constants';
 
 // Core components.
 import { DropdownButton, MenuItem } from 'react-bootstrap';

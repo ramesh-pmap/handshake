@@ -1,7 +1,7 @@
 // Dependencies.
 import React from 'react';
 import { connect } from 'react-redux';
-import { toggleModal } from '../../../../redux/actions';
+import { toggleModal } from '../../../../redux/actions/ui-actions';
 
 import { Button, Modal, Input, FormControls } from 'react-bootstrap';
 import Icon from 'react-fa';

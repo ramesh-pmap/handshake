@@ -1,7 +1,12 @@
 // Dependencies.
 import React from 'react';
 import { connect } from 'react-redux';
-import { SHARE, CHECKIN, CHECKOUT, DOWNLOAD, UPLOAD_NEW_VERSION } from '../../redux/constants';
+import {SHARE,
+  CHECKIN,
+  CHECKOUT,
+  DOWNLOAD,
+  UPLOAD_NEW_VERSION
+} from '../../redux/constants/ui-constants';
 
 // Components.
 import ModalShare from './components/Modal/Share';

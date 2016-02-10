@@ -1,8 +1,8 @@
 // Dependencies.
 import React from 'react';
 import { connect } from 'react-redux';
-import { setContentAreaView, setRightPanelAreaView } from '../../../../redux/actions';
-import { DEFAULT, UPLOAD, SEARCH_RESULTS, ACTIVITY } from '../../../../redux/constants';
+import { setContentAreaView, setRightPanelAreaView } from '../../../../redux/actions/ui-actions';
+import { DEFAULT, UPLOAD, SEARCH_RESULTS, ACTIVITY } from '../../../../redux/constants/ui-constants';
 // import {Link} from 'react-router';
 // import {LinkContainer} from 'react-router-bootstrap';
 

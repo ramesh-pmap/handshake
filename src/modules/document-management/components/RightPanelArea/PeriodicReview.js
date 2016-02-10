@@ -1,8 +1,8 @@
 // Dependencies.
 import React from 'react';
 import { connect } from 'react-redux';
-import { setRightPanelAreaView } from '../../../../redux/actions';
-import { DETAIL } from '../../../../redux/constants';
+import { setRightPanelAreaView } from '../../../../redux/actions/ui-actions';
+import { DETAIL } from '../../../../redux/constants/ui-constants';
 
 // Core components.
 import {Button, Input, FormControls, ListGroup, ListGroupItem} from 'react-bootstrap';

@@ -1,7 +1,7 @@
 // Dependencies.
 import React from 'react';
 import { connect } from 'react-redux';
-import { setRightPanelAreaView } from '../../../../redux/actions';
+import { setRightPanelAreaView } from '../../../../redux/actions/ui-actions';
 import { DETAIL,
   /* VIEWER_CHANGE_REQUEST, */
   APPROVE_CHANGE_REQUEST,
@@ -9,7 +9,7 @@ import { DETAIL,
   RELEASE_NOTIFICATION,
   APPROVAL_WORKFLOW,
   PERIODIC_REVIEW
-} from '../../../../redux/constants';
+} from '../../../../redux/constants/ui-constants';
 
 import { ButtonGroup, DropdownButton, MenuItem } from 'react-bootstrap';
 

@@ -11,7 +11,7 @@ import {
   setContentAreaView,
   setModalView,
   toggleModal
-} from '../../../../../redux/actions';
+} from '../../../../../redux/actions/ui-actions';
 
 // Constants
 import {
@@ -23,7 +23,7 @@ import {
   // CHECKOUT,
   DOWNLOAD,
   UPLOAD_NEW_VERSION
-} from '../../../../../redux/constants';
+} from '../../../../../redux/constants/ui-constants';
 
 // Core components.
 import {Row, Col, Button, ListGroupItem, MenuItem, ButtonToolbar, DropdownButton} from 'react-bootstrap';

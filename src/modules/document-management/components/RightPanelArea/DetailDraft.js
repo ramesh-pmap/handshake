@@ -19,7 +19,7 @@ import {
   setContentAreaView,
   toggleModal,
   setModalView
-} from '../../../../redux/actions';
+} from '../../../../redux/actions/ui-actions';
 
 // Components.
 import Avatar from '../../../../components/Avatar';
@@ -31,7 +31,7 @@ import {
   DETAILFORM,
   DOWNLOAD,
   DETAIL_SUBMITTED
-} from '../../../../redux/constants';
+} from '../../../../redux/constants/ui-constants';
 
 // Import Firebase
 import Firebase from 'firebase';

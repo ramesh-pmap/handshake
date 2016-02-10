@@ -1,7 +1,13 @@
 // Dependencies.
 import React from 'react';
 import { connect } from 'react-redux';
-import { DEFAULT, PREVIEW, UPLOAD, SEARCH_RESULTS, DATAGRID } from '../../redux/constants';
+import {
+  DEFAULT,
+  PREVIEW,
+  UPLOAD,
+  SEARCH_RESULTS,
+  DATAGRID
+} from '../../redux/constants/ui-constants';
 
 // Components.
 import DocumentListHeader from './components/ContentArea/ContentAreaHeader';

@@ -2,8 +2,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { toggleRightSidebar, setRightPanelAreaView, setContentAreaView } from '../../../../redux/actions';
-import { ACTIVITY, DETAILFORM, PREVIEW } from '../../../../redux/constants';
+import {
+  toggleRightSidebar,
+  setRightPanelAreaView,
+  setContentAreaView
+} from '../../../../redux/actions/ui-actions';
+import { ACTIVITY, DETAILFORM, PREVIEW } from '../../../../redux/constants/ui-constants';
 
 // Components.
 import {Row, Col, Button, ListGroupItem, ProgressBar} from 'react-bootstrap';

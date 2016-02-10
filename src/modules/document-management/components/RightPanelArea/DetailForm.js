@@ -1,8 +1,8 @@
 // Dependencies.
 import React from 'react';
 import { connect } from 'react-redux';
-import { setRightPanelAreaView } from '../../../../redux/actions';
-import { DETAIL_DRAFT, ACTIVITY } from '../../../../redux/constants';
+import { setRightPanelAreaView } from '../../../../redux/actions/ui-actions';
+import { DETAIL_DRAFT, ACTIVITY } from '../../../../redux/constants/ui-constants';
 
 import { Row, Col, Button, Input, FormControls } from 'react-bootstrap';
 // import Icon from 'react-fa';

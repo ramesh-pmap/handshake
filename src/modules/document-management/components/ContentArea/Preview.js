@@ -11,9 +11,9 @@ import {
   toggleRightSidebar,
   setModalView,
   toggleModal
-} from '../../../../redux/actions';
+} from '../../../../redux/actions/ui-actions';
 
-import { DEFAULT, DETAIL, DOWNLOAD, SHARE } from '../../../../redux/constants';
+import { DEFAULT, DETAIL, DOWNLOAD, SHARE } from '../../../../redux/constants/ui-constants';
 
 // Define class.
 class Preview extends React.Component {
