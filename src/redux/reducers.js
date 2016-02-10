@@ -108,7 +108,7 @@ function dmUIReducer(state = {}, action) {
   }
 }
 
-function dmDataReducer(state = {
+function dmFoldersReducer(state = {
   isFetching: false,
   didInvalidate: false,
   items: []
@@ -128,7 +128,8 @@ function dmDataReducer(state = {
     });
   case FETCH_FOLDERS_FAILURE:
     return Object.assign({}, state, {
-      didInvalidate: true
+      didInvalidate: true,
+      error: action.error
     });
   default:
     return state;
@@ -137,7 +138,7 @@ function dmDataReducer(state = {
 
 const rootReducer = combineReducers({
   ui: dmUIReducer,
-  data: dmDataReducer
+  folders: dmFoldersReducer
 });
 
 

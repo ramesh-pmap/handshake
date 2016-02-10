@@ -34,8 +34,12 @@ export function fetchFoldersSuccess(folderId, json) {
   };
 }
 
-export function fetchFoldersFailure(folderId) {
-  return { type: FETCH_FOLDERS_FAILURE, folderId };
+export function fetchFoldersFailure(folderId, error) {
+  return {
+    type: FETCH_FOLDERS_FAILURE,
+    folderId,
+    error
+  };
 }
 
 export function fetchFolders(folderId) {
@@ -47,8 +51,8 @@ export function fetchFolders(folderId) {
       .then(json =>
         dispatch(fetchFoldersSuccess(folderId, json))
       )
-      .catch(
-        dispatch(fetchFoldersFailure(folderId))
+      .catch(error =>
+        dispatch(fetchFoldersFailure(folderId, error))
       );
   };
 }
