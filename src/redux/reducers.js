@@ -19,7 +19,7 @@ import {
   RECEIVE_FOLDERS
 } from './constants';
 
-function docMgtUIReducer(state = {}, action) {
+function dmUIReducer(state = {}, action) {
   switch (action.type) {
 
   case WINDOW_DIMENSIONS:
@@ -50,7 +50,6 @@ function docMgtUIReducer(state = {}, action) {
     // console.log('CHANGE_FOLDER Action:', action);
     return Object.assign({}, state, {
       currentFolderId: action.id
-      // currentFolderPath: action.path
     });
 
   case SELECT_FILE:
@@ -108,7 +107,7 @@ function docMgtUIReducer(state = {}, action) {
   }
 }
 
-function docMgtDataReducer(state = {
+function dmDataReducer(state = {
   isFetching: false,
   didInvalidate: false,
   items: []
@@ -136,8 +135,8 @@ function docMgtDataReducer(state = {
 }
 
 const rootReducer = combineReducers({
-  ui: docMgtUIReducer,
-  data: docMgtDataReducer
+  ui: dmUIReducer,
+  data: dmDataReducer
 });
 
 

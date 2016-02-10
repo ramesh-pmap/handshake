@@ -12,7 +12,15 @@ import createLogger from 'redux-logger';
 import Routes from './routes';
 import App from './app';
 import rootReducer from './redux/reducers';
-import { getWindowDimensions, toggleLeftSidebar, toggleRightSidebar, changeFrameSource, setFirebaseUrl } from './redux/actions';
+import {
+  getWindowDimensions,
+  toggleLeftSidebar,
+  toggleRightSidebar,
+  changeFrameSource,
+  setFirebaseUrl,
+  fetchFolders
+} from './redux/actions';
+
 import utils from './utils';
 
 // Stylesheets.
@@ -41,17 +49,9 @@ store.dispatch(toggleRightSidebar(false));
 store.dispatch(setFirebaseUrl('https://resplendent-heat-3135.firebaseio.com'));
 // Set iframe source.
 store.dispatch(changeFrameSource('http://productfacelift.pmapconnect.com/AIMS/WRAIMS/CaseHistory/Case_History_listing.asp?ModuleId=15&Module_Id=15&LocationId=8790&Location_Id=8790'));
+// Async action sample.
+store.dispatch(fetchFolders(12345));
 
-// console.log(store.getState());
-// // Every time the state changes, log it
-// let unsubscribe = store.subscribe(() =>
-//   console.log(store.getState())
-// );
-// store.dispatch(toggleSidebar(true));
-// store.dispatch(toggleSidebar(false));
-// store.dispatch(toggleSidebar(true));
-// store.dispatch(toggleSidebar(false));
-// unsubscribe();
 
 // Routes template.
 const template = (

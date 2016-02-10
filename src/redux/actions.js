@@ -12,15 +12,49 @@ import {
   SET_FIREBASE_URL,
   IFRAME_SOURCE,
   SEARCHING_FOR,
-  SELECT_FOLDER
+  // Data / Async
+  FETCH_FOLDERS_REQUEST,
+  FETCH_FOLDERS_SUCCESS,
+  FETCH_FOLDERS_FAILURE
 } from './constants';
 
-// Async Action creators
-export function selectFolder(id) {
-  return { type: SELECT_FOLDER, id };
+// DATA - Async Action creators
+// Folders
+export function fetchFoldersRequest(folderId) {
+  return { type: FETCH_FOLDERS_REQUEST, folderId };
 }
 
-// Action creators
+export function fetchFoldersSuccess(folderId, json) {
+  return {
+    type: FETCH_FOLDERS_SUCCESS,
+    folderId,
+    folders: json.document,
+    // folders: json.data.children.map(child => child.data),
+    receivedAt: Date.now()
+  };
+}
+
+export function fetchFoldersFailure(folderId) {
+  return { type: FETCH_FOLDERS_FAILURE, folderId };
+}
+
+export function fetchFolders(folderId) {
+  return (dispatch) => {
+    dispatch(fetchFoldersRequest(folderId));
+    // return fetch(`http://cosmos.pmapconnect.com:8081/api/0/documents/${folderId}`)
+    return fetch(`http://cosmos.pmapconnect.com:8081/api/0/documents`)
+      .then(response => response.json())
+      .then(json =>
+        dispatch(fetchFoldersSuccess(folderId, json))
+      )
+      .catch(
+        dispatch(fetchFoldersFailure(folderId))
+      );
+  };
+}
+
+
+// UI - Sync Action creators
 export function getWindowDimensions(value) {
   return { type: WINDOW_DIMENSIONS, value };
 }
@@ -37,8 +71,8 @@ export function toggleModal(value) {
   return { type: TOGGLE_MODAL, value };
 }
 
-export function changeFolder(id, path) {
-  return { type: CHANGE_FOLDER, id, path };
+export function changeFolder(id) {
+  return { type: CHANGE_FOLDER, id};
 }
 
 export function selectFile(value) {
