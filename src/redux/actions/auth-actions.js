@@ -4,6 +4,8 @@ import {
   FETCH_AUTH_FAILURE
 } from '../constants/auth-constants';
 
+import { setAuthorizationToken } from './global-actions';
+
 // Async Action creators
 // Auth
 export function fetchAuthRequest(consumerId) {
@@ -44,9 +46,14 @@ export function fetchAuth(consumerId) {
 
   return (dispatch) => {
     dispatch(fetchAuthRequest(consumerId));
-    // return fetch(`http://cosmos.pmapconnect.com:8081/api/0/documents/${folderId}`)
     return fetch(url, sInit)
-      .then(response => response.json())
+      .then(response => {
+        const token = response.headers.get('Authorization');
+        if (token) {
+          dispatch(setAuthorizationToken(token));
+        }
+        return response.json();
+      })
       .then(json => {
         if (json.ErrorMessage) {
           dispatch(fetchAuthFailure(consumerId, json));
