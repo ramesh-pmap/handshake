@@ -22,7 +22,7 @@ class UploadFile extends React.Component {
     super(props);
 
     this.state = {
-      progress: 90,
+      progress: 100,
     };
 
     // Set API Key for Filestack
@@ -68,7 +68,7 @@ class UploadFile extends React.Component {
       })
       .then(json => {
         console.log(json);
-        this.setState({progress: 100});
+        this.setState({progress: 101});
       });
   }
 
@@ -83,7 +83,7 @@ class UploadFile extends React.Component {
 
   render() {
     let fileItem;
-    if (this.state.progress < 100) {
+    if (this.state.progress < 101) {
       fileItem = (
         <ListGroupItem onClick={this.handleUploadedFileClick.bind(this, ACTIVITY)}>
           <Button componentClass="div" bsStyle="link" disabled>
@@ -93,7 +93,7 @@ class UploadFile extends React.Component {
           </Button>
           <Row>
             <Col xs={10}>
-              <ProgressBar bsStyle="primary" active now={this.state.progress} label="%(percent)s%" />
+              <ProgressBar bsStyle="primary" active now={this.state.progress} label="Uploading" />
             </Col>
             <Col xs={2} className="text-right">
               <Button componentClass="div" bsStyle="default" bsSize="xs">
