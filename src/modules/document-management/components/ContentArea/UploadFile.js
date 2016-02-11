@@ -13,7 +13,7 @@ import { ACTIVITY, DETAILFORM, PREVIEW } from '../../../../redux/constants/ui-co
 import {Row, Col, Button, ListGroupItem, ProgressBar} from 'react-bootstrap';
 import Icon from 'react-fa';
 
-import Filestack from 'filepicker-js';
+// import Filestack from 'filepicker-js';
 
 // Define class.
 class UploadFile extends React.Component {
@@ -22,26 +22,54 @@ class UploadFile extends React.Component {
     super(props);
 
     this.state = {
-      progress: 0,
+      progress: 90,
     };
 
     // Set API Key for Filestack
-    Filestack.setKey('ApllgXw6MTHiBIIas6R9Dz');
-    Filestack.store(
-      this.props.file,
-      (blob) => {
-        this.setState({
-          upload: false,
-          fileInfo: blob
-        });
-      },
-      (error) => {
-        console.log(error.toString());
-      },
-      (p) => {
-        this.setState({ progress: p });
-      }
-    );
+    // Filestack.setKey('ApllgXw6MTHiBIIas6R9Dz');
+    // Filestack.store(
+    //   this.props.file,
+    //   (blob) => {
+    //     this.setState({
+    //       upload: false,
+    //       fileInfo: blob
+    //     });
+    //   },
+    //   (error) => {
+    //     console.log(error.toString());
+    //   },
+    //   (p) => {
+    //     this.setState({ progress: p });
+    //   }
+    // );
+    const { state } = this.props;
+
+    let url = 'https://devsvc.pmapconnect.com/papi/v1/dm/document/upload';
+    let sHeaders = new Headers();
+    sHeaders.append('Accept-Language', 'en');
+    sHeaders.append('ApplicationType', '4');
+    sHeaders.append('Authorization', state.global.authorizationToken);
+    sHeaders.append('ConsumerId', state.global.consumerId);
+    sHeaders.append('UserId', '12878');
+    sHeaders.append('LocationId', '8840');
+
+    let sBody = new FormData();
+    sBody.append('file', this.props.file);
+
+    let uploadInit = {
+      method: 'POST',
+      headers: sHeaders,
+      body: sBody
+    };
+
+    fetch(url, uploadInit)
+      .then(response => {
+        return response.json();
+      })
+      .then(json => {
+        console.log(json);
+        this.setState({progress: 100});
+      });
   }
 
   handleUploadedFileClick(panelView) {
