@@ -7,6 +7,7 @@ import { toggleLeftSidebar } from '../redux/actions/ui-actions';
 import Header from '../components/Header';
 // import Footer from '../components/Footer';
 import Sidebar from '../components/SidebarLeft';
+import Info from '../components/Info';
 
 // Define class.
 class Layout extends React.Component {
@@ -23,7 +24,12 @@ class Layout extends React.Component {
   // Render method.
   render() {
     const { state } = this.props;
-    // console.log('Layout:state:', state);
+    // Temporary info.
+    const consumerId = state.global.consumerId;
+    const token = state.global.authorizationToken;
+    const message = `consumerId = ${consumerId} | authorizationToken=${token}`;
+
+    // Check left sidebar status.
     const leftSidebarOpened = state.ui.leftSidebarOpened;
     const noHeader = this.props.noHeader;
     let toggle = (leftSidebarOpened === false) ? 'shell-wrapper doc-wrapper toggled' : 'shell-wrapper doc-wrapper';
@@ -41,6 +47,7 @@ class Layout extends React.Component {
             }
           })()}
 
+          <Info message={message} />
           {this.props.children}
 
       </div>
