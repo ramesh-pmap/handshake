@@ -25,8 +25,8 @@ class Layout extends React.Component {
   render() {
     const { state } = this.props;
     // Temporary info.
-    const consumerId = state.global.consumerId;
-    const token = state.global.authorizationToken;
+    const consumerId = state.global.consumerId ? state.global.consumerId : 'No consumerId';
+    const token = state.global.authorizationToken ? state.global.authorizationToken : 'No Token';
     const error = state.auth.error ? state.auth.error.ErrorMessage : 'No errors';
 
     const message = `consumerId = ${consumerId} | authorizationToken=${token} | error=${error}`;
