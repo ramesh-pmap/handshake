@@ -5,6 +5,28 @@ import Icon from 'react-fa';
 
 // Define class.
 class Avatar extends React.Component {
+  constructor() {
+    super();
+
+    // Background color.
+    const colors = [
+      '#ff6c93',
+      '#ff8a13',
+      '#4cbb22',
+      '#4CBBFC',
+      '#EEEE22',
+      '#ffc38a',
+      '#fadc4a',
+      '#4fc7ea',
+      '#E3FFEE',
+      '#80E56F',
+      '#7fcbc9'
+    ];
+
+    // Get random number from colors array
+    const random = Math.floor((Math.random() * colors.length));
+    this.randomColor = colors[random];
+  }
 
   // Render method.
   render() {
@@ -41,29 +63,11 @@ class Avatar extends React.Component {
       radius = '50%';
     }
 
-    // Background color.
-    const colors = [
-      '#ff6c93',
-      '#ff8a13',
-      '#4cbb22',
-      '#4CBBFC',
-      '#EEEE22',
-      '#ffc38a',
-      '#fadc4a',
-      '#4fc7ea',
-      '#E3FFEE',
-      '#80E56F',
-      '#7fcbc9'
-    ];
-
-    // Get random number from colors array
-    const random = Math.floor((Math.random() * colors.length));
-
     let styles = {
       width: sizeStyle,
       height: sizeStyle,
       borderRadius: radius,
-      backgroundColor: colors[random]
+      backgroundColor: this.randomColor
     };
 
     const status = this.props.status || '';
