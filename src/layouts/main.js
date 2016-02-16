@@ -27,7 +27,9 @@ class Layout extends React.Component {
     // Temporary info.
     const consumerId = state.global.consumerId;
     const token = state.global.authorizationToken;
-    const message = `consumerId = ${consumerId} | authorizationToken=${token}`;
+    const error = state.auth.error ? state.auth.error.ErrorMessage : 'No errors';
+
+    const message = `consumerId = ${consumerId} | authorizationToken=${token} | error=${error}`;
 
     // Check left sidebar status.
     const leftSidebarOpened = state.ui.leftSidebarOpened;
