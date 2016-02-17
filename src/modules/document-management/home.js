@@ -128,7 +128,6 @@ class Page extends React.Component {
     return (
       <div>
         <Main>
-          {dev === true ? <Info /> : ''}
 
           {/* Column wrapper. */}
           <div className={ state.ui.rightSidebarOpened ? 'main-col-wrapper sidebar--open clearfix' : 'main-col-wrapper sidebar--closed clearfix' }>
@@ -169,6 +168,9 @@ class Page extends React.Component {
 
               {/* ContentArea component */}
               <ContentArea />
+                {/* Debugging component */}
+              {dev ? <Info /> : ''}
+
 
             </div>
 

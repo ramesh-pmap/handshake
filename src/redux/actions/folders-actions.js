@@ -35,7 +35,7 @@ export function fetchFoldersFailure(folderId, error) {
 
 export function fetchFolders(folderId, token, consumerId) {
   let url = `https://devsvc.pmapconnect.com/papi/dm/folder/${folderId}`;
-  // let url = `http://cosmos.pmapconnect.com:8081/api/0/documents/`;
+  // let url = `https://devsvc.pmapconnect.com/papi/dm/folder/root`;
 
   let sHeaders = new Headers();
   sHeaders.append('Accept-Language', 'en');
