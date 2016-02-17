@@ -495,7 +495,7 @@ $search-expanded-width: 400px;
     -moz-transition: all .15s linear;
     transition: all .15s linear;
 
-    &:hover{
+    &.hover:hover{
       cursor: pointer;
       background-color: lighten($primary-color, 50%); // $row-hover;
     }
@@ -678,7 +678,7 @@ $search-expanded-width: 400px;
     font-size: 18px;
     padding-top: 4px;
   }
-  
+
   .avatar-initials{
     display: block;
     text-align: center;

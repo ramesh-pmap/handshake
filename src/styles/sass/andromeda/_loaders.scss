@@ -1,0 +1,93 @@
+
+@-webkit-keyframes placeHolderShimmer {
+  0% {
+    background-position: -100% 0
+  }
+  100% {
+    background-position: 100% 0
+  }
+}
+@-webkit-keyframes prideShimmer {
+  from {
+    background-position: top left
+  }
+  to {
+    background-position: top right
+  }
+}
+
+.--file_manager-loader_frapper {
+    padding: 4px 4px 0;
+}
+.--file_manager-loader_inner {
+  position: relative;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: placeHolderShimmer;
+  -webkit-animation-timing-function: linear;
+  background: #F6F7F8;
+  background-image: linear-gradient(to right, #F6F7F8 0%, #EDEEF1 20%, #F6F7F8 40%, #F6F7F8 100%);
+  background-repeat: no-repeat;
+  background-size: 2000px 104px;
+  height: 20px;
+  overflow: hidden;
+}
+.direction_rtl .--file_manager-loader_inner {
+  -webkit-animation-direction: reverse
+}
+.--file_manager-loader_inner div {
+  background: #fff;
+  height: 6px;
+  left: 0;
+  position: absolute;
+  right: 0
+}
+div.--file_manager-loader_a {
+  height: 20px;
+  left: 20px;
+  right: auto;
+  top: 0;
+  width: 8px
+}
+div.--file_manager-loader_b {
+  height: 4px;
+  left: 28px;
+  top: 0
+}
+div.--file_manager-loader_c {
+  left: 30%;
+  top: 4px;
+  height: 10px;
+  width: 20%;
+}
+div.--file_manager-loader_d {
+  height: 8px;
+  left: 20px;
+  top: 14px
+}
+div.--file_manager-loader_e {
+  left: 100px;
+  top: 26px
+}
+div.--file_manager-loader_f {
+  left: 58%;
+  top: 4px;
+  height: 10px;
+  width: 5%;
+}
+div.--file_manager-loader_g {
+  left: 72%;
+  top: 4px;
+  height: 10px;
+  width: 12%;
+}
+div.--file_manager-loader_h {
+  left: 94%;
+  top: 4px;
+  height: 10px;
+}
+div.--file_manager-loader_i {
+  height: 13px;
+  top: 66px
+}
