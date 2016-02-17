@@ -5,8 +5,8 @@ import Icon from 'react-fa';
 
 // Define class.
 class Avatar extends React.Component {
-  constructor() {
-    super();
+  constructor(props, context) {
+    super(props, context);
 
     // Background color.
     const colors = [
@@ -25,7 +25,9 @@ class Avatar extends React.Component {
 
     // Get random number from colors array
     const random = Math.floor((Math.random() * colors.length));
-    this.randomColor = colors[random];
+    this.state = {
+      randomColor: colors[random]
+    };
   }
 
   // Render method.
@@ -41,6 +43,7 @@ class Avatar extends React.Component {
 
     // Size.
     let size = this.props.size;
+
     let sizeStyle;
     if (size === 'xs') {
       sizeStyle = 16;
@@ -67,7 +70,7 @@ class Avatar extends React.Component {
       width: sizeStyle,
       height: sizeStyle,
       borderRadius: radius,
-      backgroundColor: this.randomColor
+      backgroundColor: this.state.randomColor
     };
 
     const status = this.props.status || '';

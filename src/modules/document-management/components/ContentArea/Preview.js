@@ -111,7 +111,7 @@ class Preview extends React.Component {
     }
 
     return (
-      <div className="preview-panel" style={{height: state.ui.windowDimensions.height - 88}}>
+      <div className="preview-panel" style={{height: state.ui.windowDimensions.height - 50}}>
         <div className="preview-panel-toolbar clearfix">
           <div className="pull-left lead">
           {docTitle}
