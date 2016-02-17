@@ -9,6 +9,8 @@ export const CHANGE_FOLDER = 'CHANGE_FOLDER';
 export const SELECT_FILE = 'SELECT_FILE';
 export const SET_FILE_MANAGER_DATA = 'SET_FILE_MANAGER_DATA';
 
+export const SET_DEV_MODE = 'SET_DEV_MODE';
+
 // Main Content Area constants.
 export const SET_CONTENT_AREA_VIEW = 'SET_CONTENT_AREA_VIEW';
 export const DEFAULT = 'DEFAULT';

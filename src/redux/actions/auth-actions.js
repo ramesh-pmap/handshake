@@ -9,7 +9,10 @@ import { setAuthorizationToken } from './global-actions';
 // Async Action creators
 // Auth
 export function fetchAuthRequest(consumerId) {
-  return { type: FETCH_AUTH_REQUEST, consumerId };
+  return {
+    type: FETCH_AUTH_REQUEST,
+    consumerId
+  };
 }
 
 export function fetchAuthSuccess(consumerId, json) {

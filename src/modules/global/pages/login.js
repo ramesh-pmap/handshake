@@ -3,9 +3,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 // Actions.
-import { fetchTenant } from '../../../redux/actions/tenant-actions';
-import { fetchAuth } from '../../../redux/actions/auth-actions';
-import { setConsumerId } from '../../../redux/actions/global-actions';
+// import { fetchTenant } from '../../../redux/actions/tenant-actions';
+// import { fetchAuth } from '../../../redux/actions/auth-actions';
+// import { setConsumerId } from '../../../redux/actions/global-actions';
 
 // Utility methods.
 import utils from '../../../utils';
@@ -28,22 +28,19 @@ class Page extends React.Component {
   }
 
   handleLogin(loginName, password) {
-    const {dispatch} = this.props;
+    // const {dispatch} = this.props;
     if (loginName === 'devuser' && password === 'Password2016') {
-      // Get Tenant data and then call authentication action.
-      dispatch(fetchTenant('productfacelift.pmapconnect.com'))
-      .then(response => {
-        dispatch(fetchAuth(response.tenant.Id));
-        dispatch(setConsumerId(response.tenant.Id));
-      });
+      // // Get Tenant data and then call authentication action.
+      // dispatch(fetchTenant('productfacelift.pmapconnect.com'))
+      // .then(response => {
+      //   dispatch(fetchAuth(response.tenant.Id));
+      //   dispatch(setConsumerId(response.tenant.Id));
+      // });
       // Redirect to document management page.
       this.props.history.pushState(null, '/document-management');
       return true;
     }
     return false;
-    // if (loginName === 'pmap2') {
-    //   this.props.history.pushState(null, '/home');
-    // }
   }
 
   // Render method.

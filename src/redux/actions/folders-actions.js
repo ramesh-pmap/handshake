@@ -6,8 +6,13 @@ import {
 
 // DATA - Async Action creators
 // Folders
-export function fetchFoldersRequest(folderId) {
-  return { type: FETCH_FOLDERS_REQUEST, folderId };
+export function fetchFoldersRequest(folderId, consumerId, token) {
+  return {
+    type: FETCH_FOLDERS_REQUEST,
+    folderId,
+    consumerId,
+    token
+  };
 }
 
 export function fetchFoldersSuccess(folderId, json) {
@@ -29,7 +34,7 @@ export function fetchFoldersFailure(folderId, error) {
 }
 
 export function fetchFolders(folderId, token, consumerId) {
-  let url = `https://devsvc.pmapconnect.com/papi/v1/dm/folder/${folderId}`;
+  let url = `https://devsvc.pmapconnect.com/papi/dm/folder/${folderId}`;
   // let url = `http://cosmos.pmapconnect.com:8081/api/0/documents/`;
 
   let sHeaders = new Headers();
@@ -42,7 +47,7 @@ export function fetchFolders(folderId, token, consumerId) {
              headers: sHeaders};
 
   return (dispatch) => {
-    dispatch(fetchFoldersRequest(folderId));
+    dispatch(fetchFoldersRequest(folderId, consumerId, token));
     // return fetch(`http://cosmos.pmapconnect.com:8081/api/0/documents/${folderId}`)
     return fetch(url, sInit)
       .then(response => response.json())

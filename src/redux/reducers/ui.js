@@ -12,6 +12,7 @@ import {
   SET_FIREBASE_URL,
   IFRAME_SOURCE,
   SEARCHING_FOR,
+  SET_DEV_MODE
 } from '../constants/ui-constants';
 
 function dmUIReducer(state = {}, action) {
@@ -95,6 +96,11 @@ function dmUIReducer(state = {}, action) {
     // console.log('SEARCHING_FOR Action:', action);
     return Object.assign({}, state, {
       searchingFor: action.value
+    });
+  case SET_DEV_MODE:
+    // console.log('SEARCHING_FOR Action:', action);
+    return Object.assign({}, state, {
+      devMode: action.value
     });
 
   default:

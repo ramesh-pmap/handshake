@@ -8,7 +8,10 @@ import {
 // Async Action creators
 // Tenant
 export function fetchTenantRequest(paramUrl) {
-  return { type: FETCH_TENANT_REQUEST, paramUrl };
+  return {
+    type: FETCH_TENANT_REQUEST,
+    paramUrl
+  };
 }
 
 export function fetchTenantSuccess(paramUrl, json) {

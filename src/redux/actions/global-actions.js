@@ -6,9 +6,15 @@ import {
 
 // Global.
 export function setAuthorizationToken(value) {
-  return { type: SET_AUTHORIZATION_TOKEN, value };
+  return {
+    type: SET_AUTHORIZATION_TOKEN,
+    value
+  };
 }
 
 export function setConsumerId(value) {
-  return { type: SET_CONSUMER_ID, value };
+  return {
+    type: SET_CONSUMER_ID,
+    value
+  };
 }

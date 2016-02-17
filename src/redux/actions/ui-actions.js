@@ -12,6 +12,7 @@ import {
   SET_FIREBASE_URL,
   IFRAME_SOURCE,
   SEARCHING_FOR,
+  SET_DEV_MODE
 } from '../constants/ui-constants';
 
 
@@ -66,4 +67,8 @@ export function changeFrameSource(value) {
 
 export function changeSearchingFor(value) {
   return { type: SEARCHING_FOR, value };
+}
+
+export function setDevMode(value) {
+  return { type: SET_DEV_MODE, value };
 }

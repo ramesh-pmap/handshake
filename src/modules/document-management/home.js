@@ -46,6 +46,9 @@ import ContentArea from './content-area';
 import RightPanelArea from './right-panel-area';
 import ModalArea from './modal-area';
 
+import Info from '../../components/Info';
+
+
 // Utility methods.
 import utils from '../../utils';
 
@@ -120,14 +123,17 @@ class Page extends React.Component {
   render() {
     const { state } = this.props;
     // console.log('state:', state);
+    const dev = state.ui.devMode;
+
     return (
       <div>
         <Main>
+          {dev === true ? <Info /> : ''}
 
-        {/* Column wrapper. */}
+          {/* Column wrapper. */}
           <div className={ state.ui.rightSidebarOpened ? 'main-col-wrapper sidebar--open clearfix' : 'main-col-wrapper sidebar--closed clearfix' }>
 
-          {/* Left (Main) column. */}
+            {/* Left (Main) column. */}
             <div className="main-col main-col-left">
 
               <div style={{ display: 'none', padding: '20px 20px 0', marginBottom: -10 }}>

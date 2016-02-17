@@ -17,10 +17,14 @@ import {
   toggleLeftSidebar,
   toggleRightSidebar,
   changeFrameSource,
-  setFirebaseUrl
+  setFirebaseUrl,
+  setDevMode
 } from './redux/actions/ui-actions';
 // import { fetchFolders } from './redux/actions/folders-actions';
 // import { setAuthorizationToken, setConsumerId } from './redux/actions/global-actions';
+import { fetchTenant } from './redux/actions/tenant-actions';
+import { fetchAuth } from './redux/actions/auth-actions';
+import { setConsumerId } from './redux/actions/global-actions';
 
 import utils from './utils';
 
@@ -38,8 +42,10 @@ let store = createStore(
   )
 );
 
-// console.log(store.getState());
+// Set dev mode.
+store.dispatch(setDevMode(true));
 
+// Get window dimensions.
 const dimensions = utils.getWindowDimensions();
 
 // Set initial sidebar state.
@@ -51,15 +57,13 @@ store.dispatch(setFirebaseUrl('https://resplendent-heat-3135.firebaseio.com'));
 // Set iframe source.
 store.dispatch(changeFrameSource('http://productfacelift.pmapconnect.com/AIMS/WRAIMS/CaseHistory/Case_History_listing.asp?ModuleId=15&Module_Id=15&LocationId=8790&Location_Id=8790'));
 
-// // Set Authorization Token.
-// store.dispatch(setAuthorizationToken('Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxMmVmOGViYi1iZTA3LTQ5NTEtYTA5NC02YzI1MTFkNjU2MmYiLCJjaWQiOiIxMDMyNjc1IiwidXNyIjoibW9oYnVsbCIsImlzcyI6Imh0dHA6Ly93d3cucHJvY2Vzc21hcC5jb20iLCJhdWQiOiJkZXYucG1hcGNvbm5lY3QuY29tIiwiZXhwIjoxNDU1NzQzODgzLCJuYmYiOjE0NTUxMzkwODN9.yr8raFEC5tTeICU_ktKogmtML98uCVoOQTlXtxCjgnw'));
-// // Set Consumer Id.
-// store.dispatch(setConsumerId('1032675'));
 
-// const token = store.getState().global.authorizationToken;
-// const consumerId = store.getState().global.consumerId;
-// // Async action sample.
-// store.dispatch(fetchFolders(12345, token, consumerId));
+// Get Tenant data and then call authentication action.
+store.dispatch(fetchTenant('productfacelift.pmapconnect.com'))
+.then(response => {
+  store.dispatch(fetchAuth(response.tenant.Id));
+  store.dispatch(setConsumerId(response.tenant.Id));
+});
 
 
 // Routes template.
