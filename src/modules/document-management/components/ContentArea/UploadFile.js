@@ -25,23 +25,6 @@ class UploadFile extends React.Component {
       progress: 100,
     };
 
-    // Set API Key for Filestack
-    // Filestack.setKey('ApllgXw6MTHiBIIas6R9Dz');
-    // Filestack.store(
-    //   this.props.file,
-    //   (blob) => {
-    //     this.setState({
-    //       upload: false,
-    //       fileInfo: blob
-    //     });
-    //   },
-    //   (error) => {
-    //     console.log(error.toString());
-    //   },
-    //   (p) => {
-    //     this.setState({ progress: p });
-    //   }
-    // );
     const { state } = this.props;
 
     let url = 'https://devsvc.pmapconnect.com/papi/v1/dm/document/upload';
@@ -51,6 +34,7 @@ class UploadFile extends React.Component {
     sHeaders.append('Authorization', state.global.authorizationToken);
     sHeaders.append('ConsumerId', state.global.consumerId);
     sHeaders.append('UserId', '12878');
+    sHeaders.append('ModuleId', '16');
     sHeaders.append('LocationId', '8840');
 
     let sBody = new FormData();
