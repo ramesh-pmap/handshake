@@ -10,17 +10,16 @@ import { connect } from 'react-redux';
 import FileManagerBreadcrumb from './FileManagerBreadcrumb';
 import FileManagerHeader from './FileManagerHeader';
 import FileManagerRows from './FileManagerRows';
+import FileManagerRowLoader from './FileManagerRowLoader';
 
 
 // Define class.
 class FileManager extends React.Component {
-  constructor(props) {
-    // Pass `props` into scope.
-    super(props);
-  }
-
   // Render method.
   render() {
+    const { state } = this.props;
+    const isFetching = state.folders.isFetching;
+
     const { foldersData, filesData, breadcrumbData, currentFolderId } = this.props;
 
     return (
@@ -38,7 +37,11 @@ class FileManager extends React.Component {
           {/* File Manager Header */}
           <FileManagerHeader />
 
-          <FileManagerRows foldersData={foldersData} filesData={filesData} currentFolderId={currentFolderId}/>
+          { isFetching ?
+            <FileManagerRowLoader />
+          :
+            <FileManagerRows foldersData={foldersData} filesData={filesData} currentFolderId={currentFolderId}/>
+          }
 
         </div>
 
