@@ -6,7 +6,7 @@ import {ListGroup} from 'react-bootstrap';
 
 // Components.
 import FileManagerRowFolder from './FileManagerRowFolder';
-import FileManagerRowFile from './FileManagerRowFile';
+import FileManagerRowDocument from './FileManagerRowDocument';
 
 // Define class.
 class FileManagerRows extends React.Component {
@@ -30,9 +30,9 @@ class FileManagerRows extends React.Component {
     }
 
     if (documentData) {
-      documentData.forEach(file => {
-        if (file.Uid) {
-          rows.push(<FileManagerRowFile data={file} key={file.Uid} />);
+      documentData.forEach(document => {
+        if (document.Uid) {
+          rows.push(<FileManagerRowDocument data={document} key={document.Uid} />);
         }
       });
     }
