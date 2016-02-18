@@ -19,8 +19,7 @@ export function fetchFolderSuccess(folderId, json) {
   return {
     type: FETCH_FOLDER_SUCCESS,
     folderId,
-    folders: json,
-    // folders: json.data.children.map(child => child.data),
+    folder: json,
     receivedAt: Date.now()
   };
 }

@@ -1,29 +1,29 @@
 import {
-  FETCH_FOLDER_REQUEST,
-  FETCH_FOLDER_SUCCESS,
-  FETCH_FOLDER_FAILURE
+  FETCH_DOCUMENT_REQUEST,
+  FETCH_DOCUMENT_SUCCESS,
+  FETCH_DOCUMENT_FAILURE
 } from '../constants/folder-constants';
 
 // Data / Async
-function dmFolderReducer(state = {
+function dmDocumentReducer(state = {
   isFetching: false,
   didInvalidate: false,
   items: []
 }, action) {
   switch (action.type) {
-  case FETCH_FOLDER_REQUEST:
+  case FETCH_DOCUMENT_REQUEST:
     return Object.assign({}, state, {
       isFetching: true,
       didInvalidate: false
     });
-  case FETCH_FOLDER_SUCCESS:
+  case FETCH_DOCUMENT_SUCCESS:
     return Object.assign({}, state, {
       isFetching: false,
       didInvalidate: false,
-      items: action.folder,
+      items: action.document,
       lastUpdated: action.receivedAt
     });
-  case FETCH_FOLDER_FAILURE:
+  case FETCH_DOCUMENT_FAILURE:
     return Object.assign({}, state, {
       didInvalidate: true,
       error: action.error
@@ -34,4 +34,4 @@ function dmFolderReducer(state = {
 }
 
 
-export default dmFolderReducer;
+export default dmDocumentReducer;

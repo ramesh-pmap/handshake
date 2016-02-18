@@ -12,7 +12,7 @@ import utils from '../utils';
 // Define class.
 class Info extends React.Component {
 
-  handleClickGetFolders() {
+  handleClickGetFolder() {
     const { state, dispatch } = this.props;
     const token = state.global.authorizationToken;
     const consumerId = state.global.consumerId;
@@ -20,7 +20,7 @@ class Info extends React.Component {
     dispatch(fetchFolder('root', token, consumerId));
   }
 
-  handleClickSaveFolders() {
+  handleClickSaveFolder() {
     const { state } = this.props;
     utils.save(state.folder.items);
   }
@@ -39,8 +39,8 @@ class Info extends React.Component {
       <div>
         <div>{message}</div>
         {/*
-        <div><button onClick={this.handleClickGetFolders.bind(this)}>Get Folders</button></div>
-        <div><button onClick={this.handleClickSaveFolders.bind(this)}>Save Folders json</button></div>
+        <div><button onClick={this.handleClickGetFolder.bind(this)}>Get Folder</button></div>
+        <div><button onClick={this.handleClickSaveFolder.bind(this)}>Save Folder json</button></div>
         */}
       </div>
     );

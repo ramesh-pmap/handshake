@@ -18,19 +18,19 @@ class FileManagerRows extends React.Component {
   // Render method.
   render() {
     // const rowsData = this.props.data;
-    const {foldersData, filesData} = this.props;
+    const {folderData, documentData} = this.props;
 
     let rows = [];
-    if (foldersData) {
-      foldersData.forEach(folder => {
+    if (folderData) {
+      folderData.forEach(folder => {
         if (folder.Id) {
           rows.push(<FileManagerRowFolder data={folder} key={folder.Uid + folder.Description} />);
         }
       });
     }
 
-    if (filesData) {
-      filesData.forEach(file => {
+    if (documentData) {
+      documentData.forEach(file => {
         if (file.Uid) {
           rows.push(<FileManagerRowFile data={file} key={file.Uid} />);
         }
@@ -47,8 +47,8 @@ class FileManagerRows extends React.Component {
 
 // Validation.
 FileManagerRows.propTypes = {
-  foldersData: React.PropTypes.array,
-  filesData: React.PropTypes.array,
+  folderData: React.PropTypes.array,
+  documentData: React.PropTypes.array,
   currentFolderId: React.PropTypes.string
 };
 

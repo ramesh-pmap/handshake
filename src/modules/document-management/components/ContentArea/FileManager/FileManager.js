@@ -20,7 +20,7 @@ class FileManager extends React.Component {
     const { state } = this.props;
     const isFetching = state.folder.isFetching;
 
-    const { foldersData, filesData, breadcrumbData, currentFolderId } = this.props;
+    const { folderData, documentData, breadcrumbData, currentFolderId } = this.props;
 
     return (
       <div>
@@ -35,7 +35,7 @@ class FileManager extends React.Component {
           { isFetching ?
             <FileManagerRowLoader />
           :
-            <FileManagerRows foldersData={foldersData} filesData={filesData} currentFolderId={currentFolderId}/>
+            <FileManagerRows folderData={folderData} documentData={documentData} currentFolderId={currentFolderId}/>
           }
 
         </div>
@@ -47,8 +47,8 @@ class FileManager extends React.Component {
 
 // Validation.
 FileManager.propTypes = {
-  foldersData: React.PropTypes.array,
-  filesData: React.PropTypes.array,
+  folderData: React.PropTypes.array,
+  documentData: React.PropTypes.array,
   breadcrumbData: React.PropTypes.array,
   currentFolderId: React.PropTypes.string,
   state: React.PropTypes.object

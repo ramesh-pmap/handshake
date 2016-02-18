@@ -21,12 +21,12 @@ class Default extends React.Component {
     const currentId = state.ui.currentFolderId;
     let breadcrumbData = state.folder.items.Breadcrumbs ? state.folder.items.Breadcrumbs : [];
     let folderData = state.folder.items.Subfolders ? state.folder.items.Subfolders : [];
-    let filesData = state.folder.items.Documents ? state.folder.items.Documents : [];
+    let documentData = state.folder.items.Documents ? state.folder.items.Documents : [];
 
     return (
       <div>
         {/* FileManager component */}
-        <FileManager foldersData={folderData} breadcrumbData={breadcrumbData} filesData={filesData} currentFolderId={currentId} />
+        <FileManager folderData={folderData} breadcrumbData={breadcrumbData} documentData={documentData} currentFolderId={currentId} />
       </div>
     );
   }
