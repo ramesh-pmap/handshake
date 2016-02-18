@@ -11,18 +11,21 @@ import utils from '../utils';
 
 // Define class.
 class Info extends React.Component {
+
   handleClickGetFolders() {
     const { state, dispatch } = this.props;
     const token = state.global.authorizationToken;
     const consumerId = state.global.consumerId;
     // Async action sample.
     // dispatch(fetchFolders('7059a989-f85b-4193-ac32-a485024e4ea4', token, consumerId));
-
-    dispatch(fetchFolders('7059a989-f85b-4193-ac32-a485024e4ea4', token, consumerId))
-    .then(
-      utils.save(state.folders, 'newFolders')
-    );
+    dispatch(fetchFolders('root', token, consumerId));
   }
+
+  handleClickSaveFolders() {
+    const { state } = this.props;
+    utils.save(state.folders.items);
+  }
+
   // Render method.
   render() {
     const { state } = this.props;
@@ -37,6 +40,7 @@ class Info extends React.Component {
       <div>
         <div>{message}</div>
         <div><button onClick={this.handleClickGetFolders.bind(this)}>Get Folders</button></div>
+        <div><button onClick={this.handleClickSaveFolders.bind(this)}>Save Folders json</button></div>
       </div>
     );
   }

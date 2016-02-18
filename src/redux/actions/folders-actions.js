@@ -42,6 +42,8 @@ export function fetchFolders(folderId, token, consumerId) {
   sHeaders.append('ApplicationType', '1');
   sHeaders.append('Authorization', token);
   sHeaders.append('ConsumerId', consumerId);
+  // sHeaders.append('LocationId', 8840); // many documents
+  sHeaders.append('LocationId', 10918); // one subfolder and one document
 
   let sInit = { method: 'GET',
              headers: sHeaders};

@@ -3,6 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { changeFolder, setRightPanelAreaView } from '../../../../../redux/actions/ui-actions';
+import { fetchFolders } from '../../../../../redux/actions/folders-actions';
 import { ACTIVITY } from '../../../../../redux/constants/ui-constants';
 
 // Core components.
@@ -17,9 +18,12 @@ class FileManagerBreadcrumb extends React.Component {
   }
 
   handleClick(id) {
-    const { dispatch } = this.props;
+    const { state, dispatch } = this.props;
+    let token = state.global.authorizationToken;
+    let consumerId = state.global.consumerId;
     // Redux action.
     dispatch(changeFolder(id));
+    dispatch(fetchFolders(id, token, consumerId));
     dispatch(setRightPanelAreaView(ACTIVITY));
   }
 
@@ -27,22 +31,21 @@ class FileManagerBreadcrumb extends React.Component {
   render() {
     const breadcrumbsData = this.props.data;
     let breadcrumbs = [];
-    // Work in progress.
 
     if (breadcrumbsData) {
       breadcrumbsData.forEach((item, index) => {
         // Breadcrumb array is reversed.
         if (index === 0) {
-          breadcrumbs.push(<BreadcrumbItem active key={item.breadcrumb_id}>{item.breadcrumb_name}</BreadcrumbItem>);
+          breadcrumbs.push(<BreadcrumbItem active key={item.Uid}>{item.Description}</BreadcrumbItem>);
         } else {
-          breadcrumbs.push(<BreadcrumbItem onClick={this.handleClick.bind(this, item.breadcrumb_id)} key={item.breadcrumb_id + item.breadcrumb_name}>{item.breadcrumb_name}</BreadcrumbItem>);
+          breadcrumbs.push(<BreadcrumbItem onClick={this.handleClick.bind(this, item.Id)} key={item.Uid + item.Description}>{item.Description}</BreadcrumbItem>);
         }
       });
     }
 
     return (
       <Breadcrumb>
-        <BreadcrumbItem onClick={this.handleClick.bind(this, 0)} key={'0'}><Icon name="home"/></BreadcrumbItem>
+        <BreadcrumbItem onClick={this.handleClick.bind(this, 'root')} key={'root'}><Icon name="home"/></BreadcrumbItem>
         {breadcrumbs.reverse()}
       </Breadcrumb>
     );
