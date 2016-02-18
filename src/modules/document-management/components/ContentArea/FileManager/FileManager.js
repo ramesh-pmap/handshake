@@ -26,19 +26,14 @@ class FileManager extends React.Component {
     return (
       <div>
         {/* File Manager Breadcrumb */}
-        {
-          breadcrumbData.length >= 1 ?
-            <FileManagerBreadcrumb data={breadcrumbData} />
-          :
-            <div/>
-        }
+        <FileManagerBreadcrumb data={breadcrumbData} />
 
         <div className="card" style={{ position: 'relative' }}>
 
-          {/* File Manager Header */}
-          <FileManagerHeader />
+        {/* File Manager Header */}
+        <FileManagerHeader />
 
-          <FileManagerRows foldersData={foldersData} filesData={filesData} currentFolderId={currentFolderId}/>
+        <FileManagerRows foldersData={foldersData} filesData={filesData} currentFolderId={currentFolderId}/>
 
         </div>
 
@@ -52,7 +47,7 @@ FileManager.propTypes = {
   foldersData: React.PropTypes.array,
   filesData: React.PropTypes.array,
   breadcrumbData: React.PropTypes.array,
-  currentFolderId: React.PropTypes.number,
+  currentFolderId: React.PropTypes.string,
   state: React.PropTypes.object
 };
 

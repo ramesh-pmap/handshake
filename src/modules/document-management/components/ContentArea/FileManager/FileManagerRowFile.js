@@ -29,6 +29,8 @@ import {
 import {Row, Col, Button, ListGroupItem, MenuItem, ButtonToolbar, DropdownButton} from 'react-bootstrap';
 import Icon from 'react-fa';
 
+import moment from 'moment';
+
 // Define class.
 class FileManagerRowFile extends React.Component {
   constructor(props) {
@@ -76,14 +78,14 @@ class FileManagerRowFile extends React.Component {
   // Render method.
   render() {
     const fileData = this.props.data;
-    const typesMapping = {'doc': 'word', 'docx': 'word', 'xls': 'excel', 'jpg': 'image', 'tif': 'image', 'gif': 'image', 'png': 'image', 'ppt': 'powerpoint', 'pptx': 'powerpoint'};
+    // const typesMapping = {'doc': 'word', 'docx': 'word', 'xls': 'excel', 'jpg': 'image', 'tif': 'image', 'gif': 'image', 'png': 'image', 'ppt': 'powerpoint', 'pptx': 'powerpoint'};
 
-    const fileId = fileData.doc_id;
-    const fileName = fileData.doc_title;
-    const fileType = typesMapping[fileData.file_type.toLowerCase()] ? typesMapping[fileData.file_type.toLowerCase()] : fileData.file_type;
-    const fileVersion = fileData.doc_version;
-    const fileModifiedDate = fileData.doc_modified_date;
-    const fileStatus = 'Final'; // fileData.doc_status_id;
+    const fileId = fileData.Uid;
+    const fileName = fileData.Title;
+    const fileType = 'word'; // typesMapping[fileData.file_type.toLowerCase()] ? typesMapping[fileData.file_type.toLowerCase()] : fileData.file_type;
+    const fileVersion = fileData.Version;
+    const fileModifiedDate = fileData.UpdatedDate ? fileData.UpdatedDate : fileData.CreatedDate;
+    const fileStatus = fileData.Status;
 
     return (
       <ListGroupItem className={ this.state.isFocused ? 'on' : null }>
@@ -106,7 +108,7 @@ class FileManagerRowFile extends React.Component {
           <Col sm={2} className="text-center text-left-xs">
           <p>
               <span className="visible-xs-inline">Date Modified: </span>
-              {fileModifiedDate}
+              {moment(fileModifiedDate).format('MM/DD/YYYY')}
             </p>
           </Col>
           <Col sm={3} className="text-center text-left-xs">

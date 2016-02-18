@@ -3,11 +3,7 @@ import {
   SET_CONSUMER_ID
 } from '../constants/global-constants';
 
-function dmGlobalReducer(state = {
-  isFetching: false,
-  didInvalidate: false,
-  tenant: []
-}, action) {
+function dmGlobalReducer(state = {}, action) {
   switch (action.type) {
 
   case SET_AUTHORIZATION_TOKEN:

@@ -3,6 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { changeFolder, setRightPanelAreaView } from '../../../../../redux/actions/ui-actions';
+import { fetchFolders } from '../../../../../redux/actions/folders-actions';
 import { ACTIVITY } from '../../../../../redux/constants/ui-constants';
 
 // Core components.
@@ -17,17 +18,21 @@ class FileManagerRowFolder extends React.Component {
   }
 
   handleClick() {
-    const { dispatch, data } = this.props;
+    const { state, dispatch, data } = this.props;
+
+    let token = state.global.authorizationToken;
+    let consumerId = state.global.consumerId;
     // Redux action.
-    dispatch(changeFolder(data.folder_id));
+    dispatch(fetchFolders(data.Id, token, consumerId));
+    dispatch(changeFolder(data.Id));
     dispatch(setRightPanelAreaView(ACTIVITY));
   }
 
   // Render method.
   render() {
     const folderData = this.props.data;
-    const folderName = folderData.folder_name;
-    const folderDate = folderData.folder_updated_date;
+    const folderName = folderData.Description;
+    const folderDate = folderData.UpdatedDate;
 
     return (
       <ListGroupItem onClick={this.handleClick.bind(this)}>
@@ -53,9 +58,13 @@ class FileManagerRowFolder extends React.Component {
 // Validation.
 FileManagerRowFolder.propTypes = {
   data: React.PropTypes.object,
-  dispatch: React.PropTypes.func
+  dispatch: React.PropTypes.func,
+  state: React.PropTypes.object
 };
 
+const mapStateToProps = (state) => ({
+  state
+});
 
 // Export.
-export default connect()(FileManagerRowFolder);
+export default connect(mapStateToProps)(FileManagerRowFolder);

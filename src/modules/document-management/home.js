@@ -4,14 +4,13 @@ import { connect } from 'react-redux';
 
 // Actions.
 import {
-  changeFolder,
-  setFileManagerData,
   setContentAreaView,
   toggleRightSidebar,
   setRightPanelAreaView,
   toggleModal,
   setModalView
 } from '../../redux/actions/ui-actions';
+
 
 // Constants.
 import {
@@ -62,35 +61,18 @@ class Page extends React.Component {
     utils.title(props);
   }
 
+  // componentWillReceiveProps(nextProps) {
+  //   const { state, dispatch } = nextProps;
+  //
+  //   const token = state.global.authorizationToken;
+  //   const consumerId = state.global.consumerId;
+  //   // Async action sample.
+  //   // dispatch(fetchFolders('7059a989-f85b-4193-ac32-a485024e4ea4', token, consumerId));
+  //   // dispatch(fetchFolders('root', token, consumerId));
+  // }
+
   componentDidMount() {
     const { dispatch } = this.props;
-
-    // LOCAL API
-    // Fetching data from local express server.
-    fetch('http://cosmos.pmapconnect.com:8081/api/0/documents').then(response => response.json())
-      .then(data => {
-        // Redux action.
-        const parsedFolders = utils.parseTreeWithBreadcrumb(data.document_folder);
-        const flatFolders = utils.convertToFlatTree([], parsedFolders);
-        const docFiles = data.document;
-        dispatch(setFileManagerData(parsedFolders[0], flatFolders, docFiles));
-        dispatch(changeFolder(0));
-      })
-      .catch(error => {this.setState({error}); });
-
-    // // FIREBASE`
-    // // Fetch Source Json data from Firebase
-    // let ref = new Firebase(state.ui.firebaseUrl);
-    // ref.once('value', data => {
-    //   // console.log('data from firebase', data.val());
-    //   // Redux action.
-    //   const parsedFolders = utils.parseTreeWithBreadcrumb(data.val().document_folder);
-    //   const flatFolders = utils.convertToFlatTree([], parsedFolders);
-    //   const docFiles = data.val().document;
-    //   dispatch(setFileManagerData(parsedFolders[0], flatFolders, docFiles));
-    //   dispatch(changeFolder(0));
-    // });
-
 
     // Set initial state.
     dispatch(setContentAreaView(DEFAULT));
