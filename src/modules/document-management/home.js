@@ -67,8 +67,8 @@ class Page extends React.Component {
   //   const token = state.global.authorizationToken;
   //   const consumerId = state.global.consumerId;
   //   // Async action sample.
-  //   // dispatch(fetchFolders('7059a989-f85b-4193-ac32-a485024e4ea4', token, consumerId));
-  //   // dispatch(fetchFolders('root', token, consumerId));
+  //   // dispatch(fetchFolder('7059a989-f85b-4193-ac32-a485024e4ea4', token, consumerId));
+  //   // dispatch(fetchFolder('root', token, consumerId));
   // }
 
   componentDidMount() {

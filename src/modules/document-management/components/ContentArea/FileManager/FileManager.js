@@ -18,7 +18,7 @@ class FileManager extends React.Component {
   // Render method.
   render() {
     const { state } = this.props;
-    const isFetching = state.folders.isFetching;
+    const isFetching = state.folder.isFetching;
 
     const { foldersData, filesData, breadcrumbData, currentFolderId } = this.props;
 

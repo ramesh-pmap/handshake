@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { changeFolder, setRightPanelAreaView } from '../../../../../redux/actions/ui-actions';
-import { fetchFolders } from '../../../../../redux/actions/folders-actions';
+import { fetchFolder } from '../../../../../redux/actions/folder-actions';
 import { ACTIVITY } from '../../../../../redux/constants/ui-constants';
 
 // Core components.
@@ -23,7 +23,7 @@ class FileManagerBreadcrumb extends React.Component {
     let consumerId = state.global.consumerId;
     // Redux action.
     dispatch(changeFolder(id));
-    dispatch(fetchFolders(id, token, consumerId));
+    dispatch(fetchFolder(id, token, consumerId));
     dispatch(setRightPanelAreaView(ACTIVITY));
   }
 

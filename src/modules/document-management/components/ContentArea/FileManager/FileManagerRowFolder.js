@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { changeFolder, setRightPanelAreaView } from '../../../../../redux/actions/ui-actions';
-import { fetchFolders } from '../../../../../redux/actions/folders-actions';
+import { fetchFolder } from '../../../../../redux/actions/folder-actions';
 import { ACTIVITY } from '../../../../../redux/constants/ui-constants';
 
 // Core components.
@@ -23,7 +23,7 @@ class FileManagerRowFolder extends React.Component {
     let token = state.global.authorizationToken;
     let consumerId = state.global.consumerId;
     // Redux action.
-    dispatch(fetchFolders(data.Id, token, consumerId));
+    dispatch(fetchFolder(data.Id, token, consumerId));
     dispatch(changeFolder(data.Id));
     dispatch(setRightPanelAreaView(ACTIVITY));
   }

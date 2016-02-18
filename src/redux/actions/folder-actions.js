@@ -1,23 +1,23 @@
 import {
-  FETCH_FOLDERS_REQUEST,
-  FETCH_FOLDERS_SUCCESS,
-  FETCH_FOLDERS_FAILURE
-} from '../constants/folders-constants';
+  FETCH_FOLDER_REQUEST,
+  FETCH_FOLDER_SUCCESS,
+  FETCH_FOLDER_FAILURE
+} from '../constants/folder-constants';
 
 // DATA - Async Action creators
 // Folders
-export function fetchFoldersRequest(folderId, consumerId, token) {
+export function fetchFolderRequest(folderId, consumerId, token) {
   return {
-    type: FETCH_FOLDERS_REQUEST,
+    type: FETCH_FOLDER_REQUEST,
     folderId,
     consumerId,
     token
   };
 }
 
-export function fetchFoldersSuccess(folderId, json) {
+export function fetchFolderSuccess(folderId, json) {
   return {
-    type: FETCH_FOLDERS_SUCCESS,
+    type: FETCH_FOLDER_SUCCESS,
     folderId,
     folders: json,
     // folders: json.data.children.map(child => child.data),
@@ -25,15 +25,15 @@ export function fetchFoldersSuccess(folderId, json) {
   };
 }
 
-export function fetchFoldersFailure(folderId, error) {
+export function fetchFolderFailure(folderId, error) {
   return {
-    type: FETCH_FOLDERS_FAILURE,
+    type: FETCH_FOLDER_FAILURE,
     folderId,
     error
   };
 }
 
-export function fetchFolders(folderId, token, consumerId) {
+export function fetchFolder(folderId, token, consumerId) {
   let url = `https://devsvc.pmapconnect.com/papi/dm/folder/${folderId}`;
   // let url = `https://devsvc.pmapconnect.com/papi/dm/folder/root`;
 
@@ -49,19 +49,19 @@ export function fetchFolders(folderId, token, consumerId) {
              headers: sHeaders};
 
   return (dispatch) => {
-    dispatch(fetchFoldersRequest(folderId, consumerId, token));
+    dispatch(fetchFolderRequest(folderId, consumerId, token));
     // return fetch(`http://cosmos.pmapconnect.com:8081/api/0/documents/${folderId}`)
     return fetch(url, sInit)
       .then(response => response.json())
       .then(json => {
         if (json.ErrorMessage) {
-          dispatch(fetchFoldersFailure(folderId, json));
+          dispatch(fetchFolderFailure(folderId, json));
         } else {
-          dispatch(fetchFoldersSuccess(folderId, json));
+          dispatch(fetchFolderSuccess(folderId, json));
         }
       })
       .catch(error =>
-        dispatch(fetchFoldersFailure(folderId, error))
+        dispatch(fetchFolderFailure(folderId, error))
       );
   };
 }

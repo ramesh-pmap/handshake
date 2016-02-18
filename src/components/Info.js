@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 // UI components
 // import {Panel, Button} from 'react-bootstrap';
-import { fetchFolders } from '../redux/actions/folders-actions';
+import { fetchFolder } from '../redux/actions/folder-actions';
 import utils from '../utils';
 
 
@@ -17,12 +17,12 @@ class Info extends React.Component {
     const token = state.global.authorizationToken;
     const consumerId = state.global.consumerId;
     // Async action sample.
-    dispatch(fetchFolders('root', token, consumerId));
+    dispatch(fetchFolder('root', token, consumerId));
   }
 
   handleClickSaveFolders() {
     const { state } = this.props;
-    utils.save(state.folders.items);
+    utils.save(state.folder.items);
   }
 
   // Render method.

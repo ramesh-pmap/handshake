@@ -20,12 +20,12 @@ import {
   setFirebaseUrl,
   setDevMode
 } from './redux/actions/ui-actions';
-// import { fetchFolders } from './redux/actions/folders-actions';
+// import { fetchFolder } from './redux/actions/folder-actions';
 // import { setAuthorizationToken, setConsumerId } from './redux/actions/global-actions';
 import { fetchTenant } from './redux/actions/tenant-actions';
 import { fetchAuth } from './redux/actions/auth-actions';
 import { setConsumerId } from './redux/actions/global-actions';
-import { fetchFolders } from './redux/actions/folders-actions';
+import { fetchFolder } from './redux/actions/folder-actions';
 
 
 import utils from './utils';
@@ -69,10 +69,10 @@ store.dispatch(fetchTenant('productfacelift.pmapconnect.com'))
     let token = store.getState().global.authorizationToken;
     let consumerId = store.getState().global.consumerId;
     // Async action sample.
-    // dispatch(fetchFolders('7059a989-f85b-4193-ac32-a485024e4ea4', token, consumerId));
+    // dispatch(fetchFolder('7059a989-f85b-4193-ac32-a485024e4ea4', token, consumerId));
     if (token) {
-      store.dispatch(fetchFolders('root', token, consumerId));
-      // store.dispatch(fetchFolders('7059a989-f85b-4193-ac32-a485024e4ea4', token, consumerId));
+      store.dispatch(fetchFolder('root', token, consumerId));
+      // store.dispatch(fetchFolder('7059a989-f85b-4193-ac32-a485024e4ea4', token, consumerId));
     }
     // console.log('Async actions completed! Token=', token);
   }).catch(error => {
@@ -91,9 +91,9 @@ store.dispatch(fetchTenant('productfacelift.pmapconnect.com'))
 //   let token = store.getState().global.authorizationToken;
 //   let consumerId = store.getState().global.consumerId;
 //   // Async action sample.
-//   // dispatch(fetchFolders('7059a989-f85b-4193-ac32-a485024e4ea4', token, consumerId));
+//   // dispatch(fetchFolder('7059a989-f85b-4193-ac32-a485024e4ea4', token, consumerId));
 //   if (token) {
-//     store.dispatch(fetchFolders('root', token, consumerId));
+//     store.dispatch(fetchFolder('root', token, consumerId));
 //   }
 //   console.log('Async actions completed! Token=', token);
 // }).catch(error => {

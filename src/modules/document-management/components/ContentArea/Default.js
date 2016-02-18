@@ -19,9 +19,9 @@ class Default extends React.Component {
     // File Manager data
     const { state } = this.props;
     const currentId = state.ui.currentFolderId;
-    let breadcrumbData = state.folders.items.Breadcrumbs ? state.folders.items.Breadcrumbs : [];
-    let folderData = state.folders.items.Subfolders ? state.folders.items.Subfolders : [];
-    let filesData = state.folders.items.Documents ? state.folders.items.Documents : [];
+    let breadcrumbData = state.folder.items.Breadcrumbs ? state.folder.items.Breadcrumbs : [];
+    let folderData = state.folder.items.Subfolders ? state.folder.items.Subfolders : [];
+    let filesData = state.folder.items.Documents ? state.folder.items.Documents : [];
 
     return (
       <div>
