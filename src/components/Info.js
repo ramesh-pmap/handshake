@@ -17,7 +17,6 @@ class Info extends React.Component {
     const token = state.global.authorizationToken;
     const consumerId = state.global.consumerId;
     // Async action sample.
-    // dispatch(fetchFolders('7059a989-f85b-4193-ac32-a485024e4ea4', token, consumerId));
     dispatch(fetchFolders('root', token, consumerId));
   }
 
@@ -39,8 +38,10 @@ class Info extends React.Component {
     return (
       <div>
         <div>{message}</div>
+        {/*
         <div><button onClick={this.handleClickGetFolders.bind(this)}>Get Folders</button></div>
         <div><button onClick={this.handleClickSaveFolders.bind(this)}>Save Folders json</button></div>
+        */}
       </div>
     );
   }
