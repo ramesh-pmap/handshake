@@ -12,6 +12,8 @@ import {
   setModalView,
   toggleModal
 } from '../../../../../redux/actions/ui-actions';
+import { fetchDocument } from '../../../../../redux/actions/document-actions';
+
 
 // Constants
 import {
@@ -45,6 +47,11 @@ class FileManagerRowFile extends React.Component {
   clickListGroupItemHandler(fileId, e) {
     e.preventDefault();
     const { state, dispatch } = this.props;
+
+    let token = state.global.authorizationToken;
+    let consumerId = state.global.consumerId;
+    dispatch(fetchDocument(fileId, token, consumerId));
+
     // Redux actions.
     dispatch(selectFile(fileId));
     dispatch(setRightPanelAreaView(DETAIL));

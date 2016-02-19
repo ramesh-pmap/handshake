@@ -2,7 +2,7 @@ import {
   FETCH_DOCUMENT_REQUEST,
   FETCH_DOCUMENT_SUCCESS,
   FETCH_DOCUMENT_FAILURE
-} from '../constants/folder-constants';
+} from '../constants/document-constants';
 
 // Data / Async
 function dmDocumentReducer(state = {

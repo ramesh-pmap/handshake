@@ -33,8 +33,6 @@ import {
   VIEWER_CHANGE_REQUEST
 } from '../../../../redux/constants/ui-constants';
 
-// Import Firebase
-import Firebase from 'firebase';
 
 // Tooltip const.
 const tooltipOwner = (
@@ -67,30 +65,6 @@ class Detail extends React.Component {
     super(props);
   }
 
-  deleteForm() {
-    const { state } = this.props;
-    let ref = new Firebase(state.ui.firebaseUrl + '/document/');
-
-    // initial list
-    let list = [];
-
-    // sync down from server
-    ref.on('value', data => {
-      list = data.val();
-    });
-
-    // for every value in the list
-    for (let value of list) {
-      // if the doc_id of the value matches the currentFileId
-      if (value.doc_id === state.ui.currentFileId) {
-        // assign the doc_is_active value to 0
-        value.doc_is_active = 0;
-      }
-    }
-    // push back to firebase
-    // ref.set(list);
-  }
-
   handleContentButtonClick(view) {
     const { dispatch } = this.props;
     dispatch(setContentAreaView(view));
@@ -110,43 +84,32 @@ class Detail extends React.Component {
   // Render method.
   render() {
     const { state } = this.props;
-    const currentFileId = state.ui.currentFileId;
-    const docFiles = state.ui.docFiles;
-    let fileData = [];
-
-    // Find selected file in the array.
-    if (docFiles) {
-      for (let i = 0; i < docFiles.length; i++) {
-        if (docFiles[i].doc_id === currentFileId) {
-          fileData = docFiles[i];
-        }
-      }
-    }
+    let documentData = state.document ? state.document.items : [];
 
     // Get file details.
-    const docTitle = fileData.doc_title;
-    const docId = fileData.doc_id;
-    const docVersion = fileData.doc_version;
-    const docOwner = fileData.doc_owner;
-    const docAuthor = fileData.doc_author;
-    const fileUploadedBy = fileData.file_uploaded_by;
-    const fileUploadedDate = fileData.file_uploaded_date;
-    const docModifiedBy = fileData.doc_modified_by;
-    const docModifiedDate = fileData.doc_modified_date;
-    const docStatusId = fileData.doc_status_id;
-    const fileType = fileData.file_type;
-    const docLevel = fileData.doc_level;
-    const docDisplayFolders = fileData.doc_display_folders;
-    const docDescription = fileData.doc_description;
-    const docKeywords = fileData.doc_keywords;
-    const extReferenceDocuments = fileData.ext_reference_documents;
-    const extRegulatoryRef = fileData.ext_regulatory_ref;
-    const docReviewDate = fileData.doc_review_date;
-    const docRetentionPeriod = fileData.doc_retention_period;
-    const docChangeRequest = fileData.doc_change_request;
-    const fileName = fileData.file_name;
-    const fileSize = fileData.file_size;
-    const fileActive = fileData.doc_is_active;
+    const docTitle = documentData.Title;
+    const docId = documentData.Id;
+    const docVersion = documentData.Version;
+    const docOwner = documentData.OwnerId; //
+    const docAuthor = documentData.AuthorId; //
+    const fileUploadedBy = documentData.file_uploaded_by; //
+    const fileUploadedDate = documentData.file_uploaded_date; //
+    const docModifiedBy = documentData.UpdatedByName;
+    const docModifiedDate = documentData.UpdatedDate;
+    const docStatus = documentData.Status;
+    const fileType = documentData.Type;
+    const docLevel = documentData.LevelType;
+    const docDisplayFolders = documentData.doc_display_folders; //
+    const docDescription = documentData.doc_description; //
+    const docKeywords = documentData.doc_keywords; //
+    const extReferenceDocuments = documentData.ext_reference_documents; //
+    const extRegulatoryRef = documentData.ext_regulatory_ref; //
+    const docReviewDate = documentData.doc_review_date; //
+    const docRetentionPeriod = documentData.doc_retention_period; //
+    const docChangeRequest = documentData.doc_change_request; //
+    const fileName = documentData.FileName;
+    const fileSize = documentData.file_size; //
+    const fileActive = documentData.doc_is_active; //
 
 
     // Panels
@@ -183,7 +146,7 @@ class Detail extends React.Component {
           <FormControls.Static label="Date Uploaded/Referenced" value={fileUploadedDate} />
           <FormControls.Static label="Modified By" value={docModifiedBy} />
           <FormControls.Static label="Modified Date" value={docModifiedDate} />
-          <FormControls.Static label="Document Status" value={docStatusId} />
+          <FormControls.Static label="Document Status" value={docStatus} />
           <FormControls.Static label="Document Type" value={fileType} />
           <FormControls.Static label="Document Level" value={docLevel} />
           <FormControls.Static label="Display Folders" value={docDisplayFolders} />
