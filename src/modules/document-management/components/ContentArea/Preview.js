@@ -1,8 +1,10 @@
 // Dependencies.
 import React from 'react';
 import { connect } from 'react-redux';
-import { ButtonGroup, Button, Image, Alert } from 'react-bootstrap';
+import { ButtonGroup, Button, /* Image, */ Alert } from 'react-bootstrap';
 import Icon from 'react-fa';
+
+import PDF from '../../../../components/PDF';
 
 // Redux.
 import {
@@ -93,7 +95,7 @@ class Preview extends React.Component {
     const fileAcknowledgement = fileData.doc_acknowledgement;
     const docTitle = fileData.doc_title;
 
-    let acknowledgementAlert = '';
+    let acknowledgementAlert;
     if (this.state.alertVisible) {
       acknowledgementAlert = (
         <div className="acknowledgement-wrapper">
@@ -109,6 +111,13 @@ class Preview extends React.Component {
         </div>
       );
     }
+
+    const styles = {
+      pdf: {
+        width: '50%',
+        margin: '0 auto'
+      }
+    };
 
     return (
       <div className="preview-panel" style={{height: state.ui.windowDimensions.height - 50}}>
@@ -146,7 +155,11 @@ class Preview extends React.Component {
             </Button>
           </ButtonGroup>
         </div>
-        <Image src="/static/images/sample-doc-preview.png" />
+
+        {/* <Image src="/static/images/sample-doc-preview.png" /> */}
+        <div style={styles.pdf}>
+          <PDF file="./static/pdf-sample.pdf" name="Sample Document Preview" page={1} />
+        </div>
 
         {fileAcknowledgement === 1 ? acknowledgementAlert : null}
 
