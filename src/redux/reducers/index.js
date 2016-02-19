@@ -1,18 +1,21 @@
 import { combineReducers } from 'redux';
+
 import ui from './ui';
+import tenant from './tenant';
+import auth from './auth';
 import folder from './folder';
 import document from './document';
 import global from './global';
-import tenant from './tenant';
-import auth from './auth';
+import lookups from './lookups';
 
 const rootReducer = combineReducers({
   ui,
+  tenant,
+  auth,
   folder,
   document,
   global,
-  tenant,
-  auth
+  lookups
 });
 
 

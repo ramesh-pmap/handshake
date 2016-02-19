@@ -26,6 +26,7 @@ import { fetchTenant } from './redux/actions/tenant-actions';
 import { fetchAuth } from './redux/actions/auth-actions';
 import { setConsumerId } from './redux/actions/global-actions';
 import { fetchFolder } from './redux/actions/folder-actions';
+import { fetchLookups } from './redux/actions/lookups-actions';
 
 
 import utils from './utils';
@@ -71,8 +72,9 @@ store.dispatch(fetchTenant('productfacelift.pmapconnect.com'))
     // Async action sample.
     // dispatch(fetchFolder('7059a989-f85b-4193-ac32-a485024e4ea4', token, consumerId));
     if (token) {
-      store.dispatch(fetchFolder('root', token, consumerId));
       // store.dispatch(fetchFolder('7059a989-f85b-4193-ac32-a485024e4ea4', token, consumerId));
+      store.dispatch(fetchFolder('root', token, consumerId));
+      store.dispatch(fetchLookups(token, consumerId));
     }
     // console.log('Async actions completed! Token=', token);
   }).catch(error => {

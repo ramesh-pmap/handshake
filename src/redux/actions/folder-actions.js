@@ -49,7 +49,6 @@ export function fetchFolder(folderId, token, consumerId) {
 
   return (dispatch) => {
     dispatch(fetchFolderRequest(folderId, consumerId, token));
-    // return fetch(`http://cosmos.pmapconnect.com:8081/api/0/documents/${folderId}`)
     return fetch(url, sInit)
       .then(response => response.json())
       .then(json => {
