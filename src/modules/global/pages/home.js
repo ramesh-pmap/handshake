@@ -12,6 +12,7 @@ import Mars from '../../../components/Mars';
 import Avatar from '../../../components/Avatar';
 import Card from '../../../components/Card';
 // import ChangeRequest from '../../components/RightPanelArea/ChangeRequestFromViewer.js';
+import PDF from '../../../components/PDF';
 
 // Define class.
 class Page extends React.Component {
@@ -27,6 +28,9 @@ class Page extends React.Component {
   render() {
     return (
       <Main>
+
+        <PDF file="./static/pdf-sample.pdf" name="Sample Document Preview" page={1} />
+
         <Avatar
           name="Marcelo Paiva"
           // icon="user"
@@ -44,30 +48,7 @@ class Page extends React.Component {
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac vulputate quam, in faucibus nisl."
           date="Jan 20, 2016"
           status="Approved" />
-        <Card
-          title="Hello World"
-          subtitle="subtitle"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac vulputate quam, in faucibus nisl."
-          date="Jan 20, 2016"
-          status="Rejected" />
-        <Card
-          title="Hello World"
-          subtitle="subtitle"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac vulputate quam, in faucibus nisl."
-          date="Jan 20, 2016"
-          status="Pending Approval" />
-        <Card
-          title="Hello World"
-          subtitle="subtitle"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac vulputate quam, in faucibus nisl."
-          date="Jan 20, 2016"
-          status="Final" />
-        <Card
-          title="Hello World"
-          subtitle="subtitle"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac vulputate quam, in faucibus nisl."
-          date="Jan 20, 2016"
-          status="Archived" />
+
         <Mars title="Home" message="Message goes here" />
       </Main>
     );
