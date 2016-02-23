@@ -23,7 +23,7 @@ class FileManagerRows extends React.Component {
     let rows = [];
     if (folderData) {
       folderData.forEach(folder => {
-        if (folder.Id) {
+        if (folder.Uid) {
           rows.push(<FileManagerRowFolder data={folder} key={folder.Uid + folder.Description} />);
         }
       });

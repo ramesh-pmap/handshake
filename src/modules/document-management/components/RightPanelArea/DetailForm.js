@@ -10,6 +10,7 @@ import Select from 'react-select';
 
 // Components.
 import Avatar from '../../../../components/Avatar';
+import DataSelect from '../../../../components/DataForms/DataSelect';
 
 
 // Define class.
@@ -39,7 +40,7 @@ class DetailForm extends React.Component {
   }
 
   handleDocumentLevelChange(val) {
-    // console.log(val);
+    // alert(val);
     if (val >= 1) {
       this.setState({ workflowFormIsVisible: true });
     } else {
@@ -55,8 +56,37 @@ class DetailForm extends React.Component {
     }
   }
 
+
   // Render method.
   render() {
+    const { state } = this.props;
+    let documentData = state.document ? state.document.items : [];
+
+    // Get file details.
+    const docTitle = documentData.Title;
+    const docId = documentData.Id;
+    const docVersion = documentData.Version;
+    // const docOwner = documentData.OwnerId; //
+    // const docAuthor = documentData.AuthorId; //
+    // const fileUploadedBy = documentData.file_uploaded_by; //
+    // const fileUploadedDate = documentData.file_uploaded_date; //
+    // const docModifiedBy = documentData.UpdatedByName;
+    // const docModifiedDate = documentData.UpdatedDate;
+    // const docStatus = documentData.Status;
+    // const fileType = documentData.Type;
+    // const docLevel = documentData.LevelType;
+    // const docDisplayFolders = documentData.doc_display_folders; //
+    // const docDescription = documentData.doc_description; //
+    // const docKeywords = documentData.doc_keywords; //
+    // const extReferenceDocuments = documentData.ext_reference_documents; //
+    // const extRegulatoryRef = documentData.ext_regulatory_ref; //
+    // const docReviewDate = documentData.doc_review_date; //
+    // const docRetentionPeriod = documentData.doc_retention_period; //
+    // const docChangeRequest = documentData.doc_change_request; //
+    // const fileName = documentData.FileName;
+    // const fileSize = documentData.file_size; //
+    // const fileActive = documentData.doc_is_active; //
+
     const employeePicklistOptions = [
       { value: 'John Smith', label: 'John Smith', clearableValue: false },
       { value: 'Bob Roberts', label: 'Bob Roberts', clearableValue: false },
@@ -96,6 +126,19 @@ class DetailForm extends React.Component {
       { value: '15 Years', label: '15 Years'},
       { value: '30 Years', label: '30 Years'}
     ];
+    const documentScope = [
+      { value: 'Corporate', label: 'Corporate'},
+      { value: 'Division', label: 'Division'},
+      { value: 'Facility', label: 'Facility'}
+    ];
+
+    const documentDepartment = [
+      { value: 'Department 1', label: 'Department 1'},
+      { value: 'Department 2', label: 'Department 2'},
+      { value: 'Department 3', label: 'Department 3'},
+      { value: 'Department 4', label: 'Department 4'}
+    ];
+
     const selectNoResultsText = 'Sorry, the name you type cannot be found.';
 
     let workflowForm;
@@ -191,20 +234,25 @@ class DetailForm extends React.Component {
         <div className="sidebar-details">
           <div className="document-details">
 
-            <Input type="text" label="Title" labelClassName="required" />
+            <Input type="text" label="Title" labelClassName="required" defaultValue={docTitle} />
 
-            <Input type="text" label="Internal Document ID" />
+            <Input type="text" label="Internal Document ID" defaultValue={docId} />
 
-            {/*
-            <Input type="text" label="URL" labelClassName="required" />
+            <Input type="number" label="Version" labelClassName="required" defaultValue={docVersion} />
 
-            <Input type="text" label="Web Site Maintained By" />
+            <DataSelect
+              label="Document Scope"
+              options={documentScope}
+              isRequired
+              multi
+            />
 
-            <Input type="text" label="Physical Location" />
-            */}
-
-            <Input type="number" label="Version" labelClassName="required" />
-
+            <DataSelect
+              label="Department"
+              options={documentDepartment}
+              multi
+            />
+          { /* }
             <Input type="select" multiple label="Document Scope" labelClassName="required">
               <option>Corporate</option>
               <option>Division</option>
@@ -217,64 +265,46 @@ class DetailForm extends React.Component {
               <option>Department 3</option>
               <option>Department 4</option>
             </Input>
+            {*/}
 
-            <div className="form-group">
-              <label className="control-label">Business Process</label>
-              <Select
-                name="form-control"
-                placeholder="Type to find Business Process"
-                noResultsText={selectNoResultsText}
-                value=""
-                options={businessProcessOptions}
-                // multi
-                // isLoading
-              />
-            </div>
+            <DataSelect
+              label="Business Process"
+              options={businessProcessOptions}
+              placeholder="Type to find Business Process"
+              noResultsText={selectNoResultsText}
+            />
 
-            <div className="form-group">
-              <label className="control-label required">Document Owner</label>
-              <Select
-                name="form-control"
-                placeholder="Type to find Document Owner"
-                noResultsText={selectNoResultsText}
-                value=""
-                options={employeePicklistOptions}
-              />
-            </div>
+            <DataSelect
+              label="Document Owner"
+              options={employeePicklistOptions}
+              placeholder="Type to find Document Owner"
+              noResultsText={selectNoResultsText}
+              isRequired
+            />
 
-            <div className="form-group">
-              <label className="control-label">Document Coordinator</label>
-              <Select
-                name="form-control"
-                placeholder="Type to find Document Coordinator"
-                noResultsText={selectNoResultsText}
-                value=""
-                options={employeePicklistOptions}
-              />
-            </div>
+            <DataSelect
+              label="Document Coordinator"
+              options={employeePicklistOptions}
+              placeholder="Type to find Document Coordinator"
+              noResultsText={selectNoResultsText}
+            />
 
-            <div className="form-group">
-              <label className="control-label">Document Type</label>
-              <Select
-                name="form-control"
-                placeholder="Type to find Document Type"
-                noResultsText={selectNoResultsText}
-                value=""
-                options={docTypePicklistOptions}
-              />
-            </div>
+            <DataSelect
+              label="Document Type"
+              options={docTypePicklistOptions}
+              placeholder="Type to find Document Type"
+              noResultsText={selectNoResultsText}
+            />
 
-            <div className="form-group">
-              <label className="control-label required">Document Level</label>
-              <Select
-                name="form-control"
-                placeholder="Type to find Document Level"
-                noResultsText={selectNoResultsText}
-                value=""
-                options={docLevelPicklistOptions}
-                onChange={this.handleDocumentLevelChange.bind(this)}
-              />
-            </div>
+            <DataSelect
+              label="Document Level"
+              options={docLevelPicklistOptions}
+              placeholder="Type to find Document Level"
+              noResultsText={selectNoResultsText}
+              onChange={this.handleDocumentLevelChange.bind(this)}
+              isRequired
+            />
+
 
             {workflowForm}
 

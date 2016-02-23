@@ -33,6 +33,8 @@ import {
   VIEWER_CHANGE_REQUEST
 } from '../../../../redux/constants/ui-constants';
 
+import moment from 'moment';
+
 
 // Tooltip const.
 const tooltipOwner = (
@@ -90,12 +92,12 @@ class Detail extends React.Component {
     const docTitle = documentData.Title;
     const docId = documentData.Id;
     const docVersion = documentData.Version;
-    const docOwner = documentData.OwnerId; //
-    const docAuthor = documentData.AuthorId; //
+    const docOwner = documentData.Owner.Description;
+    const docAuthor = documentData.Author.Description;
     const fileUploadedBy = documentData.file_uploaded_by; //
     const fileUploadedDate = documentData.file_uploaded_date; //
     const docModifiedBy = documentData.UpdatedByName;
-    const docModifiedDate = documentData.UpdatedDate;
+    const docModifiedDate = moment(documentData.UpdatedDate).format('MM/DD/YYYY');
     const docStatus = documentData.Status;
     const fileType = documentData.Type;
     const docLevel = documentData.LevelType;

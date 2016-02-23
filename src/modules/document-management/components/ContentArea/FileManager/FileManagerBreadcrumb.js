@@ -38,7 +38,7 @@ class FileManagerBreadcrumb extends React.Component {
         if (index === 0) {
           breadcrumbs.push(<BreadcrumbItem active key={item.Uid}>{item.Description}</BreadcrumbItem>);
         } else {
-          breadcrumbs.push(<BreadcrumbItem onClick={this.handleClick.bind(this, item.Id)} key={item.Uid + item.Description}>{item.Description}</BreadcrumbItem>);
+          breadcrumbs.push(<BreadcrumbItem onClick={this.handleClick.bind(this, item.Uid)} key={item.Uid + item.Description}>{item.Description}</BreadcrumbItem>);
         }
       });
     }

@@ -23,8 +23,8 @@ class FileManagerRowFolder extends React.Component {
     let token = state.global.authorizationToken;
     let consumerId = state.global.consumerId;
     // Redux action.
-    dispatch(fetchFolder(data.Id, token, consumerId));
-    dispatch(changeFolder(data.Id));
+    dispatch(fetchFolder(data.Uid, token, consumerId));
+    dispatch(changeFolder(data.Uid));
     dispatch(setRightPanelAreaView(ACTIVITY));
   }
 
